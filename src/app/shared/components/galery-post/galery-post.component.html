@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
+            </div>
+            <div class="col-md-8"></div>
+        </div> 
+        <div class="row">
+            <div class="col-md-4 p-5" *ngFor="let post of this.postPaginar">
+                <div class="d-flex justify-content-end mb-2 drop-two">
+                    <a href="{{ this.retornarDatoCategoria(post.categoria,11) }}">
+                        <img src="{{ this.retornarDatoCategoria(post.categoria,12) }}" alt="" height="30" width="auto">
+                    </a>
+                </div>
+                <div class="pr-3 pt-3 imgPost">
+                    <img [ngClass]="tipoSombra(post.imgHorizontal.ruta)"
+                        src="{{ post.imgHorizontal.ruta }}"
+                        [attr.alt]="referenciaImagen('', post.imgHorizontal.alt)"
+                        [attr.width]="referenciaImagen('100%',post.imgHorizontal.ancho)"
+                        [attr.height]="referenciaImagen('auto',post.imgHorizontal.alto)">
+                </div>
+                <div class="mt-5">
+                    <h4 class="tituloPost f-bebas">{{ post.nombre | translate }}</h4>
+                </div>
+                <p class="fuenteDos fs-17 lh-23 text-light">{{ post.descripcionCorta | translate }}</p>
+                <time><p class="f-shadow-into-l text-light fs-15 m-0">{{ post.fechaActualizacion? post.fechaActualizacion : post.fechaCreacion | translate }}</p></time>
+                <a class="f-open-sans-c leerMas mt-2" href="{{ post.ruta }}">{{ 'LeerMas' | translate }} &gt;</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <app-paginator (paginados)="recibirCantidadElementos($event)"
+                                [contenedor]="todosLosPost"
+                                [itemsPorPantalla]="postPorPantalla"
+                                [mostrarItemsPorPantalla]="false"
+                                [itemIniciales]="anchoPantalla > 768? 9:3"></app-paginator>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>

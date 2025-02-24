@@ -1,0 +1,36 @@
+
+.ranking {
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.tech {
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.bar {
+    width: 80%;
+    height: 20px;
+    background: #888c8f;
+    overflow: hidden;
+    position: relative;
+}
+
+.fill {
+    height: 100%;
+    background: #000;
+    text-align: right;
+    padding-right: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.small-update{
+    font-size: 30px;
+}
+.tecno{
+    margin-right: 10px;
+    width: 20%;
+}

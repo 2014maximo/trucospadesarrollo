@@ -1,0 +1,13 @@
+.tituloPost {
+    text-transform: uppercase;
+    line-height: 80px;
+    font-size: 95px;
+    color: white;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+.linkReference{
+    transform: rotate(-6deg) !important;
+    background: white;
+    padding: 0 10px;
+    color: #000;
+}

@@ -1,0 +1,46 @@
+/* ESTILOS GENERALES PARA TODO */
+/* FUENTES EXTERNAS */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+:root {
+    --fuente-uno: 'Open Sans', sans-serif;
+    --fuente-dos: 'Open Sans Condensed', sans-serif;
+    --fuente-tres: 'OperatorMono';
+    --fuente-cuatro: 'Alex Brush', cursive;
+    --fuente-cinco: 'Patua One', cursive;
+    --fuente-seis: 'Shadows Into Light', cursive;
+    --color-uno: #f6921e;
+    --color-dos:#262626;
+    --color-tres:#24a9df;
+    --color-cuatro:#8bc53f;
+    --color-cinco:#ed4036;
+    --color-seis: #c18de2;
+    --color-siete: #c3c1cf;
+    --color-ocho: #a1b0a0;
+    --color-nueve: #5ba8db;
+    --color-dark-uno: #2a2d3e;
+    --color-dark-dos: #002451;
+    --color-dark-tres:#3a0000;
+}
+
+
+.tituloDos{
+    font-family: var(--fuente-dos) !important;
+}
+.translate-item{
+    color:#fff;
+}
+.translate-item:hover{
+    color:#002451;
+}
+
+@media (max-width: 600px) {
+    .marcaMobile {
+        margin-left: 15px;
+        margin-top: 5px;
+    }
+}

@@ -1,0 +1,146 @@
+form input {
+    font-family: 'Open Sans Condensed', sans-serif;
+    ;
+}
+
+.linkCategoria {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8) !important;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 0;
+}
+
+.sidenav li {
+    font-family: var(--fuente-dos);
+    font-size: 20px;
+}
+
+.sidenav ul {
+    list-style: none
+}
+
+.closebtn {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 50px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+a {
+    color: #fff;
+    transition: 0.3s;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@-webkit-keyframes swing {
+    20% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg)
+    }
+
+    40% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg)
+    }
+
+    60% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg)
+    }
+
+    80% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg)
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+@keyframes swing {
+    20% {
+        -webkit-transform: rotate(15deg);
+        transform: rotate(15deg)
+    }
+
+    40% {
+        -webkit-transform: rotate(-10deg);
+        transform: rotate(-10deg)
+    }
+
+    60% {
+        -webkit-transform: rotate(5deg);
+        transform: rotate(5deg)
+    }
+
+    80% {
+        -webkit-transform: rotate(-5deg);
+        transform: rotate(-5deg)
+    }
+
+    to {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+}
+
+.box {
+    display: inline-block;
+    transform-origin: top center;
+    transition: transform 0.3s;
+}
+
+.box:hover {
+    /* transform: rotate(-10deg); */
+}
+
+.box:not(:hover) {
+    animation: swing 3s ease-in-out;
+    animation-fill-mode: forwards;
+    /* Mantiene el último estado de la animación */
+}
+
+.inactivo {
+    filter: grayscale(1) !important;
+}
+
+
+.animate__swing:hover {
+    -webkit-transform-origin: top center;
+    transform-origin: top center;
+    -webkit-animation-name: swing;
+    animation-name: swing
+}
+
+
+@media (max-width: 990px) {
+    .title-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 991px) {
+    .title-menu-mobile {
+        display: none;
+    }
+}
+

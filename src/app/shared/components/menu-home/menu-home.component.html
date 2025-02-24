@@ -1,0 +1,117 @@
+<div class="row" id="categories">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-10 d-none d-md-block">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-light fuenteOcho categorias title-menu-mobile">{{ 'Categorias' | translate }}</h2>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 p-5 sombraUno" style='background-image:url("assets/img/banner/cork-board7.jpg");background-position:center;background-repeat:no-repeat;background-size:100% 100%;'>
+                <div class='p-3 d-flex justify-content-around align-items-center text-center'>
+                    <div *ngFor="let menu of menus.menuUno">
+                        <div class="linkCategoria" (click)="abrirMenuCategoria(menu.nombre, menu.abertura)">
+                            <img src="{{ menu.rutaIcono }}" alt="" width="auto" height="{{menu.alturaIcono}}" class="drop2 box {{ menu.estado }}">
+                        </div>
+                    </div>
+                </div>
+                <div class='p-3 d-flex justify-content-around align-items-center text-center'>
+                    <div *ngFor="let menu of menus.menuDos">
+                        <div class="linkCategoria" (click)="abrirMenuCategoria(menu.nombre, menu.abertura)">
+                            <img src="{{ menu.rutaIcono }}" alt="" width="auto" height="{{menu.alturaIcono}}" class="drop2 box {{ menu.estado }}">
+                        </div>
+                    </div>
+                </div>
+                <div class='p-2 d-flex justify-content-around align-items-center text-center'>
+                    <div *ngFor="let menu of menus.menuTres">
+                        <div class="linkCategoria" (click)="abrirMenuCategoria(menu.nombre, menu.abertura)">
+                            <img src="{{ menu.rutaIcono }}" alt="" width="auto" height="{{menu.alturaIcono}}" class="drop2 box {{ menu.estado }}">
+                        </div>
+                    </div>
+                </div>
+                <div class='p-4 d-flex justify-content-around align-items-center text-center'>
+                    <div *ngFor="let menu of menus.menuCuatro">
+                        <div class="linkCategoria" (click)="abrirMenuCategoria(menu.nombre, menu.abertura)">
+                            <img src="{{ menu.rutaIcono }}" alt="" width="auto" height="{{menu.alturaIcono}}" class="drop2 box {{ menu.estado }}">
+                        </div>
+                    </div>
+                </div>
+                <div class='p-4 d-flex justify-content-around align-items-center text-center'>
+                    <div *ngFor="let menu of menus.menuCinco">
+                        <div class="linkCategoria" (click)="abrirMenuCategoria(menu.nombre, menu.abertura)">
+                            <img src="{{ menu.rutaIcono }}" alt="" width="auto" height="{{menu.alturaIcono}}" class="drop2 box {{ menu.estado }}">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h2 class="text-light fuenteOcho categorias title-menu">{{ 'Categorias' | translate }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<div class="d-md-none">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="text-light categorias fuenteOcho mt-5">{{ 'Categorias' | translate }}</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <app-content-index [indice]="pasoDeIndice" [clase]="claseContenedor"></app-content-index>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+<div *ngFor="let categoria of categorias">
+    <div class="row {{ categoria.nombre }} sidenav">
+        <div class="col-md-12">
+            <div class="text-right">
+                <a href="javascript:void(0)" class="closebtn" (click)="cierreMenu(categoria.nombre)">&times;</a>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="text-right">
+                        <a class="nav-link" href="{{ categoria.ruta }}">
+                            <img src="{{ categoria.rutaIcono }}" alt="" width="auto" height="{{ categoria.alturaIcono }}" class="drop h-zoom">
+                        </a>
+                    </div>
+                    <div  class="row m-3">
+                        <div *ngFor="let post of filtrarActivo(categoria.post)" class="col {{ categoria.colorFondo }} {{ post.posicion}} l-menu" data-toggle="tooltip" data-placement="top" title="{{ traducirTexto(post.nombre) }}">
+                            <a href="{{ post.ruta }}">
+                                <del *ngIf="!validarActivo(post.estado)" class="text-uppercase">{{ traducirTexto(post.nombre).substring(0, 18) }}...</del>
+                                <span *ngIf="validarActivo(post.estado)" class="text-uppercase">{{ traducirTexto(post.nombre).substring(0, 18) }}...</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div *ngFor="let postMas of categoria.subcategorias" class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <h2 class="fuenteSeis text-light mt-5 fs-40 text-uppercase">{{ postMas.subCategoria }}</h2>
+                    <div class="row m-3">
+                        <div *ngFor="let postAdd of postMas.post" class="col {{ postAdd.estilos.colorFondo }} {{ postAdd.posicion}} l-menu" data-toggle="tooltip" data-placement="top" title="{{ traducirTexto(postAdd.nombre) }}">
+                            <a href="{{ postAdd.ruta }}" class="text-uppercase">
+                                <del *ngIf="!validarActivo(postAdd.estado)">{{ traducirTexto(postAdd.nombre).substring(0, 18) }}...</del>
+                                <span *ngIf="validarActivo(postAdd.estado)">{{ traducirTexto(postAdd.nombre).substring(0, 18) }}...</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,110 @@
+<header>
+    <div id="head" class="bg-dark header fixed-top text-primary pt-3 pb-3 grandes transparenciaUno">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-2">
+                <a href="home" class="cursor-p text-decoration-none">
+                    <h1 class="fuenteOcho text-light m-0">{{ 'titulo_blog' | translate }}</h1>
+                    <span *ngIf="categoria.activo">
+                        <a href="{{categoria.ruta}}"
+                            class="f-shadow-into-l text-uppercase {{categoria.colorText}} fs-17 text-shadow-one">
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                            {{ categoria.categoria }}
+                        </a>
+                    </span>
+                </a>
+            </div>
+            <div class="col-2 d-flex justify-content-around fuenteDos">
+                <a class="text-decoration-none mt-2" href="#categories">{{'Categorias' | translate }}</a>
+                <a class="text-decoration-none mt-2" href="#contact">{{'Contacto' | translate }}</a>
+            </div>
+            <div class="col-5">
+                <form class="formUno mb-2" [formGroup]="formBasic">
+                    <input (blur)="desaparecerTablaBusqueda()" class="inputUno text-light fuente bg-transparent"
+                        type="search" placeholder="{{ 'Buscar' | translate }}" aria-label="Search"
+                        formControlName="busqueda" (keyup)="buscar($event)">
+                </form>
+                <div *ngIf="mostrarResultados">
+                    <p *ngFor="let item of encontrados" class="text-light f-open-sans-c cursor-p m-0 p-0"
+                        (click)="irAlPost(item.ruta)">{{ item.nombre }}</p>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="dropdown f-open-sans-c text-center">
+                    <a type="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
+                        <img src="assets/img/icons/traduccion.png" alt="icon png" height="40px" width="auto"
+                            class="drop">
+                    </a>
+                    <div class="dropdown-menu bg-transparent border text-light">
+                        <a *ngFor="let lenguaje of lenguajes"
+                            class="d-flex dropdown-item cursor-p translate-item justify-content-between"
+                            (click)="procesoCambioLenguaje(lenguaje)">{{lenguaje}} <img
+                                src="assets/img/icons/languaje-{{lenguaje}}.png" alt="incon languaje" height="20px"
+                                width="auto"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+        </div>
+    </div>
+    <div class="pos-f-t mobile fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <h1 class="marcaMobile">{{ 'titulo_blog' | translate }}</h1>
+
+                <!-- Botón del menú hamburguesa -->
+                <button class="navbar-toggler" *ngIf="showMenu" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button class="navbar-toggler" *ngIf="!showMenu" type="button" aria-controls="navbarNav"
+                    aria-expanded="false" (click)="closeOptions()" aria-label="Toggle navigation">
+                    <i class="bi bi-x-lg text-light fs-30"></i>
+                </button>
+
+                <!-- Menú de navegación -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fuenteDos text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="collapse" data-bs-target="#navbarNav" (click)="openSearch()">{{ 'Buscar' | translate }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                                (click)="openLanguage()">{{ 'Idioma' | translate }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                                (click)="openCategories()">{{ 'Categorias' | translate }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="bg-dark p-5" *ngIf="showSearch">
+            <form class="formUno mb-2" [formGroup]="formBasic">
+                <input (blur)="desaparecerTablaBusqueda()" class="inputUno text-light fuente bg-transparent"
+                    type="search" placeholder="{{ 'Buscar' | translate }}" aria-label="Search"
+                    formControlName="busqueda" (keyup)="buscar($event)">
+            </form>
+            <div *ngIf="mostrarResultados">
+                <p *ngFor="let item of encontrados" class="text-light f-open-sans-c cursor-p m-0 p-0"
+                    (click)="irAlPost(item.ruta)">{{ item.nombre }}</p>
+            </div>
+        </div>
+        <div class="bg-dark p-5" *ngIf="showLanguajes">
+            <a *ngFor="let lenguaje of lenguajes"
+                class="d-flex dropdown-item cursor-p translate-item justify-content-center mr-5"
+                (click)="procesoCambioLenguaje(lenguaje)">
+                <p class="fuenteDos mr-5">{{lenguaje}}</p> <img src="assets/img/icons/languaje-{{lenguaje}}.png"
+                    alt="incon languaje" height="20px" width="auto">
+            </a>
+        </div>
+        <div class="bg-dark p-5" *ngIf="showCategories">
+            <app-content-index [indice]="pasoDeIndice" [clase]="claseContenedor"></app-content-index>
+        </div>
+
+    </div>
+</header>

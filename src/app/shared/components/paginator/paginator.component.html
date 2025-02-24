@@ -1,0 +1,16 @@
+<div *ngIf="mostrarItemsPorPantalla" class="d-flex justify-content-center fuenteDos">
+    <select (change)="cargarCantidadElementos($event, 0)">
+        <option *ngFor="let valor of itemsPorPantalla" value="{{valor}}">{{valor}}</option>
+    </select>
+</div>
+<div class="row mt-3">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="row text-center">
+            <a *ngFor="let pages of totalPaginas" (click)="cargarPagina(pages.pagina)" class="cursor-p col text-light">
+                <p class="ml-3 d-block f-shadow-into-l fs-25 text-shadow {{this.active==pages.pagina? 'active':''}}">{{ pages.pagina + 1}}</p>
+            </a>
+        </div>
+    </div>
+    <div class="col-md-1 text-light"></div>
+</div>

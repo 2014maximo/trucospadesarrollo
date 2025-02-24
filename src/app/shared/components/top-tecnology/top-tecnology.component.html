@@ -1,0 +1,93 @@
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-4">
+                <h2 class="text-light fuenteOcho categorias">{{ 'LoQueMasGusta' | translate }}<span class="small-update"> ( 2 0 2 4 ) </span></h2>
+            </div>
+            <div class="col-md-8"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 pt-5">
+                <h4 class="tituloPost f-bebas c7">{{ 'Framework' | translate }}</h4>
+                <p class="f-open-sans-c fs-15 lh-17 c7">
+                    {{ 'PreguntaFramework' | translate}}
+                </p>
+                <button class="btn btn-outline-secondary d-md-none mb-3"  type="button" aria-controls="frameworkNav"
+                    aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse"
+                    data-bs-target="#frameworkNav">
+                    <i class="bi bi-sort-down-alt fs-30 text-light"></i>
+                </button>
+                <div class="{{widthScreen > 768? '':'collapse navbar-collapse' }} ranking" id="frameworkNav">
+                    <div *ngFor="let tec of frameworks" class="tech">
+                      <span class="text-light f-open-sans-c tecno fs-15 lh-17">{{ tec.name }}</span>
+                      <div class="bar">
+                        <div class="fill" [style.width.%]="tec.value">{{ tec.value }}%</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-5">
+                <h4 class="tituloPost f-bebas c7">{{ 'Lenguajes' | translate }}</h4>
+                <p class="f-open-sans-c fs-15 lh-17 c7">
+                    {{ 'PreguntaLenguajes' | translate }}
+                </p>
+                <button class="btn btn-outline-secondary d-md-none mb-3"  type="button" aria-controls="lenguagesNav"
+                    aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse"
+                    data-bs-target="#lenguagesNav">
+                    <i class="bi bi-sort-down-alt fs-30 text-light"></i>
+                </button>
+                <div class="{{ widthScreen > 768? '':'collapse navbar-collapse' }} ranking" id="lenguagesNav">
+                    <div *ngFor="let tec of languages" class="tech">
+                      <span class="text-light f-open-sans-c tecno fs-15 lh-17">{{ tec.name }}</span>
+                      <div class="bar">
+                        <div class="fill" [style.width.%]="tec.value">{{ tec.value }}%</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-5">
+                <h4 class="tituloPost f-bebas c7">{{ 'BasesDeDatos' | translate }}</h4>
+                <p class="f-open-sans-c fs-15 lh-17 c7">
+                    {{ 'PreguntaBasesDatos' | translate }}
+                </p>
+                <button class="btn btn-outline-secondary d-md-none mb-3"  type="button" aria-controls="dataBasesNav"
+                    aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse"
+                    data-bs-target="#dataBasesNav">
+                    <i class="bi bi-sort-down-alt fs-30 text-light"></i>
+                </button>
+                <div class="{{widthScreen > 768? '':'collapse navbar-collapse' }} ranking" id="dataBasesNav">
+                    <div *ngFor="let tec of databases" class="tech">
+                      <span class="text-light f-open-sans-c tecno fs-15 lh-17">{{ tec.name }}</span>
+                      <div class="bar">
+                        <div class="fill" [style.width.%]="tec.value">{{ tec.value }}%</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pt-5">
+                <h4 class="tituloPost f-bebas c7">IDE's</h4>
+                <p class="f-open-sans-c fs-15 lh-17 c7">
+                    {{ 'PreguntaIDEs' | translate }}
+                </p>
+                <button class="btn btn-outline-secondary d-md-none mb-3"  type="button" aria-controls="idesNav"
+                    aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse"
+                    data-bs-target="#idesNav">
+                    <i class="bi bi-sort-down-alt fs-30 text-light"></i>
+                </button>
+                <div class="{{widthScreen > 768? '':'collapse navbar-collapse' }} ranking" id="idesNav">
+                    <div *ngFor="let tec of ides" class="tech">
+                      <span class="text-light f-open-sans-c tecno fs-15 lh-17">{{ tec.name }}</span>
+                      <div class="bar">
+                        <div class="fill" [style.width.%]="tec.value">{{ tec.value }}%</div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<div class="espaciado d-md-none"></div>
+
