@@ -2,58 +2,53 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
-## Development server
+# SCAFOLDING
+src/
+├── app/
+│   ├── core/               # Código base reutilizable, servicios globales
+│   ├── shared/             # Componentes, pipes, directivas reutilizables
+│   ├── features/           # Módulos funcionales específicos
+│   │   ├── blog/           # Módulo del blog
+│   │   │   ├── components/ # Componentes específicos del blog
+│   │   │   ├── models/     # Interfaces/Clases relacionadas al blog
+│   │   │   ├── pages/      # Páginas completas del blog
+│   │   │   │   ├── post-list/       # Página con la lista de posts
+│   │   │   │   ├── post-detail/     # Página de detalle de un post
+│   │   │   ├── services/   # Servicios específicos del blog
+│   │   │   ├── utils/      # Funciones auxiliares específicas del blog
+│   │   │   ├── posts/      # Contenido de publicaciones
+│   │   │   │   ├── 2025/
+│   │   │   │   │   ├── 01/
+│   │   │   │   │   │   ├── post-title-one/
+│   │   │   │   │   │   │   ├── post.component.html
+│   │   │   │   │   │   │   ├── post.component.ts
+│   │   │   │   │   │   │   ├── post.component.scss
+│   │   │   │   │   │   ├── post-title-two/
+│   │   │   │   │   │       ├── ...
+│   │   │   │   ├── 2024/
+│   │   │   │   │   ├── ...
+│   ├── home/               # Página de inicio
+│   ├── about/              # Página acerca del autor/blog
+│   ├── contact/            # Página de contacto
+│   ├── app.component.html
+│   ├── app.module.ts
 
-To start a local development server, run:
+patrón: Feature-based Architecture
+También es conocido como:
 
-```bash
-ng serve
-```
+Modular Design
+Domain-driven Folder Structure
+Feature-first Organization
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Principios clave de este patrón:
+Cohesión alta:
+Todos los archivos relacionados con una funcionalidad (componentes, servicios, modelos, etc.) se agrupan en una carpeta específica, lo que facilita encontrar, entender y modificar el código.
 
-## Code scaffolding
+Separación de responsabilidades:
+Cada carpeta de funcionalidad o módulo actúa como una unidad independiente con una responsabilidad clara.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Escalabilidad:
+Es ideal para proyectos que crecerán con el tiempo porque las nuevas funcionalidades simplemente se agregan como nuevos módulos sin afectar la estructura existente.
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Lazy loading y optimización:
+Al combinar este patrón con el cargado diferido (lazy loading), solo se carga el código de una característica cuando se necesita, mejorando el rendimiento.
