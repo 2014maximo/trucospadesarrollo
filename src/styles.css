@@ -38,7 +38,6 @@ html{
     scroll-behavior: smooth;
 }
 :root {
-    --fuente-uno: 'Open Sans', sans-serif;
     --fuente-dos: 'Open Sans Condensed', sans-serif;
     --fuente-tres: 'OperatorMono';
     --fuente-cuatro: 'Alex Brush', cursive;
@@ -75,9 +74,7 @@ html{
 .w-100{
     width: 100%;
 }
-.fuenteUno {
-    font-family: var(--fuente-uno);
-}
+
 .fuenteDos {
     font-family: var(--fuente-dos);
 }
@@ -387,9 +384,6 @@ a:hover {
 }
 .bBlancoInferior{
     border-bottom: 5px dotted gray;
-}
-.tituloUno{
-    font-family: var(--fuente-uno);
 }
 .tituloDos{
     font-family: var(--fuente-dos) !important;
