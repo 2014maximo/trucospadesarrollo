@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,400,400i,500,500i,600,600i,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://anijs.github.io/lib/anicollection/anicollection.css');
@@ -38,10 +36,8 @@ html{
     scroll-behavior: smooth;
 }
 :root {
-    --fuente-dos: 'Open Sans Condensed', sans-serif;
     --fuente-tres: 'OperatorMono';
     --fuente-cuatro: 'Alex Brush', cursive;
-    --fuente-cinco: 'Patua One', cursive;
     --fuente-seis: 'Shadows Into Light', cursive;
     --fuente-siete: "Cutive Mono", monospace;
     --fuente-ocho: "Six Caps", serif;
@@ -75,17 +71,11 @@ html{
     width: 100%;
 }
 
-.fuenteDos {
-    font-family: var(--fuente-dos);
-}
 .fuenteTres {
     font-family: var(--fuente-tres);
 }
 .fuenteCuatro {
     font-family: var(--fuente-cuatro);
-}
-.fuenteCinco {
-    font-family: var(--fuente-cinco);
 }
 .fuenteSeis {
     font-family: var(--fuente-seis);
@@ -385,9 +375,6 @@ a:hover {
 .bBlancoInferior{
     border-bottom: 5px dotted gray;
 }
-.tituloDos{
-    font-family: var(--fuente-dos) !important;
-}
 .tituloTres{
     font-family: var(--fuente-tres);
 }
@@ -437,9 +424,6 @@ a:hover {
 .drops:active {
     filter: none;
 }
-.fuenteTitulo {
-    font-family: 'Patua One', cursive;
-}
 .tamanoUno {
     font-size: 27px;
 }
@@ -455,11 +439,6 @@ a:hover {
 }
 .transparencia {
     background: rgba(0,0,0,0.4);
-}
-.titulo-vertical{
-    transform: rotate(-90deg);
-    color: #fff;
-    font-family: var(--fuente-dos);
 }
 .copiado:active {
     color:#fff 

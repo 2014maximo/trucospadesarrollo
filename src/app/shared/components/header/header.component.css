@@ -1,15 +1,11 @@
 /* ESTILOS GENERALES PARA TODO */
 /* FUENTES EXTERNAS */
-@import url('https://fonts.googleapis.com/css?family=Patua+One&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 :root {
-    --fuente-dos: 'Open Sans Condensed', sans-serif;
     --fuente-tres: 'OperatorMono';
     --fuente-cuatro: 'Alex Brush', cursive;
-    --fuente-cinco: 'Patua One', cursive;
     --fuente-seis: 'Shadows Into Light', cursive;
     --color-uno: #f6921e;
     --color-dos:#262626;
@@ -25,10 +21,6 @@
     --color-dark-tres:#3a0000;
 }
 
-
-.tituloDos{
-    font-family: var(--fuente-dos) !important;
-}
 .translate-item{
     color:#fff;
 }
