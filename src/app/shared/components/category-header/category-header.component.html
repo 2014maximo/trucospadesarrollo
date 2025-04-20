@@ -13,28 +13,7 @@
             </div>
             <div class="col-md-4"></div>
         </div>
-        <div class="espaciado"></div>
-        <div class="row" *ngIf="adds.roadMap">
-            <div class="col-md-7">
-                <h2 class="fuenteOcho fs-50 {{ this.categoria.color }} fw-6">{{ 'Origen' | translate }}</h2>
-                <p *ngFor="let descripcion of this.publicacion.descripcion" class="text-light f-open-sans-c fs-20 lh-25">
-                    {{ traducirTexto(descripcion) }}
-                </p>
-                <div *ngFor="let descripciones of this.categoria.descripcion">
-                    <p *ngFor="let descripcion of descripciones.descripciones" class="text-light f-open-sans-c fs-20 lh-30">
-                        {{ descripcion }}
-                    </p>
-                    <a href="{{descripciones.linkAlAutor}}" target="_blank">
-                        <p class="text-right {{ this.categoria.color }} tituloCuatro sombra-texto">{{ descripciones.autor }}</p>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-5">
-                <h2 class="text-light fuenteOcho categorias title-menu">ROADMAP - FRONTEND</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">Este mapa debería mostrar el camino ninja de cualquier desarrollo de software.</p>
-                <img src="assets/img/extructures/roadmap-software-dev.gif" alt="" class="img-fluid">
-            </div>
-        </div>
+
 
         <div class="espaciado"></div>
 

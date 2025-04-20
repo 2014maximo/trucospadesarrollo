@@ -10,10 +10,10 @@ export const devRoutes:Routes = [
             )
     },
     {
-        path:'dev-ias', 
+        path:'dev-super-recursos', 
         loadComponent:() =>
-            import('./dev-ias/dev-ias.component').then(
-                (m) => m.DevIasComponent
+            import('./dev-sites/dev-sites.component').then(
+                (m) => m.DevSitesComponent
             )
     }
 ]

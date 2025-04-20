@@ -413,7 +413,7 @@
             "descripcionCorta":""
         },
         "dev-super-recursos":{
-            "nombre":"Un grand groupe de sites web avec de nombreuses ressources",
+            "nombre":"Proposition de compilation de sites web et d'IA",
             "referenciaBusqueda":"sites web, liens",
             "descripcion":{
                 "tx1":"Nous ignorons l'existence de certains sites web jusqu'à ce que quelqu'un nous dise à quel point ils sont extraordinaires et que nous tombions dessus. Cette fois-ci, nous avons une compilation de quelques sites web hautement recommandés."
