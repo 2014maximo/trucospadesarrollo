@@ -5,12 +5,14 @@ import { HeaderComponent } from 'src/app/shared/components/header/header.compone
 import { AddsModel } from 'src/app/shared/models/post.model';
 import { DevCategoryHeaderComponent } from '../dev-category-header/dev-category-header.component';
 import { CategoriaPostModel } from '@models/categorias.model';
+import { DevCategoryContentComponent } from '../dev-category-content/dev-category-content.component';
 
 @Component({
   selector: 'app-dev-category',
   imports: [
     FooterHomeComponent,
     DevCategoryHeaderComponent,
+    DevCategoryContentComponent,
     CategoryHeaderComponent,
     HeaderComponent
   ],

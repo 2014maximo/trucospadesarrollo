@@ -6,7 +6,7 @@
                 <h2 class="tituloPost fuenteOcho p-2">{{ traducirTexto(this.categoria.nombre) }}</h2>
                 <app-content-index [indice]="indice"></app-content-index>
                 <div class="espacio"></div>
-                <div *ngfor="let subcatego of subCategorias">
+                <div *ngFor="let subcatego of subCategorias">
                     <h2 class="tituloPost f-bebas p-2">{{ traducirTexto(subcatego.subCategoria) }}</h2>
                     <app-content-index [contenido]="'subcategorias'" [categoria]="'angular'"></app-content-index>
                 </div>
