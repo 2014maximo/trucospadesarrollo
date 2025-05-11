@@ -1,0 +1,21 @@
+<div *ngFor="let fronText of content; let i = index" id="accordionContent{{ref}}{{ i }}">
+    <h2 *ngFor="let title of fronText.title?.title" data-bs-toggle="collapse" [attr.aria-controls]="'collap' + ref + i" [attr.data-bs-target]="'#collap' + ref + i" class="cursor-p mt-4 fuenteSeis fs-50 lh-50 {{ categoryColor }} cursor-def" title="{{ controlUndefined(fronText.title?.description) }}" id="header{{ ref }}{{ i }}">{{ title }}</h2>
+    <div id="collap{{ ref }}{{ i }}" class="collapse" [attr.data-bs-parent]="'#accordionContent' + ref + i" [attr.aria-labelledby]="'header' + ref + i" >
+        <div *ngFor="let textBlock of fronText.textBlock" class="blocktext">
+            <span *ngFor="let sub of textBlock.subtitle" class="text-light f-open-sans-c fs-20 lh-25">
+                <b>{{ sub | translate }}</b>
+            </span>
+            <p *ngFor="let text of textBlock.textBlock" class="{{text.styleText}}">
+                {{ text.sectionText | translate }}
+            </p>
+            <div *ngIf="textBlock.image" class="text-center">
+                <img src="{{ textBlock.image.src }}" alt="" height="200" width="auto"
+                    class="rounded-circle mr-3 border">
+            </div>
+        </div>
+        <button *ngFor="let link of fronText.referenceContent" class="{{ link.classStyle }} border-0"
+            (click)="openLink(link.link, true)" title="{{ controlUndefined(link.description) }}">
+            <small>{{link.title}}</small>
+        </button>
+    </div>
+</div>

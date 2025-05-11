@@ -167,8 +167,9 @@ export function reduccionTexto(cantPalabras: number, maxPalabra: number, textoCo
   return reducido;
 }
 
-export function abrirUrl(link:string){
-  window.open(link, '_blank');
+export function abrirUrl(link:string, blank:true){
+  const blank_ = blank? '_blank' : '_self';
+  window.open(link, blank_);
 }
 
 export function cargarIndice(publicacion: DatosPost): IndiceDeContenidosModel[]{

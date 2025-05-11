@@ -3,15 +3,13 @@ import { CategoryHeaderComponent } from 'src/app/shared/components/category-head
 import { FooterHomeComponent } from 'src/app/shared/components/footer-home/footer-home.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { AddsModel } from 'src/app/shared/models/post.model';
-import { DevCategoryHeaderComponent } from '../dev-category-header/dev-category-header.component';
 import { CategoriaPostModel } from '@models/categorias.model';
-import { DevCategoryContentComponent } from '../dev-category-content/dev-category-content.component';
+import { DevCategoryContentComponent } from './dev-category-content/dev-category-content.component';
 
 @Component({
   selector: 'app-dev-category',
   imports: [
     FooterHomeComponent,
-    DevCategoryHeaderComponent,
     DevCategoryContentComponent,
     CategoryHeaderComponent,
     HeaderComponent
@@ -21,10 +19,10 @@ import { DevCategoryContentComponent } from '../dev-category-content/dev-categor
 })
 export class DevCategoryComponent {
 
-  idPost = '441cab09-256e-446f-bb2c-f017dd6d217b';
-  partsAdds: AddsModel = {contentIndex: true, roadMap: true, origin: true};
-    public categoria = new CategoriaPostModel();
-  
+  public idPost = '441cab09-256e-446f-bb2c-f017dd6d217b';
+  public partsAdds: AddsModel = { contentIndex: true, roadMap: true, origin: true };
+  public categoria = new CategoriaPostModel();
+
 
   scroll(el: HTMLElement) {
     el.scrollIntoView();

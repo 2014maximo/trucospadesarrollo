@@ -1,0 +1,16 @@
+.linkReference{
+    background: white;
+    padding: 0px 6px;
+    text-align: center;
+}
+
+.blocktext div p:last-of-type{
+    margin-bottom: 0px;
+}
+
+.cursor-def{
+    user-select: none;
+}
+.cursor-def:hover{
+    color: #fff;
+}
