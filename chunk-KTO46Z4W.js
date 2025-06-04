@@ -1,0 +1,1 @@
+import"./chunk-2VMXMS7J.js";var t=[{path:"angular",loadChildren:()=>import("./chunk-N6G64D7Z.js").then(o=>o.ANGULAR_ROUTES)},{path:"developer",loadChildren:()=>import("./chunk-NIJXVURO.js").then(o=>o.DEVELOPER_ROUTES)}];export{t as BLOG_ROUTES};

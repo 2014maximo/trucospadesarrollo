@@ -1,0 +1,1 @@
+import{Ca as e,Ua as o,Va as a,cb as i}from"./chunk-N27UFSPU.js";import"./chunk-2VMXMS7J.js";var s=class n{constructor(){}static \u0275fac=function(t){return new(t||n)};static \u0275cmp=e({type:n,selectors:[["app-ng-instalation"]],decls:2,vars:0,template:function(t,p){t&1&&(o(0,"p"),i(1,"ng-instalation works!"),a())},encapsulation:2})};export{s as NgInstalationComponent};

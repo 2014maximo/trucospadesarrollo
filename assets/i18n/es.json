@@ -1,0 +1,1378 @@
+{
+	"titulo_blog": "TRUCOS PA' DESARROLLO",
+	"Buscar": "Buscar",
+	"Email": "Email",
+	"Comentarios": "Comentarios",
+	"Presentacion": "Es increíble que desarrolladores visiten este blog, sin embargo es un honor poder ser útil, ayudar y brindar ese apoyo en una idea, una manera de expresar los conocimientos que propongo en este blog de desarrollo. Así como yo busqué fuentes en muchas partes y me sirvieron de mucha ayuda, ahora emprendo el mismo objetivo entregando lo que me voy empapando de este maravilloso mundo de las tecnologías de la información. No dudes si tienes alguna duda o quieres hablar, escribes y compartimos experiencias. Por todo y con gusto y gracias.",
+	"Post": "PUBLICACIONES",
+	"LeerMas": "LEER MÁS",
+	"Categorias": "Categorías",
+	"Contacto": "Contacto",
+	"Enviar": "Enviar",
+	"Glosario": "Glosario",
+	"LoQueMasGusta": "Lo que más gusta",
+	"Idioma": "Idioma",
+	"Framework": "Frameworks",
+	"Lenguajes": "LENGUAJES, SCRIPTING Y MARCADO",
+	"BasesDeDatos": "BASES DE DATOS",
+	"Origen": "Origen",
+	"Frases": {
+		"f1": {
+			"frase": "Las mentes ocupadas, las almas limpias y los corazones satisfechos, no se meten jamás en las vida de nadie.",
+			"autor": "Pedro Bergman"
+		},
+		"f2": {
+			"frase": "La persona que pregunta es tonta por un minuto. La persona que se queda con la duda permanece tonta por siempre",
+			"autor": "Albert Einstein"
+		},
+		"f3": {
+			"frase": "Lo mismo que el hierro se oxida por falta de uso y el agua estancada se vuelve putrefacta, también la inactividad destruye el intelecto.",
+			"autor": "Leonardo Da Vinci"
+		},
+		"f4": {
+			"frase": "Quien quiere hacer algo, encuentra los medios, quien no quiere, encuentra miles de escusas.",
+			"autor": "Proverbio Árabe"
+		},
+		"f5": {
+			"frase": "La lógica te llevará de la A-Z, pero la imaginación te llevará a todas partes.",
+			"autor": "Albert Einstein"
+		},
+		"f6": {
+			"frase": "Esperar que la vida te trate bien porque eres buena persona, es como esperar que un tigre no te ataque porque eres vegetariano.",
+			"autor": "Bruce Lee"
+		},
+		"f7": {
+			"frase": "Cuida tus pensamientos, porque se convertirán en tus palabras. Cuida tus palabras, porque se convertirán en tus actos. Cuida tus actos, porque se convertirán en tus hábitos. cuida tus hábitos, porque se convertirán en tu destino.",
+			"autor": "Mahatma Gandhi"
+		},
+		"f8": {
+			"frase": "Somos arquitectos de nuestro propio destino.",
+			"autor": "Albert Einstein"
+		},
+		"f9": {
+			"frase": "Intenta no volverte un hombre de éxito, sino un hombre de valor.",
+			"autor": "Albert Einstein"
+		},
+		"f10": {
+			"frase": "Entre las dificultades se esconde la oportunidad.",
+			"autor": "Albert Einstein"
+		},
+		"f11": {
+			"frase": "No necesito saberlo todo, tan sólo necesito saber donde encontrar aquello que me hace falta, cuando lo necesite.",
+			"autor": "Albert Einstein"
+		},
+		"f12": {
+			"frase": "La mente que se abre a una nueva idea jamás vuelve a su tamaño original.",
+			"autor": "Albert Einstein"
+		},
+		"f13": {
+			"frase": "Siento una enorme gratitud por todos los que me dijeron no, gracias a ellos lo hice yo mismo.",
+			"autor": "Albert Einstein"
+		},
+		"f14": {
+			"frase": "Vivimos en un mundo en el que la verdad es opacada por una realidad que no existe.",
+			"autor": "Albert Einstein"
+		},
+		"f15": {
+			"frase": "El inteligente no es aquel que lo sabe todo, sino aquel que sabe utilizar lo poco que sabe.",
+			"autor": "Sebastian Cohen Saavedra"
+		},
+		"f16": {
+			"frase": "Si no eres agradecido con lo que tienes, ¿que te hace pensar que serás feliz si tuvieras más?",
+			"autor": "Anónimo"
+		},
+		"f17": {
+			"frase": "Gastamos dinero que no tenemos, en cosas que no necesitamos, para impresionar a gente a la que no le importamos.",
+			"autor": "Will Smith"
+		},
+		"f18": {
+			"frase": "Que tu único vicío sea seguir aprendiendo.",
+			"autor": "Anónimo"
+		},
+		"f19": {
+			"frase": "Tienes que aprender la reglas del juego y despues jugar mejor que nadie.",
+			"autor": "Albert Einstein"
+		},
+		"f20": {
+			"frase": "El diablo susurró en mi oído, -No eres lo suficientemente fuerte para resistir la tormenta. Hoy le susurré al diablo en el oído, -Yo soy la tormenta.",
+			"autor": "Anónimo"
+		},
+		"f21": {
+			"frase": "Todo lo que quieres en la vida está fuera de tu zona de confort.",
+			"autor": "Robert Allen"
+		},
+		"f22": {
+			"frase": "Dios no creo el mal. El mal es el resultado de ausencia de Dios en el corazón de los hombres.",
+			"autor": "Albert Einstein"
+		},
+		"f23": {
+			"frase": "El más grande obstáculo que le impide a la gente alcanzar el éxito, es tener en su mente una fábrica de excusas.",
+			"autor": "Mauricio Duarte"
+		},
+		"f24": {
+			"frase": "La fuerza no viene de la capacidad corporal, sino de la voluntad del alma.",
+			"autor": "Gandhi"
+		},
+		"f25": {
+			"frase": "Recuerda que solo porque tocaste fondo no significa que tengas que quedarte allí",
+			"autor": "Robert Downey Jr."
+		},
+		"f26": {
+			"frase": "Si quieres ser rico, mira lo que todo el mundo hace y haz todo lo contrario.",
+			"autor": "R. Kiyosaki"
+		},
+		"f27": {
+			"frase": "No importa lo despacio que vayas, siempre y cuando no te detengas.",
+			"autor": "Confucio"
+		},
+		"f28": {
+			"frase": "Los hombres pierden la salud para hacer dinero, y luego pierden dinero para recuperar la salud, y por pensar ansiosamente en el futuro, olvidan el presente. Viven como si nunca fueran a morir y mueren como si nunca hubieran vivido.",
+			"autor": "Dalai Lama"
+		},
+		"f29": {
+			"frase": "Aquel que niega sus impulsos, esta negando todo aquello que nos hace humanos.",
+			"autor": "Mouse - Matrix"
+		},
+		"f30": {
+			"frase": "Vivir en el mundo sin percatarse del significado del mismo es como deambular por una gran biblioteca sin tocar sus libros.",
+			"autor": "Dan Brown"
+		},
+		"f31": {
+			"frase": "La verdadera inteligencia actúa silenciosamente. Es en la quietud donde encontramos la creatividad y la solución a los problemas.",
+			"autor": "Eckhart Tolle"
+		},
+		"f32": {
+			"frase": "Siendo fiel a ti mismo no podrás ser falso con los demás.",
+			"autor": "William Shakespeare"
+		},
+		"f33": {
+			"frase": "No estamos llamados a la mediocridad, sino a la excelencia. La clave esta en descubrir esa grandeza que ya habita dentro de ti.",
+			"autor": "Mario Alonso Puig"
+		}
+	},
+	"PreguntaFramework": "¿En qué marcos y tecnologías web ha trabajado intensamente durante el último año y en cuáles desea trabajar el próximo año? (48.503 Encuestados.)",
+	"PreguntaLenguajes": "¿En qué lenguajes de programación, scripting y marcado ha trabajado intensamente durante el último año y en cuáles desea trabajar durante el próximo año? (60.171 encuestados.)",
+	"PreguntaBasesDatos": "¿En qué entornos de bases de datos ha realizado un amplio trabajo de desarrollo durante el último año y en cuáles desea trabajar durante el próximo año? (52.418 encuestados.)",
+	"PreguntaIDEs": "¿Qué entornos de desarrollo utilizó con regularidad el año pasado y con cuáles quiere trabajar el año que viene? (58.121 encuestados.)",
+	"ANDROID": {
+		"android": {
+			"nombre": "Android",
+			"referenciaBusqueda": "sistema operativo, android",
+			"descripcion": {
+				"tx1": "El inicio de todo es apartir de 2003 cuando se fundó Android Inc por Andy Rubin, Rich Miner, Nick Sears y Chris White. Una búsqueda para desarrollar un sistema operativo avanzado.",
+				"tx2": "Una trayectoria constante de cambios comenzando por la adquición por parte de Google en 2005, en 2007 la Open Handset Alliance (OHA) una alianza de varias compañías tecnológicas para impulsar el desarrollo de estándares abiertos para dispositivos móviles.",
+				"tx3": "En noviembre de 2007, Google lanzó el Software Development Kit (SDK) de Android, permitiendo a los desarrolladores comenzar a crear aplicaciones para la plataforma.",
+				"tx4": "El 23 de septiembre de 2008, se lanzó el primer dispositivo Android comercial, el HTC Dream (también conocido como T-Mobile G1 en EE. UU.).",
+				"tx5": "Hasta el presente se entrega una tras otra versiones cada vez mejorada."
+			},
+			"descripcionCorta": ""
+		}
+	},
+	"ANGULAR": {
+		"angular": {
+			"nombre": "Angular",
+			"referenciaBusqueda": "angular",
+			"descripcion": {
+				"tx1": "Remontando su inicio en el año 2010, arrancó Angular en su versión 'AngularJS'. Gracias a los ingenieros Misko Hevery y Adam Abrons.",
+				"tx2": "Introduce MVC(Model-View-Controller) para el lado del cliente, como también la vinculación de datos bidireccional.",
+				"tx3": "La gran reforma de Angular estuvo apartir de la versión 2 en 2016, dado el requerimiento importante sobre el rendimiento y la escalabilidad para aplicaciones grandes.",
+				"tx4": "Angular esta en el grupo de los mejores frameworks web, cada 6 meses sin falta entrega una nueva versión y se ha permitido evolucionar. Hoy en día a sido adoptado en muchos proyectos empresariales por las características que lo hacen particular. La comunidad cada vez se hace más grande volviéndose popular y destacando cómo una excelente opción en el mundo del desarrollo.",
+				"tx5": "Personalmente fue mi inicio en el mundo del Desarrollo y siempre he estado de la mano de este maravilloso framework."
+			},
+			"descripcionCorta": ""
+		},
+		"ng-instalacion": {
+			"nombre": "Instalación Angular y recomendados",
+			"referenciaBusqueda": "instalacion, angular, recomendaciones",
+			"descripcion": {
+				"tx1": "Para empezar esta la instalación de angular simplemente, se puede tener en cuenta que trae de especial cada versión, obviamente la última versión nos muestra hasta donde a evolucionado el Framework. También estan los comandos de inicio, de creación y las opciones, que cuando empezamos no los tenemos a la mano."
+			},
+			"descripcionCorta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+		},
+		"ng-elementos": {
+			"nombre": "Elementos Angular",
+			"referenciaBusqueda": "instalacion, angular, recomendaciones",
+			"descripcion": {
+				"tx1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+			},
+			"descripcionCorta": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+		},
+		"ng-comunicacion-componentes": {
+			"nombre": "Comunicacion entre componentes",
+			"referenciaBusqueda": "Paso de datos, Comunicacion",
+			"descripcion": {
+				"tx1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+			},
+			"descripcionCorta": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+		},
+		"ng-arquitectura": {
+			"nombre": "Arquitecturas propuestas para Angular",
+			"referenciaBusqueda": "arquitectura, angular",
+			"descripcion": {
+				"tx1": "Teniendo en cuenta que una arquitectura se puede aplicar para todo un proyecto en sus partes de frontend, backend, bases de datos y hasta infraestructura. Esta vez la idea es mostrar la arquitectura aplicando solo al frontend, en este caso a Angular y la aplicacíon a su estructura interna con varios ejemplos dado el caso de interés.",
+				"tx2": "Un esfuerzo máximo se desprende en los inicios por buscar la mejor arquitectura para los proyectos, buscando que todo dure y se quede con las bases del inicio, pero a medida que avanza el desarrollo, van creciendo lo requerimientos, las necesidades y se van definiendo nuevas opciones que no se tuvieron en cuenta al inicio."
+			},
+			"descripcionCorta": "Instalación angular. Qué traen las versiones desde la js y todos los comandos del angular que desconocías."
+		},
+		"ng-manejo-rutas": {
+			"nombre": "Manejo de rutas en Angular",
+			"referenciaBusqueda": "rutas, caminos, enrutamiento",
+			"descripcion": {
+				"tx1": "Para empezar esta la instalación de angular simplemente, se puede tener en cuenta que trae de especial cada versión, obviamente la última versión nos muestra hasta donde a evolucionado el Framework. También estan los comandos de inicio, de creación y las opciones, que cuando empezamos no los tenemos a la mano."
+			},
+			"descripcionCorta": "Instalación angular. Qué traen las versiones desde la js y todos los comandos del angular que desconocías."
+		},
+		"ng-microservicios": {
+			"nombre": "Microservicios",
+			"referenciaBusqueda": "microservicios",
+			"descripcion": {
+				"tx1": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+			},
+			"descripcionCorta": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+		},
+		"ng-modulos": {
+			"nombre": "Módulos Angular",
+			"referenciaBusqueda": "modulos",
+			"descripcion": {
+				"tx1": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+			},
+			"descripcionCorta": "Instalación angular. Qué traen las versiones desde la js y todos los comandos del angular que desconocías."
+		},
+		"ng-pruebas-unitarias": {
+			"nombre": "Pruebas unitarias en Angular",
+			"referenciaBusqueda": "pruebas, unitarias, test",
+			"descripcion": {
+				"tx1": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."
+			},
+			"descripcionCorta": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam."
+		},
+		"ng-gh-pages": {
+			"nombre": "Subir proyecto angular a GithubPages",
+			"referenciaBusqueda": "github pages, github, githubpages, subir a github",
+			"descripcion": {
+				"tx1": "Github permite subir nuestro proyecto frontend Angular a través de la librería 'angular-github-pages'. Básicamente son 4 archivos Javascript y una hoja de estilos CSS, los compilados para realizar el deploy en el dominio github.io. "
+			},
+			"descripcionCorta": "Subir proyecto angular a un dominio prestado por Github. Una manera de compartir un diseño personal creado con el framework Angular.",
+			"crear-repo": {
+				"titulo": "CREAR REPO EN GITHUB",
+				"tx1": "En nuestro Github personal, crear un nuevo repositorio con solamente el nombre:",
+				"tx2": "Para el ejercicio actual no se requieren características especiales o configuraciones adicionales. Solo el nombre del proyecto y crear.",
+				"tx3": "Copiar toda esta lista de comandos con el botón copiar de Github:",
+				"tx4": "En esta parte la idea es subir en simple el proyecto Angular al repositorio recién creado. Se sugiere copiar el grupo de comandos, o, tranquilamente, se puede trabajar por ramas o con Github aplicación de escritorio."
+			},
+			"crear-proyecto-local": {
+				"titulo": "CREAR PROYECTO ANGULAR EN LOCAL",
+				"tx1": "Por consola o terminal, crear proyecto nuevo de angular en local:",
+				"tx2": "Con el comando angular@cli para crear nuevo proyecto, construimos uno en local para subir a Github, cualquier nombre esta bien: En el ejercicio actual se utilizó Angular en versión 16.0.0. - Node Js en versión 16.17.1"
+			},
+			"agregar-libreria": {
+				"titulo": "AGREGAR LIBRERÍA",
+				"tx1": "Con este comando, por consola agregar la librería angular-ghpages:",
+				"tx2": "Debido a que solamente se requiere la librería angular 'githubpages' en entorno de desarrollo, el comando anterior lo instalará en 'devDependencies'."
+			},
+			"primer-commit": {
+				"titulo": "PRIMER COMMIT",
+				"tx1": "Ahora los datos copiados en el paso 2, se pegan y se ejecutan dentro del proyecto nuevo de Angular creado.",
+				"tx2": "Y así de esta forma subir el primer commit con toda la estructura del framework."
+			},
+			"construir-compilado": {
+				"titulo": "CONSTRUIR COMPILADO",
+				"tx1": "Ejecutar este comando para construir. En la parte de 'project-gh-pages' colocar el nombre del repositorio creado en Github:",
+				"tx2": "Con este comando por consola, se ejecuta el constructor de proyecto, el cual funciona en base al repositorio que esta en Github.",
+				"nota": "NOTA:",
+				"tx3": "Cada que hacemos cambios al proyecto, se suben a Github y luego se ejecuta el anterior comando."
+			},
+			"subir-compilado": {
+				"titulo": "SUBIR COMPILADO",
+				"tx1": "Ahora ejecutamos el siguiente comando para terminar:",
+				"tx2": "Reemplazar la parte de",
+				"tx3": "Por la ruta donde se encuentran los siguientes archivos creados en la compilación:"
+			},
+			"deploy-github": {
+				"titulo": "DEPLOY EN GITHUB",
+				"tx1": "El proyecto local queda en el dominio de github:",
+				"tx2": "",
+				"tx3": "GithubPersonal",
+				"tx4": ".github.io/",
+				"tx5": "nombreRepositorio",
+				"tx6": "Se uso como referencia la documentación de la librería oficial :",
+				"tx7": "No se tuvo el éxito esperado con la documentación oficial. Debido a esto sugiero estos pasos que en la prueba resultaron exitosos y simples.",
+				"tx8": "Cualquier sugerencia es bienvenida."
+			}
+		}
+	},
+	"CSS": {
+		"css": {
+			"nombre": "CSS",
+			"referenciaBusqueda": "css",
+			"descripcion": {
+				"tx1": "En una necesidad de estandares de presentación entre 1994 y 1996 Håkon Wium Lie y Bert Bos propusieron por primera vez la idea de CSS en 1994. La versión 1.0 fue presentada en 1996 como una solución para separar la estructura del documento HTML de su presentación.",
+				"tx2": "En diciembre de 1996, el World Wide Web Consortium (W3C) publicó la primera especificación oficial de CSS, conocida como CSS 1. Esta versión incluía propiedades básicas para el diseño de la página, como color, fuente y margen.",
+				"tx3": "Después los cambios empezaron a marcar mayor diferencia a partir de 1998, con capacidades para tablas y propiedades para impresión.",
+				"tx4": "Como desarrolladores de hoy en día ya estamos percatados que los estilos estan sometidos a las versiones de los navegadores. Pues anteriormente fue realmente complicado escribir código que se adaptara a los diferentes navegadores. Para eso se lanzó la versión 2.1 en 2004, que buscaba corregir las inconsistencias que se presentaban, a medida que se presenta una nueva versión, ya la madurez y adaptación ha crecido, permitiendo una evolución que facilitan los estilos y la presentación."
+			},
+			"descripcionCorta": ""
+		},
+		"css-clases": {
+			"nombre": "Clases CSS",
+			"referenciaBusqueda": "clases, css",
+			"descripcion": {
+				"tx1": "Siendo un principio común, algunos de los que iniciamos en la programación arrancamos en la Web y es indudable que para algunos fue enredado entender como aplicar una clase o cada opción que el DOM pone a disposición con los estilos CSS."
+			},
+			"descripcionCorta": "Explicación detallada para los estilos de las clases CSS. Particularmente fue la manera como siempre espere encontrarme una explicación en las búsquedas de google."
+		}
+	},
+	"DART": {
+		"dart": {
+			"nombre": "Dart",
+			"referenciaBusqueda": "dart",
+			"descripcion": {
+				"tx1": "En 2011 Google anuncia un nuevo lenguaje de programación, donde el objetivo era superar los limitantes de Javascript en cuanto a rendimiento, mantenimiento y escalabilidad.",
+				"tx2": "En 2013 Aparece el SDK en su versión 1.0, mostrándose como una opción adaptable al diseño web.",
+				"tx3": "De 2011 a 2015 tuvo una trayectoria enfocada en desarrollo web, donde se presentó un motor 'Dartium' utilizado en el navegador Chrome para y poder ser usado directamente el lenguaje Dart.",
+				"tx4": "Increíble una versión de AngularDart, un framework para ser usado en AngularJS a cambio de Javascript en 2013, además de ser en colaboración con el proyecto de Web Components.",
+				"tx5": "Ahora en 2015 con Flutter, donde encontró un revelador camino hacía las aplicaciones móviles multiplataforma.",
+				"tx6": "Ahora conectado a Flutter empiezan a expandir una comunidad que se deja seducir por los diseños atractivos y rendimiento que llega en la versión 2 de este lenguaje."
+			},
+			"descripcionCorta": "Dart con sus altibajos, entra de nuevo al ruedo con Flutter, sin embargo es importante saber que ventajas nos ofrece sobre otros lenguajes para poder elegirlo."
+		},
+		"dart-elementos": {
+			"nombre": "Elementos Dart",
+			"referenciaBusqueda": "elementos",
+			"descripcion": {
+				"tx1": "Famoso por Flutter, la estructura de Dart permite crear aplicaciones de muchos tipos enfocados a desarrollos web con mucha potencia."
+			},
+			"descripcionCorta": "Descripción de los elementos que hacen parte de Dart. Sugerencias adicionales para otra clase de aplicaciones."
+		}
+	},
+	"DB": {
+		"db": {
+			"nombre": "DB",
+			"referenciaBusqueda": "db, bases de datos",
+			"descripcion": {
+				"tx1": "El inicio de las bases de datos parece estar remontado a épocas más anteriores a las actuales tecnologías, que surgen muchas, en estos últimos años.",
+				"tx2": "En 1960, en sus primeros intentos, un módelo de red se había planteado a través de una estructura de grafo. La IBM lanzó el sistema de gestión de bases de datos (DBMS) IMS (Information Management System) en 1966.",
+				"tx3": "En 1960 con la ayuda de Charles Bachman se desarrolló el modelo jerárquico, que organiza los datos en una estructura de árbol.",
+				"tx4": "A medida que iba transcurriendo el tiempo se aplicaban cambios hasta las versiones actuales en bases de datos, en este caso ya en 1970, Edgar F. Codd, un científico informático de IBM, propuso el modelo relacional en su artículo \"A Relational Model of Data for Large Shared Data Banks\" en 1970. Este modelo se basa en tablas relacionadas entre sí, y es la base de las bases de datos relacionales modernas.",
+				"tx5": "Ya en 1974 IBM lanzó el primer lenguaje de consulta estructurado (SQL) como parte del sistema System R (un sistema de base de datos construido como un proyecto de investigación en el Laboratorio de Investigación San Jose de IBM).",
+				"tx6": "En 1977 Larry Ellison, Bob Miner y Ed Oates fundaron Oracle Corporation , lanzando su primer producto de base de datos relacionales, Oracle Database, en 1979.",
+				"tx7": "En 1986 ANSI adoptó SQL como un estándar, lo que impulsó la interoperatividad entre sistemas de bases de datos. Varios sistemas de bases de datos relacionales comerciales, como Microsoft SQL Server, Sybase, y Informix, fueron lanzados en los 80's.",
+				"tx8": "En 1995 la versión inicial de MySQL fue lanzada, proporcionando una opción de base de datos relacional de código abierto.",
+				"tx9": "En 1998 el término \"NoSQL\" fue acuñado en esta década, los sistemas de bases de datos NoSQL, como MongoDB, CouchDB y Cassandra, expanden su popularidad.",
+				"tx10": "Ya en la década de 2000 llega ‘Big Data’ con soluciones como Apache Hadoop y Apache Spark proporcionaron herramientas para procesar grandes conjuntos de datos. Surgimiento de las Bases de Datos NoSQL: MongoDB (2009), Couchbase, y otras bases de datos NoSQL se volvieron populares para casos de uso específicos, como la gestión de grandes volúmenes de datos no estructurados.",
+				"tx11": "Bases de Datos en la Nube: La oferta de bases de datos en la nube, como Amazon RDS, Google Cloud Firestore y Azure Cosmos DB, se convirtieron en opciones populares, permitiendo a las empresas externalizar la gestión de sus bases de datos.",
+				"tx12": "GraphQL (2012): Facebook lanzó GraphQL como una alternativa para el acceso eficiente a datos, permitiendo a los clientes solicitar solo la información que necesitan.",
+				"tx13": "Década de 2020 - Continuación de Tendencias Anteriores: Machine Learning y Bases de Datos: La integración de la inteligencia artificial y el machine learning en las bases de datos se ha vuelto más prominente, permitiendo análisis más avanzados y automatización de tareas.",
+				"tx14": "Desarrollo de Nuevas Tecnologías: La evolución continúa con el desarrollo de nuevas tecnologías como bases de datos distribuidas, bases de datos en memoria, y sistemas de gestión de datos federados."
+			},
+			"descripcionCorta": ""
+		},
+		"db-firebase": {
+			"nombre": "Firebase",
+			"referenciaBusqueda": "firebase, no relacional, google",
+			"descripcion": {
+				"tx1": "Firebase es una super herramienta en desarrollo para ser el núcleo de información, adaptable en nuestros inicios como desarrolladores."
+			},
+			"descripcionCorta": "Esta es una guía de elementos que debes gestionar para conectar tu aplicación a Firebase."
+		},
+		"db-sql": {
+			"nombre": "SQL",
+			"referenciaBusqueda": "sql, relacionales",
+			"descripcion": {
+				"tx1": "SQL (Structured Query Language) es un lenguaje de programación diseñado para gestionar y manipular bases de datos relacionales. Utilizado en sistemas de gestión de bases de datos (DBMS), SQL permite realizar consultas, actualizaciones, inserciones y eliminaciones de datos en tablas. Su sintaxis se divide en categorías como DDL (Data Definition Language) para definir la estructura de la base de datos y DML (Data Manipulation Language) para manipular los datos. Los comandos comunes incluyen SELECT para recuperar datos, INSERT para agregar nuevos registros, UPDATE para modificar existentes y DELETE para eliminar registros. Su amplia adopción y versatilidad lo convierten en una herramienta fundamental para la administración de datos."
+			},
+			"descripcionCorta": "SQL (Structured Query Language) es un lenguaje de programación diseñado para gestionar y manipular bases de datos relacionales."
+		},
+		"db-sql-server": {
+			"nombre": "SQL Server",
+			"referenciaBusqueda": "sql, server",
+			"descripcion": {
+				"tx1": "Firebase es una super herramienta en desarrollo para ser el núcleo de información, adaptable en nuestros inicios como desarrolladores."
+			},
+			"descripcionCorta": "Esta es una guía de elementos que debes gestionar para conectar tu aplicación a Firebase."
+		}
+	},
+	"DEVELOPER": {
+		"developer": {
+			"nombre": "Developer",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "El escenario actual para desarrollar software es a través de un editor de código y la máquina que va a ejecutar las órdenes y la lógica. Siendo así, el origen implica a estos en sus comienzos."
+			},
+			"descripcionCorta": "",
+			"tituloFrontendRoadmap": "ROADMAP - FRONTEND DEVELOPER",
+			"frontendRoadmap": {
+				"origen": {
+					"titulo": "Origen",
+					"subtitulo": "La World Wide Web (WWW):",
+					"text1": "El desarrollo del frontend moderno está intrínsecamente ligado a la creación de la World Wide Web. Como dato inicial La web y el Internet no son lo mismo. Internet es la infraestructura de redes, mientras que la WWW es el sistema de páginas y enlaces que usamos a diario.",
+					"text2": "Fue inventada por Tim Berners-Lee en 1989 mientras trabajaba en el CERN (Organización Europea para la Investigación Nuclear) en Suiza.",
+					"text3": "Teniendo un problema a resolver Tim Berners-Lee buscaba una forma eficiente de compartir información entre científicos de todo el mundo, asi que presentó la propuesta de un sistema basado en hipertexto que permitiera enlazar documentos y acceder a ellos desde cualquier computadora conectada a la red.",
+					"text4": "Ya como productos:",
+					"text5": "- En 1990 Creó el primer navegador web y servidor web.",
+					"text6": "- En 1991: Lanzó el primer sitio web (info.cern.ch).",
+					"text7": "- Expansión global: En 1993, el NCSA Mosaic fue el primer navegador gráfico popular, lo que llevó a la rápida adopción de la web.",
+					"text8": "Estándares abiertos: En 1994, Berners-Lee fundó el W3C (World Wide Web Consortium) para desarrollar y mantener estándares abiertos de la web."
+				},
+				"html": {
+					"text1": "Siglas para HyperText Markup Language. HTML es como el esqueleto de una casa. Define la estructura, los cimientos y cómo se organizan los diferentes elementos. Sin HTML, una página web sería solo un montón de texto sin formato.",
+					"tituloLink": "HTML",
+					"descripcionLink": "La World Wide Web (WWW) es un sistema de información que permite acceder a documentos y recursos a través de Internet mediante enlaces hipertextuales.",
+					"descripcionLink2": "(Lenguaje de Marcas de Hipertexto) es el componente más básico de la Web. Define el significado y la estructura del contenido web."
+				},
+				"css": {
+					"text1": "Siglas para Cascading Style Sheets, que se traduce como Hojas de Estilo en Cascada. Es un lenguaje de diseño que se utiliza para dar estilo y apariencia visual a las páginas web escritas en HTML."
+				},
+				"cssArchitecture": {
+					"titulo": "Arquitectura CSS",
+					"text1": "Metodologías y patrones de diseño que te ayudan a organizar y estructurar tu código CSS de manera eficiente. Son una parte fundamental del desarrollo frontend y te ayudan a mantener tu código organizado, escalable y fácil de mantener.",
+					"descripcionLink": "(Block Element Modifier)"
+				},
+				"cssPreprocessors": {
+					"titulo": "Preprocesadores CSS",
+					"text1": "Herramientas que te permiten escribir CSS de forma más eficiente y productiva. Son una parte fundamental del desarrollo frontend y te ayudan a mantener tu código organizado, reutilizable y fácil de mantener."
+				},
+				"javascript": {
+					"text1": "Lenguaje de programación poderoso y versátil que te permite crear páginas web interactivas y dinámicas. Es una herramienta fundamental para cualquier desarrollador web y un lenguaje esencial para la creación de la web moderna."
+				},
+				"internet": {
+					"text1": "Vasta red global que conecta computadoras y dispositivos en todo el mundo. Es como una autopista digital que permite que la información viaje de un lugar a otro en cuestión de segundos.",
+					"text2": "Internet es una herramienta poderosa que ha transformado la forma en que nos comunicamos, trabajamos, nos entretenemos y accedemos a la información. Es una parte fundamental de nuestra vida cotidiana y su importancia sigue creciendo a medida que la tecnología avanza."
+				},
+				"versionControlSistem": {
+					"titulo": "Sistema de control de versión",
+					"text1": "Sistema de control de versiones que te permite rastrear los cambios en tu código a lo largo del tiempo. Es una herramienta esencial para cualquier desarrollador web y te ayuda a colaborar con otros desarrolladores, mantener un historial de cambios y revertir a versiones anteriores si es necesario."
+				},
+				"vcsHosting": {
+					"titulo": "Alojamiento VCS",
+					"text1": "Plataforma en línea que te permite alojar tu repositorio de código y colaborar con otros desarrolladores. Es una herramienta esencial para cualquier desarrollador web y te permite compartir tu código, colaborar en proyectos y mantener un historial de cambios."
+				},
+				"packageManagers": {
+					"titulo": "Gestor de paquetes",
+					"text1": "Herramienta que te permite instalar, actualizar y administrar las dependencias de tu proyecto. Es una herramienta esencial para cualquier desarrollador web y te ayuda a mantener tu código organizado y actualizado."
+				},
+				"frameworksFrontend": {
+					"text1": "Conjunto de herramientas y librerías que te permiten crear aplicaciones web de forma rápida y eficiente. Son una parte fundamental de la web moderna y te ayudan a acelerar el desarrollo, mantener tu código organizado y crear aplicaciones de alta calidad."
+				},
+				"buildToolsFront": {
+					"titulo": "Herramientas de construcción para 'front'",
+					"text1": "Herramientas que te permiten automatizar tareas repetitivas en tu flujo de trabajo de desarrollo frontend. Son una parte fundamental del desarrollo frontend y te ayudan a optimizar tu código, mejorar la eficiencia y acelerar el desarrollo."
+				},
+				"lintersAndFormatters": {
+					"titulo": "Listas y formateadores",
+					"text1": "Herramientas que te ayudan a mantener tu código limpio, consistente y libre de errores. Son una parte fundamental del desarrollo frontend y te ayudan a mejorar la calidad de tu código, detectar problemas y mantener un estilo de codificación consistente."
+				},
+				"moduleBundlers": {
+					"titulo": "Agrupadores de módulos",
+					"text1": "Herramientas que te permiten combinar y empaquetar módulos de código en un solo archivo. Son una parte fundamental del desarrollo frontend y te ayudan a optimizar el rendimiento, reducir el tiempo de carga y mejorar la eficiencia."
+				},
+				"testing": {
+					"titulo": "Pruebas",
+					"text1": "Proceso de evaluación de tu código para garantizar que funcione correctamente y cumpla con los requisitos. Es una parte fundamental del desarrollo frontend y te ayuda a detectar errores, mejorar la calidad y garantizar que tu código sea confiable."
+				},
+				"AuthenticationStrategies": {
+					"titulo": "Estrategias de autenticación",
+					"text1": "Estrategias de autenticación que te permiten proteger tu aplicación y controlar el acceso de los usuarios. Son una parte fundamental del desarrollo frontend y te ayudan a garantizar la seguridad, proteger la información confidencial y prevenir el acceso no autorizado."
+				},
+				"webSecurityBasics": {
+					"titulo": "Conceptos básicos de seguridad web",
+					"text1": "Principios y prácticas de seguridad que te ayudan a proteger tu aplicación y prevenir ataques cibernéticos. Son una parte fundamental del desarrollo frontend y te ayudan a garantizar la seguridad, proteger la información confidencial y mantener la integridad de tu aplicación."
+				},
+				"webComponents": {
+					"titulo": "Componentes Web",
+					"text1": "Conjunto de tecnologías que te permiten crear componentes web reutilizables y personalizables. Son una parte fundamental del desarrollo frontend y te ayudan a mantener tu código organizado, modular y fácil de mantener."
+				},
+				"typeCheckers": {
+					"titulo": "Tipos de comprobadores",
+					"text1": "Herramientas que te permiten detectar errores de tipo en tu código y mejorar la calidad de tu código. Son una parte fundamental del desarrollo frontend y te ayudan a detectar problemas, mejorar la calidad y garantizar que tu código sea confiable."
+				},
+				"ssr": {
+					"text1": "Siglas para Server-Side Rendering. Es una técnica que te permite renderizar tu aplicación en el servidor y enviarla al cliente como HTML estático. Es una parte fundamental del desarrollo frontend y te ayuda a mejorar el rendimiento, la accesibilidad y la experiencia del usuario."
+				},
+				"graphQL": {
+					"text1": "Lenguaje de consulta y entorno de ejecución de código abierto creado por Facebook en 2012. Es una alternativa a REST y te permite definir y consultar tus API de forma más eficiente y flexible. Es una parte fundamental del desarrollo frontend y te ayuda a mejorar la eficiencia, la escalabilidad y la flexibilidad de tus API."
+				},
+				"pwas": {
+					"text1": "Siglas para Progressive Web Apps. Son aplicaciones web que se comportan como aplicaciones nativas y ofrecen una experiencia de usuario similar a la de una aplicación nativa. Son una parte fundamental del desarrollo frontend y te ayudan a mejorar la accesibilidad, la velocidad y la experiencia del usuario."
+				},
+				"staticSiteGenerators": {
+					"titulo": "Generadores estáticos",
+					"text1": "Herramientas que te permiten generar sitios web estáticos a partir de archivos de contenido. Son una parte fundamental del desarrollo frontend y te ayudan a crear sitios web rápidos, seguros y fáciles de mantener. (Gatsby, Jekyll, Hugo)."
+				},
+				"mobileApps": {
+					"titulo": "Aplicaciones móviles",
+					"text1": "Aplicaciones móviles que se ejecutan en dispositivos móviles como teléfonos y tabletas. Son una parte fundamental del desarrollo frontend y te ayudan a llegar a una audiencia más amplia, mejorar la experiencia del usuario y ofrecer una experiencia móvil de alta calidad. (React Native, Flutter, Ionic)."
+				},
+				"desktopApps": {
+					"titulo": "Aplicaciones de escritorio",
+					"text1": "Aplicaciones de escritorio que se ejecutan en computadoras de escritorio y portátiles. Son una parte fundamental del desarrollo frontend y te ayudan a llegar a una audiencia más amplia, mejorar la experiencia del usuario y ofrecer una experiencia de escritorio de alta calidad. (Electron, NW.js)."
+				}
+			},
+			"backendRoadMap": {
+				"language": {
+					"text1": "Lenguajes de programación, permiten crear aplicaciones web y servicios en el lado del servidor. Es una parte fundamental del desarrollo backend y te ayudan a crear aplicaciones escalables, seguras y eficientes."
+				},
+				"repoHostingService": {
+					"text1":"Plataforma en línea que te permite alojar tu repositorio de código y colaborar con otros desarrolladores. Es una parte fundamental del desarrollo backend y te permite compartir tu código, colaborar en proyectos y mantener un historial de cambios."
+				},
+				"oSAndGeneralKnowledge":{
+					"text1":"Conocimientos básicos sobre sistemas operativos y tecnologías generales que te ayudan a comprender cómo funcionan las aplicaciones y servicios en el lado del servidor. Son una parte fundamental del desarrollo backend y te ayudan a crear aplicaciones escalables, seguras y eficientes."
+				},
+				"relationalDatabases":{
+					"text1":"Base de datos que utiliza un modelo de datos relacional para almacenar y gestionar la información. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				},
+				"noSQLDatabases":{
+					"text1":"Base de datos que utiliza un modelo de datos no relacional para almacenar y gestionar la información. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				},
+				"scalingDatabases":{
+					"text1":"Proceso de aumentar la capacidad y el rendimiento de una base de datos para manejar un mayor volumen de datos y tráfico. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				},
+				"API":{
+					"text1":"Interfaz de programación de aplicaciones que te permite comunicarte con otros servicios y aplicaciones. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				},
+				"caching":{
+					"text1":"Proceso de almacenar datos en memoria para acelerar el acceso y mejorar el rendimiento de una aplicación. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				},
+				"webSecurityKnowledge":{
+					"text1":"Conocimientos sobre seguridad web que te ayudan a proteger tu aplicación y prevenir ataques cibernéticos. Son una parte fundamental del desarrollo backend y te ayudan a garantizar la seguridad, proteger la información confidencial y mantener la integridad de tu aplicación."
+				},
+				"testing":{
+					"text1":"Proceso de evaluación de tu código para garantizar que funcione correctamente y cumpla con los requisitos. Es una parte fundamental del desarrollo backend y te ayuda a detectar errores, mejorar la calidad y garantizar que tu código sea confiable."
+				},
+				"CI/CD":{
+					"text1":"Prácticas y herramientas que te permiten automatizar el proceso de integración y entrega continua de tu código. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la calidad y la velocidad de tu desarrollo."
+				},
+				"designAndDevelopmentPrincipies":{
+					"text1":"Principios y prácticas de diseño y desarrollo que te ayudan a crear aplicaciones escalables, seguras y eficientes. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la calidad, la eficiencia y la experiencia del usuario."
+				},
+				"arquitecturalPatterns":{
+					"text1":"Patrones de arquitectura que te ayudan a organizar y estructurar tu código de manera eficiente. Son una parte fundamental del desarrollo backend y te ayudan a mantener tu código organizado, escalable y fácil de mantener."
+				},
+				"messageBrokers":{
+					"text1":"Sistema de mensajería que te permite enviar y recibir mensajes entre aplicaciones y servicios. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				},
+				"containerizationVsVirtualization":{
+					"text1":"Técnicas de empaquetado y despliegue de aplicaciones que te permiten crear entornos aislados y portátiles. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la escalabilidad y la seguridad de tus aplicaciones."
+				},
+				"serverSendEvents":{
+					"text1":"Tecnología que te permite enviar eventos desde el servidor al cliente de forma unidireccional. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones en tiempo real y mejorar la experiencia del usuario."
+				},
+				"webSockets":{
+					"text1":"Tecnología que te permite establecer una conexión bidireccional entre el servidor y el cliente. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones en tiempo real y mejorar la experiencia del usuario."
+				},
+				"webServers":{
+					"text1":"Servidor web que te permite alojar y servir tu aplicación en el lado del servidor. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				},
+				"buildingForScale":{
+					"text1":"Proceso de diseñar y desarrollar aplicaciones que puedan manejar un gran volumen de datos y tráfico. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				},
+				"devOps":{
+					"text1":"Prácticas y herramientas que te permiten integrar el desarrollo y la operación de tu aplicación. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la calidad y la velocidad de tu desarrollo."
+				}
+			}
+		},
+		"dev-super-recursos": {
+			"nombre": "Recopilación sugerida de sitios web e IA's",
+			"referenciaBusqueda": "páginas web, links",
+			"descripcion": {
+				"tx1": "No sabemos que existen ciertos sitios web hasta que alguien nos cuenta lo increíble que son y llegamos a ellos. Esta vez están a la mano un recopilación de unos sitios web recomendados totalmente."
+			},
+			"descripcionCorta": "Sitios web que se ignora para que puedan ser útiles. Una pequeña descripción."
+		},
+		"dev-algoritmos-clave": {
+			"nombre": "Algoritmos de clasificación que son clave",
+			"referenciaBusqueda": "algoritmos clave",
+			"descripcion": {
+				"tx1": "No sabemos que existen ciertos sitios web hasta que alguien nos cuenta lo increíble que son y llegamos a ellos. Esta vez están a la mano un recopilación de unos sitios web recomendados totalmente."
+			},
+			"descripcionCorta": "Sitios web que se ignora para que puedan ser útiles. Una pequeña descripción."
+		},
+		"dev-diagramas-secuencia": {
+			"nombre": "Diagramas de secuencia",
+			"referenciaBusqueda": "diagrama, secuencia",
+			"descripcion": {
+				"tx1": "No sabemos que existen ciertos sitios web hasta que alguien nos cuenta lo increíble que son y llegamos a ellos. Esta vez están a la mano un recopilación de unos sitios web recomendados totalmente."
+			},
+			"descripcionCorta": "Sitios web que se ignora para que puedan ser útiles. Una pequeña descripción."
+		},
+		"dev-controles-visual": {
+			"nombre": "Controles rápidos visual studio code",
+			"referenciaBusqueda": "hotkey, controles",
+			"descripcion": {
+				"tx1": "No sabemos que existen ciertos sitios web hasta que alguien nos cuenta lo increíble que son y llegamos a ellos. Esta vez están a la mano un recopilación de unos sitios web recomendados totalmente."
+			},
+			"descripcionCorta": "Sitios web que se ignora para que puedan ser útiles. Una pequeña descripción."
+		},
+		"dev-busqueda-empleo": {
+			"nombre": "Búsqueda de empleo como desarrollador",
+			"referenciaBusqueda": "trabajo, empleo, labor, trabajar",
+			"descripcion": {
+				"tx1": "Recomendaciones probadas en la búsqueda de empleo.",
+				"tx2": "Esta publicación es un reflejo de mi propio proceso para ingresar a trabajar como desarrollador frontend. Iniciada la publicación estoy en búsqueda laboral de una buena empresa, al terminarlo la idea es sugerir que puntos funcionaron.",
+				"tx3": "El objetivo visto de simple manera es vendernos como un producto de comercio (Solo en contexto). Estos son los puntos que sugiero se deben tener en cuenta."
+			},
+			"descripcionCorta": "Recomendaciones y sugerencias en la búsqueda de empleo. Se muestra un proceso para tener en cuenta en este camino.",
+			"predisposicion": "PREDISPOSICIÓN",
+			"predisposicion1": "Antes de decirle al mundo que buscamos empleo, primero hay que saberlo dentro. Por obvias razones si se esta en la búsqueda es porque presuntamente hay total convencimiento.",
+			"predisposicion2": "La sola predisposición termina siendo la mayor fuerza que va a conectar todo.",
+			"predisposicion3": "No sirve de nada iniciar una búsqueda sin tenerlo como un objetivo prescindible en la vida.",
+			"ejercicio_fisico": "EJERCICIO FÍSICO",
+			"ejercicio1": "Todo el que saludablemente se pueda hacer.",
+			"ejercicio2": "Existen demasiados beneficios asociados al deporte, especialmente lo que se busca de esta parte es la serotonina, la sustancia de la felicidad natural del cuerpo.",
+			"ejercicio3": "Qué acompañe todos los días como parte de la rutina de la búsqueda.",
+			"curriculum": "CURRICULUM VITAE",
+			"curriculum1": "Sin duda alguna se requiere hoja de vida con tu información personal, educativa y profesional.",
+			"curriculum2": "En este caso sugiero estos recursos online donde puedes organizar toda tu información:",
+			"cv": {
+				"cv1": "Formatos de hoja de vida, portafolios, formatos de cartas legales",
+				"cv2": "Crear su curriculum en tan solo 5 minutos",
+				"cv3": "Tu Curriculum Vitae rápido, fácil de usar y profesional",
+				"cv4": "Crea tu curriculum como un profesional",
+				"cv5": "Cree un currículum listo para el trabajo en minutos",
+				"cv6": "Creador de currículums en línea gratuito",
+				"cv7": "La historia de tu éxito empieza con un currículum"
+			},
+			"carta": {
+				"titulo": "CARTA DE PRESENTACIÓN",
+				"tx1": "Es una carta personal que te presentará a la empresa o al cargo que estás postulando.",
+				"tx2": "Las palabras contenidas suelen ser muy personales, lo increíble de hoy en día es que si pides ayuda a la inteligencia artificial suele darle al clavo con la inspiración.",
+				"tx3": " \"Actualmente, he estado enfocado en el desarrollo frontend en Angular, con más de 5 años de experiencia. Me gusta trabajar en equipo, buscar una formación continua, aplicar nuevos conocimientos en desarrollo, y poner mi creatividad y corazón en mi trabajo diario. También considero que la vida y el tiempo que tenemos son una oportunidad y una bendición para compartir la pasión que nos hace únicos, y que el mundo espera y necesita para prosperar. \"..."
+			},
+			"marketplace": {
+				"titulo": "MARKETPLACE DE TALENTO",
+				"tx1": "Las agencias de empleo determinan el punto central laboral, acá es donde somos un producto que debe destacarse para ser visto y tenido en cuenta.",
+				"tx2": "El panorama es favorable o no según la oferta y la demanda de postulados, si hay pocos seremos muy valiosos y muchas cosas pueden pasarse por alto como por ejemplo que no domine por completo una tecnología o que se requiera un cargo senior y lo termine consiguiendo un semi, cosas por el estilo.",
+				"tx3": "En este caso consideremos que el panorama no es favorable y que nos toca buscar la manera de destacar entre muchos.",
+				"tx4": "Si tenemos amigos o familiares que nos puedan dar una recomendación directa en la empresa, usemos esta posibilidad. Un reclutador ve de mejor manera a alguien recomendado que a un desconocido inicialmente.",
+				"linkedin": {
+					"tx1": "La mamá de las agencias para el empleo con un sentido muchísimo más completo enfocado a redes sociales.",
+					"tx2": "Para esta parte es requerido hacer un marketing personal teniendo en cuenta estos puntos:",
+					"puntos": {
+						"tx1": "Ampliar la red con contactos de valor, según mi perfil y lo que busco.",
+						"tx2": "Se necesita estar publicando contenido de valor.",
+						"tx3": "Comentar, hacer comentarios fuertes propositivos ejemplo: \"guau\" que buen artículo porque...",
+						"tx4": "Escribir un resumen atractivo que destaquen logro y propuestas de valor.",
+						"tx5": "Añadir mensaje personalizado al enviar solicitudes de conexión, para explicar porque deseas conectarte.",
+						"tx6": "Seguir a las empresas que me interesen y a los reclutadores de las empresas.",
+						"tx7": "Unirme a grupos relacionados con tu industria o área de interes, en ellos participa en convesaciones, comparte conocimientos y establece conexiones valiosas."
+					},
+					"tx3": "Ahora en la siguiente parte se muestra una lista de agencias encargadas de publicación de ofertas laborales, se requiere llenar una serie de campos que te piden muy repetitiva mente, datos personales, estudio 1, estudio 2, empresa 1, empresa 2...",
+					"tx4": "Así ya esten incluídos en la hoja de vida."
+				}
+			},
+			"entrevista": {
+				"titulo": "ENTREVISTA",
+				"tx1": "De alguna manera esto es muy parecido a la cita que logras con la chica(o) que te gusta.",
+				"tx2": "Es un gran paso y debe verse como un negocio en que ambas partes buscan que hay para ganar. Por ejemplo el salario es un tema que ambas partes tienen interés y es un punto en el que debemos saber como esta valorada nuesta profesión en el mercado.",
+				"tx3": "Aún sintiendo mucha confianza porque antes nos fue bien en empresas anteriores, o, en caso de ser todo lo contrario y los nervios hicieron sus destrozos, en ambos casos se deben conocer las preguntas comunes y tener claro que se debe responder sin falsedades. ",
+				"tx4": "Este es un excelente sitio con materiales gratuitos de preparación para entrevistas, seleccionados para personas ocupadas. ",
+				"tx5": "Estas son algunas de las preguntas más comunes que suelen hacer para cada caso:",
+				"preguntas": {
+					"ctn1": {
+						"categoria": "PERSONALES",
+						"bls": {
+							"bl1": {
+								"pregunta": "CUÉNTAME SOBRE TI",
+								"sugerencia": "Esta es una pregunta abierta que te da la oportunidad de hablar sobre tu experiencia, intereses y objetivos personales y profesionales.",
+								"ejemplo": ""
+							},
+							"bl2": {
+								"pregunta": "¿POR QUÉ ESTÁS INTERESADO EN TRABAJAR EN NUESTRA EMPRESA?",
+								"sugerencia": " Los entrevistadores quieren saber si has investigado sobre la empresa y si compartes sus valores y objetivos.",
+								"ejemplo": ""
+							},
+							"bl3": {
+								"pregunta": "¿CUÁL ES TU EXPERIENCIA TRABAJANDO EN EQUIPOS DE DESARROLLO DE SOFTWARE?",
+								"sugerencia": "Aquí pueden preguntarte sobre tus habilidades de comunicación, colaboración y adaptación a dinámicas de equipo.",
+								"ejemplo": ""
+							},
+							"bl4": {
+								"pregunta": "¿PUEDES DESCRIBIR UN PROYECTO DESAFIANTE EN EL QUE HAYAS TRABAJADO Y CÓMO LO SUPERASTE?",
+								"sugerencia": "Esta pregunta evalúa tus habilidades para resolver problemas y tu capacidad de afrontar desafíos.",
+								"ejemplo": ""
+							},
+							"bl5": {
+								"pregunta": "¿CÓMO TE MANTIENES ACTUALIZADO CON LAS ÚLTIMAS TENDENCIAS Y TECNOLOGÍAS EN DESARROLLO DE SOFTWARE?",
+								"sugerencia": " Los entrevistadores quieren saber si eres un profesional que sigue aprendiendo y se mantiene actualizado.",
+								"ejemplo": ""
+							},
+							"bl6": {
+								"pregunta": "¿TIENES ALGUNA EXPERIENCIA EN TRABAJAR EN PROYECTOS ÁGILES O METODOLOGÍAS DE DESARROLLO ESPECÍFICAS?",
+								"sugerencia": "Pueden preguntarte sobre tu adaptabilidad y experiencia en entornos de desarrollo específicos.",
+								"ejemplo": ""
+							},
+							"bl7": {
+								"pregunta": "¿QUÉ TE MOTIVA EN TU CARRERA COMO DESARROLLADOR DE SOFTWARE?",
+								"sugerencia": "Aquí puedes hablar sobre tus metas profesionales y lo que te entusiasma en el desarrollo de software.",
+								"ejemplo": ""
+							},
+							"bl8": {
+								"pregunta": "¿CÓMO MANEJAS EL ESTRÉS Y LOS PLAZOS AJUSTADOS?",
+								"sugerencia": "Esta pregunta evalúa tu capacidad para lidiar con situaciones de alta presión.",
+								"ejemplo": ""
+							},
+							"bl9": {
+								"pregunta": "¿TIENES EXPERIENCIA EN LIDERAZGO O GESTIÓN DE EQUIPOS DE DESARROLLO?",
+								"sugerencia": "Esto podría explorar tu potencial para asumir roles de liderazgo en el futuro.",
+								"ejemplo": ""
+							},
+							"bl10": {
+								"pregunta": "¿CUÁL ES TU ENFOQUE EN CUANTO A LA CALIDAD DEL CÓDIGO Y LAS PRÁCTICAS DE DESARROLLO SOSTENIBLE?",
+								"sugerencia": "Los entrevistadores pueden estar interesados en tu compromiso con la calidad y la mejora continua.",
+								"ejemplo": ""
+							},
+							"bl11": {
+								"pregunta": "¿POR QUÉ QUIERES SER PARTE DE ESTE RETO?",
+								"sugerencia": "Están interesados en saber cuáles son tus motivaciones específicas para unirte a su equipo y enfrentar los desafíos que ofrece el puesto de trabajo o proyecto en cuestión. Quieren entender cómo tus objetivos personales y profesionales se alinean con lo que la empresa tiene para ofrecer y cómo planeas contribuir al éxito del equipo.",
+								"ejemplo": "Es una gran oportunidad hacer parte de su equipo de trabajo pues son una empresa que esta en constante crecimiento a nivel tecnológico, se atreven a empreder en soluciones actuales en las que en el día a día se aprende de los errores, se descubren maneras de hacer las cosas por caminos más cortos y efectivos. Esa es la ficha clave en mi camino de aprendizaje con la cual puedo entregar mi pasión."
+							}
+						}
+					},
+					"ctn2": {
+						"categoria": "LABORALES",
+						"bls": {
+							"bl1": {
+								"pregunta": "CUAL FUE LA ÚLTIMA EMPRESA DONDE LABORASTE?",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl2": {
+								"pregunta": "CUÉNTANOS COMO FUE TU EXPERIENCIA EN LA ÚLTIMA EMPRESA?",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl3": {
+								"pregunta": "CUAL FUE TU MAYOR RETO EN ESTA EMPRESA Y PORQUE?",
+								"sugerencia": "",
+								"ejemplo": ""
+							}
+						}
+					},
+					"ctn3": {
+						"categoria": "ESTUDIOS",
+						"bls": {
+							"bl1": {
+								"pregunta": "HASTA QUE NIVEL ESTUDIASTE?",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl2": {
+								"pregunta": "TIENES MAESTRÍAS O DIPLOMADOS?",
+								"sugerencia": "",
+								"ejemplo": ""
+							}
+						}
+					},
+					"ctn4": {
+						"categoria": "DESARROLLO FRONTEND",
+						"bls": {
+							"bl1": {
+								"pregunta": "TIENE EXPERIENCIA EN PATRONES DE DISEÑO TYPESCRIPT Y JAVASCRIPT?",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl2": {
+								"pregunta": "TIENE EXPERIENCIA EN LA ARQUITECTURA DE ATOMIC DESIGN?",
+								"sugerencia": "",
+								"ejemplo": ""
+							}
+						}
+					},
+					"ctn5": {
+						"categoria": "HTML, CSS Y JAVASCRIPT",
+						"bls": {
+							"bl1": {
+								"pregunta": "¿QUÉ ATRIBUTO DE HTML SE EMPLEA PARA DEFINIR LOS ESTILOS EN LÍNEA?",
+								"sugerencia": "",
+								"ejemplo": "Es el atributo style."
+							},
+							"bl2": {
+								"pregunta": "¿QUÉ ETIQUETA DE HTML SE EMPLEA PARA DEFINIR UNA HOJA DE ESTILO EXTERNA?",
+								"sugerencia": "",
+								"ejemplo": "Es la etiqueta link y se agrega la ruta en el atributo src."
+							},
+							"bl3": {
+								"pregunta": "¿QUÉ PSEUDO CLASE SE EMPLEA PARA DEFINIR UNA PROPIEDAD CUANDO EL CURSOR DEL RATÓN SE SITÚA SOBRE UN ELEMENTO?",
+								"sugerencia": "",
+								"ejemplo": "La pseudo clase hover antecedido de dos puntos."
+							},
+							"bl4": {
+								"pregunta": "EN CSS ¿ CUÁL ES LA DIFERENCIA ENTRE LAS PROPIEDADES MARGIN Y PADDING?",
+								"sugerencia": "",
+								"ejemplo": "Margin es el espacio fuera del elemento DOM y padding se aplica dentro del cuerpo del elemento DOM al cual se le esta aplicando la clase."
+							},
+							"bl5": {
+								"pregunta": "¿QUÉ SIGNIFICAN LAS SIGLAS CSS?",
+								"sugerencia": "",
+								"ejemplo": "Cascade Style Sheet"
+							},
+							"bl6": {
+								"pregunta": "EN CSS3 ¿QUÉ SIGNIFICAN LA \"A\" EN RGBA?",
+								"sugerencia": "",
+								"ejemplo": "Las 4 significan R:red, G:green, B:blue, A:alpha (transparencia)"
+							},
+							"bl7": {
+								"pregunta": "¿CÓMO ASIGNAS ESTILOS PARA DISTINTOS DISPOSITIVOS Y RESOLUCIONES?",
+								"sugerencia": "",
+								"ejemplo": "A través de la propiedad @media dentro de los estilos en cascada."
+							},
+							"bl8": {
+								"pregunta": "¿QUÉ ESTARÍA DEFINIENDO AL UTILIZAR FLEX-DIRECTION: COLUMN; EN UN ELEMENTO CON DISPLAY: FLEX;?",
+								"sugerencia": "",
+								"ejemplo": "que los elementos dentro del display: flex se formen en forma de columna."
+							},
+							"bl9": {
+								"pregunta": "EXPLICA CUÁL ES LA FUNCIÓN DE @IMPORT EN SASS",
+								"sugerencia": "",
+								"ejemplo": "El objetivo de la directiva @import es conectar varios archivos SASS o SCSS a un archivo del tipo SASS o SCSS, con la finalidad de ordenar separadamente el código."
+							},
+							"bl10": {
+								"pregunta": "EXPLICA CUÁL ES LA FUNCIÓN DE @EXTEND EN SASS",
+								"sugerencia": "",
+								"ejemplo": "Esta directiva tiene una cualidad especial al permitir heredar características de una clase o selector a otro selector, evitando la repetición de estilos."
+							},
+							"bl11": {
+								"pregunta": "EXPLICA CUANDO PUEDES UTILIZAR EL % PLACEHOLDER EN SASS",
+								"sugerencia": "",
+								"ejemplo": "Se utiliza al crear un grupo de estilos %nombre {caracteristicas css}, luego de crearse funciona dentro de una clase cuando se hace referencia a la herencia de %nombre y por lo tanto hereda los estilos, de esta forma: .clase { @extend %nombre;}"
+							},
+							"bl12": {
+								"pregunta": "EXPLICA CON TUS PROPIAS PALABRAS CÓMO LOS MIXINS (@MIXIN) DE SASS PUEDEN SER ÚTILES",
+								"sugerencia": "",
+								"ejemplo": "Permite reutilizar estilos y propiedades CSS en tus hojas de estilo de una manera modular y eficiente. Una gran utilidad es poder pasar parámetros a un @mixin creado anteriormente y utilizar todas las características de ese @mixin con el parámetro que se envía."
+							},
+							"bl13": {
+								"pregunta": "EN HTML, EL ATRIBUTO TITLE SE EMPLEA PARA:",
+								"sugerencia": "",
+								"ejemplo": "Es para proporcionar información adicional sobre un elemento cuando el usuario pasa el cursor sobre él."
+							},
+							"bl14": {
+								"pregunta": "EN HTML, PARA INCLUIR CÓDIGO DE SCRIPT QUE SE ENCUENTRA EN OTRO ARCHIVO (EXTERNO) SE EMPLEA EL TAG:",
+								"sugerencia": "",
+								"ejemplo": "<script> con el src=\"\" y la ruta del archivo."
+							},
+							"bl15": {
+								"pregunta": "EN HTML PARA DEFINIR UNA LINEA HORIZONTAL DE SEPARACIÓN SE EMPLEA:",
+								"sugerencia": "",
+								"ejemplo": "Se usa la etiqueta <hr>."
+							},
+							"bl16": {
+								"pregunta": "EN HTML PARA DEFINIR QUE EL IDIOMA PRINCIPAL DE UNA PÁGINA ES EL ESPAÑOL SE EMPLEA",
+								"sugerencia": "",
+								"ejemplo": "Dentro de la etiqueta HTML se emplea un atributo llamado lang=\"es\", adicional es recomendable usar también la misma propiedad en etiquetas como \"header\", \"main\", \"section\", \"footer\", para ayudar a las herramientas de traducción."
+							},
+							"bl17": {
+								"pregunta": "EN HTML, ROWSPAN Y COLSPAN SON ATRIBUTOS DE LA ETIQUETA",
+								"sugerencia": "",
+								"ejemplo": "Etiqueta <td>, son para controlar la fusión de celdas, lo que permite que una celda ocupe múltiples filas \"rowspan\" o múltiples columnas \"colspan\"."
+							},
+							"bl18": {
+								"pregunta": "¿QUÉ ETIQUETA DE HTML SE EMPLEA PARA DEFINIR UNA HOJA DE ESTILO INTERNA?",
+								"sugerencia": "",
+								"ejemplo": "<style>"
+							},
+							"bl19": {
+								"pregunta": "EN HTML, EL ATRIBUTO ALT SE EMPLEA PARA:",
+								"sugerencia": "",
+								"ejemplo": "3 principales beneficios como: -Descripción de accesiblidad en imágenes para personas con poca visiblidad, - Cuando las imágenes no se cargan correctamente proporcionan información del contenido, - En el SEO de búsqueda permiten una mejor indexación en los resultados. En las etiquetas <img>, <audio> y <video>."
+							},
+							"bl20": {
+								"pregunta": "EN HTML LA FORMA CORRECTA DE CREAR UN COMENTARIO ES:",
+								"sugerencia": "",
+								"ejemplo": "<---- comentario ---->"
+							},
+							"bl21": {
+								"pregunta": "¿QUÉ ESTRUCTURA SIGUE EL DOM?",
+								"sugerencia": "El DOM, o Document Object Model (Modelo de Objetos del Documento, en español), sigue una jerarquía, donde un nodo principal llamado \"nodo raíz\" representa todo el documento. A partir de este nodo raíz, se ramifican nodos que representan los elementos del documento, como etiquetas HTML, atributos y contenido de texto. Estos nodos están conectados entre sí de manera jerárquica, reflejando la estructura anidada del documento original.",
+								"ejemplo": ""
+							},
+							"bl22": {
+								"pregunta": "NOMBRA TODOS LOS ELEMENTOS QUE CONOZCAS QUE FUERON INTRODUCIDOS EN HTML 5",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl23": {
+								"pregunta": "¿CUÁL ES LA DIFERENCIA ENTRE VAR, LET Y CONST?",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl24": {
+								"pregunta": "¿QUÉ ES ECMA Y/O QUE DEFINE?",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl25": {
+								"pregunta": "MENCIONA AL MENOS DOS FRAMEWORKS DE TEST UNITARIOS PARA JAVASCRIPT",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl26": {
+								"pregunta": "¿CUÁL ES LA DIFERENCIA ENTRE UNA CLASE Y UN OBJETO EN PROGRAMACIÓN?",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl27": {
+								"pregunta": "¿QUÉ FORMAS HAY PARA OBTENER LAS VARIABLES DEL SIGUIENTE OBJETO USANDO ES5 Y ES6 CONST USER = {NAME: USERNAME, AGE: 99}",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl28": {
+								"pregunta": "EXPLICA QUÉ HACE LA SIGUIENTE LÍNEA CONSIDERANDO QUE MONTHS ES UN ARRAY DE MESES: MONTHS.SPLICE(1, 0, \"FEB\");",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl29": {
+								"pregunta": "DESCRIBE EN DETALLE TODO LO QUE PUEDAS OBSERVAR DE LA SIGUIENTE FUNCIÓN: \"(() ⇒ {CONSOLE.LOG(\"HOLA MUNDO\");})()\"",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl30": {
+								"pregunta": "CREA UNA PETICIÓN HTTP BÁSICA DE TIPO GET UTILIZANDO JAVASCRIPT A UN DOMINIO DE TU ELECCIÓN",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl31": {
+								"pregunta": "¿CUÁL ES LA DIFERENCIA ENTRE UN TEST UNITARIO, TEST DE INTEGRACIÓN Y UN TEST DE ACEPTACIÓN?",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl32": {
+								"pregunta": "¿QUÉ CARACTERÍSTICAS DEBE TENER UN BUEN TEST UNITARIO?",
+								"sugerencia": "",
+								"ejemplo": ""
+							},
+							"bl33": {
+								"pregunta": "EN EL CICLO DE VIDA DE VUE, CUAL SERÍA LA DIFERENCIA ENTRE \"CREATED\" Y \"MOUNTED\"",
+								"sugerencia": "",
+								"ejemplo": ""
+							}
+						}
+					}
+				},
+				"Sugerencia": "Sugerencia",
+				"Respuesta_ejemplo": "Respuesta ejemplo"
+			},
+			"prueba": {
+				"titulo": "PRUEBA TÉCNICA",
+				"tx1": "Superar con éxito la prueba técnica puede considerarse como el primer pie en la puerta de la empresa.",
+				"tx2": "En un perfil con experiencia debe tomarse como un requisito laboral normal.",
+				"tx3": "Con o sin experiencia es necesario entrenarse antes, estas son algunas herramientas para lograrlo:",
+				"tx4": "Las habilidades hablan más que las palabras.",
+				"tx5": "Ayudamos a las empresas a desarrollar los equipos tecnológicos más fuertes.",
+				"tx6": "Ayudamos a los candidatos a perfeccionar sus conocimientos tecnológicos y a buscar oportunidades de empleo."
+			}
+		},
+		"dev-glosario": {
+			"nombre": "Glosario general",
+			"referenciaBusqueda": "terminos, glosario, buscar, encontrar",
+			"descripcion": {
+				"tx1": "Busca cualquier término dentro del campo de desarrollo.",
+				"tx2": "La idea de este glosario es encontrar rápidamente una descripción simplificada de los términos en desarrollo que a veces se nos pierde del mente. De momento no suele necesitarse tanta información de algún tema en específico."
+			},
+			"descripcionCorta": "Encuentra una descripción rápida de términos en desarrollo."
+		}
+	},
+	"ELECTRON": {
+		"electron": {
+			"nombre": "Eletron",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "En un inicio, es de mucha admiración cuando nos enteramos que un framework crea aplicaciones de escritorio a partir de html, css y javascript, sin duda sorprende. Electron fue creado por Cheng Zhao en 2013 como un proyecto interno de GitHub llamado Atom Shell. La intención original era construir el entorno de desarrollo Atom utilizando tecnologías web estándar.",
+				"tx2": "En 2014, GitHub decidió lanzar Atom Shell como un proyecto de código abierto, y pronto se convirtió en Electron.",
+				"tx3": "En mayo de 2015, GitHub anunció oficialmente Electron 1.0. Esto marcó el lanzamiento estable del framework y su disponibilidad para desarrolladores de todo el mundo.",
+				"tx4": "Electron permitió a los desarrolladores construir aplicaciones de escritorio multiplataforma utilizando tecnologías web como HTML, CSS y JavaScript.",
+				"tx5": "En vista de los fácil que puediese resultar crear aplicaciones de escritorio resultó muy tentador para grandes empresas como la Microsoft que utilizó el framework para crear el editor de texto visual studio code, entre otros que tambien destacan en la actualidad.",
+				"tx6": "A medida que avanza el tiempo se ha permitido evolucionar e implementar mejoras en rendimiento y seguridad que sin duda alguna estan a la vanguardia."
+			},
+			"descripcionCorta": ""
+		},
+		"etron-elementos": {
+			"nombre": "Elementos Electron",
+			"referenciaBusqueda": "electron, elementos",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		},
+		"etron-instalacion": {
+			"nombre": "Electrón instalación",
+			"referenciaBusqueda": "instalacion, instalar",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		}
+	},
+	"FLUTTER": {
+		"flutter": {
+			"nombre": "Flutter",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "Creado por Google, este excelente framework enfocado a aplicaciones móviles comenzó en 2015 bajo el nombre en código 'Sky' como un proyecto interno en Google.",
+				"tx2": "Google anunció oficialmente Flutter en la conferencia Dart Developer Summit en 2017. Flutter fue presentado como un framework que permitiría a los desarrolladores crear interfaces de usuario atractivas y fluidas con un solo código base para iOS y Android.",
+				"tx3": "Flutter se destacó por su rendimiento rápido gracias a su motor gráfico personalizado llamado 'Skia'. En diciembre de 2018, Google lanzó oficialmente Flutter 1.0, fue adoptado por varias empresas y desarrolladores para construir aplicaciones móviles. Algunas empresas notables que utilizaron Flutter incluyen Alibaba, Reflectly, y Google Ads.",
+				"tx4": "A lo largo de 2019, Google expandió el alcance de Flutter al anunciar la capacidad de desarrollar aplicaciones para la web y el escritorio, lo que permitió a los desarrolladores utilizar Flutter para construir experiencias multiplataforma.",
+				"tx5": "Una comunidad que crece cada día y una infinidad de formas atractivas al usuario, a puesto a FLUTTER en los top's principales."
+			},
+			"descripcionCorta": ""
+		},
+		"flutter-instalacion": {
+			"nombre": "Flutter instalacion",
+			"referenciaBusqueda": "instalacion, instalar",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Esta vez tenemos descripción rápida de la instalación junto con las versiones, los cambios y el link para descargar una versión específica."
+		},
+		"flutter-elementos": {
+			"nombre": "Flutter elementos",
+			"referenciaBusqueda": "elementos, partes, descripcion",
+			"descripcion": {
+				"tx1": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		}
+	},
+	"GIT": {
+		"git": {
+			"nombre": "Git",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "Ya acostumbrados a su beneficioso servicio, no pudiera uno imaginarse como controlar las copias de cada una de las versiones de los programas que fabricaban antes. Y de hecho esa fue la necesidad que vió Linus Torvalds, creador del git y del kernel de Linux, en 2005 en respuesta a las limitaciones y deficiencias que experimentó con el sistema de control de versiones distribuido existente, BitKeeper, que estaba siendo utilizado para el desarrollo del kernel de Linux en ese entonces.",
+				"tx2": "La decisión de crear Git surgió después de que la relación entre la comunidad de código abierto y BitKeeper se volviera tensa. Cuando la relación se rompió, Torvalds decidió desarrollar su propio sistema de control de versiones distribuido.",
+				"tx3": "En abril de 2005, Linus Torvalds anunció oficialmente Git en la lista de correo de desarrollo del kernel de Linux. La primera versión pública de Git (v0.99) fue lanzada poco después.",
+				"tx4": "Ya de 2005-2007, por sus muy necesitadas características Git se propagó rápidamente en la comunidad de desarrollo debido a su velocidad, eficiencia y diseño distribuido. Otros proyectos de código abierto y empresas comenzaron a adoptar Git como su sistema de control de versiones preferido.",
+				"tx5": "Crece la comunidad y al crecer Git se benefició enormemente de las contribuciones de código abierto. Desarrolladores de todo el mundo contribuyeron al código fuente de Git, mejorando su funcionalidad y corrigiendo errores.",
+				"tx6": "Plataformas de alojamiento de código, como GitHub (lanzado en 2008), GitLab y Bitbucket, adoptaron Git como el sistema de control de versiones subyacente para sus servicios, lo que llevó a un aumento significativo en su popularidad.",
+				"tx7": "Debido al auge de Git, no se hicieron esperar la ideas paralelas a la idea y se desarrollaron numerosas herramientas y clientes gráficos que facilitaron el uso de Git para aquellos que no estaban familiarizados con la línea de comandos. Algunas de estas herramientas incluyen SourceTree, GitKraken y GitHub Desktop.",
+				"tx8": "Pudieran existir herramientas de respaldo de datos automáticas en nube o similares, pero Git se destacó por características clave como su modelo de ramificación y fusión eficiente, la capacidad de trabajar sin conexión, la integridad de los datos mediante el uso de sumas de comprobación (hashes), y su diseño distribuido.",
+				"tx9": "Ahora destacando cambios fuertes Git ha experimentado múltiples versiones importantes a lo largo de los años, cada una introduciendo nuevas características y mejoras. Algunas versiones notables incluyen Git 1.0 (2005), Git 2.0 (2013), y las versiones más recientes, que continúan mejorando la eficiencia y la usabilidad.",
+				"tx10": "Ya al día de hoy Git hace parte de la vida de los desarrollos actuales, continuará creciendo y entregando una gran ayuda en pro de todo lo bueno que viene por delante."
+			},
+			"descripcionCorta": ""
+		},
+		"git-errores": {
+			"nombre": "Errores comunes en git",
+			"referenciaBusqueda": "Errores, fallas, git",
+			"descripcion": {
+				"tx1": "Errores comunes que nos ponen a patinar un rato buscado la solución."
+			},
+			"descripcionCorta": "Errores comunes que nos ponen a patinar un rato buscado la solución."
+		}
+	},
+	"HTML": {
+		"html": {
+			"nombre": "HTML",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "Lejos de ser considerado un lenguaje de programación, al principio nunca se buscó este fin. Por esto, en 1989, Tim Berners-Lee, un físico británico que trabajaba en el CERN (Organización Europea para la Investigación Nuclear), propuso un sistema de gestión de información basado en la idea de enlaces y documentos interconectados. En 1990, Berners-Lee desarrolló el lenguaje de marcado llamado 'Enquire Within Upon Everything' como precursor de HTML.",
+				"tx2": "En 1991, Tim Berners-Lee creó la primera versión de HTML (HTML 1.0) mientras trabajaba en el CERN. HTML se diseñó originalmente como un lenguaje simple para estructurar documentos científicos en la web. No se hubiera podido considerar la cantidad tan inmensa de documentos que hay en la actualidad.",
+				"tx3": "La primera descripción formal de HTML se publicó en 1993 en un documento llamado 'HTML Tags', donde se definieron las etiquetas básicas y la estructura del lenguaje. Concepto general que se sigue manejando.",
+				"tx4": "Con cada nueva versión vendrían nuevas mejoras. En noviembre de 1995, la Internet Engineering Task Force (IETF) publicó la especificación de HTML 2.0, que incluía nuevas características y mejoras en comparación con la versión anterior.",
+				"tx5": "Entre 1995 y 1997 arrancan los primeros navegadores, en este caso 'Netscape Navigator' e 'Internet Explorer'. Ahora que la web crece, HTLM se convierte en el estándar de creación de páginas web.",
+				"tx6": "Entre 1996-1997 nueva versión con HTML 3.2 tablas y los applets. En ese mismo año, el World Wide Web Consortium (W3C) asumió la responsabilidad del desarrollo futuro de HTML.",
+				"tx7": "Del 1997-1999, HTML en su versión 4.0 que introdujo hojas de estilo CSS (Cascading Style Sheets) y un modelo más avanzado para formularios. HTML 4.01, una versión revisada, se lanzó en diciembre de 1999.",
+				"tx8": "Entre 1998 y 2008, se comienza con XHTML (Extensible Hypertext Markup Language), una versión más estricta y basada en XML de HTML. XHTML se diseñó para ser compatible con XML y HTML, pero no logró reemplazar por completo a HTML.",
+				"tx9": "Ahora entre 2008 y 2014, con HTML 5, una versión más significativa con nuevas etiquetas, API para multimedia, elementos semánticos, y mejoró el soporte para la accesibilidad y la integración de contenido multimedia.",
+				"tx10": "Luego de 2014, entró algo increíble: el W3C adoptó un enfoque diferente llamado 'HTML Living Standard', que implica actualizaciones continuas sin establecer una versión específica. Esto permite una evolución más rápida del lenguaje.",
+				"tx11": "Del 2018 en adelante, más increíbles llegan, ahora con Web components que permiten la creación de componentes web reutilizables. Desde sus inicios hasta el momento, permanece tan inprescindible en el mundo del desarrollo, total gratitud por sus aportes."
+			},
+			"descripcionCorta": ""
+		},
+		"html-elementos": {
+			"nombre": "HTML ELEMENTOS",
+			"referenciaBusqueda": "etiquetas, html",
+			"descripcion": {
+				"tx1": "Tan importante como las columnas de un edificio, hace parte primordial en la elaboración de aplicaciones. Existen propiedades, incluso etiquetas que suelen estar disponibles y se pasan por alto. Aquí estan lo más detallada posible cada uno de los elementos que hacen parte de los elementos HTML."
+			},
+			"descripcionCorta": "Una chequeo detallado a las etiquetas html y propiedades que no se suelen utilizar."
+		}
+	},
+	"JAVA": {
+		"java": {
+			"nombre": "Java",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "Uno de los lenguajes más impactantes y aclamados en la historia del desarrollo, Java fue concebido por James Gosling, Mike Sheridan y Patrick Naughton en Sun Microsystems en 1991. Inicialmente, el proyecto se llamaba 'Green' y estaba centrado en la creación de software para electrodomésticos y dispositivos integrados.",
+				"tx2": "En 1992, el equipo de desarrollo empezó a trabajar en un lenguaje de programación independiente de la plataforma y en un entorno de ejecución, conocido como 'Oak'. En 1995, Oak fue renombrado oficialmente a Java.",
+				"tx3": "La primera versión Java 1.0 fue lanzada oficialmente en 1995, marcando el inicio de la era Java. La plataforma Java incluía un lenguaje de programación, una máquina virtual (JVM), y una amplia biblioteca estándar.",
+				"tx4": "De 1996 a 1998, se integraron características como portabilidad, seguridad y la capacidad de ejecutarse en cualquier dispositivo con una JVM. También se introdujo el concepto de 'applets', pequeñas aplicaciones Java integradas en páginas web.",
+				"tx5": "La famosa librería Swing en la versión 2 de Java, también conocida como J2SE 1.2, fue lanzado en 1998 e introdujo importantes mejoras en el lenguaje y la plataforma.",
+				"tx6": "Luego de 2000-2004, muchas empresas lo tomaron para sus emprendimientos y las ideas en los desarrollos. La introducción de las tecnologías J2EE (Java 2 Platform, Enterprise Edition) y J2ME (Java 2 Platform, Micro Edition) amplió su alcance en el desarrollo web y móvil.",
+				"tx7": "En 2010, Oracle Corporation adquirió Sun Microsystems, y con ello, se convirtió en el nuevo responsable del desarrollo y la dirección de Java.",
+				"tx8": "Java 7 se lanzó en 2011 con mejoras en el lenguaje y la máquina virtual. Java 8, lanzado en 2014, fue un hito importante con la introducción de expresiones lambda, Streams API, y la nueva API de fecha y hora.",
+				"tx9": "En 2006, con el proyecto OpenJDK (Java Development Kit) la comunidad de desarrolladores desempeñó un papel esencial en la evolución continua de Java, abriéndose quedando más accesible para la comunidad.",
+				"tx10": "Muchos lenguajes siguen el camino del crecimiento y Java en 2020 en adelante sigue evolucionando con características como Records en Java 16 y Patrones en Instancia en Java 17. Se espera que las futuras versiones continúen mejorando la eficiencia y la usabilidad del lenguaje."
+			},
+			"descripcionCorta": ""
+		},
+		"java-glassfish": {
+			"nombre": "Glassfish",
+			"referenciaBusqueda": "glassfish",
+			"descripcion": {
+				"tx1": "Para empezar esta la instalación de angular simplemente, se puede tener en cuenta que trae de especial cada versión, obviamente la última versión nos muestra hasta donde a evolucionado el Framework. También estan los comandos de inicio, de creación y las opciones, que cuando empezamos no los tenemos a la mano."
+			},
+			"descripcionCorta": "Instalación angular. Qué traen las versiones desde la js y todos los comandos del angular que desconocías."
+		},
+		"java-instalacion": {
+			"nombre": "Instalación Java",
+			"referenciaBusqueda": "instalacion, instalar",
+			"descripcion": {
+				"tx1": "Para empezar esta la instalación de angular simplemente, se puede tener en cuenta que trae de especial cada versión, obviamente la última versión nos muestra hasta donde a evolucionado el Framework. También estan los comandos de inicio, de creación y las opciones, que cuando empezamos no los tenemos a la mano."
+			},
+			"descripcionCorta": "Instalación angular. Qué traen las versiones desde la js y todos los comandos del angular que desconocías."
+		},
+		"java-elementos": {
+			"nombre": "Elementos java",
+			"referenciaBusqueda": "elementos, java",
+			"descripcion": {
+				"tx1": "La estructura de los lenguajes basados en 'C', como Java, es muy similar. Adicional estan otros elementos y partes destacables, su descripción, funcionamiento e implicaciones dentro del mismo.",
+				"tx2": ""
+			},
+			"descripcionCorta": "Aquí estan los elementos más destacables nuestro querido Java."
+		}
+	},
+	"JAVASCRIPT": {
+		"javascript": {
+			"nombre": "Javascript",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "Remontando al punto inicial cuando la web estaba en su pleno crecimiento, JavaScript entró como el complemento ideal, creado por Brendan Eich en 1995 mientras trabajaba en Netscape Communications Corporation. El objetivo era desarrollar un lenguaje de scripting del lado del cliente para mejorar la interactividad en las páginas web.",
+				"tx2": "Inicialmente, el lenguaje se llamaba 'LiveScript', pero debido a un acuerdo de colaboración entre Netscape y Sun Microsystems, se cambió el nombre a 'JavaScript' para capitalizar la popularidad de Java en ese momento.",
+				"tx3": "En búsqueda de la animación, la primera implementación de JavaScript se lanzó con Netscape Navigator 2.0 en septiembre de 1995. La inclusión de JavaScript permitió a los desarrolladores crear páginas web más dinámicas e interactivas.",
+				"tx4": "Llegada de ECMAScript en 1997. Para estandarizar JavaScript y garantizar su compatibilidad entre navegadores, Netscape presentó el lenguaje al European Computer Manufacturers Association (ECMA). Se publicó la primera edición de ECMAScript, que es la especificación estándar que rige JavaScript.",
+				"tx5": "De 1996 a 1999, incursionando en un camino aparte de JavaScript, Microsoft desarrolló su propia implementación de JavaScript llamada JScript para Internet Explorer. Durante este período, hubo una competencia entre las implementaciones de JavaScript de Netscape y Microsoft, lo que llevó a algunas incompatibilidades.",
+				"tx6": "1997-1998. Ingresan al escenario DOM (Document Object Model) y DHTML (Dinamic HTML), lo que permitió a los desarrolladores manipular la estructura y presentación de las páginas web de manera dinámica, utilizando JavaScript. Esto aumentó la capacidad de interactividad en el lado del cliente.",
+				"tx7": "JavaScript en la web 2.0 Se utilizaron técnicas como AJAX (Asynchronous JavaScript and XML) para lograr actualizaciones de página sin necesidad de recargarla.",
+				"tx8": "De 2005 en adelante se desarrollaron bibliotecas y frameworks como jQuery, Prototype, y luego, en la década de 2010, frameworks más avanzados como Angular, React y Vue.js.",
+				"tx9": "JavaScript evoluciona con la llegada de Node JS lanzada por Ryan Dahl en 2009, permitiendo a los desarrolladores ejecutar JavaScript en el lado del servidor. Esto marcó un hito importante, ya que antes JavaScript era principalmente un lenguaje de cliente.",
+				"tx10": "En 2015 entró ECMAScript 6, también conocido como ES6 o ECMAScript. Este introdujo nuevas características importantes en el lenguaje, como clases, arrow functions, let y const, mejor manejo de promesas, y más, mejorando la legibilidad y funcionalidad del código.",
+				"tx11": "El desarrollo de JavaScript continúa con actualizaciones regulares. Las versiones más recientes de ECMAScript, conocidas como ESNext, introducen constantes mejoras y nuevas características para mejorar el desarrollo de aplicaciones modernas."
+			},
+			"descripcionCorta": ""
+		},
+		"js-elementos": {
+			"nombre": "Elementos javascript",
+			"referenciaBusqueda": "elementos, partes",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		},
+		"js-recorrer-arrays-objetos": {
+			"nombre": "Recorrido de arrays",
+			"referenciaBusqueda": "recorrer, iterar",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		}
+	},
+	"KOTLIN": {
+		"kotlin": {
+			"nombre": "kotlin",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "Creado por JetBrains, empresa de desarrollo en la sede en San Petersburgo, Rusia. El proyecto se inició en 2010 con el objetivo de abordar las limitaciones y desafíos que enfrentaban al utilizar Java en el desarrollo de software.",
+				"tx2": "Se presentó Kotlin en julio de 2011 como un nuevo lenguaje de programación interoperable con Java, lo que significa que podía utilizarse junto con el código Java existente.",
+				"tx3": "El desarrollo de Kotlin fue para ser conciso, expresivo, seguro y totalmente interoperable con Java. La sintaxis de Kotlin se inspira en varios lenguajes, incluyendo Java, Groovy, Scala y C#.",
+				"tx4": "Kotlin abrió sus puertas bajo la licencia Apache 2.0, ganó gradualmente popularidad entre los desarrolladores Java, y algunas empresas comenzaron a adoptarlo en sus proyectos.",
+				"tx5": "Con la versión 1.0, Google anunció oficialmente el soporte para Kotlin en Android, elevando aún más su visibilidad y adopción en 2017.",
+				"tx6": "JetBrains continuó mejorando Kotlin con actualizaciones regulares, introduciendo nuevas características y mejoras. Kotlin se convirtió en un lenguaje de programación multifuncional, admitiendo tanto la programación orientada a objetos como la programación funcional.",
+				"tx7": "Del 2017 en adelante, Kotlin no solo se utiliza para el desarrollo de Android, sino que también se ha ampliado para admitir el desarrollo en diversas plataformas, incluyendo el desarrollo del lado del servidor, el desarrollo web y el desarrollo de aplicaciones de escritorio. JetBrains ha trabajado en proyectos como Kotlin/Native y Kotlin Multiplatform, permitiendo a los desarrolladores utilizar Kotlin para crear aplicaciones que se ejecuten en una variedad de plataformas, incluyendo iOS, MacOS y JavaScript.",
+				"tx8": "Es muy notable hasta donde ha llegado el proyecto de JetBrains, especialmente en el contexto del desarrollo de Android. Su crecimiento continuo y su enfoque en la interoperabilidad con Java lo han posicionado como una opción popular en el mundo del desarrollo de software moderno."
+			},
+			"descripcionCorta": ""
+		},
+		"kotlin-elementos": {
+			"nombre": "Elementos kotlin",
+			"referenciaBusqueda": "elementos, partes",
+			"descripcion": {
+				"tx1": "Tal vez más de los mismo... Kotlin variables, funciones, sistemas de archivo, clases, tipados, etc."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		}
+	},
+	"KUBERNETES": {
+		"kubernetes": {
+			"nombre": "Kubernetes",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "Buscando mejorar la eficiencia en la ejecución de aplicaciones a nivel de producción, Google desarrolló un sistema interno llamado Borg para la gestión de contenedores, desde 2003",
+				"tx2": "Borg se convirtió en la base sobre la cual se construyó Kubernetes. Durante más de una década, Google perfeccionó y utilizó Borg internamente para orquestar y gestionar aplicaciones en sus enormes centros de datos.",
+				"tx3": "En 2013, Docker fue lanzado y proporcionó una forma estandarizada de empaquetar aplicaciones y sus dependencias en contenedores. Esto marcó un hito importante para la adopción de contenedores y contribuyó al interés generalizado en la orquestación de contenedores.",
+				"tx4": "En junio de 2014, Google anunció Kubernetes como un proyecto de código abierto en colaboración con la Linux Foundation. Kubernetes se diseñó para ofrecer una solución de orquestación de contenedores basada en la experiencia acumulada con Borg.",
+				"tx5": "En julio de 2015, Kubernetes lanzó su primera versión estable, la versión 1.0. Poco después, Kubernetes fue transferido a la Cloud Native Computing Foundation (CNCF), una fundación neutral que fomenta el desarrollo de tecnologías nativas de la nube.",
+				"tx6": "De 2020 en adelante Kubernetes ha extendido su alcance para soportar implementaciones en el borde (edge computing) y entornos multi-nube, ofreciendo flexibilidad y portabilidad en diversas configuraciones."
+			},
+			"descripcionCorta": ""
+		},
+		"kubernetes-elementos": {
+			"nombre": "Elementos kubernetes",
+			"referenciaBusqueda": "elementos, partes",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		}
+	},
+	"LINUX": {
+		"linux": {
+			"nombre": "Linux",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "Remontando el inicio, desde la creación de 'Unix', en los laboratorios Bell de AT&T a finales de 1960, se crea un sistema operativo para varias tareas que se hace popular en entornos académicos y empresariales.",
+				"tx2": "Richard Stallman y el Proyecto GNU: A principios de la década de 1980, Richard Stallman, un programador y defensor del software libre, inició el Proyecto GNU con el objetivo de crear un sistema operativo completamente libre y de código abierto. A lo largo de la década, se desarrollaron numerosas herramientas y componentes para este sistema operativo, pero faltaba el núcleo.",
+				"tx3": "Ya en 1991, un estudiante finlandés Linus Torvalds desarrolló el núcleo del sistema operativo como un proyecto personal, inspirado en Minix (un sistema Unix-like para educación). Inicialmente se llamaba \"Freax\", luego fue renombrado como \"Linux\" por Ari Lemmke, el administrador del servidor FTP donde se alojaba el código. Linus Torvalds liberó la primera versión del núcleo Linux (versión 0.01) bajo la licencia GPL (Licencia Pública General de GNU) de software libre. Publicó el código fuente en Internet, invitando a otros a contribuir y mejorar.",
+				"tx4": "A medida del transcurso del tiempo se agregaban funcionalidades y mayor estabilidad al sistema operativo, programadores de todo el mundo ponen de su parte ayudando a mejorar y expandirlo.",
+				"tx5": "Empresas como IBM, Oracle, Red Hat y SUSE invirtieron en el desarrollo y soporte de Linux, lo que ayudó a aumentar su legitimidad en entornos empresariales.",
+				"tx6": "En medio de su crecimiento, Linux se expande a otros dispositivos más allá de las computadoras personales y servidores. Se utiliza en dispositivos embebidos, teléfonos inteligentes (a través de Android, una versión modificada de Linux), sistemas embebidos en automóviles, electrodomésticos y más.",
+				"tx7": "Pasando por un sendero lleno de retos y desafíos en el mercado de PC escritorio y dominado por Windows y MacOS. Sin embargo, ha ganado seguidores entre usuarios técnicos y entusiastas, y distribuciones como Ubuntu, Fedora y Linux Mint han hecho que Linux sea más accesible para los usuarios cotidianos.",
+				"tx8": "En nuestro mundo actual en el que la familia de desarrolladores crece cada día, Linux ha significado un gran regalo al desarrollo de software, con todas sus prestaciones y utilidades que se mantienen a la vanguardia. Como desarrolladores esperemos que llegue al podio y supere enormemente a los otros con su cara amable y libre."
+			},
+			"descripcionCorta": ""
+		},
+		"lx-comandos": {
+			"nombre": "Comandos más usados",
+			"referenciaBusqueda": "Comandos, codigos",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		}
+	},
+	"NET": {
+		"net": {
+			"nombre": "Net",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "Como parte de Microsoft y como un padre que hizo parte del origen de la mano de la plataforma Windows, a medida que la informática personal se volvía más prominente en la década de 1980, Microsoft se estableció como uno de los principales jugadores en el desarrollo de software para PC.",
+				"tx2": "Microsoft reconoció la necesidad de una plataforma unificada que permitiera a los desarrolladores crear aplicaciones de software de manera más eficiente y consistente. Comenzó a trabajar en lo que eventualmente se convertiría en .NET Framework.",
+				"tx3": "Junto con el desarrollo de .NET Framework, Microsoft creó un nuevo lenguaje de programación llamado C#. C# fue diseñado para ser un lenguaje moderno y orientado a objetos, que aprovechara las características de la plataforma .NET.",
+				"tx4": "Microsoft anunció .NET Framework en el año 2000 y lo lanzó oficialmente en febrero de 2002 como una plataforma de desarrollo para construir aplicaciones de software en Windows. .NET Framework proporcionó un entorno de ejecución común, una biblioteca de clases unificada y herramientas de desarrollo integradas para varios lenguajes de programación, incluyendo C#, Visual Basic.NET y C++.",
+				"tx5": "Con el paso del tiempo surgían nuevas plataformas, Microsoft extendió .NET Framework para admitir otros sistemas operativos además de Windows. Esto incluyó el desarrollo de .NET Core, una versión modular y multiplataforma de .NET que fue lanzada en 2016.",
+				"tx6": "Ya en noviembre de 2020, Microsoft anunció la unificación de .NET Core, Xamarin y Mono en una sola plataforma llamada .NET 5. Este fue el primer paso hacia la consolidación de la plataforma .NET. Luego, en noviembre de 2021, se lanzó .NET 6, la última versión principal de .NET, que ofrece aún más mejoras y características, así como una mayor convergencia entre diferentes cargas de trabajo y tipos de aplicaciones."
+			},
+			"descripcionCorta": ""
+		},
+		"net-elementos": {
+			"nombre": "Elementos net",
+			"referenciaBusqueda": "elementos, partes",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		},
+		"net-instalacion": {
+			"nombre": "Instalacion NET",
+			"referenciaBusqueda": "instalacion, instalar",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		}
+	},
+	"PHP": {
+		"php": {
+			"nombre": "Php",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "En 1994 creado como una herramienta para rastrear las visitas a su curriculum personal, Rasmus Lerdorf crea un conjunto de scripts CGI escritos en C.",
+				"tx2": "En su forma original, PHP era conocido como 'Personal Home Page Tools' (Herramientas de Página Personal).",
+				"tx3": "En 1995, Lerdorf extendió el conjunto de herramientas y lanzó PHP/FI (Personal Home Page/Forms Interpreter), que incluía capacidades para crear aplicaciones web dinámicas y formularios interactivos. PHP/FI fue la primera versión más reconocible de PHP y permitió a los desarrolladores crear páginas web dinámicas de manera más eficiente.",
+				"tx4": "Lerdorf dió el punto de partida, pero a medida que se hacía popular PHP/FI, la colaboración comunitaria fue fundamental para el crecimiento y la evolución de PHP.",
+				"tx5": "En 1998, Zeev Suraski y Andi Gutmans reescribieron el núcleo de PHP y lanzaron PHP 3. Esta versión introdujo mejoras significativas en el rendimiento y la funcionalidad del lenguaje, incluida una arquitectura de módulos que permitía la expansión y la integración con otros sistemas y tecnologías.",
+				"tx6": "PHP 3 fue un gran éxito y atrajo a una amplia gama de desarrolladores y empresas que buscaban crear aplicaciones web dinámicas. La simplicidad del lenguaje, su integración con HTML y su amplio soporte para bases de datos lo convirtieron en una opción popular para el desarrollo web.",
+				"tx7": "En 2000, se lanzó PHP 4, que incluía mejoras adicionales en rendimiento, estabilidad y características. PHP 4 fue una versión muy exitosa y contribuyó aún más a la adopción generalizada de PHP en la comunidad de desarrollo web.",
+				"tx8": "En 2004, se lanzó PHP 5, que incluía un motor Zend completamente renovado y un soporte mejorado para programación orientada a objetos (POO). Esta versión fue un gran paso adelante en la evolución de PHP y lo estableció como un lenguaje de programación poderoso y versátil para el desarrollo web.",
+				"tx9": "PHP 7, lanzado en 2015, introdujo mejoras significativas en rendimiento y eficiencia de memoria, lo que lo hizo aún más atractivo para el desarrollo web de alto rendimiento. PHP 7.4, PHP 8 y las versiones posteriores continuaron mejorando el lenguaje con nuevas características, optimizaciones y mejoras de seguridad."
+			},
+			"descripcionCorta": ""
+		},
+		"php-elementos": {
+			"nombre": "Elementos php",
+			"referenciaBusqueda": "elementos, partes",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		}
+	},
+	"REACT": {
+		"react": {
+			"nombre": "React",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "Desarrollado por Facebook, creado por Jordan Walke, un ingeniero de software de Facebook, y se introdujo por primera vez en 2011 en la página de noticias de Facebook (News Feed). El objetivo principal de React era mejorar el rendimiento y la eficiencia de la representación de la interfaz de usuario en aplicaciones web complejas y dinámicas.",
+				"tx2": "React fue lanzado oficialmente como un proyecto de código abierto en GitHub en mayo de 2013. En un principio, fue adoptado internamente por Facebook y luego se extendió a otros productos de la empresa. La simplicidad, la eficiencia y la capacidad de reutilización del código de React atrajeron rápidamente la atención de la comunidad de desarrollo de software.",
+				"tx3": "A medida que React ganaba popularidad, se convirtió en uno de los frameworks de JavaScript más utilizados y ampliamente adoptados en la industria. Grandes empresas como Netflix, Airbnb, Instagram y WhatsApp comenzaron a utilizar React en sus aplicaciones web y móviles debido a su rendimiento, flexibilidad y comunidad activa.",
+				"tx4": "En 2015, Facebook anunció React Native, un marco de desarrollo de aplicaciones móviles basado en React.  React Native permite a los desarrolladores crear aplicaciones móviles nativas para iOS y Android utilizando JavaScript y React. Esto permitió a los equipos de desarrollo compartir código entre las aplicaciones web y móviles, lo que resultó en un desarrollo más eficiente y una experiencia de usuario consistente en múltiples plataformas.",
+				"tx5": "React ha tenido un impacto significativo en el ecosistema de desarrollo web y ha influenciado a otros frameworks y bibliotecas de JavaScript. Muchos otros proyectos, como Redux, Next.js y Gatsby, se han construido sobre React para proporcionar funcionalidades adicionales y mejorar la experiencia de desarrollo."
+			},
+			"descripcionCorta": ""
+		},
+		"react-elementos": {
+			"nombre": "Elementos React",
+			"referenciaBusqueda": "elementos, partes",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		}
+	},
+	"TYPESCRIPT": {
+		"typescript": {
+			"nombre": "Typescript",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": "TypeScript fue creado por Anders Hejlsberg, un ingeniero de software danés conocido por su trabajo en Turbo Pascal, Delphi y C#. Hejlsberg y su equipo comenzaron a trabajar en TypeScript en 2010 en Microsoft. El objetivo principal era abordar las limitaciones de JavaScript en el desarrollo de aplicaciones web a gran escala, proporcionando tipos estáticos y otras características de lenguajes de programación modernos.",
+				"tx2": "TypeScript fue anunciado por primera vez por Anders Hejlsberg en octubre de 2012 en la conferencia Build de Microsoft. La primera versión pública, TypeScript 0.8, fue lanzada en octubre de 2012. Esta versión inicial incluía soporte para anotaciones de tipos estáticos, clases, módulos y otras características de lenguajes modernos.",
+				"tx3": "TypeScript ha experimentado un crecimiento significativo desde su lanzamiento inicial. Ha ganado una gran popularidad entre los desarrolladores que buscan una manera más segura y estructurada de desarrollar aplicaciones web y móviles. Grandes empresas como Google, Facebook, Netflix y Airbnb utilizan TypeScript en sus proyectos debido a sus beneficios en términos de productividad y mantenibilidad del código."
+			},
+			"descripcionCorta": ""
+		},
+		"typescript-elementos": {
+			"nombre": "Elementos typescript",
+			"referenciaBusqueda": "elementos, partes",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		},
+		"typescript-instalacion": {
+			"nombre": "Instalación typescript para pruebas",
+			"referenciaBusqueda": "instalacion, correr archivos typescript, archivos typescript",
+			"descripcion": {
+				"tx1": "No es necesario cargarse un framework completo como Angular o React para ejecutar las pruebas que solemos hacer de funciones o algún elemento del lenguaje con los archivos typescript.",
+				"tx2": "Miremos como ejecutarlos directamente desde las diferentes consolas de los Sistemas operativos.",
+				"tx3": "Es un proceso simple, sin embargo miremos estas maneras."
+			},
+			"descripcionCorta": "Paso a paso para correr archivos typescript directamente en los diferentes sistemas operativos.",
+			"titulo1": "EN LINUX",
+			"enLinux": "Al tratar de ejecutar 'tsc app.ts' o 'node app.ts' de un archivo typescript, linux solicita instalar una dependencia.",
+			"instalar": "INSTALAR ESTA DEPENDENCIA:",
+			"archivo": "Archivo app.ts",
+			"correrArchivo": "Una vez instalada la dependencia, el archivo anterior se corre tranquilamente:",
+			"titulo2": "EN WINDOWS",
+			"enWindows": "Al tratar de ejecutar 'tsc app.ts' o 'node app.ts' de un archivo typescript, en windows aparece: 'no se reconoce como un comando inerno o externo, programa o archivo por lotes ejecutable.'"
+		}
+	},
+	"WORDPRESS": {
+		"wordpress": {
+			"nombre": "Wordpress",
+			"referenciaBusqueda": "",
+			"descripcion": {
+				"tx1": ""
+			},
+			"descripcionCorta": ""
+		},
+		"wordpress-elementos": {
+			"nombre": "Elementos Wordpress",
+			"referenciaBusqueda": "elementos, partes",
+			"descripcion": {
+				"tx1": "Descripción rápida de la aplicación de lo elementos que hacen parte de typescript, similares en gran parte a Javascript, ya obviamente la aplicación de lo particular de typescript que son los tipos."
+			},
+			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
+		}
+	}
+}
