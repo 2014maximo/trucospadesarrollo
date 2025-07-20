@@ -103,19 +103,19 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         referenceContent: [
             {
                 title: 'CSSMAKING',
-                link: 'https://www.w3.org/',
+                link: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
                 description: 'DEVELOPER.developer.frontendRoadmap.css.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'LAYOUTSRESPONSIVE',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout/Responsive_Design',
                 description: 'DEVELOPER.developer.frontendRoadmap.css.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
             {
                 title: 'DESIGN',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://developer.mozilla.org/es/docs/Learn/CSS/CSS_layout',
                 description: 'DEVELOPER.developer.frontendRoadmap.css.descripcionLink3',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
@@ -146,19 +146,19 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
             },
             {
                 title: 'SMACSS',
-                link: 'https://developer.mozilla.org/es/docs/Web/HTML',
+                link: 'https://smacss.com/book/',
                 description: 'DEVELOPER.developer.frontendRoadmap.cssArchitecture.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
             {
                 title: 'OOCSS',
-                link: 'https://en.bem.info/',
+                link: 'https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/',
                 description: 'DEVELOPER.developer.frontendRoadmap.cssArchitecture.descripcionLink3',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'ATOMIC DESIGN',
-                link: 'https://en.bem.info/',
+                link: 'https://css-tricks.com/lets-define-exactly-atomic-css/',
                 description: 'DEVELOPER.developer.frontendRoadmap.cssArchitecture.descripcionLink4',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
@@ -182,12 +182,12 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         referenceContent: [
             {
                 title: 'SASS',
-                link: 'https://www.w3.org/',
+                link: 'https://sass-lang.com/documentation/',
                 description: 'DEVELOPER.developer.frontendRoadmap.cssPreprocessors.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
-                title: 'LESS',
+                title: ' ',
                 link: 'https://developer.mozilla.org/es/docs/Web/CSS',
                 description: 'DEVELOPER.developer.frontendRoadmap.cssPreprocessors.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
@@ -214,6 +214,20 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
                     }
                 ]
             }
+        ],
+        referenceContent: [
+            {
+                title: 'ECMASCRIPT',
+                link: 'https://developer.mozilla.org/es/docs/Glossary/ECMAScript',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-1'
+            },
+            {
+                title: 'MDN WEB DOCS - JAVASCRIPT',
+                link: 'https://developer.mozilla.org/es/docs/Web/JavaScript',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            }
         ]
     },
     {
@@ -229,6 +243,26 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
                         styleText: 'text-light f-open-sans-c fs-20 lh-25'
                     }
                 ]
+            }
+        ],
+        referenceContent: [
+            {
+                title: 'HTTP',
+                link: 'https://developer.mozilla.org/es/docs/Web/HTTP',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-1'
+            },
+            {
+                title: 'HTTPS',
+                link: 'https://developer.mozilla.org/es/docs/Web/HTTP/Overview',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            },
+            {
+                title: 'DNS',
+                link: 'https://support.google.com/a/answer/48090?',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
         ]
     },
@@ -250,19 +284,19 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         referenceContent: [
             {
                 title: 'GIT',
-                link: 'https://www.w3.org/',
+                link: 'https://git-scm.com/',
                 description: 'DEVELOPER.developer.frontendRoadmap.versionControlSistem.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'SVN',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://subversion.apache.org/docs/',
                 description: 'DEVELOPER.developer.frontendRoadmap.versionControlSistem.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
             {
                 title: 'MERCURIAL',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://www.mercurial-scm.org',
                 description: 'DEVELOPER.developer.frontendRoadmap.versionControlSistem.descripcionLink3',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
@@ -282,6 +316,26 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
                     }
                 ]
             }
+        ],
+        referenceContent:[
+            {
+                title: 'GITHUB',
+                link: 'https://github.com/',
+                description: 'DEVELOPER.developer.frontendRoadmap.versionControlSistem.descripcionLink3',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            },
+            {
+                title: 'BITBUCKET',
+                link: 'https://bitbucket.org/',
+                description: 'DEVELOPER.developer.frontendRoadmap.versionControlSistem.descripcionLink3',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            },
+            {
+                title: 'GITLAB',
+                link: 'https://gitlab.com/',
+                description: 'DEVELOPER.developer.frontendRoadmap.versionControlSistem.descripcionLink3',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            }
         ]
     },
     {
@@ -298,6 +352,26 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
                     }
                 ]
             }
+        ],
+        referenceContent:[
+            {
+                title: 'NPM (NODE.JS)',
+                link: 'https://www.npmjs.com/',
+                description: 'DEVELOPER.developer.frontendRoadmap.versionControlSistem.descripcionLink3',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            },
+            {
+                title: 'YARN',
+                link: 'https://yarnpkg.com/',
+                description: 'DEVELOPER.developer.frontendRoadmap.versionControlSistem.descripcionLink3',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            },
+            {
+                title: 'PNPM',
+                link: 'https://pnpm.io/motivation',
+                description: 'DEVELOPER.developer.frontendRoadmap.versionControlSistem.descripcionLink3',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            }
         ]
     },
     {
@@ -313,6 +387,26 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
                         styleText: 'text-light f-open-sans-c fs-20 lh-25'
                     }
                 ]
+            }
+        ],
+        referenceContent: [
+            {
+                title: 'REACT',
+                link: 'https://react.dev/',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-1'
+            },
+            {
+                title: 'ANGULAR',
+                link: 'https://angular.io/',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            },
+            {
+                title: 'VUE',
+                link: 'https://vuejs.org/',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
         ]
     },
@@ -334,19 +428,19 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         referenceContent: [
             {
                 title: 'WEBPACK',
-                link: 'https://www.w3.org/',
+                link: 'https://webpack.js.org/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'GULP',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://gulpjs.com/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
             {
                 title: 'GRUNT',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://gruntjs.com/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
@@ -370,13 +464,13 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         referenceContent: [
             {
                 title: 'ESLINT',
-                link: 'https://www.w3.org/',
+                link: 'http://eslint.org/docs/latest/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'PRETTIER',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://prettier.io/docs/index.html',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
@@ -399,20 +493,38 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         ],
         referenceContent: [
             {
-                title: 'WEBPACK',
-                link: 'https://www.w3.org/',
-                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
-                classStyle: 'fuenteSeis linkReference cursor-p rot-1'
-            },
-            {
                 title: 'ROLLUP',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://rollupjs.org/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
             {
                 title: 'PARCEL',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://parceljs.org/',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            },
+            {
+                title: 'VITE',
+                link: 'https://vitejs.dev/',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            },
+            {
+                title: 'SNOWPACK',
+                link: 'https://www.snowpack.dev/',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            },
+            {
+                title: 'ESBUILD',
+                link: 'https://esbuild.github.io/',
+                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
+                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
+            },
+            {
+                title: 'BROWSERIFY',
+                link: 'http://browserify.org/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
@@ -435,20 +547,20 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         ],
         referenceContent: [
             {
-                title: 'UNIT TESTING',
-                link: 'https://www.w3.org/',
+                title: 'JEST',
+                link: 'https://jestjs.io/docs/getting-started',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
-                title: 'INTEGRATION TESTING',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                title: 'MOCHA',
+                link: 'https://mochajs.org/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
             {
-                title: 'END-TO-END TESTING',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                title: 'JASMINE',
+                link: 'https://jasmine.github.io/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
@@ -472,19 +584,19 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         referenceContent: [
             {
                 title: 'JWT',
-                link: 'https://www.w3.org/',
+                link: 'https://jwt.io/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'OAUTH',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://oauth.net/2/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
             {
                 title: 'OPENID CONNECT',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://openid.net/specs/openid-connect-core-1_0.html',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
@@ -508,19 +620,13 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         referenceContent: [
             {
                 title: 'CORS',
-                link: 'https://www.w3.org/',
+                link: 'https://developer.mozilla.org/es/docs/Web/HTTP/Guides/CORS',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
-                title: 'HTTPS',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
-                description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
-                classStyle: 'fuenteSeis linkReference cursor-p rot-3'
-            },
-            {
                 title: 'CONTENT SECURITY POLICY',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
@@ -544,19 +650,19 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         referenceContent: [
             {
                 title: 'CUSTOM ELEMENTS',
-                link: 'https://www.w3.org/',
+                link: 'https://custom-elements-manifest.open-wc.org/analyzer/getting-started/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'SHADOW DOM',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://developer.mozilla.org/es/docs/Web/API/Web_components/Using_shadow_DOM',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
             {
                 title: 'HTML TEMPLATES',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://blog.pixelfreestudio.com/how-to-use-html-templates-in-web-components/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
@@ -580,13 +686,13 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         referenceContent: [
             {
                 title: 'Typescript',
-                link: 'https://www.w3.org/',
+                link: 'https://www.typescriptlang.org/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'FLOW',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://support.flow-software.com/hc/en-us/categories/360002305879-Product-Documentation',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
@@ -658,19 +764,19 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         referenceContent: [
             {
                 title: 'GATSBY',
-                link: 'https://www.w3.org/',
+                link: 'https://www.gatsbyjs.com/docs/cheat-sheet/',
                 description: 'DEVELOPER.developer.frontendRoadmap.staticSiteGenerators.titulo',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'JEKYLL',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://jekyllrb.com/docs/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
             {
                 title: 'HUGO',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://gohugo.io/documentation/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
@@ -693,19 +799,19 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         ], referenceContent: [
             {
                 title: 'REACT NATIVE',
-                link: 'https://www.w3.org/',
+                link: 'https://reactnative.dev/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'FLUTTER',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://docs.flutter.dev/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
             {
                 title: 'IONIC',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://ionicframework.com/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             },
@@ -728,16 +834,16 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
         ], referenceContent: [
             {
                 title: 'ELECTRON',
-                link: 'https://www.w3.org/',
+                link: 'https://www.electronjs.org/es/docs/latest/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-1'
             },
             {
                 title: 'NW.js',
-                link: 'https://developer.mozilla.org/es/docs/Web/CSS',
+                link: 'https://nwjs.io/',
                 description: 'DEVELOPER.developer.frontendRoadmap.html.descripcionLink2',
                 classStyle: 'fuenteSeis linkReference cursor-p rot-3'
             }
         ]
-    },
+    }
 ]

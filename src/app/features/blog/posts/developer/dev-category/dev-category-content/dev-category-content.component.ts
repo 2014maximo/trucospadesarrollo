@@ -5,8 +5,9 @@ import { CategoriaPostModel, DatosPost } from '@models/categorias.model';
 import { IndiceDeContenidosModel } from '@models/indice.model';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AddsModel } from 'src/app/shared/models/post.model';
-import { FRONTEND_ROADMAP } from '../dev-category.constants';
+import { FRONTEND_ROADMAP } from '../constants/frontend-roadmap.constant';
 import { FirstDescriptionBlockComponent } from 'src/app/shared/components/first-description-block/first-description-block.component';
+import { BACKEND_ROADMAP } from '../constants/backend-roadmap.constant';
 
 @Component({
   selector: 'app-dev-category-content',
@@ -25,7 +26,8 @@ export class DevCategoryContentComponent {
 
   public categoria = new CategoriaPostModel();
   public indice: IndiceDeContenidosModel [] = [];
-  public roadMapDescriptions = FRONTEND_ROADMAP;
+  public frontendRoadMap = FRONTEND_ROADMAP;
+  public backendRoadMap = BACKEND_ROADMAP;
 
   constructor(private translate: TranslateService){
   }

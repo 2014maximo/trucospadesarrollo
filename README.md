@@ -33,6 +33,7 @@ src/
 │   ├── app.component.html
 │   ├── app.module.ts
 
+# DESCRIPCIÓN
 patrón: Feature-based Architecture
 También es conocido como:
 
@@ -52,3 +53,5 @@ Es ideal para proyectos que crecerán con el tiempo porque las nuevas funcionali
 
 Lazy loading y optimización:
 Al combinar este patrón con el cargado diferido (lazy loading), solo se carga el código de una característica cuando se necesita, mejorando el rendimiento.
+
+# DEPLOY GITHUB PAGES

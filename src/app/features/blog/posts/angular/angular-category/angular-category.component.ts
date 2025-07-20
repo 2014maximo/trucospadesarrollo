@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
 export class AngularCategoryComponent {
 
   constructor(){
-    console.log('Categoria Angular cargada');
   }
 
 }

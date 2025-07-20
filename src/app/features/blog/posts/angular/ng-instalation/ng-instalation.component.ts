@@ -9,7 +9,6 @@ import { Component } from '@angular/core';
 export class NgInstalationComponent {
 
   constructor(){
-    console.log('NgInstalationComponent cargado')
   }
 
 }

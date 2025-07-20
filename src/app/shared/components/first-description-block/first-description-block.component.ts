@@ -29,7 +29,7 @@ export class FirstDescriptionBlockComponent {
 		abrirUrl(url, blank)
 	}
 
-	public controlUndefined(value: string | undefined, defaultValue: string = ''): string {
+	public controlUndefined(value?: string | undefined, defaultValue: string = ''): string {
 		const textToTranslate = value ?? defaultValue;
 		const textReturn = this.translate.instant(textToTranslate);
 

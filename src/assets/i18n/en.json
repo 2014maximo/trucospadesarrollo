@@ -502,7 +502,68 @@
                     "titulo": "Desktop applications",
                     "text1": "Desktop applications that run on desktop and laptop computers. They are a fundamental part of frontend development and help you reach a wider audience, enhance the user experience and deliver a high-quality desktop experience (Electron, NW.js)."
                 }
-            }
+            },"backendRoadMap": {
+				"language": {
+					"text1": "Programming languages, allow you to create web applications and services on the server side. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+				},
+				"repoHostingService": {
+					"text1":"Online platform that allows you to host your code repository and collaborate with other developers. It is a fundamental part of backend development and allows you to share your code, collaborate on projects and maintain a change history."
+				},
+				"oSAndGeneralKnowledge":{
+					"text1":"Basic knowledge of operating systems and general technologies that help you understand how server-side applications and services work. They are a fundamental part of backend development and help you create scalable, secure and efficient applications."
+				},
+				"relationalDatabases":{
+					"text1":"A database that uses a relational data model to store and manage information. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+				},
+				"noSQLDatabases":{
+					"text1":"A database that uses a non-relational data model to store and manage information. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+				},
+				"scalingDatabases":{
+					"text1":"The process of increasing the capacity and performance of a database to handle a higher volume of data and traffic. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+				},
+				"API":{
+					"text1":"Application programming interface that allows you to communicate with other services and applications. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+				},
+				"caching":{
+					"text1":"The process of storing data in memory to speed access and improve the performance of an application. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+				},
+				"webSecurityKnowledge":{
+					"text1":"Web security skills that help you protect your application and prevent cyber attacks. They are a fundamental part of backend development and help you ensure security, protect sensitive information and maintain the integrity of your application."
+				},
+				"testing":{
+					"text1":"The process of evaluating your code to ensure that it works correctly and meets requirements. It is a fundamental part of backend development and helps you detect bugs, improve quality and ensure that your code is reliable."
+				},
+				"CI/CD":{
+					"text1":"Practices and tools that allow you to automate the process of continuous integration and delivery of your code. They are a fundamental part of backend development and help you improve the efficiency, quality and speed of your development."
+				},
+				"designAndDevelopmentPrincipies":{
+					"text1":"Design and development principles and practices that help you create scalable, secure and efficient applications. They are a fundamental part of backend development and help you improve quality, efficiency and user experience."
+				},
+				"arquitecturalPatterns":{
+					"text1":"Architecture patterns that help you organize and structure your code efficiently. They are a fundamental part of backend development and help you keep your code organized, scalable and easy to maintain."
+				},
+				"messageBrokers":{
+					"text1":"Messaging system that allows you to send and receive messages between applications and services. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+				},
+				"containerizationVsVirtualization":{
+					"text1":"Application packaging and deployment techniques that allow you to create isolated and portable environments. They are a fundamental part of backend development and help you improve the efficiency, scalability and security of your applications."
+				},
+				"serverSendEvents":{
+					"text1":"Technology that allows you to send events from the server to the client in a unidirectional way. It is a fundamental part of backend development and helps you create real-time applications and improve the user experience."
+				},
+				"webSockets":{
+					"text1":"Technology that allows you to establish a bidirectional connection between the server and the client. It is a fundamental part of backend development and helps you create real-time applications and improve the user experience."
+				},
+				"webServers":{
+					"text1":"Web server that allows you to host and serve your application on the server side. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+				},
+				"buildingForScale":{
+					"text1":"The process of designing and developing applications that can handle large volumes of data and traffic. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+				},
+				"devOps":{
+					"text1":"Practices and tools that allow you to integrate the development and operation of your application. They are a fundamental part of backend development and help you improve the efficiency, quality and speed of your development."
+				}
+			}
         },
         "dev-super-recursos": {
             "nombre": "Suggested compilation of websites and AI's",

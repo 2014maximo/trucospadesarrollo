@@ -506,7 +506,69 @@
                     "titulo": "Applications de bureau",
                     "text1": "Applications de bureau qui fonctionnent sur les ordinateurs de bureau et les ordinateurs portables. Elles constituent un élément fondamental du développement frontal et permettent d'atteindre un public plus large, d'améliorer l'expérience de l'utilisateur et de fournir une expérience de bureau de haute qualité (Electron, NW.js)."
                 }
-            }
+            },
+			"backendRoadMap": {
+				"language": {
+					"text1": "Langages de programmation qui permettent de créer des applications et des services web du côté du serveur. Il s'agit d'un élément fondamental du développement backend qui vous aide à créer des applications évolutives, sûres et efficaces."
+				},
+				"repoHostingService": {
+					"text1":"Une plateforme en ligne qui vous permet d'héberger votre dépôt de code et de collaborer avec d'autres développeurs. Il s'agit d'un élément fondamental du développement backend qui vous permet de partager votre code, de collaborer sur des projets et de conserver un historique des modifications."
+				},
+				"oSAndGeneralKnowledge":{
+					"text1":"Connaissance de base des systèmes d'exploitation et des technologies générales qui vous aident à comprendre le fonctionnement des applications et des services côté serveur. Ils constituent une partie fondamentale du développement backend et vous aident à créer des applications évolutives, sûres et efficaces."
+				},
+				"relationalDatabases":{
+					"text1":"Une base de données qui utilise un modèle de données relationnel pour stocker et gérer des informations. Il s'agit d'un élément fondamental du développement backend qui vous aide à créer des applications évolutives, sécurisées et efficaces."
+				},
+				"noSQLDatabases":{
+					"text1":"Une base de données qui utilise un modèle de données non relationnel pour stocker et gérer des informations. Il s'agit d'un élément fondamental du développement backend qui vous aide à créer des applications évolutives, sécurisées et efficaces."
+				},
+				"scalingDatabases":{
+					"text1":"Le processus d'augmentation de la capacité et de la performance d'une base de données pour gérer un plus grand volume de données et de trafic. Il s'agit d'un élément fondamental du développement backend qui vous aide à créer des applications évolutives, sécurisées et efficaces."
+				},
+				"API":{
+					"text1":"Une interface de programmation d'application qui vous permet de communiquer avec d'autres services et applications. Il s'agit d'un élément fondamental du développement backend qui vous aide à créer des applications évolutives, sécurisées et efficaces."
+				},
+				"caching":{
+					"text1":"Le processus de stockage des données en mémoire afin d'accélérer l'accès et d'améliorer les performances d'une application. Il s'agit d'un élément fondamental du développement backend qui vous aide à créer des applications évolutives, sécurisées et efficaces."
+				},
+				"webSecurityKnowledge":{
+					"text1":"Compétences en matière de sécurité web qui vous aident à protéger votre application et à prévenir les cyberattaques. Elles constituent une partie fondamentale du développement backend et vous aident à garantir la sécurité, à protéger les informations sensibles et à maintenir l'intégrité de votre application."
+				},
+				"testing":{
+					"text1":"Le processus d'évaluation de votre code pour s'assurer qu'il fonctionne correctement et qu'il répond aux exigences. Il s'agit d'une partie fondamentale du développement backend qui vous aide à détecter les bogues, à améliorer la qualité et à garantir la fiabilité de votre code."
+				},
+				"CI/CD":{
+					"text1":"Pratiques et outils qui vous permettent d'automatiser le processus d'intégration et de livraison continues de votre code. Ils constituent une partie fondamentale du développement backend et vous aident à améliorer l'efficacité, la qualité et la rapidité de votre développement."
+				},
+				"designAndDevelopmentPrincipies":{
+					"text1":"Principes et pratiques de conception et de développement qui vous aident à créer des applications évolutives, sûres et efficaces. Ils constituent une partie fondamentale du développement backend et vous aident à améliorer la qualité, l'efficacité et l'expérience de l'utilisateur."
+				},
+				"arquitecturalPatterns":{
+					"text1":"Les modèles d'architecture qui vous aident à organiser et à structurer votre code de manière efficace. Ils constituent une partie fondamentale du développement backend et vous aident à garder votre code organisé, évolutif et facile à maintenir."
+				},
+				"messageBrokers":{
+					"text1":"Système de messagerie qui vous permet d'envoyer et de recevoir des messages entre les applications et les services. Il s'agit d'un élément fondamental du développement d'applications dorsales qui vous aide à créer des applications évolutives, sûres et efficaces."
+				},
+				"containerizationVsVirtualization":{
+					"text1":"Techniques d'empaquetage et de déploiement d'applications qui permettent de créer des environnements isolés et portables. Elles constituent un élément fondamental du développement des applications dorsales et vous aident à améliorer l'efficacité, l'évolutivité et la sécurité de vos applications."
+				},
+				"serverSendEvents":{
+					"text1":"Technologie qui permet d'envoyer des événements du serveur au client de manière unidirectionnelle. Il s'agit d'un élément fondamental du développement backend qui vous aide à créer des applications en temps réel et à améliorer l'expérience de l'utilisateur."
+				},
+				"webSockets":{
+					"text1":"Technologie qui permet d'établir une connexion bidirectionnelle entre le serveur et le client. Il s'agit d'un élément fondamental du développement backend qui vous aide à créer des applications en temps réel et à améliorer l'expérience de l'utilisateur."
+				},
+				"webServers":{
+					"text1":"Serveur web qui vous permet d'héberger et de servir votre application côté serveur. Il s'agit d'un élément fondamental du développement backend qui vous aide à créer des applications évolutives, sûres et efficaces."
+				},
+				"buildingForScale":{
+					"text1":"Le processus de conception et de développement d'applications capables de gérer de grands volumes de données et de trafic. Il s'agit d'une partie fondamentale du développement backend qui vous aide à créer des applications évolutives, sécurisées et efficaces."
+				},
+				"devOps":{
+					"text1":"Pratiques et outils qui vous permettent d'intégrer le développement et le fonctionnement de votre application. Ils constituent une partie fondamentale du développement backend et vous aident à améliorer l'efficacité, la qualité et la rapidité de votre développement."
+				}
+			}
         }
     },
     "ELECTRON": {
