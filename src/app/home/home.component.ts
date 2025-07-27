@@ -7,6 +7,7 @@ import { MenuHomeComponent } from '../shared/components/menu-home/menu-home.comp
 import { PhrasesComponent } from "../shared/components/phrases/phrases.component";
 import { FooterHomeComponent } from '../shared/components/footer-home/footer-home.component';
 import { TopTecnologyComponent } from '../shared/components/top-tecnology/top-tecnology.component';
+import { GoUpComponent } from '../shared/components/go-up/go-up.component';
 
 @Component({
 	selector: 'app-home',
@@ -18,7 +19,8 @@ import { TopTecnologyComponent } from '../shared/components/top-tecnology/top-te
     SliderHomeComponent,
     GaleryPostComponent,
 	TopTecnologyComponent,
-    PhrasesComponent
+    PhrasesComponent,
+	GoUpComponent
 ],
 	standalone: true,
 	templateUrl: './home.component.html',

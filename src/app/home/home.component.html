@@ -1,4 +1,5 @@
 <div class="espaciado" #target></div>
+
 <app-header></app-header>
 <app-galery-post [itemIniciales]="9"></app-galery-post>
 <div class="espaciado"></div>
@@ -16,16 +17,4 @@
 <div class="espaciado d-none d-md-block"></div>
 
 <app-footer-home></app-footer-home>
-
-
-
-
-
-
-
-
-
-
-<div class="go-up" (click)="scroll(target)">
-	<i class="fa fa-chevron-up" aria-hidden="true"></i>
-</div>
+<go-up [target]="target"></go-up>

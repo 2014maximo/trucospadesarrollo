@@ -5,6 +5,7 @@ import { HeaderComponent } from 'src/app/shared/components/header/header.compone
 import { AddsModel } from 'src/app/shared/models/post.model';
 import { CategoriaPostModel } from '@models/categorias.model';
 import { DevCategoryContentComponent } from './dev-category-content/dev-category-content.component';
+import { GoUpComponent } from 'src/app/shared/components/go-up/go-up.component';
 
 @Component({
   selector: 'app-dev-category',
@@ -12,7 +13,8 @@ import { DevCategoryContentComponent } from './dev-category-content/dev-category
     FooterHomeComponent,
     DevCategoryContentComponent,
     CategoryHeaderComponent,
-    HeaderComponent
+    HeaderComponent,
+    GoUpComponent
   ],
   templateUrl: './dev-category.component.html',
   styleUrl: './dev-category.component.css'
@@ -24,8 +26,6 @@ export class DevCategoryComponent {
   public categoria = new CategoriaPostModel();
 
 
-  scroll(el: HTMLElement) {
-    el.scrollIntoView();
-  }
+
 
 }
