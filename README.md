@@ -55,3 +55,9 @@ Lazy loading y optimización:
 Al combinar este patrón con el cargado diferido (lazy loading), solo se carga el código de una característica cuando se necesita, mejorando el rendimiento.
 
 # DEPLOY GITHUB PAGES
+Use command for deploy in 'www.trucospadesarrollo.com':
+firebase deploy
+
+Use commands for deploy in githubpages:
+ng build --base-href "https://2014maximo.github.io/trucospadesarrollo/"
+npx angular-cli-ghpages --dir=dist/trucospadesarrollo/browser
