@@ -67,7 +67,7 @@
 
                 <!-- Menú de navegación -->
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto fuenteDos text-center">
+                    <ul class="navbar-nav ms-auto f-open-sans-c text-center">
                         <li class="nav-item">
                             <a class="nav-link active" data-bs-toggle="collapse" data-bs-target="#navbarNav" (click)="openSearch()">{{ 'Buscar' | translate }}</a>
                         </li>
@@ -98,8 +98,8 @@
             <a *ngFor="let lenguaje of lenguajes"
                 class="d-flex dropdown-item cursor-p translate-item justify-content-center mr-5"
                 (click)="procesoCambioLenguaje(lenguaje)">
-                <p class="fuenteDos mr-5">{{lenguaje}}</p> <img src="assets/img/icons/languaje-{{lenguaje}}.png"
-                    alt="incon languaje" height="20px" width="auto">
+                <p class="f-open-sans-c">{{lenguaje}} </p><img src="assets/img/icons/languaje-{{lenguaje}}.png"
+                    alt="incon languaje" height="20px" width="auto" class="ms-2">
             </a>
         </div>
         <div class="bg-dark p-5" *ngIf="showCategories">
