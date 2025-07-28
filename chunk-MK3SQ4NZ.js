@@ -1,1 +1,0 @@
-import"./chunk-2VMXMS7J.js";var t=[{path:"",loadComponent:()=>import("./chunk-VLJG2UEY.js").then(o=>o.DevCategoryComponent)},{path:"ias",loadComponent:()=>import("./chunk-BQ7FZVBQ.js").then(o=>o.DevIasComponent)},{path:"sites",loadComponent:()=>import("./chunk-UARWNEDC.js").then(o=>o.DevSitesComponent)}];export{t as DEVELOPER_ROUTES};

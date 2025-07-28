@@ -964,7 +964,18 @@
                 "tx2": "The idea of this glossary is to quickly find a simplified description of developing terms that are sometimes lost from our minds. For the time being, there is usually no need for so much information on a specific topic."
             },
             "descripcionCorta": "Find a quick description of terms in development."
-        }
+        },
+		"dev-extra-money": {
+			"nombre": "Earn extra money",
+			"referenciaBusqueda": "money, extra, assets, profits",
+			"descripcion": {
+				"tx1": "You may have thought about making some extra money at some point, so here are a few ideas that I researched and studied for quite some time.",
+				"tx2": "If you think about it, programming can be applied to any of these current ways of generating income.",
+				"tx3": "Finances are a fundamental part of a developer's life. Salaries in development have been a good source of income, so it is vital to know how to manage them and it is also a good idea to invest them or use them to provide assistance that benefits both parties.",
+				"tx4": "I hope this is useful. If you have any questions or suggestions, please contact me using the contact form."
+			},
+			"descripcionCorta": "Ways in which many people are currently generating income in a short period of time. Today's technology provides a favorable outlook when thinking about work or ways to earn extra money."
+		}
     },
     "ELECTRON": {
         "electron": {

@@ -1,0 +1,1 @@
+import{Ca as n,Ua as o,Va as s,eb as a}from"./chunk-HD77BPYG.js";import"./chunk-2VMXMS7J.js";var i=class t{static \u0275fac=function(e){return new(e||t)};static \u0275cmp=n({type:t,selectors:[["app-dev-ias"]],decls:2,vars:0,template:function(e,m){e&1&&(o(0,"p"),a(1,"dev-ias works!"),s())},encapsulation:2})};export{i as DevIasComponent};

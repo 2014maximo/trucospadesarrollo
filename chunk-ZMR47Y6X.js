@@ -1,0 +1,1 @@
+import{Ca as a,Ua as n,Va as o,eb as r}from"./chunk-HD77BPYG.js";import"./chunk-2VMXMS7J.js";var s=class t{constructor(){}static \u0275fac=function(e){return new(e||t)};static \u0275cmp=a({type:t,selectors:[["app-angular-category"]],decls:2,vars:0,template:function(e,l){e&1&&(n(0,"p"),r(1,"angular-category works!"),o())},encapsulation:2})};export{s as AngularCategoryComponent};

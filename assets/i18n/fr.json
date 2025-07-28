@@ -569,7 +569,18 @@
 					"text1":"Pratiques et outils qui vous permettent d'intégrer le développement et le fonctionnement de votre application. Ils constituent une partie fondamentale du développement backend et vous aident à améliorer l'efficacité, la qualité et la rapidité de votre développement."
 				}
 			}
-        }
+        },
+		"dev-extra-money": {
+			"nombre": "Gagnez de l'argent supplémentaire",
+			"referenciaBusqueda": "argent, supplément, actifs, bénéfices",
+			"descripcion": {
+				"tx1": "Si l'idée de gagner un peu d'argent supplémentaire vous a déjà traversé l'esprit, voici quelques idées que j'ai moi-même consultées et étudiées pendant un certain temps.",
+				"tx2": "Si vous y réfléchissez bien, la programmation peut s'appliquer à n'importe laquelle de ces formes actuelles de génération de revenus.",
+				"tx3": "Les finances sont un élément fondamental dans la vie d'un développeur. Le salaire dans le domaine du développement est un bon indicateur de revenus, il est essentiel de savoir le gérer et il n'est pas inutile de le coupler à des investissements ou de pouvoir apporter une aide qui profite aux deux parties.",
+				"tx4": "J'espère que cela vous sera utile. Pour toute question ou suggestion, vous pouvez me contacter via le formulaire de contact."
+			},
+			"descripcionCorta": "Formas en las que actualmente muchas personas estan generando ingresos en poco tiempo. La tecnología hoy en día entrega un panorama favorable a la hora de pensar en trabajo o formas de ganar platica extra."
+		}
     },
     "ELECTRON": {
         "electron": {
