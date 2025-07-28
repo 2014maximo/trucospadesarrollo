@@ -71,6 +71,13 @@ html{
     width: 100%;
 }
 
+.tituloPost{
+    text-transform: uppercase;
+    line-height: 80px;
+    font-size: 95px;
+    color: #fff;
+    text-shadow: black .1em .1em .2em;
+}
 .fuenteTres {
     font-family: var(--fuente-tres);
 }

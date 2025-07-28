@@ -1,21 +1,19 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { CategoriaModel } from '../../models/post.model';
-import { FormControl, FormGroup } from '@angular/forms';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormGroup, FormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CATEGORIA } from '@constants/categories.constant';
 import { CategoriaPostModel, DatosPost } from '@models/categorias.model';
-import { Router } from '@angular/router';
-import { Subject, firstValueFrom } from 'rxjs';
-import { busquedaGeneral } from '@shared//global-functions';
-import { TraduccionService } from '../../services/traduccion.service';
 import { IndiceDeContenidosModel } from '@models/indice.model';
-import { TranslateModule } from '@ngx-translate/core';
-import { TranslateService } from "@ngx-translate/core";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { firstValueFrom, Subject } from 'rxjs';
+import { CategoriaModel } from '../../models/post.model';
+import { Router } from '@angular/router';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TraduccionService } from '../../services/traduccion.service';
+import { busquedaGeneral } from '@shared//global-functions';
 import { ContentIndexComponent } from '../content-index/content-index.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
-	selector: 'app-header',
+	selector: 'app-header-post',
 	imports: [
 		TranslateModule,
 		ReactiveFormsModule,
@@ -23,11 +21,10 @@ import { ContentIndexComponent } from '../content-index/content-index.component'
 		CommonModule,
 		ContentIndexComponent
 	],
-	standalone: true,
-	templateUrl: './header.component.html',
-	styleUrl: './header.component.css'
+	templateUrl: './header-post.component.html',
+	styleUrl: './header-post.component.css'
 })
-export class HeaderComponent {
+export class HeaderPostComponent {
 
 	public formBasic: FormGroup;
 	public categorias = CATEGORIA;
@@ -56,8 +53,8 @@ export class HeaderComponent {
 	};
 
 	constructor(private router: Router,
-				public translate: TranslateService,
-				private traduccion: TraduccionService) {
+		public translate: TranslateService,
+		private traduccion: TraduccionService) {
 
 		if (localStorage.getItem("idioma")) {
 			this.idiomaActual = localStorage.getItem('idioma') ?? '';
@@ -75,8 +72,8 @@ export class HeaderComponent {
 		});
 
 		this.translate.addLangs(['fr', 'en', 'es']);
-	    this.translate.setDefaultLang('es');
-	    this.translate.use('es');
+		this.translate.setDefaultLang('es');
+		this.translate.use('es');
 	}
 
 	private inicializarVariables() {
@@ -106,21 +103,21 @@ export class HeaderComponent {
 		}
 	}
 
-	openSearch(){
+	openSearch() {
 		this.showSearch = !this.showSearch;
 		this.showMenu = !this.showMenu;
 	}
-	closeOptions(){
+	closeOptions() {
 		this.showMenu = true;
 		this.showSearch = false;
 		this.showLanguajes = false;
 		this.showCategories = false
 	}
-	openLanguage(){
+	openLanguage() {
 		this.showLanguajes = !this.showLanguajes;
 		this.showMenu = !this.showMenu;
 	}
-	openCategories(){
+	openCategories() {
 		this.showCategories = !this.showCategories;
 		this.showMenu = !this.showMenu;
 	}

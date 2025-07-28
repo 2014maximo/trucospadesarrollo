@@ -174,4 +174,29 @@ export const DEVELOPER: DatosPost[] = [
         estado: 'activo',
         imgSlider: undefined
     },
+    {
+        id: '3cc3d6ca-15db-4fea-b225-6cc0c715e8c8',
+        nombre: 'DEVELOPER.dev-extra-money.nombre',
+        referenciaBusqueda:'DEVELOPER.dev-extra-money.referenciaBusqueda',
+        descripcion: [
+            'DEVELOPER.dev-extra-money.descripcion.tx1',
+            'DEVELOPER.dev-extra-money.descripcion.tx2',
+            'DEVELOPER.dev-extra-money.descripcion.tx3',
+            'DEVELOPER.dev-extra-money.descripcion.tx4'
+        ],
+        descripcionCorta: 'DEVELOPER.dev-extra-money.descripcionCorta',
+        ruta: 'blog/developer/extra-money',
+        componente: 'DevExtraMoney',
+        mostrarEnPostHome: true,
+        estilos: ESTILO_DEVELOPER,
+        fechaCreacion: '2025-07-27',
+        fechaActualizacion: '',
+        imgHorizontal: new RefImg('https://plantillas_dev.gitlab.io/assets/img/posts/developer/gallery-extra-money.jpg','Glosario general','auto','220'),
+        imgVertical:'',
+        imgCuadro:'',
+        categoria: 'developer',
+        posicion: 'rot-3',
+        estado: 'activo',
+        imgSlider: undefined
+    },
 ]

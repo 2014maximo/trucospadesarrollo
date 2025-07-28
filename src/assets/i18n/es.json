@@ -970,6 +970,17 @@
 				"tx2": "La idea de este glosario es encontrar rápidamente una descripción simplificada de los términos en desarrollo que a veces se nos pierde del mente. De momento no suele necesitarse tanta información de algún tema en específico."
 			},
 			"descripcionCorta": "Encuentra una descripción rápida de términos en desarrollo."
+		},
+		"dev-extra-money": {
+			"nombre": "Genera dinero extra",
+			"referenciaBusqueda": "dinero, extra, activos, ganancias",
+			"descripcion": {
+				"tx1": "Posiblemente por la cabeza en algún momento ha pasado la idea de generar dinero extra, aqui te dejo un grupo de ideas que yo mismo consulte y estudie durante un buen tiempo.",
+				"tx2": "Si lo piensas bien hasta la programación se puede aplicar a cualquiera de estas formas actuales de generar ingresos.",
+				"tx3": "La finanzas son una parte fundamental en la vida de un desarrollador. El salario en desarrollo a sido un buen referente de ingresos, es vital saber administrarlo y no esta de más acoplarlo a inversiones o poder brindar una ayuda en la que se beneficien ambas partes.",
+				"tx4": "Espero sea de utilidad, cualquier duda o sugerencia puedes contactarme por el formulario de contacto."
+			},
+			"descripcionCorta": "Formas en las que actualmente muchas personas estan generando ingresos en poco tiempo. La tecnología hoy en día entrega un panorama favorable a la hora de pensar en trabajo o formas de ganar platica extra."
 		}
 	},
 	"ELECTRON": {

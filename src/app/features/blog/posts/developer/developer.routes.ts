@@ -15,5 +15,10 @@ export const DEVELOPER_ROUTES: Routes = [
     path: 'sites',
     loadComponent: () => import('./dev-sites/dev-sites.component')
       .then(m => m.DevSitesComponent)
+  },
+  {
+    path: 'extra-money',
+    loadComponent: () => import('./dev-extra-money/dev-extra-money.component')
+      .then(m => m.DevExtraMoneyComponent)
   }
 ];

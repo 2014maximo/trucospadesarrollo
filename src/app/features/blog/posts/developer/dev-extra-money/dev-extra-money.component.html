@@ -1,0 +1,20 @@
+<app-header-post [categoria]="breadcrumb"></app-header-post>
+<div class="espaciado"></div>
+<app-header-post-supplement [idPublicacion]="idPublicacion"
+    [rutaIconoSugerido]="categoria.rutaIcono"></app-header-post-supplement>
+
+<div class="espaciado"></div>
+
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <ul>
+            <li *ngFor="let idea of ideasExtraMoney" id="description" class="c7 f-open-sans-c fs-20 lh-25">
+                {{ idea}}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<div class="espaciado"></div>
