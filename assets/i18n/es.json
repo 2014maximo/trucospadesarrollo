@@ -975,12 +975,62 @@
 			"nombre": "Genera dinero extra",
 			"referenciaBusqueda": "dinero, extra, activos, ganancias",
 			"descripcion": {
-				"tx1": "Posiblemente por la cabeza en algún momento ha pasado la idea de generar dinero extra, aqui te dejo un grupo de ideas que yo mismo consulte y estudie durante un buen tiempo.",
+				"tx1": "Posiblemente por nuestra la cabeza en algún momento ha pasado la idea de generar dinero extra, aqui te dejo un grupo de ideas que yo mismo consulte y estudie durante un buen tiempo.",
 				"tx2": "Si lo piensas bien hasta la programación se puede aplicar a cualquiera de estas formas actuales de generar ingresos.",
 				"tx3": "La finanzas son una parte fundamental en la vida de un desarrollador. El salario en desarrollo a sido un buen referente de ingresos, es vital saber administrarlo y no esta de más acoplarlo a inversiones o poder brindar una ayuda en la que se beneficien ambas partes.",
 				"tx4": "Espero sea de utilidad, cualquier duda o sugerencia puedes contactarme por el formulario de contacto."
 			},
-			"descripcionCorta": "Formas en las que actualmente muchas personas estan generando ingresos en poco tiempo. La tecnología hoy en día entrega un panorama favorable a la hora de pensar en trabajo o formas de ganar platica extra."
+			"descripcionCorta": "Formas en las que actualmente muchas personas estan generando ingresos en poco tiempo. La tecnología hoy en día entrega un panorama favorable a la hora de pensar en trabajo o formas de ganar platica extra.",
+			"ideas":{
+				"dropshiping": {
+					"nombre": "Dropshipping",
+					"descripcion": "Vender productos sin tener inventario propio, utilizando proveedores que envían directamente al cliente."
+				},
+				"ventaProductosChinos": {
+					"nombre": "Vender productos chinos por mercado libre",
+					"descripcion": "Importar productos desde China y venderlos en tu país, aprovechando la diferencia de precios."
+				},
+				"perfilesGoogle": {
+					"nombre": "Organizando los perfiles de negocio para las búsquedas de Google a negocios pequeños",
+					"descripcion": "Crear y vender perfiles de Google optimizados para negocios locales, ayudando a mejorar su visibilidad en línea."
+				},
+				"aplicacionesMoviles": {
+					"nombre": "Crear aplicaciones móviles",
+					"descripcion": "Desarrollar aplicaciones móviles y monetizarlas a través de publicidad o compras dentro de la app."
+				},
+				"inversionesFlipping": {
+					"nombre": "Inversiones flipping",
+					"descripcion": "Comprar propiedades o activos a bajo precio, renovarlos y venderlos a un precio más alto."
+				},
+				"verderRopaOlvidada": {
+					"nombre": "Vender ropa olvidada",
+					"descripcion": "Recoger ropa usada o olvidada y venderla en línea o en mercados locales."
+				},
+				"marketingAfiliados": {
+					"nombre": "Marketing de afiliados",
+					"descripcion": "Promocionar productos o servicios de otras empresas y ganar comisiones por cada venta realizada a través de tus enlaces."
+				},
+				"tiendaOnlinePropia": {
+					"nombre": "Tienda online propia",
+					"descripcion": "Crear una tienda en línea para vender productos propios o de terceros, utilizando plataformas como Shopify o WooCommerce."
+				},
+				"amazonFBA": {
+					"nombre": "Amazon FBA (Fulfillment by Amazon)",
+					"descripcion": "Vender productos a través de Amazon, donde ellos se encargan del almacenamiento, envío y atención al cliente."
+				},
+				"startup": {
+					"nombre": "Crear una startup",
+					"descripcion": "Desarrollar una idea innovadora y buscar financiamiento para lanzar un negocio desde cero."
+				},
+				"royaltiesFranquicia": {
+					"nombre": "Cobrar royalties por franquicias",
+					"descripcion": "Crear un modelo de negocio exitoso y cobrar royalties a otros emprendedores que deseen replicarlo."
+				},
+				"pinteres": {
+					"nombre": "Pinterest",
+					"descripcion": "Utilizar Pinterest para promocionar productos o servicios, generando tráfico y ventas a través.."
+				}
+			}
 		}
 	},
 	"ELECTRON": {

@@ -502,68 +502,69 @@
                     "titulo": "Desktop applications",
                     "text1": "Desktop applications that run on desktop and laptop computers. They are a fundamental part of frontend development and help you reach a wider audience, enhance the user experience and deliver a high-quality desktop experience (Electron, NW.js)."
                 }
-            },"backendRoadMap": {
-				"language": {
-					"text1": "Programming languages, allow you to create web applications and services on the server side. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
-				},
-				"repoHostingService": {
-					"text1":"Online platform that allows you to host your code repository and collaborate with other developers. It is a fundamental part of backend development and allows you to share your code, collaborate on projects and maintain a change history."
-				},
-				"oSAndGeneralKnowledge":{
-					"text1":"Basic knowledge of operating systems and general technologies that help you understand how server-side applications and services work. They are a fundamental part of backend development and help you create scalable, secure and efficient applications."
-				},
-				"relationalDatabases":{
-					"text1":"A database that uses a relational data model to store and manage information. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
-				},
-				"noSQLDatabases":{
-					"text1":"A database that uses a non-relational data model to store and manage information. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
-				},
-				"scalingDatabases":{
-					"text1":"The process of increasing the capacity and performance of a database to handle a higher volume of data and traffic. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
-				},
-				"API":{
-					"text1":"Application programming interface that allows you to communicate with other services and applications. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
-				},
-				"caching":{
-					"text1":"The process of storing data in memory to speed access and improve the performance of an application. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
-				},
-				"webSecurityKnowledge":{
-					"text1":"Web security skills that help you protect your application and prevent cyber attacks. They are a fundamental part of backend development and help you ensure security, protect sensitive information and maintain the integrity of your application."
-				},
-				"testing":{
-					"text1":"The process of evaluating your code to ensure that it works correctly and meets requirements. It is a fundamental part of backend development and helps you detect bugs, improve quality and ensure that your code is reliable."
-				},
-				"CI/CD":{
-					"text1":"Practices and tools that allow you to automate the process of continuous integration and delivery of your code. They are a fundamental part of backend development and help you improve the efficiency, quality and speed of your development."
-				},
-				"designAndDevelopmentPrincipies":{
-					"text1":"Design and development principles and practices that help you create scalable, secure and efficient applications. They are a fundamental part of backend development and help you improve quality, efficiency and user experience."
-				},
-				"arquitecturalPatterns":{
-					"text1":"Architecture patterns that help you organize and structure your code efficiently. They are a fundamental part of backend development and help you keep your code organized, scalable and easy to maintain."
-				},
-				"messageBrokers":{
-					"text1":"Messaging system that allows you to send and receive messages between applications and services. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
-				},
-				"containerizationVsVirtualization":{
-					"text1":"Application packaging and deployment techniques that allow you to create isolated and portable environments. They are a fundamental part of backend development and help you improve the efficiency, scalability and security of your applications."
-				},
-				"serverSendEvents":{
-					"text1":"Technology that allows you to send events from the server to the client in a unidirectional way. It is a fundamental part of backend development and helps you create real-time applications and improve the user experience."
-				},
-				"webSockets":{
-					"text1":"Technology that allows you to establish a bidirectional connection between the server and the client. It is a fundamental part of backend development and helps you create real-time applications and improve the user experience."
-				},
-				"webServers":{
-					"text1":"Web server that allows you to host and serve your application on the server side. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
-				},
-				"buildingForScale":{
-					"text1":"The process of designing and developing applications that can handle large volumes of data and traffic. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
-				},
-				"devOps":{
-					"text1":"Practices and tools that allow you to integrate the development and operation of your application. They are a fundamental part of backend development and help you improve the efficiency, quality and speed of your development."
-				}
-			}
+            },
+            "backendRoadMap": {
+                "language": {
+                    "text1": "Programming languages, allow you to create web applications and services on the server side. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+                },
+                "repoHostingService": {
+                    "text1": "Online platform that allows you to host your code repository and collaborate with other developers. It is a fundamental part of backend development and allows you to share your code, collaborate on projects and maintain a change history."
+                },
+                "oSAndGeneralKnowledge": {
+                    "text1": "Basic knowledge of operating systems and general technologies that help you understand how server-side applications and services work. They are a fundamental part of backend development and help you create scalable, secure and efficient applications."
+                },
+                "relationalDatabases": {
+                    "text1": "A database that uses a relational data model to store and manage information. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+                },
+                "noSQLDatabases": {
+                    "text1": "A database that uses a non-relational data model to store and manage information. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+                },
+                "scalingDatabases": {
+                    "text1": "The process of increasing the capacity and performance of a database to handle a higher volume of data and traffic. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+                },
+                "API": {
+                    "text1": "Application programming interface that allows you to communicate with other services and applications. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+                },
+                "caching": {
+                    "text1": "The process of storing data in memory to speed access and improve the performance of an application. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+                },
+                "webSecurityKnowledge": {
+                    "text1": "Web security skills that help you protect your application and prevent cyber attacks. They are a fundamental part of backend development and help you ensure security, protect sensitive information and maintain the integrity of your application."
+                },
+                "testing": {
+                    "text1": "The process of evaluating your code to ensure that it works correctly and meets requirements. It is a fundamental part of backend development and helps you detect bugs, improve quality and ensure that your code is reliable."
+                },
+                "CI/CD": {
+                    "text1": "Practices and tools that allow you to automate the process of continuous integration and delivery of your code. They are a fundamental part of backend development and help you improve the efficiency, quality and speed of your development."
+                },
+                "designAndDevelopmentPrincipies": {
+                    "text1": "Design and development principles and practices that help you create scalable, secure and efficient applications. They are a fundamental part of backend development and help you improve quality, efficiency and user experience."
+                },
+                "arquitecturalPatterns": {
+                    "text1": "Architecture patterns that help you organize and structure your code efficiently. They are a fundamental part of backend development and help you keep your code organized, scalable and easy to maintain."
+                },
+                "messageBrokers": {
+                    "text1": "Messaging system that allows you to send and receive messages between applications and services. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+                },
+                "containerizationVsVirtualization": {
+                    "text1": "Application packaging and deployment techniques that allow you to create isolated and portable environments. They are a fundamental part of backend development and help you improve the efficiency, scalability and security of your applications."
+                },
+                "serverSendEvents": {
+                    "text1": "Technology that allows you to send events from the server to the client in a unidirectional way. It is a fundamental part of backend development and helps you create real-time applications and improve the user experience."
+                },
+                "webSockets": {
+                    "text1": "Technology that allows you to establish a bidirectional connection between the server and the client. It is a fundamental part of backend development and helps you create real-time applications and improve the user experience."
+                },
+                "webServers": {
+                    "text1": "Web server that allows you to host and serve your application on the server side. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+                },
+                "buildingForScale": {
+                    "text1": "The process of designing and developing applications that can handle large volumes of data and traffic. It is a fundamental part of backend development and helps you create scalable, secure and efficient applications."
+                },
+                "devOps": {
+                    "text1": "Practices and tools that allow you to integrate the development and operation of your application. They are a fundamental part of backend development and help you improve the efficiency, quality and speed of your development."
+                }
+            }
         },
         "dev-super-recursos": {
             "nombre": "Suggested compilation of websites and AI's",
@@ -965,410 +966,460 @@
             },
             "descripcionCorta": "Find a quick description of terms in development."
         },
-		"dev-extra-money": {
-			"nombre": "Earn extra money",
-			"referenciaBusqueda": "money, extra, assets, profits",
-			"descripcion": {
-				"tx1": "You may have thought about making some extra money at some point, so here are a few ideas that I researched and studied for quite some time.",
-				"tx2": "If you think about it, programming can be applied to any of these current ways of generating income.",
-				"tx3": "Finances are a fundamental part of a developer's life. Salaries in development have been a good source of income, so it is vital to know how to manage them and it is also a good idea to invest them or use them to provide assistance that benefits both parties.",
-				"tx4": "I hope this is useful. If you have any questions or suggestions, please contact me using the contact form."
-			},
-			"descripcionCorta": "Ways in which many people are currently generating income in a short period of time. Today's technology provides a favorable outlook when thinking about work or ways to earn extra money."
-		}
-    },
-    "ELECTRON": {
-        "electron": {
-            "nombre": "Eletron",
-            "referenciaBusqueda": "",
+        "dev-extra-money": {
+            "nombre": "Earn extra money",
+            "referenciaBusqueda": "money, extra, assets, profits",
             "descripcion": {
-                "tx1": "At first, it is of much admiration when we learn that a framework creates desktop applications from html, css and javascript, it certainly surprises. Electron was created by Cheng Zhao in 2013 as an internal GitHub project called Atom Shell. The original intention was to build the Atom development environment using standard web technologies.",
-                "tx2": "In 2014, GitHub decided to launch Atom Shell as an open source project, and it soon became Electron.",
-                "tx3": "In May 2015, GitHub officially announced Electron 1.0. This marked the stable release of the framework and its availability to developers worldwide.",
-                "tx4": "Electron enabled developers to build cross-platform desktop applications using web technologies such as HTML, CSS and JavaScript.",
-                "tx5": "In view of the ease of creating desktop applications, it was very tempting for large companies such as Microsoft, which used the framework to create the visual studio code text editor, among others that also stand out today.",
-                "tx6": "As time has progressed, it has been allowed to evolve and implement improvements in performance and security that are undoubtedly at the forefront."
+                "tx1": "You may have thought about making some extra money at some point, so here are a few ideas that I researched and studied for quite some time.",
+                "tx2": "If you think about it, programming can be applied to any of these current ways of generating income.",
+                "tx3": "Finances are a fundamental part of a developer's life. Salaries in development have been a good source of income, so it is vital to know how to manage them and it is also a good idea to invest them or use them to provide assistance that benefits both parties.",
+                "tx4": "I hope this is useful. If you have any questions or suggestions, please contact me using the contact form."
             },
-            "descripcionCorta": ""
+            "descripcionCorta": "Ways in which many people are currently generating income in a short period of time. Today's technology provides a favorable outlook when thinking about work or ways to earn extra money."
         },
-        "etron-elementos": {
-            "nombre": "Elements Electron",
-            "referenciaBusqueda": "electron, elements",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+        "ideas": {
+            "dropshiping": {
+                "nombre": "Dropshipping",
+                "descripcion": "Sell products without having your own inventory, using suppliers who ship directly to the customer."
             },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            "ventaProductosChinos": {
+                "nombre": "Selling Chinese products on the open market",
+                "descripcion": "Import products from China and sell them in your country, taking advantage of the price difference."
+            },
+            "perfilesGoogle": {
+                "nombre": "Organizing business profiles for Google searches for small businesses",
+                "descripcion": "Create and sell Google profiles optimized for local businesses, helping to improve their online visibility."
+            },
+            "aplicacionesMoviles": {
+                "nombre": "Create mobile applications",
+                "descripcion": "Desarrollar aplicaciones móviles y monetizarlas a través de publicidad o compras dentro de la app."
+            },
+            "inversionesFlipping": {
+                "nombre": "Inversiones flipping",
+                "descripcion": "Comprar propiedades o activos a bajo precio, renovarlos y venderlos a un precio más alto."
+            },
+            "verderRopaOlvidada": {
+                "nombre": "Vender ropa olvidada",
+                "descripcion": "Recoger ropa usada o olvidada y venderla en línea o en mercados locales."
+            },
+            "marketingAfiliados": {
+                "nombre": "Marketing de afiliados",
+                "descripcion": "Promocionar productos o servicios de otras empresas y ganar comisiones por cada venta realizada a través de tus enlaces."
+            },
+            "tiendaOnlinePropia": {
+                "nombre": "Tienda online propia",
+                "descripcion": "Crear una tienda en línea para vender productos propios o de terceros, utilizando plataformas como Shopify o WooCommerce."
+            },
+            "amazonFBA": {
+                "nombre": "Amazon FBA (Fulfillment by Amazon)",
+                "descripcion": "Vender productos a través de Amazon, donde ellos se encargan del almacenamiento, envío y atención al cliente."
+            },
+            "startup": {
+                "nombre": "Crear una startup",
+                "descripcion": "Desarrollar una idea innovadora y buscar financiamiento para lanzar un negocio desde cero."
+            },
+            "royaltiesFranquicia": {
+                "nombre": "Cobrar royalties por franquicias",
+                "descripcion": "Crear un modelo de negocio exitoso y cobrar royalties a otros emprendedores que deseen replicarlo."
+            },
+            "pinteres": {
+                "nombre": "Pinterest",
+                "descripcion": "Utilizar Pinterest para promocionar productos o servicios, generando tráfico y ventas a través.."
+            }
         },
-        "etron-instalacion": {
-            "nombre": "Electron installation",
-            "referenciaBusqueda": "installation, install",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+        "ELECTRON": {
+            "electron": {
+                "nombre": "Eletron",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "At first, it is of much admiration when we learn that a framework creates desktop applications from html, css and javascript, it certainly surprises. Electron was created by Cheng Zhao in 2013 as an internal GitHub project called Atom Shell. The original intention was to build the Atom development environment using standard web technologies.",
+                    "tx2": "In 2014, GitHub decided to launch Atom Shell as an open source project, and it soon became Electron.",
+                    "tx3": "In May 2015, GitHub officially announced Electron 1.0. This marked the stable release of the framework and its availability to developers worldwide.",
+                    "tx4": "Electron enabled developers to build cross-platform desktop applications using web technologies such as HTML, CSS and JavaScript.",
+                    "tx5": "In view of the ease of creating desktop applications, it was very tempting for large companies such as Microsoft, which used the framework to create the visual studio code text editor, among others that also stand out today.",
+                    "tx6": "As time has progressed, it has been allowed to evolve and implement improvements in performance and security that are undoubtedly at the forefront."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        }
-    },
-    "FLUTTER": {
-        "flutter": {
-            "nombre": "Flutter",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "Created by Google, this excellent framework focused on mobile applications started in 2015 under the code name 'Sky' as an internal project at Google.",
-                "tx2": "Google officially announced Flutter at the Dart Developer Summit conference in 2017. Flutter was introduced as a framework that would allow developers to create attractive and fluid user interfaces with a single code base for iOS and Android.",
-                "tx3": "Flutter was noted for its fast performance thanks to its custom graphics engine called 'Skia'. In December 2018, Google officially launched Flutter 1.0, it was adopted by several companies and developers to build mobile apps. Some notable companies that used Flutter include Alibaba, Reflectly, and Google Ads.",
-                "tx4": "Throughout 2019, Google expanded Flutter's reach by announcing the ability to develop apps for web and desktop, allowing developers to use Flutter to build cross-platform experiences.",
-                "tx5": "A community that grows every day and an infinity of attractive ways to the user, has put FLUTTER in the top's top."
+            "etron-elementos": {
+                "nombre": "Elements Electron",
+                "referenciaBusqueda": "electron, elements",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
             },
-            "descripcionCorta": ""
+            "etron-instalacion": {
+                "nombre": "Electron installation",
+                "referenciaBusqueda": "installation, install",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            }
         },
-        "flutter-instalacion": {
-            "nombre": "Flutter installation",
-            "referenciaBusqueda": "installation, install",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+        "FLUTTER": {
+            "flutter": {
+                "nombre": "Flutter",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "Created by Google, this excellent framework focused on mobile applications started in 2015 under the code name 'Sky' as an internal project at Google.",
+                    "tx2": "Google officially announced Flutter at the Dart Developer Summit conference in 2017. Flutter was introduced as a framework that would allow developers to create attractive and fluid user interfaces with a single code base for iOS and Android.",
+                    "tx3": "Flutter was noted for its fast performance thanks to its custom graphics engine called 'Skia'. In December 2018, Google officially launched Flutter 1.0, it was adopted by several companies and developers to build mobile apps. Some notable companies that used Flutter include Alibaba, Reflectly, and Google Ads.",
+                    "tx4": "Throughout 2019, Google expanded Flutter's reach by announcing the ability to develop apps for web and desktop, allowing developers to use Flutter to build cross-platform experiences.",
+                    "tx5": "A community that grows every day and an infinity of attractive ways to the user, has put FLUTTER in the top's top."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "This time we have a quick description of the installation along with the versions, changes and the link to download a specific version."
+            "flutter-instalacion": {
+                "nombre": "Flutter installation",
+                "referenciaBusqueda": "installation, install",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "This time we have a quick description of the installation along with the versions, changes and the link to download a specific version."
+            },
+            "flutter-elementos": {
+                "nombre": "Flutter elements",
+                "referenciaBusqueda": "elements, parts, description",
+                "descripcion": {
+                    "tx1": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            }
         },
-        "flutter-elementos": {
-            "nombre": "Flutter elements",
-            "referenciaBusqueda": "elements, parts, description",
-            "descripcion": {
-                "tx1": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+        "GIT": {
+            "git": {
+                "nombre": "Git",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "Already accustomed to their beneficial service, one could not imagine how to control the copies of each of the versions of the programs they produced before. And indeed that was the need that Linus Torvalds, creator of git and the Linux kernel, saw in 2005 in response to the limitations and shortcomings he experienced with the existing distributed version control system, BitKeeper, which was being used for Linux kernel development at the time.",
+                    "tx2": "The decision to create Git came after the relationship between the open source community and BitKeeper became strained. When the relationship broke down, Torvalds decided to develop his own distributed version control system.",
+                    "tx3": "In April 2005, Linus Torvalds officially announced Git on the Linux kernel development mailing list. The first public version of Git (v0.99) was released shortly thereafter.",
+                    "tx4": "As early as 2005-2007, Git's much-needed features quickly spread in the development community due to its speed, efficiency and distributed design. Other open source projects and companies began adopting Git as their version control system of choice.",
+                    "tx5": "The community grew, and as Git grew, it benefited greatly from open source contributions. Developers from all over the world contributed to the Git source code, improving its functionality and fixing bugs.",
+                    "tx6": "Code hosting platforms, such as GitHub (launched in 2008), GitLab and Bitbucket, adopted Git as the underlying version control system for their services, leading to a significant increase in its popularity.",
+                    "tx7": "Due to the rise of Git, parallel ideas to the idea were not long in coming and numerous tools and graphical clients were developed that made Git easier to use for those unfamiliar with the command line. Some of these tools include SourceTree, GitKraken and GitHub Desktop.",
+                    "tx8": "Automated cloud-based data backup tools or similar may exist, but Git stood out for key features such as its efficient branching and merging model, the ability to work offline, data integrity through the use of hashes, and its distributed design.",
+                    "tx9": "Now highlighting strong changes Git has undergone multiple major releases over the years, each introducing new features and improvements. Some notable releases include Git 1.0 (2005), Git 2.0 (2013), and more recent versions, which continue to improve efficiency and usability.",
+                    "tx10": "Already a part of today's development life, Git will continue to grow and deliver great support for all the good things to come."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        }
-    },
-    "GIT": {
-        "git": {
-            "nombre": "Git",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "Already accustomed to their beneficial service, one could not imagine how to control the copies of each of the versions of the programs they produced before. And indeed that was the need that Linus Torvalds, creator of git and the Linux kernel, saw in 2005 in response to the limitations and shortcomings he experienced with the existing distributed version control system, BitKeeper, which was being used for Linux kernel development at the time.",
-                "tx2": "The decision to create Git came after the relationship between the open source community and BitKeeper became strained. When the relationship broke down, Torvalds decided to develop his own distributed version control system.",
-                "tx3": "In April 2005, Linus Torvalds officially announced Git on the Linux kernel development mailing list. The first public version of Git (v0.99) was released shortly thereafter.",
-                "tx4": "As early as 2005-2007, Git's much-needed features quickly spread in the development community due to its speed, efficiency and distributed design. Other open source projects and companies began adopting Git as their version control system of choice.",
-                "tx5": "The community grew, and as Git grew, it benefited greatly from open source contributions. Developers from all over the world contributed to the Git source code, improving its functionality and fixing bugs.",
-                "tx6": "Code hosting platforms, such as GitHub (launched in 2008), GitLab and Bitbucket, adopted Git as the underlying version control system for their services, leading to a significant increase in its popularity.",
-                "tx7": "Due to the rise of Git, parallel ideas to the idea were not long in coming and numerous tools and graphical clients were developed that made Git easier to use for those unfamiliar with the command line. Some of these tools include SourceTree, GitKraken and GitHub Desktop.",
-                "tx8": "Automated cloud-based data backup tools or similar may exist, but Git stood out for key features such as its efficient branching and merging model, the ability to work offline, data integrity through the use of hashes, and its distributed design.",
-                "tx9": "Now highlighting strong changes Git has undergone multiple major releases over the years, each introducing new features and improvements. Some notable releases include Git 1.0 (2005), Git 2.0 (2013), and more recent versions, which continue to improve efficiency and usability.",
-                "tx10": "Already a part of today's development life, Git will continue to grow and deliver great support for all the good things to come."
-            },
-            "descripcionCorta": ""
+            "git-errores": {
+                "nombre": "Common errors in git",
+                "referenciaBusqueda": "Errors, bugs, git",
+                "descripcion": {
+                    "tx1": "Common mistakes that make us skate for a while looking for the solution."
+                },
+                "descripcionCorta": "Common mistakes that make us skate for a while looking for the solution."
+            }
         },
-        "git-errores": {
-            "nombre": "Common errors in git",
-            "referenciaBusqueda": "Errors, bugs, git",
-            "descripcion": {
-                "tx1": "Common mistakes that make us skate for a while looking for the solution."
+        "HTML": {
+            "html": {
+                "nombre": "HTML",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "Far from being considered a programming language, it was never intended as such at the beginning. Therefore, in 1989, Tim Berners-Lee, a British physicist working at CERN (European Organization for Nuclear Research), proposed an information management system based on the idea of interconnected links and documents. In 1990, Berners-Lee developed the markup language called 'Enquire Within Upon Everything' as a precursor to HTML.",
+                    "tx2": "In 1991, Tim Berners-Lee created the first version of HTML (HTML 1.0) while working at CERN. HTML was originally designed as a simple language for structuring scientific documents on the web. It would not have been possible to consider the immense amount of documents that exist today.",
+                    "tx3": "The first formal description of HTML was published in 1993 in a document called 'HTML Tags', where the basic tags and the structure of the language were defined. This general concept is still used today.",
+                    "tx4": "With each new version would come new enhancements. In November 1995, the Internet Engineering Task Force (IETF) released the HTML 2.0 specification, which included new features and improvements over the previous version.",
+                    "tx5": "Between 1995 and 1997 the first browsers were launched, in this case 'Netscape Navigator' and 'Internet Explorer'. Now that the web is growing, HTLM becomes the standard for creating web pages.",
+                    "tx6": "Between 1996 and 1997 new version with HTML 3.2 tables and applets. In the same year, the World Wide Web Consortium (W3C) assumed responsibility for the future development of HTML.",
+                    "tx7": "From 1997-1999, HTML 4.0 introduced CSS (Cascading Style Sheets) and a more advanced model for forms. HTML 4.01, a revised version, was released in December 1999.",
+                    "tx8": "From 1997-1999, HTML 4.0 introduced CSS (Cascading Style Sheets) and a more advanced model for forms. HTML 4.01, a revised version, was released in December 1999.",
+                    "tx9": "Now between 2008 and 2014, with HTML 5, a more significant version with new tags, API for multimedia, semantic elements, and improved support for accessibility and multimedia content integration.",
+                    "tx10": "After 2014, something incredible came in: the W3C adopted a different approach called 'HTML Living Standard', which involves continuous updates without setting a specific version. This allows for a faster evolution of the language.",
+                    "tx11": "From 2018 onwards, more incredible arrives, now with Web components that allow the creation of reusable web components. From its beginnings until now, it remains so indispensable in the development world, total gratitude for its contributions."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Common mistakes that make us skate for a while looking for the solution."
-        }
-    },
-    "HTML": {
-        "html": {
-            "nombre": "HTML",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "Far from being considered a programming language, it was never intended as such at the beginning. Therefore, in 1989, Tim Berners-Lee, a British physicist working at CERN (European Organization for Nuclear Research), proposed an information management system based on the idea of interconnected links and documents. In 1990, Berners-Lee developed the markup language called 'Enquire Within Upon Everything' as a precursor to HTML.",
-                "tx2": "In 1991, Tim Berners-Lee created the first version of HTML (HTML 1.0) while working at CERN. HTML was originally designed as a simple language for structuring scientific documents on the web. It would not have been possible to consider the immense amount of documents that exist today.",
-                "tx3": "The first formal description of HTML was published in 1993 in a document called 'HTML Tags', where the basic tags and the structure of the language were defined. This general concept is still used today.",
-                "tx4": "With each new version would come new enhancements. In November 1995, the Internet Engineering Task Force (IETF) released the HTML 2.0 specification, which included new features and improvements over the previous version.",
-                "tx5": "Between 1995 and 1997 the first browsers were launched, in this case 'Netscape Navigator' and 'Internet Explorer'. Now that the web is growing, HTLM becomes the standard for creating web pages.",
-                "tx6": "Between 1996 and 1997 new version with HTML 3.2 tables and applets. In the same year, the World Wide Web Consortium (W3C) assumed responsibility for the future development of HTML.",
-                "tx7": "From 1997-1999, HTML 4.0 introduced CSS (Cascading Style Sheets) and a more advanced model for forms. HTML 4.01, a revised version, was released in December 1999.",
-                "tx8": "From 1997-1999, HTML 4.0 introduced CSS (Cascading Style Sheets) and a more advanced model for forms. HTML 4.01, a revised version, was released in December 1999.",
-                "tx9": "Now between 2008 and 2014, with HTML 5, a more significant version with new tags, API for multimedia, semantic elements, and improved support for accessibility and multimedia content integration.",
-                "tx10": "After 2014, something incredible came in: the W3C adopted a different approach called 'HTML Living Standard', which involves continuous updates without setting a specific version. This allows for a faster evolution of the language.",
-                "tx11": "From 2018 onwards, more incredible arrives, now with Web components that allow the creation of reusable web components. From its beginnings until now, it remains so indispensable in the development world, total gratitude for its contributions."
-            },
-            "descripcionCorta": ""
+            "html-elementos": {
+                "nombre": "Elements HTML",
+                "referenciaBusqueda": "tags, html",
+                "descripcion": {
+                    "tx1": "As important as the columns of a building, it is an essential part of application development. There are properties, even tags that are often available and overlooked. Here are as detailed as possible each of the elements that are part of the HTML elements."
+                },
+                "descripcionCorta": "A detailed check of html tags and properties that are not commonly used."
+            }
         },
-        "html-elementos": {
-            "nombre": "Elements HTML",
-            "referenciaBusqueda": "tags, html",
-            "descripcion": {
-                "tx1": "As important as the columns of a building, it is an essential part of application development. There are properties, even tags that are often available and overlooked. Here are as detailed as possible each of the elements that are part of the HTML elements."
+        "JAVA": {
+            "java": {
+                "nombre": "Java",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "One of the most impactful and acclaimed languages in the history of development, Java was conceived by James Gosling, Mike Sheridan and Patrick Naughton at Sun Microsystems in 1991. Initially, the project was called 'Green' and focused on creating software for home appliances and embedded devices.",
+                    "tx2": "In 1992, the development team began work on a platform-independent programming language and runtime environment, known as 'Oak'. In 1995, Oak was officially renamed to Java.",
+                    "tx3": "The first Java 1.0 version was officially released in 1995, marking the beginning of the Java era. The Java platform included a programming language, a virtual machine (JVM), and an extensive standard library.",
+                    "tx4": "From 1996 to 1998, features such as portability, security and the ability to run on any device with a JVM were integrated. The concept of 'applets', small Java applications embedded in web pages, was also introduced.",
+                    "tx5": "The famous Swing library in Java version 2, also known as J2SE 1.2, was released in 1998 and introduced major improvements to the language and platform.",
+                    "tx6": "After 2000-2004, many companies adopted it for their ventures and development ideas. The introduction of J2EE (Java 2 Platform, Enterprise Edition) and J2ME (Java 2 Platform, Micro Edition) technologies expanded its scope in web and mobile development.",
+                    "tx7": "In 2010, Oracle Corporation acquired Sun Microsystems, and with that, became the new head of Java development and management.",
+                    "tx8": "Java 7 was released in 2011 with language and virtual machine enhancements. Java 8, released in 2014, was a major milestone with the introduction of lambda expressions, Streams API, and the new date and time API.",
+                    "tx9": "In 2006, with the OpenJDK (Java Development Kit) project, the developer community played an essential role in the continued evolution of Java, making it more accessible to the community.",
+                    "tx10": "Many languages follow the path of growth and Java in 2020 and beyond continues to evolve with features such as Records in Java 16 and Instance Patterns in Java 17. Future versions are expected to continue to improve the efficiency and usability of the language."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "A detailed check of html tags and properties that are not commonly used."
-        }
-    },
-    "JAVA": {
-        "java": {
-            "nombre": "Java",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "One of the most impactful and acclaimed languages in the history of development, Java was conceived by James Gosling, Mike Sheridan and Patrick Naughton at Sun Microsystems in 1991. Initially, the project was called 'Green' and focused on creating software for home appliances and embedded devices.",
-                "tx2": "In 1992, the development team began work on a platform-independent programming language and runtime environment, known as 'Oak'. In 1995, Oak was officially renamed to Java.",
-                "tx3": "The first Java 1.0 version was officially released in 1995, marking the beginning of the Java era. The Java platform included a programming language, a virtual machine (JVM), and an extensive standard library.",
-                "tx4": "From 1996 to 1998, features such as portability, security and the ability to run on any device with a JVM were integrated. The concept of 'applets', small Java applications embedded in web pages, was also introduced.",
-                "tx5": "The famous Swing library in Java version 2, also known as J2SE 1.2, was released in 1998 and introduced major improvements to the language and platform.",
-                "tx6": "After 2000-2004, many companies adopted it for their ventures and development ideas. The introduction of J2EE (Java 2 Platform, Enterprise Edition) and J2ME (Java 2 Platform, Micro Edition) technologies expanded its scope in web and mobile development.",
-                "tx7": "In 2010, Oracle Corporation acquired Sun Microsystems, and with that, became the new head of Java development and management.",
-                "tx8": "Java 7 was released in 2011 with language and virtual machine enhancements. Java 8, released in 2014, was a major milestone with the introduction of lambda expressions, Streams API, and the new date and time API.",
-                "tx9": "In 2006, with the OpenJDK (Java Development Kit) project, the developer community played an essential role in the continued evolution of Java, making it more accessible to the community.",
-                "tx10": "Many languages follow the path of growth and Java in 2020 and beyond continues to evolve with features such as Records in Java 16 and Instance Patterns in Java 17. Future versions are expected to continue to improve the efficiency and usability of the language."
+            "java-glassfish": {
+                "nombre": "Glassfish",
+                "referenciaBusqueda": "glassfish",
+                "descripcion": {
+                    "tx1": "To begin with, there is the installation of Angular, you can take into account what is special in each version, obviously the latest version shows us how far the Framework has evolved. There are also the startup commands, creation and options, that when we start we do not have them at hand."
+                },
+                "descripcionCorta": "Angular installation. What the versions bring from the js and all the angular commands you didn't know."
             },
-            "descripcionCorta": ""
+            "java-instalacion": {
+                "nombre": "Java Installation",
+                "referenciaBusqueda": "installation, install",
+                "descripcion": {
+                    "tx1": "To begin with, there is the installation of Angular, you can take into account what is special in each version, obviously the latest version shows us how far the Framework has evolved. There are also the startup commands, creation and options, that when we start we do not have them at hand."
+                },
+                "descripcionCorta": "Angular installation. What the versions bring from the js and all the angular commands you didn't know."
+            },
+            "java-elementos": {
+                "nombre": "Java Elements",
+                "referenciaBusqueda": "elements, java",
+                "descripcion": {
+                    "tx1": "The structure of C-based languages, such as Java, is very similar. In addition, there are other important elements and parts, their description, operation and implications within it."
+                },
+                "descripcionCorta": "Here are the most outstanding elements of our beloved Java."
+            }
         },
-        "java-glassfish": {
-            "nombre": "Glassfish",
-            "referenciaBusqueda": "glassfish",
-            "descripcion": {
-                "tx1": "To begin with, there is the installation of Angular, you can take into account what is special in each version, obviously the latest version shows us how far the Framework has evolved. There are also the startup commands, creation and options, that when we start we do not have them at hand."
+        "JAVASCRIPT": {
+            "javascript": {
+                "nombre": "Javascript",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "Going back to the starting point when the web was in full growth, JavaScript came in as the ideal complement, created by Brendan Eich in 1995 while working at Netscape Communications Corporation. The goal was to develop a client-side scripting language to improve interactivity on web pages.",
+                    "tx2": "Initially, the language was called 'LiveScript', but due to a collaboration agreement between Netscape and Sun Microsystems, the name was changed to 'JavaScript' to capitalize on the popularity of Java at the time.",
+                    "tx3": "In pursuit of animation, the first implementation of JavaScript was released with Netscape Navigator 2.0 in September 1995. The inclusion of JavaScript allowed developers to create more dynamic and interactive Web pages.",
+                    "tx4": "Arrival of ECMAScript in 1997. To standardize JavaScript and ensure cross-browser compatibility, Netscape presented the language to the European Computer Manufacturers Association (ECMA). The first edition of ECMAScript was published, which is the standard specification that governs JavaScript.",
+                    "tx5": "From 1996 to 1999, going down a separate path from JavaScript, Microsoft developed its own implementation of JavaScript called JScript for Internet Explorer. During this period, there was competition between Netscape's and Microsoft's JavaScript implementations, which led to some incompatibilities.",
+                    "tx6": "1997-1998. DOM (Document Object Model) and DHTML (Dynamic HTML) entered the scene, allowing developers to manipulate the structure and presentation of web pages dynamically, using JavaScript. This increased the interactivity capacity on the client side.",
+                    "tx7": "JavaScript in Web 2.0 Techniques such as AJAX (Asynchronous JavaScript and XML) were used to achieve page updates without reloading the page.",
+                    "tx8": "De 2005 en adelante se desarrollaron bibliotecas y frameworks como jQuery, Prototype, y luego, en la década de 2010, frameworks más avanzados como Angular, React y Vue.js.",
+                    "tx9": "JavaScript evolved with the advent of Node JS released by Ryan Dahl in 2009, allowing developers to run JavaScript on the server side. This marked an important milestone, as JavaScript was previously primarily a client-side language.",
+                    "tx10": "In 2015, ECMAScript 6, also known as ES6 or ECMAScript, was introduced. This introduced important new features to the language, such as classes, arrow functions, let and const, better promise handling, and more, improving the readability and functionality of the code.",
+                    "tx11": "JavaScript development continues with regular updates. The latest versions of ECMAScript, known as ESNext, introduce constant improvements and new features to enhance modern application development."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Angular installation. What the versions bring from the js and all the angular commands you didn't know."
+            "js-elementos": {
+                "nombre": "javascript elements",
+                "referenciaBusqueda": "elements, parts",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            },
+            "js-recorrer-arrays-objetos": {
+                "nombre": "Array traversal",
+                "referenciaBusqueda": "traverse, iterate",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            }
         },
-        "java-instalacion": {
-            "nombre": "Java Installation",
-            "referenciaBusqueda": "installation, install",
-            "descripcion": {
-                "tx1": "To begin with, there is the installation of Angular, you can take into account what is special in each version, obviously the latest version shows us how far the Framework has evolved. There are also the startup commands, creation and options, that when we start we do not have them at hand."
+        "KOTLIN": {
+            "kotlin": {
+                "nombre": "kotlin",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "Created by JetBrains, a development company based in St. Petersburg, Russia. The project was initiated in 2010 with the goal of addressing the limitations and challenges they faced when using Java in software development.",
+                    "tx2": "Kotlin was introduced in July 2011 as a new programming language interoperable with Java, meaning that it could be used alongside existing Java code.",
+                    "tx3": "Kotlin was developed to be concise, expressive, secure and fully interoperable with Java. Kotlin's syntax is inspired by several languages, including Java, Groovy, Scala and C#.",
+                    "tx4": "Kotlin opened its doors under the Apache 2.0 license, gradually gained popularity among Java developers, and some companies began to adopt it in their projects.",
+                    "tx5": "With version 1.0, Google officially announced support for Kotlin on Android, further elevating its visibility and adoption in 2017.",
+                    "tx6": "JetBrains continued to improve Kotlin with regular updates, introducing new features and enhancements. Kotlin became a multifunctional programming language, supporting both object-oriented and functional programming.",
+                    "tx7": "From 2017 onwards, Kotlin is not only used for Android development, but has also expanded to support development on a variety of platforms, including server-side development, web development, and desktop application development. JetBrains has worked on projects such as Kotlin/Native and Kotlin Multiplatform, allowing developers to use Kotlin to create applications that run on a variety of platforms, including iOS, macOS and JavaScript.",
+                    "tx8": "It is quite remarkable how far the JetBrains project has come, especially in the context of Android development. Its continued growth and focus on Java interoperability has positioned it as a popular choice in the world of modern software development."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Angular installation. What the versions bring from the js and all the angular commands you didn't know."
+            "kotlin-elementos": {
+                "nombre": "Kotlin elements",
+                "referenciaBusqueda": "elements, parts",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            }
         },
-        "java-elementos": {
-            "nombre": "Java Elements",
-            "referenciaBusqueda": "elements, java",
-            "descripcion": {
-                "tx1": "The structure of C-based languages, such as Java, is very similar. In addition, there are other important elements and parts, their description, operation and implications within it."
+        "KUBERNETES": {
+            "kubernetes": {
+                "nombre": "Kubernetes",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "Seeking to improve the efficiency of running production-level applications, Google developed an internal system called Borg for container management, since 2003.",
+                    "tx2": "Borg became the foundation on which Kubernetes was built. For more than a decade, Google refined and used Borg internally to orchestrate and manage applications in its massive data centers.",
+                    "tx3": "In 2013, Docker was released and provided a standardized way to package applications and their dependencies in containers. This marked an important milestone for container adoption and contributed to the widespread interest in container orchestration.",
+                    "tx4": "In June 2014, Google announced Kubernetes as an open source project in collaboration with the Linux Foundation. Kubernetes was designed to provide a container orchestration solution based on the experience accumulated with Borg.",
+                    "tx5": "In July 2015, Kubernetes released its first stable version, version 1.0. Shortly thereafter, Kubernetes was transferred to the Cloud Native Computing Foundation (CNCF), a neutral foundation that encourages the development of cloud-native technologies.",
+                    "tx6": "From 2020 onwards Kubernetes has extended its scope to support edge computing deployments and multi-cloud environments, offering flexibility and portability in various configurations."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Here are the most outstanding elements of our beloved Java."
-        }
-    },
-    "JAVASCRIPT": {
-        "javascript": {
-            "nombre": "Javascript",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "Going back to the starting point when the web was in full growth, JavaScript came in as the ideal complement, created by Brendan Eich in 1995 while working at Netscape Communications Corporation. The goal was to develop a client-side scripting language to improve interactivity on web pages.",
-                "tx2": "Initially, the language was called 'LiveScript', but due to a collaboration agreement between Netscape and Sun Microsystems, the name was changed to 'JavaScript' to capitalize on the popularity of Java at the time.",
-                "tx3": "In pursuit of animation, the first implementation of JavaScript was released with Netscape Navigator 2.0 in September 1995. The inclusion of JavaScript allowed developers to create more dynamic and interactive Web pages.",
-                "tx4": "Arrival of ECMAScript in 1997. To standardize JavaScript and ensure cross-browser compatibility, Netscape presented the language to the European Computer Manufacturers Association (ECMA). The first edition of ECMAScript was published, which is the standard specification that governs JavaScript.",
-                "tx5": "From 1996 to 1999, going down a separate path from JavaScript, Microsoft developed its own implementation of JavaScript called JScript for Internet Explorer. During this period, there was competition between Netscape's and Microsoft's JavaScript implementations, which led to some incompatibilities.",
-                "tx6": "1997-1998. DOM (Document Object Model) and DHTML (Dynamic HTML) entered the scene, allowing developers to manipulate the structure and presentation of web pages dynamically, using JavaScript. This increased the interactivity capacity on the client side.",
-                "tx7": "JavaScript in Web 2.0 Techniques such as AJAX (Asynchronous JavaScript and XML) were used to achieve page updates without reloading the page.",
-                "tx8": "De 2005 en adelante se desarrollaron bibliotecas y frameworks como jQuery, Prototype, y luego, en la década de 2010, frameworks más avanzados como Angular, React y Vue.js.",
-                "tx9": "JavaScript evolved with the advent of Node JS released by Ryan Dahl in 2009, allowing developers to run JavaScript on the server side. This marked an important milestone, as JavaScript was previously primarily a client-side language.",
-                "tx10": "In 2015, ECMAScript 6, also known as ES6 or ECMAScript, was introduced. This introduced important new features to the language, such as classes, arrow functions, let and const, better promise handling, and more, improving the readability and functionality of the code.",
-                "tx11": "JavaScript development continues with regular updates. The latest versions of ECMAScript, known as ESNext, introduce constant improvements and new features to enhance modern application development."
-            },
-            "descripcionCorta": ""
+            "kubernetes-elementos": {
+                "nombre": "Kubernetes elements",
+                "referenciaBusqueda": "elements, parts",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            }
         },
-        "js-elementos": {
-            "nombre": "javascript elements",
-            "referenciaBusqueda": "elements, parts",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+        "LINUX": {
+            "linux": {
+                "nombre": "Linux",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "Going back to the beginning, from the creation of 'Unix' at AT&T Bell Labs in the late 1960s, a multi-tasking operating system is created that becomes popular in academic and business environments.",
+                    "tx2": "Richard Stallman and the GNU Project: In the early 1980s, Richard Stallman, a programmer and free software advocate, started the GNU Project with the goal of creating a completely free and open source operating system. Throughout the decade, numerous tools and components were developed for this operating system, but the kernel was missing.",
+                    "tx3": "As early as 1991, a Finnish student Linus Torvalds developed the operating system kernel as a personal project, inspired by Minix (a Unix-like system for education). Initially called \"Freax\", it was later renamed to \"Linux\" by Ari Lemmke, the administrator of the FTP server where the code was hosted. Linus Torvalds released the first version of the Linux kernel (version 0.01) under the free software GPL (GNU General Public License). He published the source code on the Internet, inviting others to contribute and improve.",
+                    "tx4": "As functionality and stability were added to the operating system over time, programmers from all over the world did their part in helping to improve and expand it.",
+                    "tx5": "Companies such as IBM, Oracle, Red Hat and SUSE invested in Linux development and support, which helped increase its legitimacy in enterprise environments.",
+                    "tx6": "Amid its growth, Linux is expanding to devices beyond personal computers and servers. It is used in embedded devices, smartphones (via Android, a modified version of Linux), embedded systems in automobiles, home appliances and more.",
+                    "tx7": "Going through a challenging and challenging path in the desktop PC market and dominated by Windows and MacOS, Linux has gained a following among technical users and enthusiasts, and distributions such as Ubuntu, Fedora and Linux Mint have made it more accessible to everyday users. However, it has gained a following among technical users and enthusiasts, and distributions such as Ubuntu, Fedora and Linux Mint have made Linux more accessible to everyday users.",
+                    "tx8": "In our current world where the family of developers is growing every day, Linux has meant a great gift to software development, with all its features and utilities that remain at the forefront. As developers let's hope that it makes it to the podium and greatly surpasses the others with its friendly and free face."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            "lx-comandos": {
+                "nombre": "Most used commands",
+                "referenciaBusqueda": "Commands, codes",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            }
         },
-        "js-recorrer-arrays-objetos": {
-            "nombre": "Array traversal",
-            "referenciaBusqueda": "traverse, iterate",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+        "NET": {
+            "net": {
+                "nombre": "Net",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "As part of Microsoft and as a parent that played a hand in the origin of the Windows platform, as personal computing became more prominent in the 1980s, Microsoft established itself as a major player in PC software development.",
+                    "tx2": "Microsoft recognized the need for a unified platform that would allow developers to create software applications more efficiently and consistently. It began work on what would eventually become the .NET Framework.",
+                    "tx3": "Along with the development of the NET Framework, Microsoft created a new programming language called C#. C# was designed to be a modern, object-oriented language that would take advantage of the features of the NET platform.",
+                    "tx4": "Microsoft announced the .NET Framework in 2000 and officially released it in February 2002 as a development platform for building software applications on Windows. The .NET Framework provided a common runtime environment, a unified class library and integrated development tools for several programming languages, including C#, Visual Basic.NET and C++.",
+                    "tx5": "As time went on, new platforms emerged. Microsoft extended the .NET Framework to support operating systems other than Windows. This included the development of .NET Core, a modular, cross-platform version of .NET that was released in 2016.",
+                    "tx6": "Back in November 2020, Microsoft announced the unification of .NET Core, Xamarin and Mono into a single platform called .NET 5. This was the first step towards the consolidation of the .NET platform. Then, in November 2021, .NET 6, the latest major version of .NET, was released, offering even more enhancements and features, as well as greater convergence between different workloads and application types."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        }
-    },
-    "KOTLIN": {
-        "kotlin": {
-            "nombre": "kotlin",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "Created by JetBrains, a development company based in St. Petersburg, Russia. The project was initiated in 2010 with the goal of addressing the limitations and challenges they faced when using Java in software development.",
-                "tx2": "Kotlin was introduced in July 2011 as a new programming language interoperable with Java, meaning that it could be used alongside existing Java code.",
-                "tx3": "Kotlin was developed to be concise, expressive, secure and fully interoperable with Java. Kotlin's syntax is inspired by several languages, including Java, Groovy, Scala and C#.",
-                "tx4": "Kotlin opened its doors under the Apache 2.0 license, gradually gained popularity among Java developers, and some companies began to adopt it in their projects.",
-                "tx5": "With version 1.0, Google officially announced support for Kotlin on Android, further elevating its visibility and adoption in 2017.",
-                "tx6": "JetBrains continued to improve Kotlin with regular updates, introducing new features and enhancements. Kotlin became a multifunctional programming language, supporting both object-oriented and functional programming.",
-                "tx7": "From 2017 onwards, Kotlin is not only used for Android development, but has also expanded to support development on a variety of platforms, including server-side development, web development, and desktop application development. JetBrains has worked on projects such as Kotlin/Native and Kotlin Multiplatform, allowing developers to use Kotlin to create applications that run on a variety of platforms, including iOS, macOS and JavaScript.",
-                "tx8": "It is quite remarkable how far the JetBrains project has come, especially in the context of Android development. Its continued growth and focus on Java interoperability has positioned it as a popular choice in the world of modern software development."
+            "net-elementos": {
+                "nombre": "Net elements",
+                "referenciaBusqueda": "elements, parts",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
             },
-            "descripcionCorta": ""
+            "net-instalacion": {
+                "nombre": "NET Installation",
+                "referenciaBusqueda": "installation, install",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            }
         },
-        "kotlin-elementos": {
-            "nombre": "Kotlin elements",
-            "referenciaBusqueda": "elements, parts",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+        "PHP": {
+            "php": {
+                "nombre": "Php",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "In 1994, created as a tool to track visits to his personal resume, Rasmus Lerdorf creates a set of CGI scripts written in C.",
+                    "tx2": "In its original form, PHP was known as 'Personal Home Page Tools'.",
+                    "tx3": "In 1995, Lerdorf extended the toolkit and released PHP/FI (Personal Home Page/Forms Interpreter), which included capabilities for creating dynamic web applications and interactive forms. PHP/FI was the first more recognizable version of PHP and allowed developers to create dynamic web pages more efficiently.",
+                    "tx4": "Lerdorf provided the starting point, but as PHP/FI became popular, community collaboration was critical to the growth and evolution of PHP.",
+                    "tx5": "In 1998, Zeev Suraski and Andi Gutmans rewrote the PHP core and released PHP 3. This version introduced significant improvements in the performance and functionality of the language, including a module architecture that allowed for expansion and integration with other systems and technologies.",
+                    "tx6": "PHP 3 was a huge success and attracted a wide range of developers and companies looking to create dynamic web applications. The simplicity of the language, its integration with HTML and its extensive database support made it a popular choice for web development.",
+                    "tx7": "In 2000, PHP 4 was released, which included additional performance, stability and feature enhancements. PHP 4 was a very successful release and further contributed to the widespread adoption of PHP in the web development community.",
+                    "tx8": "In 2004, PHP 5 was released, which included a completely revamped Zend engine and improved support for object-oriented programming (OOP). This version was a major step forward in the evolution of PHP and established it as a powerful and versatile programming language for web development.",
+                    "tx9": "PHP 7, released in 2015, introduced significant improvements in performance and memory efficiency, making it even more attractive for high-performance web development. PHP 7.4, PHP 8 and subsequent versions continued to enhance the language with new features, optimizations and security improvements."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        }
-    },
-    "KUBERNETES": {
-        "kubernetes": {
-            "nombre": "Kubernetes",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "Seeking to improve the efficiency of running production-level applications, Google developed an internal system called Borg for container management, since 2003.",
-                "tx2": "Borg became the foundation on which Kubernetes was built. For more than a decade, Google refined and used Borg internally to orchestrate and manage applications in its massive data centers.",
-                "tx3": "In 2013, Docker was released and provided a standardized way to package applications and their dependencies in containers. This marked an important milestone for container adoption and contributed to the widespread interest in container orchestration.",
-                "tx4": "In June 2014, Google announced Kubernetes as an open source project in collaboration with the Linux Foundation. Kubernetes was designed to provide a container orchestration solution based on the experience accumulated with Borg.",
-                "tx5": "In July 2015, Kubernetes released its first stable version, version 1.0. Shortly thereafter, Kubernetes was transferred to the Cloud Native Computing Foundation (CNCF), a neutral foundation that encourages the development of cloud-native technologies.",
-                "tx6": "From 2020 onwards Kubernetes has extended its scope to support edge computing deployments and multi-cloud environments, offering flexibility and portability in various configurations."
-            },
-            "descripcionCorta": ""
+            "php-elementos": {
+                "nombre": "php elements",
+                "referenciaBusqueda": "elements, parts",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            }
         },
-        "kubernetes-elementos": {
-            "nombre": "Kubernetes elements",
-            "referenciaBusqueda": "elements, parts",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+        "REACT": {
+            "react": {
+                "nombre": "React",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "Developed by Facebook, created by Jordan Walke, a software engineer at Facebook, and first introduced in 2011 on the Facebook News Feed. The main goal of React was to improve the performance and efficiency of UI rendering in complex and dynamic web applications.",
+                    "tx2": "React was officially launched as an open source project on GitHub in May 2013. It was initially adopted internally by Facebook and then spread to other company products. React's simplicity, efficiency and code reusability quickly attracted the attention of the software development community.",
+                    "tx3": "As React gained popularity, it became one of the most widely used and widely adopted JavaScript frameworks in the industry. Large companies such as Netflix, Airbnb, Instagram and WhatsApp started using React in their web and mobile apps because of its performance, flexibility and active community.",
+                    "tx4": "In 2015, Facebook announced React Native, a React-based mobile app development framework.  React Native allows developers to create native mobile apps for iOS and Android using JavaScript and React. This allowed development teams to share code between web and mobile apps, resulting in more efficient development and a consistent user experience across multiple platforms.",
+                    "tx5": "React has had a significant impact on the web development ecosystem and has influenced other JavaScript frameworks and libraries. Many other projects, such as Redux, Next.js and Gatsby, have built on top of React to provide additional functionality and enhance the development experience."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        }
-    },
-    "LINUX": {
-        "linux": {
-            "nombre": "Linux",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "Going back to the beginning, from the creation of 'Unix' at AT&T Bell Labs in the late 1960s, a multi-tasking operating system is created that becomes popular in academic and business environments.",
-                "tx2": "Richard Stallman and the GNU Project: In the early 1980s, Richard Stallman, a programmer and free software advocate, started the GNU Project with the goal of creating a completely free and open source operating system. Throughout the decade, numerous tools and components were developed for this operating system, but the kernel was missing.",
-                "tx3": "As early as 1991, a Finnish student Linus Torvalds developed the operating system kernel as a personal project, inspired by Minix (a Unix-like system for education). Initially called \"Freax\", it was later renamed to \"Linux\" by Ari Lemmke, the administrator of the FTP server where the code was hosted. Linus Torvalds released the first version of the Linux kernel (version 0.01) under the free software GPL (GNU General Public License). He published the source code on the Internet, inviting others to contribute and improve.",
-                "tx4": "As functionality and stability were added to the operating system over time, programmers from all over the world did their part in helping to improve and expand it.",
-                "tx5": "Companies such as IBM, Oracle, Red Hat and SUSE invested in Linux development and support, which helped increase its legitimacy in enterprise environments.",
-                "tx6": "Amid its growth, Linux is expanding to devices beyond personal computers and servers. It is used in embedded devices, smartphones (via Android, a modified version of Linux), embedded systems in automobiles, home appliances and more.",
-                "tx7": "Going through a challenging and challenging path in the desktop PC market and dominated by Windows and MacOS, Linux has gained a following among technical users and enthusiasts, and distributions such as Ubuntu, Fedora and Linux Mint have made it more accessible to everyday users. However, it has gained a following among technical users and enthusiasts, and distributions such as Ubuntu, Fedora and Linux Mint have made Linux more accessible to everyday users.",
-                "tx8": "In our current world where the family of developers is growing every day, Linux has meant a great gift to software development, with all its features and utilities that remain at the forefront. As developers let's hope that it makes it to the podium and greatly surpasses the others with its friendly and free face."
-            },
-            "descripcionCorta": ""
+            "react-elementos": {
+                "nombre": "React elements",
+                "referenciaBusqueda": "elements, parts",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            }
         },
-        "lx-comandos": {
-            "nombre": "Most used commands",
-            "referenciaBusqueda": "Commands, codes",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+        "TYPESCRIPT": {
+            "typescript": {
+                "nombre": "Typescript",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": "TypeScript was created by Anders Hejlsberg, a Danish software engineer known for his work in Turbo Pascal, Delphi and C#. Hejlsberg and his team started working on TypeScript in 2010 at Microsoft. The main goal was to address the limitations of JavaScript in large-scale web application development by providing static types and other features of modern programming languages.",
+                    "tx2": "TypeScript was first announced by Anders Hejlsberg in October 2012 at Microsoft's Build conference. The first public version, TypeScript 0.8, was released in October 2012. This initial version included support for static type annotations, classes, modules and other features of modern languages.",
+                    "tx3": "TypeScript has experienced significant growth since its initial release. It has gained huge popularity among developers looking for a more secure and structured way to develop web and mobile applications. Large companies such as Google, Facebook, Netflix and Airbnb use TypeScript in their projects because of its benefits in terms of productivity and code maintainability."
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        }
-    },
-    "NET": {
-        "net": {
-            "nombre": "Net",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "As part of Microsoft and as a parent that played a hand in the origin of the Windows platform, as personal computing became more prominent in the 1980s, Microsoft established itself as a major player in PC software development.",
-                "tx2": "Microsoft recognized the need for a unified platform that would allow developers to create software applications more efficiently and consistently. It began work on what would eventually become the .NET Framework.",
-                "tx3": "Along with the development of the NET Framework, Microsoft created a new programming language called C#. C# was designed to be a modern, object-oriented language that would take advantage of the features of the NET platform.",
-                "tx4": "Microsoft announced the .NET Framework in 2000 and officially released it in February 2002 as a development platform for building software applications on Windows. The .NET Framework provided a common runtime environment, a unified class library and integrated development tools for several programming languages, including C#, Visual Basic.NET and C++.",
-                "tx5": "As time went on, new platforms emerged. Microsoft extended the .NET Framework to support operating systems other than Windows. This included the development of .NET Core, a modular, cross-platform version of .NET that was released in 2016.",
-                "tx6": "Back in November 2020, Microsoft announced the unification of .NET Core, Xamarin and Mono into a single platform called .NET 5. This was the first step towards the consolidation of the .NET platform. Then, in November 2021, .NET 6, the latest major version of .NET, was released, offering even more enhancements and features, as well as greater convergence between different workloads and application types."
+            "typescript-elementos": {
+                "nombre": "Typescript elements",
+                "referenciaBusqueda": "elements, parts",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
             },
-            "descripcionCorta": ""
+            "typescript-instalacion": {
+                "nombre": "Typescript installation for testing",
+                "referenciaBusqueda": "installation",
+                "descripcion": {
+                    "tx1": "Let's look at how to run typescript files directly from the different operating system consoles.",
+                    "tx2": "It is a simple process, however let's look at these ways."
+                },
+                "descripcionCorta": "Step by step to run typescript files directly on different operating systems."
+            }
         },
-        "net-elementos": {
-            "nombre": "Net elements",
-            "referenciaBusqueda": "elements, parts",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+        "WORDPRESS": {
+            "wordpress": {
+                "nombre": "Wordpress",
+                "referenciaBusqueda": "",
+                "descripcion": {
+                    "tx1": ""
+                },
+                "descripcionCorta": ""
             },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        },
-        "net-instalacion": {
-            "nombre": "NET Installation",
-            "referenciaBusqueda": "installation, install",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
-            },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        }
-    },
-    "PHP": {
-        "php": {
-            "nombre": "Php",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "In 1994, created as a tool to track visits to his personal resume, Rasmus Lerdorf creates a set of CGI scripts written in C.",
-                "tx2": "In its original form, PHP was known as 'Personal Home Page Tools'.",
-                "tx3": "In 1995, Lerdorf extended the toolkit and released PHP/FI (Personal Home Page/Forms Interpreter), which included capabilities for creating dynamic web applications and interactive forms. PHP/FI was the first more recognizable version of PHP and allowed developers to create dynamic web pages more efficiently.",
-                "tx4": "Lerdorf provided the starting point, but as PHP/FI became popular, community collaboration was critical to the growth and evolution of PHP.",
-                "tx5": "In 1998, Zeev Suraski and Andi Gutmans rewrote the PHP core and released PHP 3. This version introduced significant improvements in the performance and functionality of the language, including a module architecture that allowed for expansion and integration with other systems and technologies.",
-                "tx6": "PHP 3 was a huge success and attracted a wide range of developers and companies looking to create dynamic web applications. The simplicity of the language, its integration with HTML and its extensive database support made it a popular choice for web development.",
-                "tx7": "In 2000, PHP 4 was released, which included additional performance, stability and feature enhancements. PHP 4 was a very successful release and further contributed to the widespread adoption of PHP in the web development community.",
-                "tx8": "In 2004, PHP 5 was released, which included a completely revamped Zend engine and improved support for object-oriented programming (OOP). This version was a major step forward in the evolution of PHP and established it as a powerful and versatile programming language for web development.",
-                "tx9": "PHP 7, released in 2015, introduced significant improvements in performance and memory efficiency, making it even more attractive for high-performance web development. PHP 7.4, PHP 8 and subsequent versions continued to enhance the language with new features, optimizations and security improvements."
-            },
-            "descripcionCorta": ""
-        },
-        "php-elementos": {
-            "nombre": "php elements",
-            "referenciaBusqueda": "elements, parts",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
-            },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        }
-    },
-    "REACT": {
-        "react": {
-            "nombre": "React",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "Developed by Facebook, created by Jordan Walke, a software engineer at Facebook, and first introduced in 2011 on the Facebook News Feed. The main goal of React was to improve the performance and efficiency of UI rendering in complex and dynamic web applications.",
-                "tx2": "React was officially launched as an open source project on GitHub in May 2013. It was initially adopted internally by Facebook and then spread to other company products. React's simplicity, efficiency and code reusability quickly attracted the attention of the software development community.",
-                "tx3": "As React gained popularity, it became one of the most widely used and widely adopted JavaScript frameworks in the industry. Large companies such as Netflix, Airbnb, Instagram and WhatsApp started using React in their web and mobile apps because of its performance, flexibility and active community.",
-                "tx4": "In 2015, Facebook announced React Native, a React-based mobile app development framework.  React Native allows developers to create native mobile apps for iOS and Android using JavaScript and React. This allowed development teams to share code between web and mobile apps, resulting in more efficient development and a consistent user experience across multiple platforms.",
-                "tx5": "React has had a significant impact on the web development ecosystem and has influenced other JavaScript frameworks and libraries. Many other projects, such as Redux, Next.js and Gatsby, have built on top of React to provide additional functionality and enhance the development experience."
-            },
-            "descripcionCorta": ""
-        },
-        "react-elementos": {
-            "nombre": "React elements",
-            "referenciaBusqueda": "elements, parts",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
-            },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        }
-    },
-    "TYPESCRIPT": {
-        "typescript": {
-            "nombre": "Typescript",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": "TypeScript was created by Anders Hejlsberg, a Danish software engineer known for his work in Turbo Pascal, Delphi and C#. Hejlsberg and his team started working on TypeScript in 2010 at Microsoft. The main goal was to address the limitations of JavaScript in large-scale web application development by providing static types and other features of modern programming languages.",
-                "tx2": "TypeScript was first announced by Anders Hejlsberg in October 2012 at Microsoft's Build conference. The first public version, TypeScript 0.8, was released in October 2012. This initial version included support for static type annotations, classes, modules and other features of modern languages.",
-                "tx3": "TypeScript has experienced significant growth since its initial release. It has gained huge popularity among developers looking for a more secure and structured way to develop web and mobile applications. Large companies such as Google, Facebook, Netflix and Airbnb use TypeScript in their projects because of its benefits in terms of productivity and code maintainability."
-            },
-            "descripcionCorta": ""
-        },
-        "typescript-elementos": {
-            "nombre": "Typescript elements",
-            "referenciaBusqueda": "elements, parts",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
-            },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
-        },
-        "typescript-instalacion": {
-            "nombre": "Typescript installation for testing",
-            "referenciaBusqueda": "installation",
-            "descripcion": {
-                "tx1": "Let's look at how to run typescript files directly from the different operating system consoles.",
-                "tx2": "It is a simple process, however let's look at these ways."
-            },
-            "descripcionCorta": "Step by step to run typescript files directly on different operating systems."
-        }
-    },
-    "WORDPRESS": {
-        "wordpress": {
-            "nombre": "Wordpress",
-            "referenciaBusqueda": "",
-            "descripcion": {
-                "tx1": ""
-            },
-            "descripcionCorta": ""
-        },
-        "wordpress-elementos": {
-            "nombre": "Wordpress Elements",
-            "referenciaBusqueda": "elements, parts",
-            "descripcion": {
-                "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
-            },
-            "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            "wordpress-elementos": {
+                "nombre": "Wordpress Elements",
+                "referenciaBusqueda": "elements, parts",
+                "descripcion": {
+                    "tx1": "Quick description of the application of the elements that make part of typescript, similar in great part to Javascript, and obviously the application of the particular of typescript that are the types."
+                },
+                "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
+            }
         }
     }
 }
