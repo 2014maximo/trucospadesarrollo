@@ -983,23 +983,23 @@
 			"descripcionCorta": "Formas en las que actualmente muchas personas estan generando ingresos en poco tiempo. La tecnología hoy en día entrega un panorama favorable a la hora de pensar en trabajo o formas de ganar platica extra.",
 			"ideas":{
 				"dropshiping": {
-					"nombre": "Dropshipping",
+					"nombre": "1. Dropshipping",
 					"descripcion": "Vender productos sin tener inventario propio, utilizando proveedores que envían directamente al cliente."
 				},
 				"ventaProductosChinos": {
-					"nombre": "Vender productos chinos por mercado libre",
+					"nombre": "2. Vender productos chinos por mercado libre",
 					"descripcion": "Importar productos desde China y venderlos en tu país, aprovechando la diferencia de precios."
 				},
 				"perfilesGoogle": {
-					"nombre": "Organizando los perfiles de negocio para las búsquedas de Google a negocios pequeños",
+					"nombre": "3. Organizando los perfiles de negocio para las búsquedas de Google a negocios pequeños",
 					"descripcion": "Crear y vender perfiles de Google optimizados para negocios locales, ayudando a mejorar su visibilidad en línea."
 				},
 				"aplicacionesMoviles": {
-					"nombre": "Crear aplicaciones móviles",
+					"nombre": "4. Crear aplicaciones móviles",
 					"descripcion": "Desarrollar aplicaciones móviles y monetizarlas a través de publicidad o compras dentro de la app."
 				},
 				"inversionesFlipping": {
-					"nombre": "Inversiones flipping",
+					"nombre": "5. Inversiones flipping",
 					"descripcion": "Comprar propiedades o activos a bajo precio, renovarlos y venderlos a un precio más alto."
 				},
 				"verderRopaOlvidada": {

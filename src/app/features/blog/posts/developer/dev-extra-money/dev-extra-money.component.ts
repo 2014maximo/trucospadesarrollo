@@ -5,12 +5,17 @@ import { cargarBreadcrumb, postActual } from '@shared//global-functions';
 import { HeaderPostSupplementComponent } from 'src/app/shared/components/header-post-supplement/header-post-supplement.component';
 import { HeaderPostComponent } from 'src/app/shared/components/header-post/header-post.component';
 import { CategoriaModel } from 'src/app/shared/models/post.model';
-import { EXTRA_MONEY } from './constants/dev-extra-money.constant';
+import { EXT_MONEY } from './constants/dev-extra-money.constant';
 import { CommonModule } from '@angular/common';
+import { FirstDescriptionBlockComponent } from 'src/app/shared/components/first-description-block/first-description-block.component';
 
 @Component({
   selector: 'app-dev-extra-money',
-  imports: [HeaderPostComponent, HeaderPostSupplementComponent, CommonModule,],
+  imports: [
+    HeaderPostComponent,
+    HeaderPostSupplementComponent,
+    FirstDescriptionBlockComponent,
+    CommonModule,],
   templateUrl: './dev-extra-money.component.html',
   styleUrl: './dev-extra-money.component.css'
 })
@@ -20,7 +25,7 @@ export class DevExtraMoneyComponent {
 	public breadcrumb = new CategoriaModel();
   public publicacion = new DatosPost();
   public categoria = new CategoriaPostModel();
-  public ideasExtraMoney: string[] = EXTRA_MONEY
+  public ideasExtraMoney = EXT_MONEY;
 
 
   ngOnInit():void {

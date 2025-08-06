@@ -8,11 +8,8 @@
 <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
-        <ul>
-            <li *ngFor="let idea of ideasExtraMoney" id="description" class="c7 f-open-sans-c fs-20 lh-25">
-                {{ idea}}
-            </li>
-        </ul>
+        <app-first-description-block [content]="ideasExtraMoney" [categoryColor]="this.categoria.color"
+                    [ref]="'front'"></app-first-description-block>
     </div>
     <div class="col-md-1"></div>
 </div>

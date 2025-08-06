@@ -579,7 +579,57 @@
 				"tx3": "Les finances sont un élément fondamental dans la vie d'un développeur. Le salaire dans le domaine du développement est un bon indicateur de revenus, il est essentiel de savoir le gérer et il n'est pas inutile de le coupler à des investissements ou de pouvoir apporter une aide qui profite aux deux parties.",
 				"tx4": "J'espère que cela vous sera utile. Pour toute question ou suggestion, vous pouvez me contacter via le formulaire de contact."
 			},
-			"descripcionCorta": "Formas en las que actualmente muchas personas estan generando ingresos en poco tiempo. La tecnología hoy en día entrega un panorama favorable a la hora de pensar en trabajo o formas de ganar platica extra."
+			"descripcionCorta": "Formas en las que actualmente muchas personas estan generando ingresos en poco tiempo. La tecnología hoy en día entrega un panorama favorable a la hora de pensar en trabajo o formas de ganar platica extra.",
+            "ideas":{
+				"dropshiping": {
+					"nombre": "Livraison directe",
+					"descripcion": "Vendre des produits sans avoir de stock propre, en faisant appel à des fournisseurs qui livrent directement au client."
+				},
+				"ventaProductosChinos": {
+					"nombre": "Vendre des produits chinois sur le marché libre",
+					"descripcion": "Importer des produits depuis la Chine et les vendre dans votre pays, en tirant parti de la différence de prix."
+				},
+				"perfilesGoogle": {
+					"nombre": "Organiser les profils d'entreprise pour les recherches Google destinées aux petites entreprises",
+					"descripcion": "Créer et vendre des profils Google optimisés pour les entreprises locales, contribuant ainsi à améliorer leur visibilité en ligne."
+				},
+				"aplicacionesMoviles": {
+					"nombre": "Créer des applications mobiles",
+					"descripcion": "Développer des applications mobiles et les monétiser grâce à la publicité ou aux achats intégrés à l'application."
+				},
+				"inversionesFlipping": {
+					"nombre": "Investissements retournement",
+					"descripcion": "Acheter des biens immobiliers ou des actifs à bas prix, les rénover et les revendre à un prix plus élevé."
+				},
+				"verderRopaOlvidada": {
+					"nombre": "Vendre des vêtements oubliés",
+					"descripcion": "Collecter des vêtements usagés ou oubliés et les vendre en ligne ou sur les marchés locaux."
+				},
+				"marketingAfiliados": {
+					"nombre": "Marketing d'affiliation",
+					"descripcion": "Promouvoir les produits ou services d'autres entreprises et gagner des commissions pour chaque vente réalisée via vos liens."
+				},
+				"tiendaOnlinePropia": {
+					"nombre": "Propre boutique en ligne",
+					"descripcion": "Créer une boutique en ligne pour vendre vos propres produits ou ceux de tiers, à l'aide de plateformes telles que Shopify ou WooCommerce."
+				},
+				"amazonFBA": {
+					"nombre": "Amazon FBA (Expédié par Amazon)",
+					"descripcion": "Vendre des produits via Amazon, qui se charge du stockage, de l'expédition et du service client."
+				},
+				"startup": {
+					"nombre": "Créer une start-up",
+					"descripcion": "Développer une idée innovante et rechercher des financements pour lancer une entreprise à partir de zéro."
+				},
+				"royaltiesFranquicia": {
+					"nombre": "Cobrar royalties por franquicias",
+					"descripcion": "Créer un modèle commercial performant et percevoir des redevances auprès d'autres entrepreneurs qui souhaitent le reproduire."
+				},
+				"pinteres": {
+					"nombre": "Pinterest",
+					"descripcion": "Utiliser Pinterest pour promouvoir des produits ou des services, générer du trafic et des ventes via..."
+				}
+			}
 		}
     },
     "ELECTRON": {
