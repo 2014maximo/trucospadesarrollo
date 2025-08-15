@@ -57,7 +57,7 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
     },
     {
         title: {
-            title: ['HTML'],
+            title: ['DEVELOPER.developer.frontendRoadmap.html.tituloLink'],
             description: 'DEVELOPER.developer.frontendRoadmap.html.titulo'
         },
         textBlock: [
@@ -87,7 +87,7 @@ export const FRONTEND_ROADMAP: FirstDescriptionBlockModel[] = [
     },
     {
         title: {
-            title: ['CSS'],
+            title: ['CSS.css.nombre'],
             description: 'DEVELOPER.developer.frontendRoadmap.css.titulo'
         },
         textBlock: [

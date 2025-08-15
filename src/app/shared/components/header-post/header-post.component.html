@@ -7,7 +7,7 @@
                     <h1 class="fuenteOcho text-light m-0">{{ 'titulo_blog' | translate }}</h1>
                     <span *ngIf="categoria.activo">
                         <a href="blog/{{categoria.ruta}}"
-                            class="f-shadow-into-l text-uppercase {{categoria.colorText}} fs-17 text-shadow-one">
+                            class="f-shadow-into-l text-uppercase {{categoria.colorText}} fs-17 text-shadow-one cate">
                             <i class="fa fa-chevron-left" aria-hidden="true"></i>
                             <i class="fa fa-chevron-left" aria-hidden="true"></i>
                             <i class="fa fa-chevron-left" aria-hidden="true"></i>
@@ -39,7 +39,7 @@
                     </a>
                     <div class="dropdown-menu bg-transparent border text-light">
                         <a *ngFor="let lenguaje of lenguajes"
-                            class="d-flex dropdown-item cursor-p translate-item justify-content-between"
+                            class="d-flex dropdown-item cursor-p translate-item justify-content-between text-secondary"
                             (click)="procesoCambioLenguaje(lenguaje)">{{lenguaje}} <img
                                 src="assets/img/icons/languaje-{{lenguaje}}.png" alt="incon languaje" height="20px"
                                 width="auto"></a>

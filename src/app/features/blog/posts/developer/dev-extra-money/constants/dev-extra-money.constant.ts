@@ -112,4 +112,123 @@ export const EXT_MONEY: FirstDescriptionBlockModel[] = [
             }
         ]
     },
+    {
+        title: {
+            title: ['DEVELOPER.dev-extra-money.ideas.verderRopaOlvidada.nombre'],
+            description: 'DEVELOPER.dev-extra-money.ideas.verderRopaOlvidada.nombre'
+        },
+        textBlock: [
+            {
+                subtitle: [''],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.dev-extra-money.ideas.verderRopaOlvidada.descripcion',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.dev-extra-money.ideas.marketingAfiliados.nombre'],
+            description: 'DEVELOPER.dev-extra-money.ideas.marketingAfiliados.nombre'
+        },
+        textBlock: [
+            {
+                subtitle: [''],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.dev-extra-money.ideas.marketingAfiliados.descripcion',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.dev-extra-money.ideas.tiendaOnlinePropia.nombre'],
+            description: 'DEVELOPER.dev-extra-money.ideas.tiendaOnlinePropia.nombre'
+        },
+        textBlock: [
+            {
+                subtitle: [''],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.dev-extra-money.ideas.tiendaOnlinePropia.descripcion',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.dev-extra-money.ideas.amazonFBA.nombre'],
+            description: 'DEVELOPER.dev-extra-money.ideas.amazonFBA.nombre'
+        },
+        textBlock: [
+            {
+                subtitle: [''],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.dev-extra-money.ideas.amazonFBA.descripcion',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.dev-extra-money.ideas.startup.nombre'],
+            description: 'DEVELOPER.dev-extra-money.ideas.startup.nombre'
+        },
+        textBlock: [
+            {
+                subtitle: [''],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.dev-extra-money.ideas.startup.descripcion',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.dev-extra-money.ideas.royaltiesFranquicia.nombre'],
+            description: 'DEVELOPER.dev-extra-money.ideas.royaltiesFranquicia.nombre'
+        },
+        textBlock: [
+            {
+                subtitle: [''],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.dev-extra-money.ideas.royaltiesFranquicia.descripcion',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.dev-extra-money.ideas.pinteres.nombre'],
+            description: 'DEVELOPER.dev-extra-money.ideas.pinteres.nombre'
+        },
+        textBlock: [
+            {
+                subtitle: [''],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.dev-extra-money.ideas.pinteres.descripcion',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25'
+                    }
+                ]
+            }
+        ]
+    },
 ]
