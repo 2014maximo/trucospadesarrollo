@@ -978,51 +978,51 @@
             "descripcionCorta": "Ways in which many people are currently generating income in a short period of time. Today's technology provides a favorable outlook when thinking about work or ways to earn extra money.",
             "ideas": {
                 "dropshiping": {
-                    "nombre": "Dropshipping",
+                    "nombre": "1. Dropshipping",
                     "descripcion": "Sell products without having your own inventory, using suppliers who ship directly to the customer."
                 },
                 "ventaProductosChinos": {
-                    "nombre": "Selling Chinese products on the open market",
+                    "nombre": "2. Selling Chinese products on the open market",
                     "descripcion": "Import products from China and sell them in your country, taking advantage of the price difference."
                 },
                 "perfilesGoogle": {
-                    "nombre": "Organizing business profiles for Google searches for small businesses",
+                    "nombre": "3. Organizing business profiles for Google searches for small businesses",
                     "descripcion": "Create and sell Google profiles optimized for local businesses, helping to improve their online visibility."
                 },
                 "aplicacionesMoviles": {
-                    "nombre": "Create mobile applications",
+                    "nombre": "4. Create mobile applications",
                     "descripcion": "Develop mobile applications and monetize them through advertising or in-app purchases."
                 },
                 "inversionesFlipping": {
-                    "nombre": "Investments flipping",
+                    "nombre": "5. Investments flipping",
                     "descripcion": "Buying properties or assets at a low price, renovating them, and selling them at a higher price."
                 },
                 "verderRopaOlvidada": {
-                    "nombre": "Sell forgotten clothes",
+                    "nombre": "6. Sell forgotten clothes",
                     "descripcion": "Collect used or forgotten clothing and sell it online or at local markets."
                 },
                 "marketingAfiliados": {
-                    "nombre": "Affiliate marketing",
+                    "nombre": "7. Affiliate marketing",
                     "descripcion": "Promote other companies' products or services and earn commissions for each sale made through your links."
                 },
                 "tiendaOnlinePropia": {
-                    "nombre": "Own online store",
+                    "nombre": "8. Own online store",
                     "descripcion": "Create an online store to sell your own products or those of third parties, using platforms such as Shopify or WooCommerce."
                 },
                 "amazonFBA": {
-                    "nombre": "Amazon FBA (Fulfillment by Amazon)",
+                    "nombre": "9. Amazon FBA (Fulfillment by Amazon)",
                     "descripcion": "Sell products through Amazon, where they handle storage, shipping, and customer service."
                 },
                 "startup": {
-                    "nombre": "Building a startup",
+                    "nombre": "10. Building a startup",
                     "descripcion": "Develop an innovative idea and seek funding to launch a business from scratch."
                 },
                 "royaltiesFranquicia": {
-                    "nombre": "Collecting royalties for franchises",
+                    "nombre": "11. Collecting royalties for franchises",
                     "descripcion": "Create a successful business model and charge royalties to other entrepreneurs who wish to replicate it."
                 },
                 "pinteres": {
-                    "nombre": "Pinterest",
+                    "nombre": "12. Pinterest",
                     "descripcion": "Use Pinterest to promote products or services, generating traffic and sales through..."
                 }
             }
