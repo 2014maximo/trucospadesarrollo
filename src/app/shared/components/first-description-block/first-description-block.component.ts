@@ -22,7 +22,6 @@ export class FirstDescriptionBlockComponent {
 	constructor(private translate: TranslateService) {
 		translate.setDefaultLang('es');
 		translate.use('es');
-		console.log(this.ref, 'ref');
 	}
 
 	public openLink(url: string, blank: true) {

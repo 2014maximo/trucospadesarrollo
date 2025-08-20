@@ -8,6 +8,7 @@ import { AddsModel } from 'src/app/shared/models/post.model';
 import { FRONTEND_ROADMAP } from '../constants/frontend-roadmap.constant';
 import { FirstDescriptionBlockComponent } from 'src/app/shared/components/first-description-block/first-description-block.component';
 import { BACKEND_ROADMAP } from '../constants/backend-roadmap.constant';
+import { DEV_FUNDAMENTALS } from '../constants/dev-fundamentals.constant';
 
 @Component({
   selector: 'app-dev-category-content',
@@ -28,6 +29,7 @@ export class DevCategoryContentComponent {
   public indice: IndiceDeContenidosModel [] = [];
   public frontendRoadMap = FRONTEND_ROADMAP;
   public backendRoadMap = BACKEND_ROADMAP;
+  public fundamentalsRoadMap = DEV_FUNDAMENTALS;
 
   constructor(private translate: TranslateService){
   }
