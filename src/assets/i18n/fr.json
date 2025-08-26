@@ -578,50 +578,50 @@
                         "contenido": {
                             "logicaProgramacion": {
                                 "titulo": "Logique de Programmation",
-                                "puntos": [
-                                    "Algorithmes et pseudocode",
-                                    "Organigrammes",
-                                    "Résolution de problèmes"
-                                ]
+                                "puntos": {
+                                    "p1":"Algorithmes et pseudocode",
+                                    "p2":"Organigrammes",
+                                    "p3":"Résolution de problèmes"
+                                }
                             },
                             "conceptosBasicos": {
                                 "titulo": "Concepts de Base en Programmation",
-                                "puntos": [
-                                    "Variables et types de données (entiers, flottants, chaînes, booléens, etc.)",
-                                    "Opérateurs (arithmétiques, relationnels, logiques)",
-                                    "Structures de contrôle (conditionnelles if/else, switch/case)",
-                                    "Boucles (for, while, do-while)",
-                                    "Paramètres et valeurs de retour",
-                                    "Récursivité"
-                                ]
+                                "puntos": {
+                                    "p1":"Variables et types de données (entiers, flottants, chaînes, booléens, etc.)",
+                                    "p2":"Opérateurs (arithmétiques, relationnels, logiques)",
+                                    "p3":"Structures de contrôle (conditionnelles if/else, switch/case)",
+                                    "p4":"Boucles (for, while, do-while)",
+                                    "p5":"Paramètres et valeurs de retour",
+                                    "p6":"Récursivité"
+                                }
                             },
                             "poo": {
                                 "titulo": "Programmation Orientée Objet (POO)",
-                                "puntos": [
-                                    "Classes et objets",
-                                    "Attributs et méthodes",
-                                    "Piliers de la POO : Encapsulation, Héritage, Polymorphisme, Abstraction",
-                                    "Interfaces et classes abstraites"
-                                ]
+                                "puntos": {
+                                    "p1":"Classes et objets",
+                                    "p2":"Attributs et méthodes",
+                                    "p3":"Piliers de la POO : Encapsulation, Héritage, Polymorphisme, Abstraction",
+                                    "p4":"Interfaces et classes abstraites"
+                                }
                             },
                             "estructurasDatos": {
                                 "titulo": "Structures de Données",
-                                "puntos": [
-                                    "Tableaux (arrays/listes)",
-                                    "Listes chaînées (simples, doubles, circulaires)",
-                                    "Piles et files d'attente",
-                                    "Arbres (binaires, de recherche, AVL, rouge-noir)",
-                                    "Graphes",
-                                    "Tables de hachage"
-                                ]
+                                "puntos": {
+                                    "p1":"Tableaux (arrays/listes)",
+                                    "p2":"Listes chaînées (simples, doubles, circulaires)",
+                                    "p3":"Piles et files d'attente",
+                                    "p4":"Arbres (binaires, de recherche, AVL, rouge-noir)",
+                                    "p5":"Graphes",
+                                    "p6":"Tables de hachage"
+                                }
                             },
                             "algoritmos": {
                                 "titulo": "Algorithmes",
-                                "puntos": [
-                                    "Algorithmes de recherche (linéaire, binaire)",
-                                    "Algorithmes de tri (bulle, sélection, insertion, quicksort, mergesort)",
-                                    "Analyse de complexité (notation Big O)"
-                                ]
+                                "puntos": {
+                                    "p1":"Algorithmes de recherche (linéaire, binaire)",
+                                    "p2":"Algorithmes de tri (bulle, sélection, insertion, quicksort, mergesort)",
+                                    "p3":"Analyse de complexité (notation Big O)"
+                                }
                             }
                         }
                     },
@@ -630,30 +630,30 @@
                         "contenido": {
                             "lenguajesProgramacion": {
                                 "titulo": "Langages de Programmation Populaires",
-                                "puntos": [
-                                    "Frontend : JavaScript (React, Angular, Vue.js), HTML, CSS",
-                                    "Backend : Python (Django, Flask), Java (Spring Boot), Node.js (Express), C#, Ruby (Ruby on Rails), PHP (Laravel, Symfony), Go",
-                                    "Mobile : Kotlin/Java (Android), Swift/Objective-C (iOS), React Native, Flutter, Xamarin",
-                                    "Scientifique/Données : Python (NumPy, Pandas, Scikit-learn), R",
-                                    "Bas Niveau/Systèmes : C, C++"
-                                ]
+                                "puntos": {
+                                    "p1":"Frontend : JavaScript (React, Angular, Vue.js), HTML, CSS",
+                                    "p2":"Backend : Python (Django, Flask), Java (Spring Boot), Node.js (Express), C#, Ruby (Ruby on Rails), PHP (Laravel, Symfony), Go",
+                                    "p3":"Mobile : Kotlin/Java (Android), Swift/Objective-C (iOS), React Native, Flutter, Xamarin",
+                                    "p4":"Scientifique/Données : Python (NumPy, Pandas, Scikit-learn), R",
+                                    "p5":"Bas Niveau/Systèmes : C, C++"
+                                }
                             },
                             "entornosDesarrollo": {
                                 "titulo": "Environnements de Développement Intégrés (IDE)",
-                                "puntos": [
-                                    "Visual Studio Code",
-                                    "IntelliJ IDEA",
-                                    "Eclipse",
-                                    "PyCharm",
-                                    "Xcode",
-                                    "Android Studio"
-                                ]
+                                "puntos": {
+                                    "p1":"Visual Studio Code",
+                                    "p2":"IntelliJ IDEA",
+                                    "p3":"Eclipse",
+                                    "p4":"PyCharm",
+                                    "p5":"Xcode",
+                                    "p6":"Android Studio"
+                                }
                             },
                             "sistemasOperativos": {
                                 "titulo": "Systèmes d'Exploitation",
-                                "puntos": [
-                                    "Connaissances de base de Linux, Windows, macOS (ligne de commande, gestion des fichiers, processus)"
-                                ]
+                                "puntos": {
+                                    "p1":"Connaissances de base de Linux, Windows, macOS (ligne de commande, gestion des fichiers, processus)"
+                                }
                             }
                         }
                     },
@@ -662,27 +662,27 @@
                         "contenido": {
                             "conceptosFundamentales": {
                                 "titulo": "Concepts Fondamentaux",
-                                "puntos": [
-                                    "Modélisation des données (ERD)",
-                                    "Normalisation des bases de données",
-                                    "Transactions ACID"
-                                ]
+                                "puntos": {
+                                    "p1":"Modélisation des données (ERD)",
+                                    "p2":"Normalisation des bases de données",
+                                    "p3":"Transactions ACID"
+                                }
                             },
                             "basesDatosRelacionales": {
                                 "titulo": "Bases de Données Relationnelles (SQL)",
-                                "puntos": [
-                                    "SQL (SELECT, INSERT, UPDATE, DELETE, JOINs, GROUP BY, ORDER BY)",
-                                    "Systèmes de Gestion de Bases de Données Relationnelles (MySQL, PostgreSQL, SQL Server, Oracle, SQLite)"
-                                ]
+                                "puntos": {
+                                    "p1":"SQL (SELECT, INSERT, UPDATE, DELETE, JOINs, GROUP BY, ORDER BY)",
+                                    "p2":"Systèmes de Gestion de Bases de Données Relationnelles (MySQL, PostgreSQL, SQL Server, Oracle, SQLite)"
+                                }
                             },
                             "basesDatosNoRelacionales": {
                                 "titulo": "Bases de Données Non Relationnelles (NoSQL)",
-                                "puntos": [
-                                    "Basées sur des documents (MongoDB, Couchbase)",
-                                    "Clé-Valeur (Redis, DynamoDB)",
-                                    "Colonnes (Cassandra)",
-                                    "Graphes (Neo4j)"
-                                ]
+                                "puntos": {
+                                    "p1":"Basées sur des documents (MongoDB, Couchbase)",
+                                    "p2":"Clé-Valeur (Redis, DynamoDB)",
+                                    "p3":"Colonnes (Cassandra)",
+                                    "p4":"Graphes (Neo4j)"
+                                }
                             }
                         }
                     },
@@ -691,29 +691,29 @@
                         "contenido": {
                             "frontend": {
                                 "titulo": "Frontend",
-                                "puntos": [
-                                    "HTML : Structure de la page web.",
-                                    "CSS : Styles et design (Flexbox, Grid, Responsive Design, préprocesseurs comme Sass/Less).",
-                                    "JavaScript : Interactivité (Manipulation du DOM, AJAX, Fetch API, fonctionnalités ES6+).",
-                                    "Frameworks/Bibliothèques Frontend : React, Angular, Vue.js.",
-                                    "Outils de Build : Webpack, Vite, Babel."
-                                ]
+                                "puntos": {
+                                    "p1":"HTML : Structure de la page web.",
+                                    "p2":"CSS : Styles et design (Flexbox, Grid, Responsive Design, préprocesseurs comme Sass/Less).",
+                                    "p3":"JavaScript : Interactivité (Manipulation du DOM, AJAX, Fetch API, fonctionnalités ES6+).",
+                                    "p4":"Frameworks/Bibliothèques Frontend : React, Angular, Vue.js.",
+                                    "p5":"Outils de Build : Webpack, Vite, Babel."
+                                }
                             },
                             "backend": {
                                 "titulo": "Backend",
-                                "puntos": [
-                                    "Architectures d'API : RESTful APIs, GraphQL.",
-                                    "Protocoles : HTTP/HTTPS.",
-                                    "Authentification et Autorisation : OAuth, JWT, Sessions.",
-                                    "Serveurs Web : Nginx, Apache.",
-                                    "Frameworks Backend : Django, Flask, Spring Boot, Express.js, ASP.NET Core, Laravel."
-                                ]
+                                "puntos": {
+                                    "p1":"Architectures d'API : RESTful APIs, GraphQL.",
+                                    "p2":"Protocoles : HTTP/HTTPS.",
+                                    "p3":"Authentification et Autorisation : OAuth, JWT, Sessions.",
+                                    "p4":"Serveurs Web : Nginx, Apache.",
+                                    "p5":"Frameworks Backend : Django, Flask, Spring Boot, Express.js, ASP.NET Core, Laravel."
+                                }
                             },
                             "fullStack": {
                                 "titulo": "Full Stack",
-                                "puntos": [
-                                    "Capacité à travailler à la fois sur le frontend et le backend."
-                                ]
+                                "puntos": {
+                                    "p1":"Capacité à travailler à la fois sur le frontend et le backend."
+                                }
                             }
                         }
                     },
@@ -722,11 +722,11 @@
                         "contenido": {
                             "vcs": {
                                 "titulo": "Systèmes de Contrôle de Version (VCS)",
-                                "puntos": [
-                                    "Git : La norme de l'industrie.",
-                                    "Commandes Git de base (clone, add, commit, push, pull, branch, merge, rebase).",
-                                    "Plateformes de Collaboration : GitHub, GitLab, Bitbucket."
-                                ]
+                                "puntos": {
+                                    "p1":"Git : La norme de l'industrie.",
+                                    "p2":"Commandes Git de base (clone, add, commit, push, pull, branch, merge, rebase).",
+                                    "p3":"Plateformes de Collaboration : GitHub, GitLab, Bitbucket."
+                                }
                             }
                         }
                     },
@@ -735,27 +735,27 @@
                         "contenido": {
                             "tiposPruebas": {
                                 "titulo": "Types de Tests",
-                                "puntos": [
-                                    "Tests unitaires.",
-                                    "Tests d'intégration.",
-                                    "Tests de bout en bout.",
-                                    "Tests de performance.",
-                                    "Tests de sécurité.",
-                                    "Tests d'utilisabilité."
-                                ]
+                                "puntos": {
+                                    "p1":"Tests unitaires.",
+                                    "p2":"Tests d'intégration.",
+                                    "p3":"Tests de bout en bout.",
+                                    "p4":"Tests de performance.",
+                                    "p5":"Tests de sécurité.",
+                                    "p6":"Tests d'utilisabilité."
+                                }
                             },
                             "metodologiasPruebas": {
                                 "titulo": "Méthodologies de Tests",
-                                "puntos": [
-                                    "TDD (Test-Driven Development).",
-                                    "BDD (Behavior-Driven Development)."
-                                ]
+                                "puntos": {
+                                    "p1":"TDD (Test-Driven Development).",
+                                    "p2":"BDD (Behavior-Driven Development)."
+                                }
                             },
                             "frameworksPruebas": {
                                 "titulo": "Frameworks de Tests",
-                                "puntos": [
-                                    "JUnit, NUnit, Pytest, Jest, Mocha, Cypress, Selenium."
-                                ]
+                                "puntos": {
+                                    "p1":"JUnit, NUnit, Pytest, Jest, Mocha, Cypress, Selenium."
+                                }
                             }
                         }
                     },
@@ -764,15 +764,15 @@
                         "contenido": {
                             "programacionFuncional": {
                                 "titulo": "Programmation Fonctionnelle",
-                                "puntos": [
-                                    "Fonctions pures, immutabilité, effets secondaires."
-                                ]
+                                "puntos": {
+                                    "p1":"Fonctions pures, immutabilité, effets secondaires."
+                                }
                             },
                             "programacionConcurrente": {
                                 "titulo": "Programmation Concurrente et Parallèle",
-                                "puntos": [
-                                    "Threads, processus, synchronisation, interblocages."
-                                ]
+                                "puntos": {
+                                    "p1":"Threads, processus, synchronisation, interblocages."
+                                }
                             }
                         }
                     },
@@ -781,31 +781,31 @@
                         "contenido": {
                             "patronesDiseno": {
                                 "titulo": "Modèles de Conception Logicielle",
-                                "puntos": [
-                                    "Créationnels (Singleton, Factory Method, Abstract Factory, Builder, Prototype).",
-                                    "Structurels (Adapter, Decorator, Facade, Proxy, Bridge, Composite, Flyweight).",
-                                    "Comportementaux (Observer, Strategy, Command, Iterator, State, Template Method, Chain of Responsibility, Mediator, Memento, Visitor)."
-                                ]
+                                "puntos": {
+                                    "p1":"Créationnels (Singleton, Factory Method, Abstract Factory, Builder, Prototype).",
+                                    "p2":"Structurels (Adapter, Decorator, Facade, Proxy, Bridge, Composite, Flyweight).",
+                                    "p3":"Comportementaux (Observer, Strategy, Command, Iterator, State, Template Method, Chain of Responsibility, Mediator, Memento, Visitor)."
+                                }
                             },
                             "patronesArquitectura": {
                                 "titulo": "Modèles Architecturaux",
-                                "puntos": [
-                                    "MVC (Model-View-Controller).",
-                                    "MVVM (Model-View-ViewModel).",
-                                    "Client-Serveur.",
-                                    "Microservices vs. Monolithe.",
-                                    "Architectures en couches."
-                                ]
+                                "puntos": {
+                                    "p1":"MVC (Model-View-Controller).",
+                                    "p2":"MVVM (Model-View-ViewModel).",
+                                    "p3":"Client-Serveur.",
+                                    "p4":"Microservices vs. Monolithe.",
+                                    "p5":"Architectures en couches."
+                                }
                             },
                             "principiosSolid": {
                                 "titulo": "Principes SOLID",
-                                "puntos": [
-                                    "Principe de Responsabilité Unique (SRP).",
-                                    "Principe Ouvert/Fermé (OCP).",
-                                    "Principe de Substitution de Liskov (LSP).",
-                                    "Principe de Ségrégation des Interfaces (ISP).",
-                                    "Principe d'Inversion des Dépendances (DIP)."
-                                ]
+                                "puntos": {
+                                    "p1":"Principe de Responsabilité Unique (SRP).",
+                                    "p2":"Principe Ouvert/Fermé (OCP).",
+                                    "p3":"Principe de Substitution de Liskov (LSP).",
+                                    "p4":"Principe de Ségrégation des Interfaces (ISP).",
+                                    "p5":"Principe d'Inversion des Dépendances (DIP)."
+                                }
                             }
                         }
                     },
@@ -814,36 +814,36 @@
                         "contenido": {
                             "contenedorizacion": {
                                 "titulo": "Conteneurisation",
-                                "puntos": [
-                                    "Docker : Création et gestion d'images et de conteneurs.",
-                                    "Docker Compose."
-                                ]
+                                "puntos": {
+                                    "p1":"Docker : Création et gestion d'images et de conteneurs.",
+                                    "p2":"Docker Compose."
+                                }
                             },
                             "orquestacionContenedores": {
                                 "titulo": "Orchestration de Conteneurs",
-                                "puntos": [
-                                    "Kubernetes."
-                                ]
+                                "puntos": {
+                                    "p1":"Kubernetes."
+                                }
                             },
                             "ciCd": {
                                 "titulo": "Intégration Continue (CI) et Livraison Continue (CD)",
-                                "puntos": [
-                                    "Outils : Jenkins, GitLab CI/CD, GitHub Actions, Travis CI.",
-                                    "Pipelines CI/CD."
-                                ]
+                                "puntos": {
+                                    "p1":"Outils : Jenkins, GitLab CI/CD, GitHub Actions, Travis CI.",
+                                    "p2":"Pipelines CI/CD."
+                                }
                             },
                             "computacionNube": {
                                 "titulo": "Informatique en Nuage (Cloud Computing)",
-                                "puntos": [
-                                    "Fournisseurs : AWS, Google Cloud Platform (GCP), Microsoft Azure.",
-                                    "Concepts : IaaS, PaaS, SaaS, Informatique sans serveur."
-                                ]
+                                "puntos": {
+                                    "p1":"Fournisseurs : AWS, Google Cloud Platform (GCP), Microsoft Azure.",
+                                    "p2":"Concepts : IaaS, PaaS, SaaS, Informatique sans serveur."
+                                }
                             },
                             "monitoreoLogging": {
                                 "titulo": "Surveillance et Journalisation",
-                                "puntos": [
-                                    "Outils : Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana)."
-                                ]
+                                "puntos": {
+                                    "p1":"Outils : Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana)."
+                                }
                             }
                         }
                     },
@@ -852,24 +852,24 @@
                         "contenido": {
                             "metodologiasAgiles": {
                                 "titulo": "Méthodologies Agiles",
-                                "puntos": [
-                                    "Scrum.",
-                                    "Kanban.",
-                                    "Extreme Programming (XP).",
-                                    "Principes du Manifeste Agile."
-                                ]
+                                "puntos": {
+                                    "p1":"Scrum.",
+                                    "p2":"Kanban.",
+                                    "p3":"Extreme Programming (XP).",
+                                    "p4":"Principes du Manifeste Agile."
+                                }
                             },
                             "metodologiasTradicionales": {
                                 "titulo": "Méthodologies Traditionnelles",
-                                "puntos": [
-                                    "Modèle en cascade."
-                                ]
+                                "puntos": {
+                                    "p1":"Modèle en cascade."
+                                }
                             },
                             "gestionProyectos": {
                                 "titulo": "Gestion de Projets",
-                                "puntos": [
-                                    "Outils : Jira, Trello, Asana."
-                                ]
+                                "puntos": {
+                                    "p1":"Outils : Jira, Trello, Asana."
+                                }
                             }
                         }
                     },
@@ -878,12 +878,12 @@
                         "contenido": {
                             "principiosSeguridad": {
                                 "titulo": "Principes de Sécurité",
-                                "puntos": [
-                                    "OWASP Top 10.",
-                                    "Injection SQL, XSS, CSRF.",
-                                    "Pratiques de codage sécurisé.",
-                                    "Gestion des secrets."
-                                ]
+                                "puntos": {
+                                    "p1":"OWASP Top 10.",
+                                    "p2":"Injection SQL, XSS, CSRF.",
+                                    "p3":"Pratiques de codage sécurisé.",
+                                    "p4":"Gestion des secrets."
+                                }
                             }
                         }
                     },
@@ -892,45 +892,40 @@
                         "contenido": {
                             "lineaComandos": {
                                 "titulo": "Ligne de Commande (CLI)",
-                                "puntos": [
-                                    "Gestion du terminal."
-                                ]
+                                "puntos": {
+                                    "p1":"Gestion du terminal."
+                                }
                             },
                             "expresionesRegulares": {
-                                "titulo": "Expressions Régulières (Regex)",
-                                "puntos": []
+                                "titulo": "Expressions Régulières (Regex)"
                             },
                             "ddd": {
-                                "titulo": "Conception Pilotée par le Domaine (DDD)",
-                                "puntos": []
+                                "titulo": "Conception Pilotée par le Domaine (DDD)"
                             },
                             "conocimientosRedes": {
                                 "titulo": "Connaissances Réseaux",
-                                "puntos": [
-                                    "Protocoles (TCP/IP, UDP).",
-                                    "Modèles (OSI, TCP/IP).",
-                                    "DNS."
-                                ]
+                                "puntos": {
+                                    "p1":"Protocoles (TCP/IP, UDP).",
+                                    "p2":"Modèles (OSI, TCP/IP).",
+                                    "p3":"DNS."
+                                }
                             },
                             "apiManagement": {
-                                "titulo": "Gestion des API",
-                                "puntos": []
+                                "titulo": "Gestion des API"
                             },
                             "optimizacionRendimiento": {
-                                "titulo": "Optimisation des Performances",
-                                "puntos": []
+                                "titulo": "Optimisation des Performances"
                             },
                             "documentacionCodigo": {
-                                "titulo": "Documentation du Code et des Projets",
-                                "puntos": []
+                                "titulo": "Documentation du Code et des Projets"
                             },
                             "buenasPracticasCodigo": {
                                 "titulo": "Bonnes Pratiques de Codage",
-                                "puntos": [
-                                    "Code propre.",
-                                    "Refactoring.",
-                                    "Commentaires et lisibilité."
-                                ]
+                                "puntos": {
+                                    "p1":"Code propre.",
+                                    "p2":"Refactoring.",
+                                    "p3":"Commentaires et lisibilité."
+                                }
                             }
                         }
                     }
