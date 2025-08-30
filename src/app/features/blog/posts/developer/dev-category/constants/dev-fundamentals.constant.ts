@@ -328,65 +328,140 @@ export const DEV_FUNDAMENTALS: FirstDescriptionBlockModel[] = [
         },
         textBlock: [
             {
-                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.frontend.titulo'],
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.controlVersiones.contenido.vcs.titulo'],
                 textBlock: [
                     {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.frontend.puntos.p1',
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.controlVersiones.contenido.vcs.puntos.p1',
                         styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
                     },
                     {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.frontend.puntos.p2',
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.controlVersiones.contenido.vcs.puntos.p2',
                         styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
                     },
                     {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.frontend.puntos.p3',
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.controlVersiones.contenido.vcs.puntos.p3',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.titulo'],
+            description: 'DEVELOPER.developer.frontendRoadmap.css.titulo'
+        },
+        textBlock: [
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p1',
                         styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
                     },
                     {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.frontend.puntos.p4',
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p2',
                         styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
                     },
                     {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.frontend.puntos.p5',
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p3',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p4',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p5',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p6',
                         styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
                     },
                 ]
             },
             {
-                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.backend.titulo'],
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.metodologiasPruebas.titulo'],
                 textBlock: [
                     {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.backend.puntos.p1',
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.metodologiasPruebas.puntos.p1',
                         styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
                     },
                     {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.backend.puntos.p2',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
-                    },
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.backend.puntos.p3',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
-                    },
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.backend.puntos.p4',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
-                    },
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.backend.puntos.p5',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
-                    },
-                ]
-            },
-            {
-                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.fullStack.titulo'],
-                textBlock: [
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.desarrolloWeb.contenido.fullStack.puntos.p1',
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.metodologiasPruebas.puntos.p2',
                         styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
                     }
                 ]
             },
-
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.frameworksPruebas.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.frameworksPruebas.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.titulo'],
+            description: 'DEVELOPER.developer.frontendRoadmap.css.titulo'
+        },
+        textBlock: [
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p3',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p4',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p5',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p6',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    },
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.metodologiasPruebas.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.metodologiasPruebas.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.metodologiasPruebas.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    }
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.frameworksPruebas.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.frameworksPruebas.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    }
+                ]
+            },
         ]
     },
 ]

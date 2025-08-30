@@ -3,79 +3,79 @@ import { TopTecnologyModel } from "../models/top-tecnology.model";
 export const TOP_FRAMEWORKS:TopTecnologyModel[] = [
     {
         name:'Node.js',
-        value:'40.8'
+        value:'48.7'
     },
     {
         name:'React',
-        value:'39.5'
+        value:'44.7'
     },
     {
         name:'JQuery',
-        value:'21.4'
+        value:'23.4'
     },
     {
         name:'Next.js',
-        value:'17.9'
+        value:'20.8'
     },
     {
         name:'Express',
-        value:'17.8'
-    },
-    {
-        name:'Angular',
-        value:'17.1'
+        value:'19.9'
     },
     {
         name:'ASP.NET CORE',
-        value:'16.9'
+        value:'19.7'
+    },
+    {
+        name:'Angular',
+        value:'18.2'
     },
     {
         name:'Vue.js',
-        value:'15.4'
-    },
-    {
-        name:'ASP.NET',
-        value:'12.9'
-    },
-    {
-        name:'Flash',
-        value:'12.9'
-    },
-    {
-        name:'Spring Boot',
-        value:'12.7'
-    },
-    {
-        name:'Django',
-        value:'12'
-    },
-    {
-        name:'Wordpress',
-        value:'11.8'
+        value:'17.6'
     },
     {
         name:'FastAPI',
-        value:'9.9'
+        value:'14.8'
+    },
+    {
+        name:'Spring Boot',
+        value:'14.7'
+    },
+    {
+        name:'Flash',
+        value:'14.4'
+    },
+    {
+        name:'ASP.NET',
+        value:'14.2'
+    },
+    {
+        name:'Wordpress',
+        value:'13.6'
+    },
+    {
+        name:'Django',
+        value:'12.6'
     },
     {
         name:'Laravel',
-        value:'7.9'
+        value:'8.9'
     },
     {
         name:'AngularJS',
-        value:'6.8'
+        value:'7.2'
     },
     {
         name:'Svelte',
-        value:'6.5'
+        value:'7.2'
+    },
+    {
+        name:'Blazor',
+        value:'7'
     },
     {
         name:'NestJS',
         value:'5.8'
-    },
-    {
-        name:'Blazor',
-        value:'4.9'
     },
     {
         name:'Ruby on Rails',

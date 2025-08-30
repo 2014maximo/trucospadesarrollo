@@ -725,32 +725,32 @@
 							"vcs": {
 								"titulo": "Sistemas de Control de Versiones (VCS)",
 								"puntos": {
-									"p1": "Git: El estándar de la industria.",
-									"p2": "Comandos básicos de Git (clone, add, commit, push, pull, branch, merge, rebase).",
-									"p3": "Plataformas de Colaboración: GitHub, GitLab, Bitbucket."
+									"p1": "• Git: El estándar de la industria.",
+									"p2": "• Comandos básicos de Git (clone, add, commit, push, pull, branch, merge, rebase).",
+									"p3": "• Plataformas de Colaboración: GitHub, GitLab, Bitbucket."
 								}
 							}
 						}
 					},
 					"pruebasSoftware": {
-						"titulo": "Pruebas de Software",
+						"titulo": "6. Pruebas de Software",
 						"contenido": {
 							"tiposPruebas": {
 								"titulo": "Tipos de Pruebas",
 								"puntos": {
-									"p1": "Pruebas unitarias.",
-									"p2": "Pruebas de integración.",
-									"p3": "Pruebas de extremo a extremo (End-to-End).",
-									"p4": "Pruebas de rendimiento.",
-									"p5": "Pruebas de seguridad.",
-									"p6": "Pruebas de usabilidad."
+									"p1": "• Pruebas unitarias.",
+									"p2": "• Pruebas de integración.",
+									"p3": "• Pruebas de extremo a extremo (End-to-End).",
+									"p4": "• Pruebas de rendimiento.",
+									"p5": "• Pruebas de seguridad.",
+									"p6": "• Pruebas de usabilidad."
 								}
 							},
 							"metodologiasPruebas": {
 								"titulo": "Metodologías de Pruebas",
 								"puntos": {
-									"p1": "TDD (Test-Driven Development).",
-									"p2": "BDD (Behavior-Driven Development)."
+									"p1": "• TDD (Test-Driven Development).",
+									"p2": "• BDD (Behavior-Driven Development)."
 								}
 							},
 							"frameworksPruebas": {
