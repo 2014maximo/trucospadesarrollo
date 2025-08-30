@@ -513,61 +513,424 @@
 					"text1": "Lenguajes de programación, permiten crear aplicaciones web y servicios en el lado del servidor. Es una parte fundamental del desarrollo backend y te ayudan a crear aplicaciones escalables, seguras y eficientes."
 				},
 				"repoHostingService": {
-					"text1":"Plataforma en línea que te permite alojar tu repositorio de código y colaborar con otros desarrolladores. Es una parte fundamental del desarrollo backend y te permite compartir tu código, colaborar en proyectos y mantener un historial de cambios."
+					"text1": "Plataforma en línea que te permite alojar tu repositorio de código y colaborar con otros desarrolladores. Es una parte fundamental del desarrollo backend y te permite compartir tu código, colaborar en proyectos y mantener un historial de cambios."
 				},
-				"oSAndGeneralKnowledge":{
-					"text1":"Conocimientos básicos sobre sistemas operativos y tecnologías generales que te ayudan a comprender cómo funcionan las aplicaciones y servicios en el lado del servidor. Son una parte fundamental del desarrollo backend y te ayudan a crear aplicaciones escalables, seguras y eficientes."
+				"oSAndGeneralKnowledge": {
+					"text1": "Conocimientos básicos sobre sistemas operativos y tecnologías generales que te ayudan a comprender cómo funcionan las aplicaciones y servicios en el lado del servidor. Son una parte fundamental del desarrollo backend y te ayudan a crear aplicaciones escalables, seguras y eficientes."
 				},
-				"relationalDatabases":{
-					"text1":"Base de datos que utiliza un modelo de datos relacional para almacenar y gestionar la información. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				"relationalDatabases": {
+					"text1": "Base de datos que utiliza un modelo de datos relacional para almacenar y gestionar la información. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
 				},
-				"noSQLDatabases":{
-					"text1":"Base de datos que utiliza un modelo de datos no relacional para almacenar y gestionar la información. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				"noSQLDatabases": {
+					"text1": "Base de datos que utiliza un modelo de datos no relacional para almacenar y gestionar la información. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
 				},
-				"scalingDatabases":{
-					"text1":"Proceso de aumentar la capacidad y el rendimiento de una base de datos para manejar un mayor volumen de datos y tráfico. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				"scalingDatabases": {
+					"text1": "Proceso de aumentar la capacidad y el rendimiento de una base de datos para manejar un mayor volumen de datos y tráfico. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
 				},
-				"API":{
-					"text1":"Interfaz de programación de aplicaciones que te permite comunicarte con otros servicios y aplicaciones. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				"API": {
+					"text1": "Interfaz de programación de aplicaciones que te permite comunicarte con otros servicios y aplicaciones. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
 				},
-				"caching":{
-					"text1":"Proceso de almacenar datos en memoria para acelerar el acceso y mejorar el rendimiento de una aplicación. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				"caching": {
+					"text1": "Proceso de almacenar datos en memoria para acelerar el acceso y mejorar el rendimiento de una aplicación. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
 				},
-				"webSecurityKnowledge":{
-					"text1":"Conocimientos sobre seguridad web que te ayudan a proteger tu aplicación y prevenir ataques cibernéticos. Son una parte fundamental del desarrollo backend y te ayudan a garantizar la seguridad, proteger la información confidencial y mantener la integridad de tu aplicación."
+				"webSecurityKnowledge": {
+					"text1": "Conocimientos sobre seguridad web que te ayudan a proteger tu aplicación y prevenir ataques cibernéticos. Son una parte fundamental del desarrollo backend y te ayudan a garantizar la seguridad, proteger la información confidencial y mantener la integridad de tu aplicación."
 				},
-				"testing":{
-					"text1":"Proceso de evaluación de tu código para garantizar que funcione correctamente y cumpla con los requisitos. Es una parte fundamental del desarrollo backend y te ayuda a detectar errores, mejorar la calidad y garantizar que tu código sea confiable."
+				"testing": {
+					"text1": "Proceso de evaluación de tu código para garantizar que funcione correctamente y cumpla con los requisitos. Es una parte fundamental del desarrollo backend y te ayuda a detectar errores, mejorar la calidad y garantizar que tu código sea confiable."
 				},
-				"CI/CD":{
-					"text1":"Prácticas y herramientas que te permiten automatizar el proceso de integración y entrega continua de tu código. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la calidad y la velocidad de tu desarrollo."
+				"CI/CD": {
+					"text1": "Prácticas y herramientas que te permiten automatizar el proceso de integración y entrega continua de tu código. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la calidad y la velocidad de tu desarrollo."
 				},
-				"designAndDevelopmentPrincipies":{
-					"text1":"Principios y prácticas de diseño y desarrollo que te ayudan a crear aplicaciones escalables, seguras y eficientes. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la calidad, la eficiencia y la experiencia del usuario."
+				"designAndDevelopmentPrincipies": {
+					"text1": "Principios y prácticas de diseño y desarrollo que te ayudan a crear aplicaciones escalables, seguras y eficientes. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la calidad, la eficiencia y la experiencia del usuario."
 				},
-				"arquitecturalPatterns":{
-					"text1":"Patrones de arquitectura que te ayudan a organizar y estructurar tu código de manera eficiente. Son una parte fundamental del desarrollo backend y te ayudan a mantener tu código organizado, escalable y fácil de mantener."
+				"arquitecturalPatterns": {
+					"text1": "Patrones de arquitectura que te ayudan a organizar y estructurar tu código de manera eficiente. Son una parte fundamental del desarrollo backend y te ayudan a mantener tu código organizado, escalable y fácil de mantener."
 				},
-				"messageBrokers":{
-					"text1":"Sistema de mensajería que te permite enviar y recibir mensajes entre aplicaciones y servicios. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				"messageBrokers": {
+					"text1": "Sistema de mensajería que te permite enviar y recibir mensajes entre aplicaciones y servicios. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
 				},
-				"containerizationVsVirtualization":{
-					"text1":"Técnicas de empaquetado y despliegue de aplicaciones que te permiten crear entornos aislados y portátiles. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la escalabilidad y la seguridad de tus aplicaciones."
+				"containerizationVsVirtualization": {
+					"text1": "Técnicas de empaquetado y despliegue de aplicaciones que te permiten crear entornos aislados y portátiles. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la escalabilidad y la seguridad de tus aplicaciones."
 				},
-				"serverSendEvents":{
-					"text1":"Tecnología que te permite enviar eventos desde el servidor al cliente de forma unidireccional. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones en tiempo real y mejorar la experiencia del usuario."
+				"serverSendEvents": {
+					"text1": "Tecnología que te permite enviar eventos desde el servidor al cliente de forma unidireccional. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones en tiempo real y mejorar la experiencia del usuario."
 				},
-				"webSockets":{
-					"text1":"Tecnología que te permite establecer una conexión bidireccional entre el servidor y el cliente. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones en tiempo real y mejorar la experiencia del usuario."
+				"webSockets": {
+					"text1": "Tecnología que te permite establecer una conexión bidireccional entre el servidor y el cliente. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones en tiempo real y mejorar la experiencia del usuario."
 				},
-				"webServers":{
-					"text1":"Servidor web que te permite alojar y servir tu aplicación en el lado del servidor. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				"webServers": {
+					"text1": "Servidor web que te permite alojar y servir tu aplicación en el lado del servidor. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
 				},
-				"buildingForScale":{
-					"text1":"Proceso de diseñar y desarrollar aplicaciones que puedan manejar un gran volumen de datos y tráfico. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
+				"buildingForScale": {
+					"text1": "Proceso de diseñar y desarrollar aplicaciones que puedan manejar un gran volumen de datos y tráfico. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes."
 				},
-				"devOps":{
-					"text1":"Prácticas y herramientas que te permiten integrar el desarrollo y la operación de tu aplicación. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la calidad y la velocidad de tu desarrollo."
+				"devOps": {
+					"text1": "Prácticas y herramientas que te permiten integrar el desarrollo y la operación de tu aplicación. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la calidad y la velocidad de tu desarrollo."
+				}
+			},
+			"fundamentalsRoadmap": {
+				"titulo": "ROADMAP - FUNDAMENTOS DE PROGRAMACIÓN",
+				"descripcion": "Este roadmap cubre los conceptos básicos que todo desarrollador debe conocer antes de especializarse en Frontend o Backend.",
+				"temas": {
+					"fundamentosProgramacion": {
+						"titulo": "1. Fundamentos de Programación",
+						"contenido": {
+							"logicaProgramacion": {
+								"titulo": "Lógica de Programación",
+								"puntos": {
+									"p1": "• Algoritmos y pseudocódigo.",
+									"p2": "• Diagramas de flujo.",
+									"p3": "• Resolución de problemas."
+								}
+							},
+							"conceptosBasicos": {
+								"titulo": "Conceptos Básicos de Programación",
+								"puntos": {
+									"p1": "• Variables y tipos de datos (enteros, flotantes, cadenas, booleanos, etc.).",
+									"p2": "• Operadores (aritméticos, relacionales, lógicos).",
+									"p3": "• Estructuras de control (condicionales if/else, switch/case).",
+									"p4": "• Bucles (for, while, do-while).",
+									"p5": "• Funciones y procedimientos.",
+									"p6": "• Parámetros y valores de retorno.",
+									"p7": "• Recursividad."
+								}
+							},
+							"poo": {
+								"titulo": "Programación Orientada a Objetos (POO)",
+								"puntos": {
+									"p1": "• Clases y objetos.",
+									"p2": "• Atributos y métodos.",
+									"p3": "• Pilares de la POO: Encapsulamiento, Herencia, Polimorfismo, Abstracción.",
+									"p4": "• Interfaces y clases abstractas."
+								}
+							},
+							"estructurasDatos": {
+								"titulo": "Estructuras de Datos",
+								"puntos": {
+									"p1": "• Arrays (arreglos/listas).",
+									"p2": "• Listas enlazadas (simples, dobles, circulares).",
+									"p3": "• Pilas (Stacks) y Colas (Queues).",
+									"p4": "• Árboles (binarios, de búsqueda, AVL, Rojo-Negro).",
+									"p5": "• Grafos.",
+									"p6": "• Tablas hash."
+								}
+							},
+							"algoritmos": {
+								"titulo": "Algoritmos",
+								"puntos": {
+									"p1": "• Algoritmos de búsqueda (lineal, binaria).",
+									"p2": "• Algoritmos de ordenamiento (burbuja, selección, inserción, quicksort, mergesort).",
+									"p3": "• Análisis de complejidad (notación Big O)."
+								}
+							}
+						}
+					},
+					"lenguajesPlataformas": {
+						"titulo": "2. Lenguajes y Plataformas",
+						"contenido": {
+							"lenguajesProgramacion": {
+								"titulo": "Lenguajes de Programación Populares",
+								"puntos": {
+									"p1": "• Frontend: JavaScript (React, Angular, Vue.js), HTML, CSS.",
+									"p2": "• Backend: Python (Django, Flask), Java (Spring Boot), Node.js (Express), C#, Ruby (Ruby on Rails), PHP (Laravel, Symfony), Go.",
+									"p3": "• Móvil: Kotlin/Java (Android), Swift/Objective-C (iOS), React Native, Flutter, Xamarin.",
+									"p4": "• Científico/Datos: Python (NumPy, Pandas, Scikit-learn), R.",
+									"p5": "• Bajo Nivel/Sistemas: C, C++"
+								}
+							},
+							"entornosDesarrollo": {
+								"titulo": "Entornos de Desarrollo Integrados (IDE)",
+								"puntos": {
+									"p1": "• Visual Studio Code.",
+									"p2": "• IntelliJ IDEA.",
+									"p3": "• Eclipse.",
+									"p4": "• PyCharm.",
+									"p5": "• Xcode.",
+									"p6": "• Android Studio."
+								}
+							},
+							"sistemasOperativos": {
+								"titulo": "Sistemas Operativos",
+								"puntos": {
+									"p1": "• Conocimientos básicos de Linux, Windows, macOS (línea de comandos, gestión de archivos, procesos)."
+								}
+							}
+						}
+					},
+					"basesDatos": {
+						"titulo": "3. Bases de Datos",
+						"contenido": {
+							"conceptosFundamentales": {
+								"titulo": "Conceptos Fundamentales",
+								"puntos": {
+									"p1": "• Modelado de datos (ERD).",
+									"p2": "• Normalización de bases de datos.",
+									"p3": "• Transacciones ACID."
+								}
+							},
+							"basesDatosRelacionales": {
+								"titulo": "Bases de Datos Relacionales (SQL)",
+								"puntos": {
+									"p1": "• SQL (SELECT, INSERT, UPDATE, DELETE, JOINs, GROUP BY, ORDER BY).",
+									"p2": "• Sistemas de Gestión de Bases de Datos Relacionales (MySQL, PostgreSQL, SQL Server, Oracle, SQLite)."
+								}
+							},
+							"basesDatosNoRelacionales": {
+								"titulo": "Bases de Datos No Relacionales (NoSQL)",
+								"puntos": {
+									"p1": "• Documentales (MongoDB, Couchbase).",
+									"p2": "• Clave-Valor (Redis, DynamoDB).",
+									"p3": "• Columnares (Cassandra).",
+									"p4": "• Grafos (Neo4j)."
+								}
+							}
+						}
+					},
+					"desarrolloWeb": {
+						"titulo": "4. Desarrollo Web",
+						"contenido": {
+							"frontend": {
+								"titulo": "Frontend",
+								"puntos": {
+									"p1": "• HTML: Estructura de la página web.",
+									"p2": "• CSS: Estilos y diseño (Flexbox, Grid, Responsive Design, preprocesadores como Sass/Less).",
+									"p3": "• JavaScript: Interactividad (DOM manipulation, AJAX, Fetch API, ES6+ features).",
+									"p4": "• Frameworks/Librerías de Frontend: React, Angular, Vue.js.",
+									"p5": "• Herramientas de Build: Webpack, Vite, Babel."
+								}
+							},
+							"backend": {
+								"titulo": "Backend",
+								"puntos": {
+									"p1": "• Arquitecturas de APIs: RESTful APIs, GraphQL.",
+									"p2": "• Protocolos: HTTP/HTTPS.",
+									"p3": "• Autenticación y Autorización: OAuth, JWT, Sesiones.",
+									"p4": "• Servidores Web: Nginx, Apache.",
+									"p5": "• Frameworks de Backend: Django, Flask, Spring Boot, Express.js, ASP.NET Core, Laravel."
+								}
+							},
+							"fullStack": {
+								"titulo": "Full Stack",
+								"puntos": {
+									"p1": "Capacidad de trabajar tanto en frontend como en backend."
+								}
+							}
+						}
+					},
+					"controlVersiones": {
+						"titulo": "5. Control de Versiones",
+						"contenido": {
+							"vcs": {
+								"titulo": "Sistemas de Control de Versiones (VCS)",
+								"puntos": {
+									"p1": "• Git: El estándar de la industria.",
+									"p2": "• Comandos básicos de Git (clone, add, commit, push, pull, branch, merge, rebase).",
+									"p3": "• Plataformas de Colaboración: GitHub, GitLab, Bitbucket."
+								}
+							}
+						}
+					},
+					"pruebasSoftware": {
+						"titulo": "6. Pruebas de Software",
+						"contenido": {
+							"tiposPruebas": {
+								"titulo": "Tipos de Pruebas",
+								"puntos": {
+									"p1": "• Pruebas unitarias.",
+									"p2": "• Pruebas de integración.",
+									"p3": "• Pruebas de extremo a extremo (End-to-End).",
+									"p4": "• Pruebas de rendimiento.",
+									"p5": "• Pruebas de seguridad.",
+									"p6": "• Pruebas de usabilidad."
+								}
+							},
+							"metodologiasPruebas": {
+								"titulo": "Metodologías de Pruebas",
+								"puntos": {
+									"p1": "• TDD (Test-Driven Development).",
+									"p2": "• BDD (Behavior-Driven Development)."
+								}
+							},
+							"frameworksPruebas": {
+								"titulo": "Frameworks de Pruebas",
+								"puntos": {
+									"p1": "JUnit, NUnit, Pytest, Jest, Mocha, Cypress, Selenium."
+								}
+							}
+						}
+					},
+					"paradigmasDesarrollo": {
+						"titulo": "Paradigmas de Desarrollo",
+						"contenido": {
+							"programacionFuncional": {
+								"titulo": "Programación Funcional",
+								"puntos": {
+									"p1": "Funciones puras, inmutabilidad, efectos secundarios."
+								}
+							},
+							"programacionConcurrente": {
+								"titulo": "Programación Concurrente y Paralela",
+								"puntos": {
+									"p1": "Hilos, procesos, sincronización, deadlocks."
+								}
+							}
+						}
+					},
+					"arquitecturaSoftware": {
+						"titulo": "Arquitectura de Software",
+						"contenido": {
+							"patronesDiseno": {
+								"titulo": "Patrones de Diseño de Software",
+								"puntos": {
+									"p1": "Creacionales (Singleton, Factory Method, Abstract Factory, Builder, Prototype).",
+									"p2": "Estructurales (Adapter, Decorator, Facade, Proxy, Bridge, Composite, Flyweight).",
+									"p3": "De Comportamiento (Observer, Strategy, Command, Iterator, State, Template Method, Chain of Responsibility, Mediator, Memento, Visitor)."
+								}
+							},
+							"patronesArquitectura": {
+								"titulo": "Patrones Arquitectónicos",
+								"puntos": {
+									"p1": "MVC (Model-View-Controller).",
+									"p2": "MVVM (Model-View-ViewModel).",
+									"p3": "Cliente-Servidor.",
+									"p4": "Microservicios vs. Monolito.",
+									"p5": "Arquitecturas en capas."
+								}
+							},
+							"principiosSolid": {
+								"titulo": "Principios SOLID",
+								"puntos": {
+									"p1": "Single Responsibility Principle (SRP).",
+									"p2": "Open/Closed Principle (OCP).",
+									"p3": "Liskov Substitution Principle (LSP).",
+									"p4": "Interface Segregation Principle (ISP).",
+									"p5": "Dependency Inversion Principle (DIP)."
+								}
+							}
+						}
+					},
+					"despliegueOperaciones": {
+						"titulo": "Despliegue y Operaciones (DevOps)",
+						"contenido": {
+							"contenedorizacion": {
+								"titulo": "Contenedorización",
+								"puntos": {
+									"p1": "Docker: Creación y gestión de imágenes y contenedores.",
+									"p2": "Docker Compose."
+								}
+							},
+							"orquestacionContenedores": {
+								"titulo": "Orquestación de Contenedores",
+								"puntos": {
+									"p1": "Kubernetes."
+								}
+							},
+							"ciCd": {
+								"titulo": "Integración Continua (CI) y Entrega Continua (CD)",
+								"puntos": {
+									"p1": "Herramientas: Jenkins, GitLab CI/CD, GitHub Actions, Travis CI.",
+									"p2": "Pipelines de CI/CD."
+								}
+							},
+							"computacionNube": {
+								"titulo": "Computación en la Nube (Cloud Computing)",
+								"puntos": {
+									"p1": "Proveedores: AWS, Google Cloud Platform (GCP), Microsoft Azure.",
+									"p2": "Conceptos: IaaS, PaaS, SaaS, Serverless computing."
+								}
+							},
+							"monitoreoLogging": {
+								"titulo": "Monitoreo y Logging",
+								"puntos": {
+									"p1": "Herramientas: Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana)."
+								}
+							}
+						}
+					},
+					"metodologiasDesarrollo": {
+						"titulo": "Metodologías de Desarrollo de Software",
+						"contenido": {
+							"metodologiasAgiles": {
+								"titulo": "Metodologías Ágiles",
+								"puntos": {
+									"p1": "Scrum.",
+									"p2": "Kanban.",
+									"p3": "Extreme Programming (XP).",
+									"p4": "Principios del Manifiesto Ágil."
+								}
+							},
+							"metodologiasTradicionales": {
+								"titulo": "Metodologías Tradicionales",
+								"puntos": {
+									"p1": "Modelo en cascada."
+								}
+							},
+							"gestionProyectos": {
+								"titulo": "Gestión de Proyectos",
+								"puntos": {
+									"p1": "Herramientas: Jira, Trello, Asana."
+								}
+							}
+						}
+					},
+					"seguridadSoftware": {
+						"titulo": "Seguridad en el Software",
+						"contenido": {
+							"principiosSeguridad": {
+								"titulo": "Principios de Seguridad",
+								"puntos": {
+									"p1": "OWASP Top 10.",
+									"p2": "Inyección SQL, XSS, CSRF.",
+									"p3": "Prácticas de codificación segura.",
+									"p4": "Gestión de secretos."
+								}
+							}
+						}
+					},
+					"herramientasConceptosAdicionales": {
+						"titulo": "Herramientas y Conceptos Adicionales",
+						"contenido": {
+							"lineaComandos": {
+								"titulo": "Línea de Comandos (CLI)",
+								"puntos": {
+									"p1": "Manejo de la terminal."
+								}
+							},
+							"expresionesRegulares": {
+								"titulo": "Expresiones Regulares (Regex)"
+							},
+							"ddd": {
+								"titulo": "Desarrollo Orientado a Dominios (DDD)"
+							},
+							"conocimientosRedes": {
+								"titulo": "Conocimientos de Redes",
+								"puntos": {
+									"p1": "Protocolos (TCP/IP, UDP).",
+									"p2": "Modelos (OSI, TCP/IP).",
+									"p3": "DNS."
+								}
+							},
+							"apiManagement": {
+								"titulo": "API Management"
+							},
+							"optimizacionRendimiento": {
+								"titulo": "Optimización de Rendimiento"
+							},
+							"documentacionCodigo": {
+								"titulo": "Documentación de Código y de Proyectos"
+							},
+							"buenasPracticasCodigo": {
+								"titulo": "Buenas Prácticas de Código",
+								"puntos": {
+									"p1": "Código limpio (Clean Code).",
+									"p2": "Refactoring.",
+									"p3": "Comentarios y legibilidad."
+								}
+							}
+						}
+					}
 				}
 			}
 		},
@@ -981,7 +1344,7 @@
 				"tx4": "Espero sea de utilidad, cualquier duda o sugerencia puedes contactarme por el formulario de contacto."
 			},
 			"descripcionCorta": "Formas en las que actualmente muchas personas estan generando ingresos en poco tiempo. La tecnología hoy en día entrega un panorama favorable a la hora de pensar en trabajo o formas de ganar platica extra.",
-			"ideas":{
+			"ideas": {
 				"dropshiping": {
 					"nombre": "1. Dropshipping",
 					"descripcion": "Vender productos sin tener inventario propio, utilizando proveedores que envían directamente al cliente."
