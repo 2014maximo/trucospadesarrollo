@@ -150,10 +150,10 @@
             "autor": "Mario Alonso Puig"
         }
     },
-    "PreguntaFramework": "Quels sont les cadres et technologies web sur lesquels vous avez travaillé intensivement l'année dernière et sur lesquels vous souhaitez travailler l'année prochaine (48 503 répondants) ?",
-    "PreguntaLenguajes": "Dans quels langages de programmation, de script et de balisage avez-vous travaillé de manière intensive au cours de l'année écoulée et quels sont ceux sur lesquels vous souhaitez travailler au cours de l'année prochaine (60 171 répondants) ?",
-    "PreguntaBasesDatos": "Quels sont les environnements de base de données sur lesquels vous avez effectué un travail de développement approfondi au cours de l'année écoulée et quels sont ceux sur lesquels vous souhaitez travailler au cours de l'année à venir (52 418 personnes interrogées) ?",
-    "PreguntaIDEs": "Quels sont les environnements de développement que vous avez utilisés régulièrement l'année dernière et avec lesquels vous souhaitez travailler l'année prochaine (58 121 répondants) ?",
+    "PreguntaFramework": "Quels sont les cadres et technologies web sur lesquels vous avez travaillé intensivement l'année dernière et sur lesquels vous souhaitez travailler l'année prochaine (23.678 répondants) ?",
+    "PreguntaLenguajes": "Dans quels langages de programmation, de script et de balisage avez-vous travaillé de manière intensive au cours de l'année écoulée et quels sont ceux sur lesquels vous souhaitez travailler au cours de l'année prochaine (31.771 répondants) ?",
+    "PreguntaBasesDatos": "Quels sont les environnements de base de données sur lesquels vous avez effectué un travail de développement approfondi au cours de l'année écoulée et quels sont ceux sur lesquels vous souhaitez travailler au cours de l'année à venir (26.083 personnes interrogées) ?",
+    "PreguntaIDEs": "Quels sont les environnements de développement que vous avez utilisés régulièrement l'année dernière et avec lesquels vous souhaitez travailler l'année prochaine (26.143 répondants) ?",
     "ANDROID": {
         "android": {
             "nombre": "Android",

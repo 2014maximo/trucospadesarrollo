@@ -150,10 +150,10 @@
 			"autor": "Mario Alonso Puig"
 		}
 	},
-	"PreguntaFramework": "¿En qué marcos y tecnologías web ha trabajado intensamente durante el último año y en cuáles desea trabajar el próximo año? (48.503 Encuestados.)",
-	"PreguntaLenguajes": "¿En qué lenguajes de programación, scripting y marcado ha trabajado intensamente durante el último año y en cuáles desea trabajar durante el próximo año? (60.171 encuestados.)",
-	"PreguntaBasesDatos": "¿En qué entornos de bases de datos ha realizado un amplio trabajo de desarrollo durante el último año y en cuáles desea trabajar durante el próximo año? (52.418 encuestados.)",
-	"PreguntaIDEs": "¿Qué entornos de desarrollo utilizó con regularidad el año pasado y con cuáles quiere trabajar el año que viene? (58.121 encuestados.)",
+	"PreguntaFramework": "¿En qué marcos y tecnologías web ha trabajado intensamente durante el último año y en cuáles desea trabajar el próximo año? (23.678 Encuestados.)",
+	"PreguntaLenguajes": "¿En qué lenguajes de programación, scripting y marcado ha trabajado intensamente durante el último año y en cuáles desea trabajar durante el próximo año? (31.771 encuestados.)",
+	"PreguntaBasesDatos": "¿En qué entornos de bases de datos ha realizado un amplio trabajo de desarrollo durante el último año y en cuáles desea trabajar durante el próximo año? (26.083 encuestados.)",
+	"PreguntaIDEs": "¿Qué entornos de desarrollo utilizó con regularidad el año pasado y con cuáles quiere trabajar el año que viene? (26.143 encuestados.)",
 	"ANDROID": {
 		"android": {
 			"nombre": "Android",
@@ -756,146 +756,146 @@
 							"frameworksPruebas": {
 								"titulo": "Frameworks de Pruebas",
 								"puntos": {
-									"p1": "JUnit, NUnit, Pytest, Jest, Mocha, Cypress, Selenium."
+									"p1": "• JUnit, NUnit, Pytest, Jest, Mocha, Cypress, Selenium."
 								}
 							}
 						}
 					},
 					"paradigmasDesarrollo": {
-						"titulo": "Paradigmas de Desarrollo",
+						"titulo": "7. Paradigmas de Desarrollo",
 						"contenido": {
 							"programacionFuncional": {
 								"titulo": "Programación Funcional",
 								"puntos": {
-									"p1": "Funciones puras, inmutabilidad, efectos secundarios."
+									"p1": "• Funciones puras, inmutabilidad, efectos secundarios."
 								}
 							},
 							"programacionConcurrente": {
 								"titulo": "Programación Concurrente y Paralela",
 								"puntos": {
-									"p1": "Hilos, procesos, sincronización, deadlocks."
+									"p1": "• Hilos, procesos, sincronización, deadlocks."
 								}
 							}
 						}
 					},
 					"arquitecturaSoftware": {
-						"titulo": "Arquitectura de Software",
+						"titulo": "8. Arquitectura de Software",
 						"contenido": {
 							"patronesDiseno": {
 								"titulo": "Patrones de Diseño de Software",
 								"puntos": {
-									"p1": "Creacionales (Singleton, Factory Method, Abstract Factory, Builder, Prototype).",
-									"p2": "Estructurales (Adapter, Decorator, Facade, Proxy, Bridge, Composite, Flyweight).",
-									"p3": "De Comportamiento (Observer, Strategy, Command, Iterator, State, Template Method, Chain of Responsibility, Mediator, Memento, Visitor)."
+									"p1": "• Creacionales (Singleton, Factory Method, Abstract Factory, Builder, Prototype).",
+									"p2": "• Estructurales (Adapter, Decorator, Facade, Proxy, Bridge, Composite, Flyweight).",
+									"p3": "• De Comportamiento (Observer, Strategy, Command, Iterator, State, Template Method, Chain of Responsibility, Mediator, Memento, Visitor)."
 								}
 							},
 							"patronesArquitectura": {
 								"titulo": "Patrones Arquitectónicos",
 								"puntos": {
-									"p1": "MVC (Model-View-Controller).",
-									"p2": "MVVM (Model-View-ViewModel).",
-									"p3": "Cliente-Servidor.",
-									"p4": "Microservicios vs. Monolito.",
-									"p5": "Arquitecturas en capas."
+									"p1": "• MVC (Model-View-Controller).",
+									"p2": "• MVVM (Model-View-ViewModel).",
+									"p3": "• Cliente-Servidor.",
+									"p4": "• Microservicios vs. Monolito.",
+									"p5": "• Arquitecturas en capas."
 								}
 							},
 							"principiosSolid": {
 								"titulo": "Principios SOLID",
 								"puntos": {
-									"p1": "Single Responsibility Principle (SRP).",
-									"p2": "Open/Closed Principle (OCP).",
-									"p3": "Liskov Substitution Principle (LSP).",
-									"p4": "Interface Segregation Principle (ISP).",
-									"p5": "Dependency Inversion Principle (DIP)."
+									"p1": "• Single Responsibility Principle (SRP).",
+									"p2": "• Open/Closed Principle (OCP).",
+									"p3": "• Liskov Substitution Principle (LSP).",
+									"p4": "• Interface Segregation Principle (ISP).",
+									"p5": "• Dependency Inversion Principle (DIP)."
 								}
 							}
 						}
 					},
 					"despliegueOperaciones": {
-						"titulo": "Despliegue y Operaciones (DevOps)",
+						"titulo": "9. Despliegue y Operaciones (DevOps)",
 						"contenido": {
 							"contenedorizacion": {
 								"titulo": "Contenedorización",
 								"puntos": {
-									"p1": "Docker: Creación y gestión de imágenes y contenedores.",
-									"p2": "Docker Compose."
+									"p1": "• Docker: Creación y gestión de imágenes y contenedores.",
+									"p2": "• Docker Compose."
 								}
 							},
 							"orquestacionContenedores": {
 								"titulo": "Orquestación de Contenedores",
 								"puntos": {
-									"p1": "Kubernetes."
+									"p1": "• Kubernetes."
 								}
 							},
 							"ciCd": {
 								"titulo": "Integración Continua (CI) y Entrega Continua (CD)",
 								"puntos": {
-									"p1": "Herramientas: Jenkins, GitLab CI/CD, GitHub Actions, Travis CI.",
-									"p2": "Pipelines de CI/CD."
+									"p1": "• Herramientas: Jenkins, GitLab CI/CD, GitHub Actions, Travis CI.",
+									"p2": "• Pipelines de CI/CD."
 								}
 							},
 							"computacionNube": {
 								"titulo": "Computación en la Nube (Cloud Computing)",
 								"puntos": {
-									"p1": "Proveedores: AWS, Google Cloud Platform (GCP), Microsoft Azure.",
-									"p2": "Conceptos: IaaS, PaaS, SaaS, Serverless computing."
+									"p1": "• Proveedores: AWS, Google Cloud Platform (GCP), Microsoft Azure.",
+									"p2": "• Conceptos: IaaS, PaaS, SaaS, Serverless computing."
 								}
 							},
 							"monitoreoLogging": {
 								"titulo": "Monitoreo y Logging",
 								"puntos": {
-									"p1": "Herramientas: Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana)."
+									"p1": "• Herramientas: Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana)."
 								}
 							}
 						}
 					},
 					"metodologiasDesarrollo": {
-						"titulo": "Metodologías de Desarrollo de Software",
+						"titulo": "10. Metodologías de Desarrollo de Software",
 						"contenido": {
 							"metodologiasAgiles": {
 								"titulo": "Metodologías Ágiles",
 								"puntos": {
-									"p1": "Scrum.",
-									"p2": "Kanban.",
-									"p3": "Extreme Programming (XP).",
-									"p4": "Principios del Manifiesto Ágil."
+									"p1": "• Scrum.",
+									"p2": "• Kanban.",
+									"p3": "• Extreme Programming (XP).",
+									"p4": "• Principios del Manifiesto Ágil."
 								}
 							},
 							"metodologiasTradicionales": {
 								"titulo": "Metodologías Tradicionales",
 								"puntos": {
-									"p1": "Modelo en cascada."
+									"p1": "• Modelo en cascada."
 								}
 							},
 							"gestionProyectos": {
 								"titulo": "Gestión de Proyectos",
 								"puntos": {
-									"p1": "Herramientas: Jira, Trello, Asana."
+									"p1": "• Herramientas: Jira, Trello, Asana."
 								}
 							}
 						}
 					},
 					"seguridadSoftware": {
-						"titulo": "Seguridad en el Software",
+						"titulo": "11. Seguridad en el Software",
 						"contenido": {
 							"principiosSeguridad": {
 								"titulo": "Principios de Seguridad",
 								"puntos": {
-									"p1": "OWASP Top 10.",
-									"p2": "Inyección SQL, XSS, CSRF.",
-									"p3": "Prácticas de codificación segura.",
-									"p4": "Gestión de secretos."
+									"p1": "• OWASP Top 10.",
+									"p2": "• Inyección SQL, XSS, CSRF.",
+									"p3": "• Prácticas de codificación segura.",
+									"p4": "• Gestión de secretos."
 								}
 							}
 						}
 					},
 					"herramientasConceptosAdicionales": {
-						"titulo": "Herramientas y Conceptos Adicionales",
+						"titulo": "12. Herramientas y Conceptos Adicionales",
 						"contenido": {
 							"lineaComandos": {
 								"titulo": "Línea de Comandos (CLI)",
 								"puntos": {
-									"p1": "Manejo de la terminal."
+									"p1": "• Manejo de la terminal."
 								}
 							},
 							"expresionesRegulares": {
@@ -907,9 +907,9 @@
 							"conocimientosRedes": {
 								"titulo": "Conocimientos de Redes",
 								"puntos": {
-									"p1": "Protocolos (TCP/IP, UDP).",
-									"p2": "Modelos (OSI, TCP/IP).",
-									"p3": "DNS."
+									"p1": "• Protocolos (TCP/IP, UDP).",
+									"p2": "• Modelos (OSI, TCP/IP).",
+									"p3": "• DNS."
 								}
 							},
 							"apiManagement": {
@@ -924,9 +924,9 @@
 							"buenasPracticasCodigo": {
 								"titulo": "Buenas Prácticas de Código",
 								"puntos": {
-									"p1": "Código limpio (Clean Code).",
-									"p2": "Refactoring.",
-									"p3": "Comentarios y legibilidad."
+									"p1": "• Código limpio (Clean Code).",
+									"p2": "• Refactoring.",
+									"p3": "• Comentarios y legibilidad."
 								}
 							}
 						}

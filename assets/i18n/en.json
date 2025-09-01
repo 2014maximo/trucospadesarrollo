@@ -150,10 +150,10 @@
             "autor": "Mario Alonso Puig"
         }
     },
-    "PreguntaFramework": "Which web frameworks and technologies have you worked on intensively during the last year and which ones do you want to work on in the coming year? (48,503 Respondents.)",
-    "PreguntaLenguajes": "In which programming, scripting and markup languages have you worked intensively during the last year and which ones do you want to work on during the next year? (60,171 respondents.)",
-    "PreguntaBasesDatos": "In which database environments have you done extensive development work during the past year and which ones do you want to work on during the next year? (52,418 respondents.)",
-    "PreguntaIDEs": "Which development environments did you use regularly last year and which ones do you want to work with next year? (58,121 respondents.)",
+    "PreguntaFramework": "Which web frameworks and technologies have you worked on intensively during the last year and which ones do you want to work on in the coming year? (23.678 Respondents.)",
+    "PreguntaLenguajes": "In which programming, scripting and markup languages have you worked intensively during the last year and which ones do you want to work on during the next year? (31.771 respondents.)",
+    "PreguntaBasesDatos": "In which database environments have you done extensive development work during the past year and which ones do you want to work on during the next year? (26.083 respondents.)",
+    "PreguntaIDEs": "Which development environments did you use regularly last year and which ones do you want to work with next year? (26.143 respondents.)",
     "ANDROID": {
         "android": {
             "nombre": "Android",
