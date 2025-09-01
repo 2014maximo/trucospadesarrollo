@@ -276,8 +276,8 @@ export class RefImg{
     
     constructor(ruta?:string,altura?:string,anchura?:string, alt?:string){
         this.ruta = ruta? ruta:'';
-        this.alt = altura? altura:'';
+        this.alt = alt? alt : '';
         this.ancho = anchura? anchura :'';
-        this.alto = alt? alt : '';
+        this.alto = altura? altura:'';
     }
 }

@@ -1,200 +1,172 @@
 import { TopTecnologyModel } from "../models/top-tecnology.model";
 
-export const TOP_LANGUAGE:TopTecnologyModel[] = [
+export const TOP_LANGUAGE: TopTecnologyModel[] = [
     {
-        name:'JS',
-        value:'62.3'
+        name: 'JavaScript',
+        value: '66'
     },
     {
-        name:'HTML/CSS',
-        value:'52.9'
+        name: 'HTML/CSS',
+        value: '61.9'
     },
     {
-        name:'PY',
-        value:'51'
+        name: 'SQL',
+        value: '58.6'
     },
     {
-        name:'SQL',
-        value:'51'
+        name: 'Python',
+        value: '57.9'
     },
     {
-        name:'TS',
-        value:'38.5'
+        name: 'Bash/Shell',
+        value: '48.7'
     },
     {
-        name:'Bash/Shell',
-        value:'33.9'
+        name: 'TypeScript',
+        value: '43.6'
     },
     {
-        name:'Java',
-        value:'30.3'
+        name: 'Java',
+        value: '29.4'
     },
     {
-        name:'C#',
-        value:'27.1'
+        name: 'C#',
+        value: '27.8'
     },
     {
-        name:'C++',
-        value:'23'
+        name: 'C++',
+        value: '23.5'
     },
     {
-        name:'C',
-        value:'20.3'
+        name: 'PowerShell',
+        value: '23.2'
     },
     {
-        name:'PHP',
-        value:'18.2'
+        name: 'C',
+        value: '22'
     },
     {
-        name:'PowerShell',
-        value:'13.8'
+        name: 'PHP',
+        value: '18.9'
     },
     {
-        name:'Go',
-        value:'13.5'
+        name: 'Go',
+        value: '16.4'
     },
     {
-        name:'Rust',
-        value:'12.6'
+        name: 'Rust',
+        value: '14.8'
     },
     {
-        name:'Kotlin',
-        value:'9.4'
+        name: 'Kotlin',
+        value: '10.8'
     },
     {
-        name:'Lua',
-        value:'6.2'
+        name: 'Lua',
+        value: '9.2'
     },
     {
-        name:'Dart',
-        value:'6'
+        name: 'Assembly',
+        value: '7.1'
     },
     {
-        name:'Assembly',
-        value:'5.4'
+        name: 'Ruby',
+        value: '6.4'
     },
     {
-        name:'Ruby',
-        value:'5.2'
+        name: 'Dart',
+        value: '5.9'
     },
     {
-        name:'Swift',
-        value:'4.7'
+        name: 'Swift',
+        value: '5.4'
     },
     {
-        name:'R',
-        value:'4.3'
+        name: 'R',
+        value: '4.9'
     },
     {
-        name:'Visual Basic',
-        value:'4.2'
+        name: 'Groovy',
+        value: '4.8'
     },
     {
-        name:'MATLAB',
-        value:'4'
+        name: 'Visual Basic (.Net)',
+        value: '4.4'
     },
     {
-        name:'VBA',
-        value:'3.7'
+        name: 'VBA',
+        value: '4.2'
     },
     {
-        name:'Groovy',
-        value:'3.3'
+        name: 'MATLAB',
+        value: '3.9'
     },
     {
-        name:'Scala',
-        value:'2.6'
+        name: 'Perl',
+        value: '3.8'
     },
     {
-        name:'Perl',
-        value:'2.5'
+        name: 'GDScript',
+        value: '3.3'
     },
     {
-        name:'GDScript',
-        value:'2.3'
+        name: 'Elixir',
+        value: '2.7'
     },
     {
-        name:'Objective-C',
-        value:'2.1'
+        name: 'Scala',
+        value: '2.6'
     },
     {
-        name:'Elixir',
-        value:'2.1'
+        name: 'Delphi',
+        value: '2.5'
     },
     {
-        name:'Haskell',
-        value:'2'
+        name: 'Lisp',
+        value: '2.4'
     },
     {
-        name:'Delphi',
-        value:'1.8'
+        name: 'MicroPython',
+        value: '2.3'
     },
     {
-        name:'MicroPython',
-        value:'1.6'
+        name: 'Zig',
+        value: '2.1'
     },
     {
-        name:'Lisp',
-        value:'1.5'
+        name: 'Erlang',
+        value: '1.5'
     },
     {
-        name:'Clojure',
-        value:'1.2'
+        name: 'Fortran',
+        value: '1.4'
     },
     {
-        name:'Julia',
-        value:'1.1'
+        name: 'Ada',
+        value: '1.4'
     },
     {
-        name:'Zig',
-        value:'1.1'
+        name: 'F#',
+        value: '1.3'
     },
     {
-        name:'Fortran',
-        value:'1.1'
+        name: 'OCaml',
+        value: '1.2'
     },
     {
-        name:'Solidity',
-        value:'1.1'
+        name: 'Gleam',
+        value: '1.1'
     },
     {
-        name:'Ada',
-        value:'0.9'
+        name: 'Prolog',
+        value: '1.1'
     },
     {
-        name:'Erlang',
-        value:'0.9'
+        name: 'COBOL',
+        value: '1'
     },
     {
-        name:'F#',
-        value:'0.9'
-    },
-    {
-        name:'Apex',
-        value:'0.8'
-    },
-    {
-        name:'Prolog',
-        value:'0.8'
-    },
-    {
-        name:'OCaml',
-        value:'0.8'
-    },
-    {
-        name:'Cobol',
-        value:'0.7'
-    },
-    {
-        name:'Crystal',
-        value:'0.4'
-    },
-    {
-        name:'Nim',
-        value:'0.4'
-    },
-    {
-        name:'Zephyr',
-        value:'0.3'
+        name: 'Mojo',
+        value: '0.4'
     }
 ]

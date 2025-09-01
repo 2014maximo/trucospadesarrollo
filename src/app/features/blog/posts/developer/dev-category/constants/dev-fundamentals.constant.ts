@@ -407,57 +407,306 @@ export const DEV_FUNDAMENTALS: FirstDescriptionBlockModel[] = [
     },
     {
         title: {
-            title: ['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.titulo'],
+            title: ['DEVELOPER.developer.fundamentalsRoadmap.temas.paradigmasDesarrollo.titulo'],
             description: 'DEVELOPER.developer.frontendRoadmap.css.titulo'
         },
         textBlock: [
             {
-                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.titulo'],
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.paradigmasDesarrollo.contenido.programacionFuncional.titulo'],
                 textBlock: [
                     {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p1',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
-                    },
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p2',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
-                    },
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p3',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
-                    },
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p4',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
-                    },
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p5',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
-                    },
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.tiposPruebas.puntos.p6',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
-                    },
-                ]
-            },
-            {
-                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.metodologiasPruebas.titulo'],
-                textBlock: [
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.metodologiasPruebas.puntos.p1',
-                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
-                    },
-                    {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.metodologiasPruebas.puntos.p2',
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.paradigmasDesarrollo.contenido.programacionFuncional.puntos.p1',
                         styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
                     }
                 ]
             },
             {
-                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.frameworksPruebas.titulo'],
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.paradigmasDesarrollo.contenido.programacionConcurrente.titulo'],
                 textBlock: [
                     {
-                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.pruebasSoftware.contenido.frameworksPruebas.puntos.p1',
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.paradigmasDesarrollo.contenido.programacionConcurrente.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.titulo'],
+            description: 'DEVELOPER.developer.frontendRoadmap.css.titulo'
+        },
+        textBlock: [
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.patronesDiseno.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.patronesDiseno.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.patronesDiseno.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.patronesDiseno.puntos.p3',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    },
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.patronesArquitectura.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.patronesArquitectura.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.patronesArquitectura.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.patronesArquitectura.puntos.p3',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.patronesArquitectura.puntos.p4',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.patronesArquitectura.puntos.p5',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    },
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.principiosSolid.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.principiosSolid.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.principiosSolid.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.principiosSolid.puntos.p3',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.principiosSolid.puntos.p4',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.arquitecturaSoftware.contenido.principiosSolid.puntos.p5',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                ]
+            },
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.titulo'],
+            description: 'DEVELOPER.developer.frontendRoadmap.css.titulo'
+        },
+        textBlock: [
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.contenedorizacion.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.contenedorizacion.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.contenedorizacion.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    }
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.orquestacionContenedores.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.orquestacionContenedores.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    }
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.ciCd.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.ciCd.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.ciCd.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    }
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.computacionNube.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.computacionNube.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.computacionNube.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    }
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.monitoreoLogging.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.despliegueOperaciones.contenido.monitoreoLogging.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.developer.fundamentalsRoadmap.temas.metodologiasDesarrollo.titulo'],
+            description: 'DEVELOPER.developer.frontendRoadmap.css.titulo'
+        },
+        textBlock: [
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.metodologiasDesarrollo.contenido.metodologiasAgiles.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.metodologiasDesarrollo.contenido.metodologiasAgiles.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.metodologiasDesarrollo.contenido.metodologiasAgiles.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.metodologiasDesarrollo.contenido.metodologiasAgiles.puntos.p3',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.metodologiasDesarrollo.contenido.metodologiasAgiles.puntos.p4',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    },
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.metodologiasDesarrollo.contenido.metodologiasTradicionales.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.metodologiasDesarrollo.contenido.metodologiasTradicionales.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    }
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.metodologiasDesarrollo.contenido.gestionProyectos.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.metodologiasDesarrollo.contenido.gestionProyectos.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.developer.fundamentalsRoadmap.temas.seguridadSoftware.titulo'],
+            description: 'DEVELOPER.developer.frontendRoadmap.css.titulo'
+        },
+        textBlock: [
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.seguridadSoftware.contenido.principiosSeguridad.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.seguridadSoftware.contenido.principiosSeguridad.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.seguridadSoftware.contenido.principiosSeguridad.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.seguridadSoftware.contenido.principiosSeguridad.puntos.p3',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.seguridadSoftware.contenido.principiosSeguridad.puntos.p4',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    },
+                ]
+            }
+        ]
+    },
+    {
+        title: {
+            title: ['DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.titulo'],
+            description: 'DEVELOPER.developer.frontendRoadmap.css.titulo'
+        },
+        textBlock: [
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.lineaComandos.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.lineaComandos.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    }
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.expresionesRegulares.titulo']
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.ddd.titulo']
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.conocimientosRedes.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.conocimientosRedes.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.conocimientosRedes.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.conocimientosRedes.puntos.p3',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    }
+                ]
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.apiManagement.titulo']
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.optimizacionRendimiento.titulo']
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.documentacionCodigo.titulo']
+            },
+            {
+                subtitle:['DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.buenasPracticasCodigo.titulo'],
+                textBlock: [
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.buenasPracticasCodigo.puntos.p1',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.buenasPracticasCodigo.puntos.p2',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
+                    },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.herramientasConceptosAdicionales.contenido.buenasPracticasCodigo.puntos.p3',
                         styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-0',
                     }
                 ]

@@ -1,144 +1,124 @@
 import { TopTecnologyModel } from "../models/top-tecnology.model";
 
-export const TOP_DATABASES:TopTecnologyModel[] = [
+export const TOP_DATABASES: TopTecnologyModel[] = [
     {
-        name:'PostgreSQL',
-        value:'48.7'
+        name: 'PostgreSQL',
+        value: '55.6'
     },
     {
-        name:'MySQL',
-        value:'40.3'
+        name: 'MySQL',
+        value: '40.5'
     },
     {
-        name:'SQLite',
-        value:'33.1'
+        name: 'SQLite',
+        value: '37.5'
     },
     {
-        name:'Microsoft SQL Server',
-        value:'25.3'
+        name: 'Microsoft SQL Server',
+        value: '30.1'
     },
     {
-        name:'MongoDB',
-        value:'24.8'
+        name: 'Redis',
+        value: '28'
     },
     {
-        name:'Redis',
-        value:'20'
+        name: 'MongoDB',
+        value: '24'
     },
     {
-        name:'MariaDB',
-        value:'17.2'
+        name: 'MariaDB',
+        value: '22.5'
     },
     {
-        name:'Elascticsearch',
-        value:'12.5'
+        name: 'Elasticsearch',
+        value: '16.7'
     },
     {
-        name:'Oracle',
-        value:'10.1'
+        name: 'Oracle',
+        value: '10.6'
     },
     {
-        name:'DynanoDB',
-        value:'7.9'
+        name: 'Dynamodb',
+        value: '9.8'
     },
     {
-        name:'Firebase Realtime Database',
-        value:'5.8'
+        name: 'BigQuery',
+        value: '6.5'
     },
     {
-        name:'Cloud Firestore',
-        value:'5.4'
+        name: 'Supabase',
+        value: '6'
     },
     {
-        name:'BigQuery',
-        value:'4.8'
+        name: 'Cloud Firestore',
+        value: '5.7'
     },
     {
-        name:'Microsoft Access',
-        value:'4.2'
+        name: 'H2',
+        value: '5'
     },
     {
-        name:'Supabase',
-        value:'4'
+        name: 'Firebase Realtime Database',
+        value: '5'
     },
     {
-        name:'H2',
-        value:'3.8'
+        name: 'Microsoft Access',
+        value: '4.8'
     },
     {
-        name:'CosmosDB',
-        value:'3.3'
+        name: 'Cosmos DB',
+        value: '4.6'
     },
     {
-        name:'Snowflake',
-        value:'2.6'
+        name: 'Snowflake',
+        value: '4.1'
     },
     {
-        name:'InfluxDB',
-        value:'2.5'
+        name: 'InfluxDB',
+        value: '3.7'
     },
     {
-        name:'Cassandra',
-        value:'2.4'
+        name: 'Databricks SQL',
+        value: '3.4'
     },
     {
-        name:'Databricks SQL',
-        value:'1.9'
+        name: 'DuckDB',
+        value: '3.3'
     },
     {
-        name:'Neo4j',
-        value:'1.9'
+        name: 'Cassandra',
+        value: '2.9'
     },
     {
-        name:'IBM DB2',
-        value:'1.7'
+        name: 'Neo4J',
+        value: '2.6'
     },
     {
-        name:'ClickHouse',
-        value:'1.7'
+        name: 'Valkey',
+        value: '2.4'
     },
     {
-        name:'Solr',
-        value:'1.5'
+        name: 'Clickhouse',
+        value: '2.4'
     },
     {
-        name:'DuckDB',
-        value:'1.4'
+        name: 'IBM DB2',
+        value: '2.4'
     },
     {
-        name:'Firebird',
-        value:'1.1'
+        name: 'Amazon Redshift',
+        value: '2.3'
     },
     {
-        name:'Couch DB',
-        value:'1'
+        name: 'Cockroachdb',
+        value: '1'
     },
     {
-        name:'CockroachDB',
-        value:'1'
+        name: 'Pocketbase',
+        value: '1'
     },
     {
-        name:'Couchbase',
-        value:'0.7'
+        name: 'Datomic',
+        value: '0.6'
     },
-    {
-        name:'Presto',
-        value:'0.6'
-    },
-    {
-        name:'Datomic',
-        value:'0.4'
-    },
-    {
-        name:'Event Store DB',
-        value:'0.3'
-    },
-    {
-        name:'RavenDB',
-        value:'0.3'
-    },
-    {
-        name:'TiDB',
-        value:'0.2'
-    }
 ]

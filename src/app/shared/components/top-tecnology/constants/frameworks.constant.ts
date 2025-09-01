@@ -1,148 +1,116 @@
 import { TopTecnologyModel } from "../models/top-tecnology.model";
 
-export const TOP_FRAMEWORKS:TopTecnologyModel[] = [
+export const TOP_FRAMEWORKS: TopTecnologyModel[] = [
     {
-        name:'Node.js',
-        value:'48.7'
+        name: 'Node.js',
+        value: '48.7'
     },
     {
-        name:'React',
-        value:'44.7'
+        name: 'React',
+        value: '44.7'
     },
     {
-        name:'JQuery',
-        value:'23.4'
+        name: 'jQuery',
+        value: '23.4'
     },
     {
-        name:'Next.js',
-        value:'20.8'
+        name: 'Next.js',
+        value: '20.8'
     },
     {
-        name:'Express',
-        value:'19.9'
+        name: 'Express',
+        value: '19.9'
     },
     {
-        name:'ASP.NET CORE',
-        value:'19.7'
+        name: 'ASP.NET Core',
+        value: '19.7'
     },
     {
-        name:'Angular',
-        value:'18.2'
+        name: 'Angular',
+        value: '18.2'
     },
     {
-        name:'Vue.js',
-        value:'17.6'
+        name: 'Vue.js',
+        value: '17.6'
     },
     {
-        name:'FastAPI',
-        value:'14.8'
+        name: 'FastAPI',
+        value: '14.8'
     },
     {
-        name:'Spring Boot',
-        value:'14.7'
+        name: 'Spring Boot',
+        value: '14.7'
     },
     {
-        name:'Flash',
-        value:'14.4'
+        name: 'Flask',
+        value: '14.4'
     },
     {
-        name:'ASP.NET',
-        value:'14.2'
+        name: 'ASP.NET',
+        value: '14.2'
     },
     {
-        name:'Wordpress',
-        value:'13.6'
+        name: 'WordPress',
+        value: '13.6'
     },
     {
-        name:'Django',
-        value:'12.6'
+        name: 'Django',
+        value: '12.6'
     },
     {
-        name:'Laravel',
-        value:'8.9'
+        name: 'Laravel',
+        value: '8.9'
     },
     {
-        name:'AngularJS',
-        value:'7.2'
+        name: 'AngularJS',
+        value: '7.2'
     },
     {
-        name:'Svelte',
-        value:'7.2'
+        name: 'Svelte',
+        value: '7.2'
     },
     {
-        name:'Blazor',
-        value:'7'
+        name: 'Blazor',
+        value: '7'
     },
     {
-        name:'NestJS',
-        value:'5.8'
+        name: 'NestJS',
+        value: '6.7'
     },
     {
-        name:'Ruby on Rails',
-        value:'4.7'
+        name: 'Ruby on Rails',
+        value: '5.9'
     },
     {
-        name:'Nuxt.js',
-        value:'3.6'
+        name: 'Astro',
+        value: '4.5'
     },
     {
-        name:'Htmx',
-        value:'3.3'
+        name: 'Deno',
+        value: '4'
     },
     {
-        name:'Symfony',
-        value:'3.2'
+        name: 'Symfony',
+        value: '4'
     },
     {
-        name:'Astro',
-        value:'3'
+        name: 'Nuxt.js',
+        value: '4'
     },
     {
-        name:'Fastify',
-        value:'2.2'
+        name: 'Fastify',
+        value: '2.9'
     },
     {
-        name:'Deno',
-        value:'1.9'
+        name: 'Axum',
+        value: '2.8'
     },
     {
-        name:'Phoenix',
-        value:'1.9'
+        name: 'Phoenix',
+        value: '2.4'
     },
     {
-        name:'Drupal',
-        value:'1.9'
-    },
-    {
-        name:'Strapi',
-        value:'1.7'
-    },
-    {
-        name:'Codelgniter',
-        value:'1.7'
-    },
-    {
-        name:'Gatsby',
-        value:'1.6'
-    },
-    {
-        name:'Remix',
-        value:'1.6'
-    },
-    {
-        name:'Solid.js',
-        value:'1.2'
-    },
-    {
-        name:'Yii 2',
-        value:'0.9'
-    },
-    {
-        name:'Play Framework',
-        value:'0.8'
-    },
-    {
-        name:'Elm',
-        value:'0.6'
+        name: 'Drupal',
+        value: '2.2'
     },
 ]

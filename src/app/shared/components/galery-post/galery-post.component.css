@@ -49,8 +49,8 @@
     color: #fff;
     margin-top: 25px;
     margin-bottom: 5px;
-    font-size: 25px;
-    line-height: 25px;
+    font-size: 30px;
+    line-height: 30px;
     text-shadow: 3px 3px 2px #000000;
 }
 .leerMas{
@@ -78,4 +78,5 @@
     position:relative;
     right: 10px;
     top:10px;
+    object-fit: cover;
 }

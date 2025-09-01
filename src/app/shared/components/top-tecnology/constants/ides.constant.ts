@@ -1,144 +1,112 @@
 import { TopTecnologyModel } from "../models/top-tecnology.model";
 
-export const TOP_IDES:TopTecnologyModel[] = [
+export const TOP_IDES: TopTecnologyModel[] = [
     {
-        name:'Visual Studio Code',
-        value:'73.6'
+        name: 'Visual Studio Code',
+        value: '75.9'
     },
     {
-        name:'Visual Studio',
-        value:'29.3'
+        name: 'Visual Studio',
+        value: '29'
     },
     {
-        name:'IntelliJ IDEA',
-        value:'26.8'
+        name: 'Notepad++',
+        value: '27.4'
     },
     {
-        name:'Notepad++',
-        value:'23.9'
+        name: 'IntelliJ IDEA',
+        value: '27.1'
     },
     {
-        name:'Vim',
-        value:'21.6'
+        name: 'Vim',
+        value: '24.3'
     },
     {
-        name:'Android Studio',
-        value:'16.1'
+        name: 'Cursor',
+        value: '17.9'
     },
     {
-        name:'PyCharm',
-        value:'15.1'
+        name: 'PyCharm',
+        value: '15'
     },
     {
-        name:'Jupyter Notebook/ JupyterLab',
-        value:'12.8'
+        name: 'Android Studio',
+        value: '15'
     },
     {
-        name:'NeoVim',
-        value:'12.5'
+        name: 'Jupyter Nb/JupyterLab',
+        value: '14.1'
     },
     {
-        name:'Sublime Text',
-        value:'10.9'
+        name: 'Neovim',
+        value: '14'
     },
     {
-        name:'Eclipse',
-        value:'9.4'
+        name: 'Nano',
+        value: '12.2'
     },
     {
-        name:'Xcode',
-        value:'9.3'
+        name: 'Sublime Text',
+        value: '10.5'
     },
     {
-        name:'Nano',
-        value:'9.2'
+        name: 'Xcode',
+        value: '10'
     },
     {
-        name:'WebStorm',
-        value:'7.5'
+        name: 'Claude Code',
+        value: '9.7'
     },
     {
-        name:'PhpStorm',
-        value:'5.9'
+        name: 'WebStorm',
+        value: '7.6'
     },
     {
-        name:'Rider',
-        value:'5.7'
+        name: 'Zed',
+        value: '7.3'
     },
     {
-        name:'DataGrip',
-        value:'5.1'
+        name: 'Rider',
+        value: '7.1'
     },
     {
-        name:'VSCodium',
-        value:'4.8'
+        name: 'Eclipse',
+        value: '7.1'
     },
     {
-        name:'IPython',
-        value:'4.7'
+        name: 'VSCodium',
+        value: '6.2'
     },
     {
-        name:'CLion',
-        value:'4.6'
+        name: 'PhpStorm',
+        value: '5.8'
     },
     {
-        name:'Emacs',
-        value:'4.2'
+        name: 'Windsurf',
+        value: '4.9'
     },
     {
-        name:'Goland',
-        value:'3.3'
+        name: 'RustRover',
+        value: '3.2'
     },
     {
-        name:'NeatBeans',
-        value:'2.9'
+        name: 'Lovable.dev',
+        value: '2.4'
     },
     {
-        name:'RStudio',
-        value:'2.8'
+        name: 'Bolt',
+        value: '2.3'
     },
     {
-        name:'Qt Creator',
-        value:'2.7'
+        name: 'Cline and/or Roo',
+        value: '2.2'
     },
     {
-        name:'Code::Blocks',
-        value:'2.1'
+        name: 'Aider',
+        value: '1.9'
     },
     {
-        name:'Kate',
-        value:'1.8'
-    },
-    {
-        name:'Fleet',
-        value:'1.7'
-    },
-    {
-        name:'Helix',
-        value:'1.7'
-    },
-    {
-        name:'Spyder',
-        value:'1.4'
-    },
-    {
-        name:'RubyMine',
-        value:'1.1'
-    },
-    {
-        name:'Geany',
-        value:'1'
-    },
-    {
-        name:'Rad Studio',
-        value:'1'
-    },
-    {
-        name:'BBEdit',
-        value:'0.9'
-    },
-    {
-        name:'Spacemacs',
-        value:'0.4'
+        name: 'Trae',
+        value: '0.8'
     },
 ]
