@@ -151,6 +151,10 @@ export const DEV_FUNDAMENTALS: FirstDescriptionBlockModel[] = [
                         sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.lenguajesPlataformas.contenido.lenguajesProgramacion.puntos.p4',
                         styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
                     },
+                    {
+                        sectionText: 'DEVELOPER.developer.fundamentalsRoadmap.temas.lenguajesPlataformas.contenido.lenguajesProgramacion.puntos.p5',
+                        styleText: 'text-light f-open-sans-c fs-20 lh-25 mb-3',
+                    },
                 ]
             },
             {
