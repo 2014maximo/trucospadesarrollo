@@ -6,12 +6,14 @@ import { AddsModel } from 'src/app/shared/models/post.model';
 import { CategoriaPostModel } from '@models/categorias.model';
 import { DevCategoryContentComponent } from './dev-category-content/dev-category-content.component';
 import { GoUpComponent } from 'src/app/shared/components/go-up/go-up.component';
+import { DevCategoryHeaderComponent } from './dev-category-header/dev-category-header.component';
 
 @Component({
   selector: 'app-dev-category',
   imports: [
     FooterHomeComponent,
     DevCategoryContentComponent,
+    DevCategoryHeaderComponent,
     CategoryHeaderComponent,
     HeaderComponent,
     GoUpComponent

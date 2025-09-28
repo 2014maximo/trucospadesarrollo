@@ -1,278 +1,62 @@
+<div class="espacio"></div>
 <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
-        <div class="row" *ngIf="adds.contentIndex">
-            <div class="col-md-8">
-                <h2 class="tituloPost fuenteOcho p-2">{{ traducirTexto(this.categoria.nombre) }}</h2>
-                <app-content-index [indice]="indice"></app-content-index>
-                <div class="espacio"></div>
-                <div *ngfor="let subcatego of subCategorias">
-                    <h2 class="tituloPost f-bebas p-2">{{ traducirTexto(subcatego.subCategoria) }}</h2>
-                    <app-content-index [contenido]="'subcategorias'" [categoria]="'angular'"></app-content-index>
-                </div>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-        <div class="espaciado"></div>
-        <div class="row">
-            <div class="col-md-5">
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">{{ 'Origen' | translate }}</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    <b>La World Wide Web (WWW): </b><br>
-                    El desarrollo del frontend moderno está intrínsecamente ligado a la creación de la World Wide Web. Como dato inicial La web y el Internet no son lo mismo. Internet es la infraestructura de redes, mientras que la WWW es el sistema de páginas y enlaces que usamos a diario.<br><br>
-                    Fue inventada por Tim Berners-Lee en 1989 mientras trabajaba en el CERN (Organización Europea para la Investigación Nuclear) en Suiza.<br><br>
+        <p class="text-light f-open-sans-c fs-20 lh-20">
+            <b>Developer: Tu Puerta de Entrada al Mundo del Desarrollo de Software</b>
+            <br><br>
+            Bienvenido al corazón de la programación. Esta es la categoría donde nacen los desarrolladores
+            extraordinarios: donde los conceptos fundamentales se transforman en tu superpoder digital.<br><br><br>
 
-                    Teniendo un problema a resolver Tim Berners-Lee buscaba una forma eficiente de compartir información entre científicos de todo el mundo, asi que presentó la propuesta de un sistema basado en hipertexto que permitiera enlazar documentos y acceder a ellos desde cualquier computadora conectada a la red.<br><br>
-                    
-                    Ya como productos:<br>
-                    - En 1990 Creó el primer navegador web y servidor web.<br>
-                    - En 1991: Lanzó el primer sitio web (info.cern.ch).<br><br>
+            <b>El ADN del Desarrollador Moderno</b><br>
+        </p>
+        <ul class="text-light f-open-sans-c fs-20 lh-30">
+            <li class="mb-2">
+                Fundamentos inquebrantables:<br>Desde "¿Qué es una variable?" hasta patrones de diseño que usan los
+                gigantes de Silicon Valley.
+            </li>
+            <li>
+                POO desmitificada: Programación Orientada a Objetos explicada como si tu abuela la entendiera (¡y tu
+                crush también!)
+            </li>
+            <li>
+                Noticias que importan: Las actualizaciones que cambiarán tu carrera antes de que tus amigos las conozcan
+            </li>
+            <li>
+                Conceptos que otros dan por sentado: Porque nadie nació sabiendo que un "loop" no es solo para tu
+                playlist
+            </li>
+        </ul>
 
-                    Expansión global: En 1993, el NCSA Mosaic fue el primer navegador gráfico popular, lo que llevó a la rápida adopción de la web.<br><br>
 
-                    Estándares abiertos: En 1994, Berners-Lee fundó el W3C (World Wide Web Consortium) para desarrollar y mantener estándares abiertos de la web.
-                </p><br>
-                <div class="text-center">
-                    <img src="assets/img/persons/Tim.png" alt="" height="200" width="auto" class="rounded-circle mr-3 border">
-                </div>
-                <p class="fuenteSeis text-light text-center">Tim Berners-Lee</p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }} mt-3">HTML</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25 mb-0">
-                    Siglas para HyperText Markup Language. HTML es como el esqueleto de una casa. Define la estructura, los cimientos y cómo se organizan los diferentes elementos. Sin HTML, una página web sería solo un montón de texto sin formato.
-                </p>
-                <span class="fuenteSeis linkReference cursor-p">
-                    <small>HTML</small>
-                </span>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }} mt-3">CSS</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25 mb-0">
-                    Siglas para Cascading Style Sheets, que se traduce como Hojas de Estilo en Cascada. Es un lenguaje de diseño que se utiliza para dar estilo y apariencia visual a las páginas web escritas en HTML.
-                </p>
-                <span class="fuenteSeis linkReference cursor-p">
-                    <small>CSS</small>
-                </span>
-                <span class="fuenteSeis linkReference cursor-p border">
-                    <small>MAKING LAYOUTS</small>
-                </span>
-                <span class="fuenteSeis linkReference cursor-p">
-                    <small>RESPONSIVE DESIGN</small>
-                </span>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }} mt-3">CSS Architecture</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Metodologías y patrones de diseño que te ayudan a organizar y estructurar tu código CSS de manera eficiente. Son una parte fundamental del desarrollo frontend y te ayudan a mantener tu código organizado, escalable y fácil de mantener. (BEM, SMACSS, OOCSS, Atomic Design).
-                </p>
-                <span class="fuenteSeis linkReference cursor-p border">
-                    <small>BEM</small>
-                </span>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">CSS Preprocessors</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Herramientas que te permiten escribir CSS de forma más eficiente y productiva. Son una parte fundamental del desarrollo frontend y te ayudan a mantener tu código organizado, reutilizable y fácil de mantener. (Sass, Less, Stylus).
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Javascript</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Lenguaje de programación poderoso y versátil que te permite crear páginas web interactivas y dinámicas. Es una herramienta fundamental para cualquier desarrollador web y un lenguaje esencial para la creación de la web moderna.
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Internet</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Vasta red global que conecta computadoras y dispositivos en todo el mundo. Es como una autopista digital que permite que la información viaje de un lugar a otro en cuestión de segundos.<br><br>
-
-                    Internet es una herramienta poderosa que ha transformado la forma en que nos comunicamos, trabajamos, nos entretenemos y accedemos a la información. Es una parte fundamental de nuestra vida cotidiana y su importancia sigue creciendo a medida que la tecnología avanza.
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Version Control Sistem</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Sistema de control de versiones que te permite rastrear los cambios en tu código a lo largo del tiempo. Es una herramienta esencial para cualquier desarrollador web y te ayuda a colaborar con otros desarrolladores, mantener un historial de cambios y revertir a versiones anteriores si es necesario. (Git, SVN, Mercurial)
-                </p>
-                
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">VCS Hosting</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Plataforma en línea que te permite alojar tu repositorio de código y colaborar con otros desarrolladores. Es una herramienta esencial para cualquier desarrollador web y te permite compartir tu código, colaborar en proyectos y mantener un historial de cambios.
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Package Managers</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Herramienta que te permite instalar, actualizar y administrar las dependencias de tu proyecto. Es una herramienta esencial para cualquier desarrollador web y te ayuda a mantener tu código organizado y actualizado.
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Frameworks frontend</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Conjunto de herramientas y librerías que te permiten crear aplicaciones web de forma rápida y eficiente. Son una parte fundamental de la web moderna y te ayudan a acelerar el desarrollo, mantener tu código organizado y crear aplicaciones de alta calidad.
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Build tools Front</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Herramientas que te permiten automatizar tareas repetitivas en tu flujo de trabajo de desarrollo frontend. Son una parte fundamental del desarrollo frontend y te ayudan a optimizar tu código, mejorar la eficiencia y acelerar el desarrollo. (Webpack, Gulp, Grunt).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Linters and Formatters</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Herramientas que te ayudan a mantener tu código limpio, consistente y libre de errores. Son una parte fundamental del desarrollo frontend y te ayudan a mejorar la calidad de tu código, detectar problemas y mantener un estilo de codificación consistente. (ESLint, Prettier).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Module Bundlers</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Herramientas que te permiten combinar y empaquetar módulos de código en un solo archivo. Son una parte fundamental del desarrollo frontend y te ayudan a optimizar el rendimiento, reducir el tiempo de carga y mejorar la eficiencia. (Webpack, Rollup, Parcel).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Testing</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Proceso de evaluación de tu código para garantizar que funcione correctamente y cumpla con los requisitos. Es una parte fundamental del desarrollo frontend y te ayuda a detectar errores, mejorar la calidad y garantizar que tu código sea confiable. (Unit testing, Integration testing, End-to-end testing).
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Authentication Strategies</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Estrategias de autenticación que te permiten proteger tu aplicación y controlar el acceso de los usuarios. Son una parte fundamental del desarrollo frontend y te ayudan a garantizar la seguridad, proteger la información confidencial y prevenir el acceso no autorizado. (JWT, OAuth, OpenID Connect).
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Web Security Basics</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Principios y prácticas de seguridad que te ayudan a proteger tu aplicación y prevenir ataques cibernéticos. Son una parte fundamental del desarrollo frontend y te ayudan a garantizar la seguridad, proteger la información confidencial y mantener la integridad de tu aplicación. (CORS, HTTPS, Content Security Policy).
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Web Components</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Conjunto de tecnologías que te permiten crear componentes web reutilizables y personalizables. Son una parte fundamental del desarrollo frontend y te ayudan a mantener tu código organizado, modular y fácil de mantener. (Custom Elements, Shadow DOM, HTML Templates).
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Type Checkers</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Herramientas que te permiten detectar errores de tipo en tu código y mejorar la calidad de tu código. Son una parte fundamental del desarrollo frontend y te ayudan a detectar problemas, mejorar la calidad y garantizar que tu código sea confiable. (TypeScript, Flow).
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">SSR</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Siglas para Server-Side Rendering. Es una técnica que te permite renderizar tu aplicación en el servidor y enviarla al cliente como HTML estático. Es una parte fundamental del desarrollo frontend y te ayuda a mejorar el rendimiento, la accesibilidad y la experiencia del usuario.
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">GraphQL</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Lenguaje de consulta y entorno de ejecución de código abierto creado por Facebook en 2012. Es una alternativa a REST y te permite definir y consultar tus API de forma más eficiente y flexible. Es una parte fundamental del desarrollo frontend y te ayuda a mejorar la eficiencia, la escalabilidad y la flexibilidad de tus API.
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">PWAs</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Siglas para Progressive Web Apps. Son aplicaciones web que se comportan como aplicaciones nativas y ofrecen una experiencia de usuario similar a la de una aplicación nativa. Son una parte fundamental del desarrollo frontend y te ayudan a mejorar la accesibilidad, la velocidad y la experiencia del usuario.
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Static Site Generators</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Herramientas que te permiten generar sitios web estáticos a partir de archivos de contenido. Son una parte fundamental del desarrollo frontend y te ayudan a crear sitios web rápidos, seguros y fáciles de mantener. (Gatsby, Jekyll, Hugo).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Mobile Apps</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Aplicaciones móviles que se ejecutan en dispositivos móviles como teléfonos y tabletas. Son una parte fundamental del desarrollo frontend y te ayudan a llegar a una audiencia más amplia, mejorar la experiencia del usuario y ofrecer una experiencia móvil de alta calidad. (React Native, Flutter, Ionic).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Mobile Apps</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Aplicaciones móviles que se ejecutan en dispositivos móviles como teléfonos y tabletas. Son una parte fundamental del desarrollo frontend y te ayudan a llegar a una audiencia más amplia, mejorar la experiencia del usuario y ofrecer una experiencia móvil de alta calidad. (React Native, Flutter, Ionic).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Desktop Apps</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Aplicaciones de escritorio que se ejecutan en computadoras de escritorio y portátiles. Son una parte fundamental del desarrollo frontend y te ayudan a llegar a una audiencia más amplia, mejorar la experiencia del usuario y ofrecer una experiencia de escritorio de alta calidad. (Electron, NW.js).
-                </p>
-            </div>
-            <div class="col-md-7">
-                <h2 class="text-light fuenteOcho categorias title-menu">ROADMAP - FRONTEND DEVELOPER</h2>
-                <img src="assets/img/extructures/frontend.png" alt="Roadmap Frontend dev" class="img-fluid drop">
-                <p class="text-light f-open-sans-c lh-25 text-end"><small>Basada en <a href="https://roadmap.sh/" target="_blank">Roadmap.sh</a></small></p>
-            </div>
-        </div>
-
-        <div class="espaciado"></div>
-        
-        <div class="row">
-            <div class="col-md-7">
-                <h2 class="text-light fuenteOcho categorias title-menu">ROADMAP - BACKEND DEVELOPER</h2>
-                <img src="assets/img/extructures/backend.png" alt="Roadmap Frontend dev" class="img-fluid drop">
-                <p class="text-light f-open-sans-c lh-25 text-end"><small>Basada en <a href="https://roadmap.sh/" target="_blank">Roadmap.sh</a></small></p>
-            </div>
-            <div class="col-md-5">
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Language</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Lenguaje de programación que te permite crear aplicaciones web y servicios en el lado del servidor. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes. (Node.js, Python, Ruby, Java, PHP).
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Repo Hosting Service</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Plataforma en línea que te permite alojar tu repositorio de código y colaborar con otros desarrolladores. Es una parte fundamental del desarrollo backend y te permite compartir tu código, colaborar en proyectos y mantener un historial de cambios. (GitHub, GitLab, Bitbucket).
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">OS and General Knowledge</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Conocimientos básicos sobre sistemas operativos y tecnologías generales que te ayudan a comprender cómo funcionan las aplicaciones y servicios en el lado del servidor. Son una parte fundamental del desarrollo backend y te ayudan a crear aplicaciones escalables, seguras y eficientes.
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Relational Databases</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Base de datos que utiliza un modelo de datos relacional para almacenar y gestionar la información. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes. (MySQL, PostgreSQL, SQLite).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">NoSQL Databases</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Base de datos que utiliza un modelo de datos no relacional para almacenar y gestionar la información. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes. (MongoDB, Redis, Cassandra).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Scaling Databases</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Proceso de aumentar la capacidad y el rendimiento de una base de datos para manejar un mayor volumen de datos y tráfico. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes. (Sharding, Replication, Caching).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">API</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Interfaz de programación de aplicaciones que te permite comunicarte con otros servicios y aplicaciones. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes. (REST, GraphQL).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Caching</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Proceso de almacenar datos en memoria para acelerar el acceso y mejorar el rendimiento de una aplicación. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes. (Redis, Memcached).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Web Security Knowledge</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Conocimientos sobre seguridad web que te ayudan a proteger tu aplicación y prevenir ataques cibernéticos. Son una parte fundamental del desarrollo backend y te ayudan a garantizar la seguridad, proteger la información confidencial y mantener la integridad de tu aplicación. (OWASP Top 10, HTTPS, CSRF).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Testing</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Proceso de evaluación de tu código para garantizar que funcione correctamente y cumpla con los requisitos. Es una parte fundamental del desarrollo backend y te ayuda a detectar errores, mejorar la calidad y garantizar que tu código sea confiable. (Unit testing, Integration testing, End-to-end testing).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">CI/CD</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Prácticas y herramientas que te permiten automatizar el proceso de integración y entrega continua de tu código. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la calidad y la velocidad de tu desarrollo. (Jenkins, Travis CI, CircleCI).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Design and Development Principies</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Principios y prácticas de diseño y desarrollo que te ayudan a crear aplicaciones escalables, seguras y eficientes. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la calidad, la eficiencia y la experiencia del usuario. (SOLID, DRY, KISS).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Arquitectural Patterns</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Patrones de arquitectura que te ayudan a organizar y estructurar tu código de manera eficiente. Son una parte fundamental del desarrollo backend y te ayudan a mantener tu código organizado, escalable y fácil de mantener. (MVC, MVVM, Microservices).
-                </p>
-
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Message Brokers</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Sistema de mensajería que te permite enviar y recibir mensajes entre aplicaciones y servicios. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes. (RabbitMQ, Kafka, ActiveMQ).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Containerization vs Virtualization</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Técnicas de empaquetado y despliegue de aplicaciones que te permiten crear entornos aislados y portátiles. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la escalabilidad y la seguridad de tus aplicaciones. (Docker, Kubernetes, Vagrant).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Server Send Events</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Tecnología que te permite enviar eventos desde el servidor al cliente de forma unidireccional. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones en tiempo real y mejorar la experiencia del usuario. (SSE, WebSockets).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Web Sockets</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Tecnología que te permite establecer una conexión bidireccional entre el servidor y el cliente. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones en tiempo real y mejorar la experiencia del usuario. (SSE, WebSockets).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Web Servers</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Servidor web que te permite alojar y servir tu aplicación en el lado del servidor. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes. (Nginx, Apache, IIS).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">Building for Scale</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Proceso de diseñar y desarrollar aplicaciones que puedan manejar un gran volumen de datos y tráfico. Es una parte fundamental del desarrollo backend y te ayuda a crear aplicaciones escalables, seguras y eficientes. (Load balancing, Caching, Sharding).
-                </p>
-                <h2 class="fuenteSeis fs-50 {{ this.categoria.color }}">DevOps</h2>
-                <p class="text-light f-open-sans-c fs-20 lh-25">
-                    Prácticas y herramientas que te permiten integrar el desarrollo y la operación de tu aplicación. Son una parte fundamental del desarrollo backend y te ayudan a mejorar la eficiencia, la calidad y la velocidad de tu desarrollo. (CI/CD, Monitoring, Automation).
-                </p>
-            </div>
-        </div>
-        
-        <div class="espaciado"></div>
-
+        <p class="text-light f-open-sans-c fs-20 lh-20">
+            🗺️ Tu Mapa del Tesoro de la Programación
+            No es solo una lista de temas: es tu GPS para dominar el desarrollo. Nuestro árbol de conocimiento incluye:
+            ✨ Nivel Iniciación: Variables, tipos de datos, estructuras de control
+            ✨ Nivel Padawan: Funciones, arrays, métodos, errores y debugging
+            ✨ Nivel Jedi: POO, patrones de diseño, principios SOLID
+            ✨ Nivel Maestro: Arquitectura de software, mejores prácticas, código limpio
+            💡 Por qué esta categoría cambiará tu carrera
+            "Pero ¿esto en qué me ayuda?": Cada concepto incluye ejemplos del mundo real y aplicaciones prácticas
+            "¿Dónde uso esto?": Te mostramos exactamente cuándo y por qué necesitas cada herramienta
+            "¿Por qué es importante?": Porque dominar los fundamentos es la diferencia entre un programador que cobra
+            $1,000 vs $10,000 al mes
+            🔥 Lo que nos hace diferentes
+            No somos otro blog técnico más. Aquí aprenderás:
+            Por qué los conceptos "básicos" son en realidad tus armas secretas
+            Cómo los principios fundamentales te preparan para cualquier lenguaje o framework
+            La mentalidad que separa a los desarrolladores mediocres de los extraordinarios
+            ¿Listo para convertirte en el developer que todas las empresas quieren contratar? 🚀
+            ¿Qué te parece esta versión? He incluido:
+            Emojis y formato visual para hacerlo más dinámico
+            Lenguaje motivacional que conecta con las aspiraciones del lector
+            Estructura de niveles que crea una sensación de progresión
+            Beneficios concretos que responden al "¿qué gano con esto?"
+            Preguntas comunes que los principiantes realmente se hacen
+            Llamado a la acción al final
+            ¿Quieres que ajuste el tono (más/menos informal) o agregue algún aspecto específico?
+        </p>
     </div>
     <div class="col-md-1"></div>
 </div>
+<div class="espaciado"></div>

@@ -12,8 +12,7 @@ import { AddsModel } from 'src/app/shared/models/post.model';
   selector: 'app-dev-category-header',
   imports: [
     CommonModule,
-    TranslateModule,
-    ContentIndexComponent],
+    TranslateModule],
   templateUrl: './dev-category-header.component.html',
   styleUrl: './dev-category-header.component.css'
 })
