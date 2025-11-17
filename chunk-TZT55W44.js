@@ -1,0 +1,1 @@
+import{Ea as o,Wa as n,Xa as a,gb as p}from"./chunk-NXHFUGVE.js";import"./chunk-2VMXMS7J.js";var s=class e{constructor(){}static \u0275fac=function(t){return new(t||e)};static \u0275cmp=o({type:e,selectors:[["app-about"]],decls:2,vars:0,template:function(t,c){t&1&&(n(0,"p"),p(1,"about works!"),a())},encapsulation:2})};export{s as AboutComponent};
