@@ -9,12 +9,14 @@ import { FRONTEND_ROADMAP } from '../constants/frontend-roadmap.constant';
 import { FirstDescriptionBlockComponent } from 'src/app/shared/components/first-description-block/first-description-block.component';
 import { BACKEND_ROADMAP } from '../constants/backend-roadmap.constant';
 import { DEV_FUNDAMENTALS } from '../constants/dev-fundamentals.constant';
+import { ImageAdapterComponent } from 'src/app/shared/components/image-adapter/image-adapter.component';
 
 @Component({
   selector: 'app-dev-category-content',
   imports: [
     TranslateModule,
     FirstDescriptionBlockComponent,
+    ImageAdapterComponent,
     CommonModule
   ],
   templateUrl: './dev-category-content.component.html',

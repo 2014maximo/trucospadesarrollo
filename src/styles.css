@@ -8,20 +8,20 @@
 
 @font-face {
     font-family: 'Alex Brush';
-    src: url(https://2014maximo.github.io/templates/styles/fonts/AlexBrush-Regular.ttf);
+    src: url(assets/fonts/AlexBrush-Regular.ttf);
     font-weight: normal;
 }
 @font-face {
     font-family: 'OperatorMono';
     font-style: normal;
     font-weight: 300;
-    src: url(https://2014maximo.github.io/templates/styles/fonts/OperatorMono-XLight.otf);
+    src: url(assets/fonts/OperatorMono-XLight.otf);
 }
 @font-face {
     font-family: 'OperatorMono';
     font-style: normal;
     font-weight: 600;
-    src: url(https://2014maximo.github.io/templates/styles/fonts/OperatorMono-Medium.otf);
+    src: url(assets/fonts/OperatorMono-Medium.otf);
 }
 
 
