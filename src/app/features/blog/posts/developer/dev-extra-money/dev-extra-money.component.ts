@@ -8,12 +8,14 @@ import { CategoriaModel } from 'src/app/shared/models/post.model';
 import { EXT_MONEY } from './constants/dev-extra-money.constant';
 import { CommonModule } from '@angular/common';
 import { FirstDescriptionBlockComponent } from 'src/app/shared/components/first-description-block/first-description-block.component';
+import { FooterHomeComponent } from 'src/app/shared/components/footer-home/footer-home.component';
 
 @Component({
   selector: 'app-dev-extra-money',
   imports: [
     HeaderPostComponent,
     HeaderPostSupplementComponent,
+    FooterHomeComponent,
     FirstDescriptionBlockComponent,
     CommonModule,],
   templateUrl: './dev-extra-money.component.html',
@@ -32,6 +34,9 @@ export class DevExtraMoneyComponent {
     this.publicacion = postActual(this.idPublicacion)[0];
     this.breadcrumb = cargarBreadcrumb(this.publicacion);
     this.categoria = CATEGORIA.filter(e => e.nombre === this.publicacion.categoria)[0];
+  }
+    scroll(el: HTMLElement) {
+    el.scrollIntoView();
   }
 
 }
