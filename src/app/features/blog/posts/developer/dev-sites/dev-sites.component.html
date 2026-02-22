@@ -1,21 +1,12 @@
 <div #target></div>
 <app-header></app-header>
 <div class="espaciado"></div>
-<app-header-post-supplement [idPublicacion]="idPublicacion"
-    [rutaIconoSugerido]="categoria.rutaIcono"></app-header-post-supplement>
-
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <h1>Sitios de Desarrollo</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.</p>
-        </div>
-    </div>
-</div>
+<article>
+    <app-header-post-supplement [idPublicacion]="idPublicacion"
+        [rutaIconoSugerido]="categoria.rutaIcono"></app-header-post-supplement>
 
 
-
-
+</article>
 <app-footer></app-footer>
 <div class="go-up" (click)="scroll(target)">
     <i class="fa fa-chevron-up" aria-hidden="true"></i>

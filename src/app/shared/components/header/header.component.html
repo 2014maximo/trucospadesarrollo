@@ -4,7 +4,7 @@
             <div class="col-1"></div>
             <div class="col-2">
                 <a href="home" class="cursor-p text-decoration-none">
-                    <h1 class="fuenteOcho text-light m-0">{{ 'titulo_blog' | translate }}</h1>
+                    <div class="fuenteOcho text-light m-0">{{ 'titulo_blog' | translate }}</div>
                     <span *ngIf="categoria.activo">
                         <a href="{{categoria.ruta}}"
                             class="f-shadow-into-l text-uppercase {{categoria.colorText}} fs-17 text-shadow-one">
@@ -69,7 +69,8 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto f-open-sans-c text-center">
                         <li class="nav-item">
-                            <a class="nav-link active" data-bs-toggle="collapse" data-bs-target="#navbarNav" (click)="openSearch()">{{ 'Buscar' | translate }}</a>
+                            <a class="nav-link active" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                                (click)="openSearch()">{{ 'Buscar' | translate }}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navbarNav"
