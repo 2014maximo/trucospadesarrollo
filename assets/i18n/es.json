@@ -935,12 +935,15 @@
 			}
 		},
 		"dev-super-recursos": {
-			"nombre": "Recopilación sugerida de sitios web e IA's",
-			"referenciaBusqueda": "páginas web, links",
+			"nombre": "Recopilación sugerida de sitios web, herramientas online y nuevas creaciones con Inteligencia artificial",
+			"referenciaBusqueda": "sitios web, links, web recomendados, aplicaciones web, páginas recomendadas, utilidades",
 			"descripcion": {
-				"tx1": "No sabemos que existen ciertos sitios web hasta que alguien nos cuenta lo increíble que son y llegamos a ellos. Esta vez están a la mano un recopilación de unos sitios web recomendados totalmente."
+				"tx1": "A medida que pasa el tiempo, aparecen más y más aplicaciones web con inteligencia artificial integrada o desarrolladas con su ayuda. En un principio, resultan imponentes por ser ideas novedosas, pero ahora nos estamos inundando de herramientas que parecen resolver infinidad de tareas (sea bueno o malo, lo importante es saber sacarles provecho). Estamos en un momento de transición para que la IA defina su lugar y aterrice de lleno en la vida de las personas.",
+				"tx2": "Debido a que surgen utilidades constantemente, considero importante tenerlas en cuenta para los múltiples usos prácticos para los que fueron creadas. Muchas son de pago, pero en otras, con la versión de prueba, es suficiente para hacer la 'tareíta' que necesitamos.",
+				"tx3": "Inicialmente las recopilé para mis propias necesidades, pero, libre de egoísmos y con la intención de siempre, las comparto esperando poder ayudar a alguien más.",
+				"tx4": "Sin más 'carreta' o texto inútil que posiblemente un modelo de IA ignoraría, presento a continuación esta recopilación de utilidades web. Las he ordenado de la forma que considero más sencilla para liberar la pantalla de basura visual y de esos mares de texto en scroll infinito. Es una selección extraída de fuentes como TikTok, Instagram y lo que se atraviese por ahí. "
 			},
-			"descripcionCorta": "Sitios web que se ignora para que puedan ser útiles. Una pequeña descripción."
+			"descripcionCorta": "Con ayuda de la IA ahora las aplicaciones y sitios web empiezan a recibir esteroides y ahora sirven para una increíble cantidad de fines como..."
 		},
 		"dev-algoritmos-clave": {
 			"nombre": "Algoritmos de clasificación que son clave",
