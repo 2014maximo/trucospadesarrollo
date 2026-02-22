@@ -863,7 +863,7 @@
                                 "gestionProyectos": {
                                     "titulo": "Project Management",
                                     "puntos": {
-                                        "p1":"Tools: Jira, Trello, Asana."
+                                        "p1": "Tools: Jira, Trello, Asana."
                                     }
                                 }
                             }
@@ -874,10 +874,10 @@
                                 "principiosSeguridad": {
                                     "titulo": "Safety Principles",
                                     "puntos": {
-                                        "p1":"OWASP Top 10.",
-                                        "p2":"Injection SQL, XSS, CSRF.",
-                                        "p3":"Secure coding practices.",
-                                        "p4":"Secret management."
+                                        "p1": "OWASP Top 10.",
+                                        "p2": "Injection SQL, XSS, CSRF.",
+                                        "p3": "Secure coding practices.",
+                                        "p4": "Secret management."
                                     }
                                 }
                             }
@@ -888,7 +888,7 @@
                                 "lineaComandos": {
                                     "titulo": "Command Line (CLI)",
                                     "puntos": {
-                                        "p1":"Terminal management."
+                                        "p1": "Terminal management."
                                     }
                                 },
                                 "expresionesRegulares": {
@@ -900,9 +900,9 @@
                                 "conocimientosRedes": {
                                     "titulo": "Networking Knowledge",
                                     "puntos": {
-                                        "p1":"Protocols (TCP/IP, UDP).",
-                                        "p2":"Models (OSI, TCP/IP).",
-                                        "p3":"DNS."
+                                        "p1": "Protocols (TCP/IP, UDP).",
+                                        "p2": "Models (OSI, TCP/IP).",
+                                        "p3": "DNS."
                                     }
                                 },
                                 "apiManagement": {
@@ -917,9 +917,9 @@
                                 "buenasPracticasCodigo": {
                                     "titulo": "Code Best Practices",
                                     "puntos": {
-                                        "p1":"Clean Code.",
-                                        "p2":"Refactoring.",
-                                        "p3":"Comments and readability."
+                                        "p1": "Clean Code.",
+                                        "p2": "Refactoring.",
+                                        "p3": "Comments and readability."
                                     }
                                 }
                             }
@@ -1782,6 +1782,17 @@
                     "descripcionCorta": "Detail of the elements that are part of Typescript, detailing in contrast to Javascript."
                 }
             }
+        },
+        "dev-super-recursos": {
+            "nombre": "Suggested collection of websites, online tools, and new creations with artificial intelligence",
+            "referenciaBusqueda": "websites, links, recommended websites, web applications, recommended pages, utilities",
+            "descripcion": {
+                "tx1": "As time goes by, more and more web applications with integrated artificial intelligence or developed with its help are appearing. At first, they are impressive because they are novel ideas, but now we are being inundated with tools that seem to solve countless tasks (whether good or bad, the important thing is to know how to take advantage of them). We are in a moment of transition for AI to define its place and fully land in people's lives.",
+                "tx2": "Because new uses are constantly emerging, I think it's important to keep in mind the many practical uses for which they were created. Many are paid, but others have a trial version that is sufficient for the “little task” we need to do.",
+                "tx3": "I initially compiled them for my own needs, but, free of selfishness and with my usual intention, I am sharing them in the hope of helping someone else.",
+                "tx4": "Without further ado or useless text that an AI model would probably ignore, I present this compilation of web utilities. I have organized them in the way I consider most straightforward to free the screen from visual clutter and those seas of endless scrolling text. It is a selection taken from sources such as TikTok, Instagram, and whatever else comes my way."
+            },
+            "descripcionCorta": "With the help of AI, applications and websites are now beginning to receive a boost and can now serve an incredible number of purposes, such as..."
         }
     }
 }

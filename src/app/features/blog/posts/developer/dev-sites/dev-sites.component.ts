@@ -1,18 +1,18 @@
 import { Component } from '@angular/core';
 import { CategoriaPostModel, DatosPost } from '@models/categorias.model';
-import { FooterHomeComponent } from 'src/app/shared/components/footer-home/footer-home.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { CategoriaModel } from 'src/app/shared/models/post.model';
 import { EXT_MONEY } from '../dev-extra-money/constants/dev-extra-money.constant';
 import { cargarBreadcrumb, postActual } from '@shared//global-functions';
 import { CATEGORIA } from '@constants/categories.constant';
-import { FirstDescriptionBlockComponent } from 'src/app/shared/components/first-description-block/first-description-block.component';
+import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
+import { HeaderPostSupplementComponent } from 'src/app/shared/components/header-post-supplement/header-post-supplement.component';
 
 @Component({
   selector: 'app-dev-sites',
   imports: [
-    FooterHomeComponent,
-    FirstDescriptionBlockComponent,
+    FooterComponent,
+    HeaderPostSupplementComponent,
     HeaderComponent],
   templateUrl: './dev-sites.component.html',
   styleUrl: './dev-sites.component.css'
