@@ -1,0 +1,38 @@
+<div class="resource-explorer">
+    <div class="categories-header">
+        <button *ngFor="let category of categories"
+            class="text-uppercase button-index {{category.individualStyle.backgroundColor}} {{category.individualStyle.textColor}} {{category.individualStyle.fontFamily}} {{category.individualStyle.fontSize}} {{category.individualStyle.rotation}}"
+            [class.active]="selectedCategory?.id === category.id" (click)="selectCategory(category)">
+            {{ category.name }}
+        </button>
+    </div>
+
+    <div class="slider-wrapper-reveal" [class.show]="selectedCategory" [class.fade-out]="isAnimating">
+        <div class="slider-container" *ngIf="selectedCategory">
+            <div class="slider-viewport">
+                <div class="slider-wrapper" [ngStyle]="{'transform': 'translateX(-' + currentSlideIndex * 100 + '%)'}">
+                    <!-- Iterate over resources of selected category -->
+                    <div class="slide" *ngFor="let resource of selectedCategory.resources">
+                        <div class="slide-content">
+                            <img src="{{resource.ImgSlider.src}}" alt="{{resource.ImgSlider.alt}}" height="{{resource.ImgSlider.height}}" width="auto">
+                            <h3 class="fuenteOcho fw-5">{{resource.title}}</h3>
+                            <p class="f-open-sans-c fs-20 lh-25">{{resource.description}}</p>
+                            <a [href]="resource.url" target="_blank" rel="noopener noreferrer" class="access-btn f-open-sans-c">
+                                Visitar sitio <span class="arrow-icon ">&rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="slider-btn prev-btn" (click)="prevSlide()">&#10094;</button>
+            <button class="slider-btn next-btn" (click)="nextSlide()">&#10095;</button>
+
+            <div class="slider-indicators">
+                <span *ngFor="let resource of selectedCategory.resources; let i = index" class="dot"
+                    [class.active]="i === currentSlideIndex" (click)="setSlide(i)">
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

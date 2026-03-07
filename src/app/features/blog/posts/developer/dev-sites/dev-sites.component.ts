@@ -7,13 +7,19 @@ import { cargarBreadcrumb, postActual } from '@shared//global-functions';
 import { CATEGORIA } from '@constants/categories.constant';
 import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
 import { HeaderPostSupplementComponent } from 'src/app/shared/components/header-post-supplement/header-post-supplement.component';
+import { IndexButtonsComponent } from 'src/app/shared/components/index-buttons/index-buttons.component';
+import { ContentIndexComponent } from "src/app/shared/components/content-index/content-index.component";
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dev-sites',
   imports: [
     FooterComponent,
+    CommonModule,
+    IndexButtonsComponent,
     HeaderPostSupplementComponent,
-    HeaderComponent],
+    HeaderComponent,
+  ],
   templateUrl: './dev-sites.component.html',
   styleUrl: './dev-sites.component.css'
 })
@@ -24,6 +30,11 @@ export class DevSitesComponent {
   public publicacion = new DatosPost();
   public categoria = new CategoriaPostModel();
   public ideasExtraMoney = EXT_MONEY;
+  public indexButtons = [
+    { title: 'Diseño Gráfico', description: 'Explora nuestros recursos de diseño creativo y profesional con las mejores herramientas.' },
+    { title: 'Desarrollo Web', description: 'Aprende las últimas tecnologías y frameworks para crear páginas rápidas y modernas.' },
+    { title: 'Servidores & Hosting', description: 'Configura tus proyectos de manera profesional, garantizando alta disponibilidad.' }
+  ];
 
 
   ngOnInit(): void {
