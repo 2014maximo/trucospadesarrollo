@@ -1,0 +1,1 @@
+import"./chunk-2VMXMS7J.js";var t=[{path:"",loadComponent:()=>import("./chunk-7YEVPD3B.js").then(o=>o.AngularCategoryComponent)},{path:"instalacion",loadComponent:()=>import("./chunk-Y72AOQKV.js").then(o=>o.NgInstalationComponent)}];export{t as ANGULAR_ROUTES};
