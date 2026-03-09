@@ -322,9 +322,29 @@ export const INDEX_BUTTONS_DEV_SITES: IndexButtonsModel[] = [
                 }, description: 'Trabajos de muchos tipo en Colombia.', url: 'https://hoytrabajas.com/'
             },
             {
-                title: 'i', ImgSlider: {
+                title: 'Indeed', ImgSlider: {
                     alt: '', src: '', height: 0, width: 0
-                }, description: 'Trabajos de muchos tipo en Colombia.', url: 'https://hoytrabajas.com/'
+                }, description: 'Busqueda de empleo adaptable a tus preferencias.', url: 'https://co.indeed.com/'
+            },
+            {
+                title: 'Klimbup', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Búsqueda de empleo o empleados según se requiera.', url: 'https://www.klimbup.com/'
+            },
+            {
+                title: 'Klimbup', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Búsqueda de empleo o empleados según se requiera.', url: 'https://www.klimbup.com/'
+            },
+            {
+                title: 'Michael Page', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Búsqueda de empleo por lugares.', url: 'https://www.michaelpage.com.co/'
+            },
+            {
+                title: 'Klimbup', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Búsqueda de empleo o empleados según se requiera.', url: 'https://www.klimbup.com/'
             },
         ]
     },
