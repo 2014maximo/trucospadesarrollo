@@ -225,13 +225,129 @@ export const INDEX_BUTTONS_DEV_SITES: IndexButtonsModel[] = [
         resources: [
             {
                 title: ' ', ImgSlider: {
+                    alt: 'Workface Logo', src: 'assets/img/icons/logo-workface-white.png', height: 90, width: 0
+                }, description: 'La mejor opción para crear tu hoja de vida. Totalmente gratuito todo, CV ATS-Friendly.', url: 'https://2014maximo.github.io/workface/home'
+            },
+            {
+                title: ' ', ImgSlider: {
                     alt: 'flowcv Logo', src: 'https://plantillas_dev.gitlab.io/styles/assets/icon/flowcv-white.png', height: 60, width: 0
                 }, description: 'Plantillas para hojas de vida. Versiones de pago y gratuitas.', url: 'https://flowcv.com/'
             },
             {
                 title: ' ', ImgSlider: {
-                    alt: 'Workface Logo', src: 'assets/img/icons/logo-workface-white.png', height: 90, width: 0
-                }, description: 'La mejor opción para crear tu hoja de vida. Totalmente gratuito todo, CV ATS-Friendly.', url: 'https://2014maximo.github.io/workface/home'
+                    alt: 'Canva Logo', src: 'https://plantillas_dev.gitlab.io/assets/img/posts/developer/logo-canva.png', height: 50, width: 0
+                }, description: 'Herramienta con una inmensa cantidad de utilidades basadas en diseño gráfico en especial la creación de hojas de vida, ahora de la mano de la IA.', url: 'https://2014maximo.github.io/workface/home'
+            },
+            {
+                title: ' ', ImgSlider: {
+                    alt: 'Novoresume Logo', src: 'https://plantillas_dev.gitlab.io/assets/img/posts/developer/logo-novoresume.png', height: 50, width: 0
+                }, description: 'Herramienta online para crear hojas de vida con diseño profesional y todo lo que se pueda requerir hasta un plan premium.', url: 'https://novoresume.com/?noRedirect=true'
+            },
+            {
+                title: ' ', ImgSlider: {
+                    alt: 'Zeta Logo', src: 'https://plantillas_dev.gitlab.io/assets/img/posts/developer/logo-zety.png', height: 70, width: 0
+                }, description: 'Otra herramienta online para crear hojas de vida con diseño profesional y todo lo que se pueda requerir hasta un plan premium.', url: 'https://zety.es/'
+            },
+            {
+                title: ' ', ImgSlider: {
+                    alt: 'CV Maker Logo', src: 'https://plantillas_dev.gitlab.io/assets/img/posts/developer/logo-cvmaker.png', height: 40, width: 0
+                }, description: 'Otra herramienta online para crear hojas de vida con diseño profesional y todo lo que se pueda requerir hasta un plan premium. Con ayuda de IA', url: 'https://www.cvmaker.es/'
+            },
+            {
+                title: ' ', ImgSlider: {
+                    alt: 'Visual CV Logo', src: 'https://plantillas_dev.gitlab.io/assets/img/posts/developer/logo-visualcv.png', height: 40, width: 0
+                }, description: 'Otra herramienta online para crear hojas de vida con diseño profesional y todo lo que se pueda requerir hasta un plan premium. Con ayuda de IA', url: 'https://www.visualcv.com/'
+            },
+            {
+                title: ' ', ImgSlider: {
+                    alt: 'Kickresume Logo', src: 'assets/img/icons/logo-kickresume.png', height: 40, width: 0
+                }, description: 'Otra herramienta online para crear hojas de vida con diseño profesional y todo lo que se pueda requerir hasta un plan premium. Con ayuda de IA', url: 'https://www.kickresume.com/es/'
+            },
+        ]
+    },
+    {
+        id: 'trabajo',
+        name: 'Trabajo y tele',
+        individualStyle: {
+            backgroundColor: 'bg-white',
+            textColor: 'text-dark',
+            fontFamily: 'fuenteSeis',
+            fontSize: 'fs-30',
+            rotation: 'rot-1'
+        },
+        resources: [
+            {
+                title: 'Accenture', ImgSlider: {
+                    alt: '', src: '', height: 60, width: 0
+                }, description: 'Empresa de tecnología con una lista grande de servicios dentro de ellos "BÚSQUEDA DE TALENTO". Cloud,Servicio al Cliente, Cyberseguridad, Datos e IA, Ingeniería y Fabricación Digital, Plataformas Empresariales, Tecnología Emergente, Finanzas y Gestión de Riesgos, Proyectos de Capital e Infraestructura, Learning Service, Servicios Gestionados Estratégicos, Marketing y Experiencia, Metaverso, Sales and Commerce, Estrategia, Supply Chain Networks, Sostenibilidad, Talento y Organización, Transformación Tecnológica', url: 'https://www.accenture.com/co-es'
+            },
+            {
+                title: 'Baires', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Trabajos en especial remotos, gestión de talentos.', url: 'https://applicants.bairesdev.com/'
+            },
+            {
+                title: 'Computrabajo', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'No es fuente favorita para búsqueda de empleo en latinoamerica, en ocasiones puede estar por ahí la oportunidad.', url: 'https://co.computrabajo.com/'
+            },
+            {
+                title: 'Chumi Jobs', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Trabajo en empresas de tecnología para latinoamérica', url: 'https://www.chumijobs.com/'
+            },
+            {
+                title: 'Deel', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Nóminas, recursos humanos, informática e inmigración para cada tipo de trabajador.', url: 'https://www.deel.com/es/'
+            },
+            {
+                title: 'Epam', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Trabaja en el equipo de tecnología.', url: 'https://careers.epam.com/en/jobs?'
+            },
+            {
+                title: 'Fast Dolphin', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Contratación remota bilingue y multilingue.', url: 'https://www.fastdolphin.com/'
+            },
+            {
+                title: 'Getonboard', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Comunidad de empleos en startups en latinoamérica.', url: 'https://www.getonbrd.com/'
+            },
+            {
+                title: 'Hoy trabajas', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Trabajos de muchos tipo en Colombia.', url: 'https://hoytrabajas.com/'
+            },
+            {
+                title: 'i', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Trabajos de muchos tipo en Colombia.', url: 'https://hoytrabajas.com/'
+            },
+        ]
+    },
+    {
+        id: 'freelancer',
+        name: 'Freelancer',
+        individualStyle: {
+            backgroundColor: 'bg-Kotlin',
+            textColor: 'text-dark',
+            fontFamily: 'fuenteSeis',
+            fontSize: 'fs-30',
+            rotation: 'rot-2'
+        },
+        resources: [
+            {
+                title: 'Freelancer', ImgSlider: {
+                    alt: '', src: '', height: 60, width: 0
+                }, description: 'La más grande para contratación freelancer a nivel mundial. Hablar en inglés es indispensable.', url: 'https://www.freelancer.com/'
+            },
+            {
+                title: 'Freelancermap', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'El hogar del freelancer. De igual forma hablar en ingles es indispensable.', url: 'https://www.freelancermap.com/'
             }
         ]
     }
