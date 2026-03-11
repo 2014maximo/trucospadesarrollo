@@ -346,6 +346,46 @@ export const INDEX_BUTTONS_DEV_SITES: IndexButtonsModel[] = [
                     alt: '', src: '', height: 0, width: 0
                 }, description: 'Búsqueda de empleo o empleados según se requiera.', url: 'https://www.klimbup.com/'
             },
+            {
+                title: 'Mbc', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Búsqueda de empleo. "Conectan tu talento con el mundo"', url: 'https://mbcgroup.co/'
+            },
+            {
+                title: 'Periferia IT', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Búsqueda de empleo. Oportunidades, crecimiento profesional y emocionantes desafíos diarios.', url: 'https://periferiaitgroup.com/trabaja-con-nosotros/#'
+            },
+            {
+                title: 'Personal Soft', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Descubre vacantes.', url: 'https://www.personalsoft.com/trabaja-con-nosotros/'
+            },
+            {
+                title: 'Si Hay Trabajo', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Oportunidades laborales de acuerdo a las necesidades, empleos temporales, profesionales, independientes, freelance y muchas más...', url: 'https://www.sihaytrabajo.com.co/'
+            },
+            {
+                title: 'GFT', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Buscador de empleos por filtros', url: 'https://jobs.gft.com/'
+            },
+            {
+                title: 'Signify Technology', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Buscador de empleos por filtros', url: 'https://www.signifytechnology.com/jobs/'
+            },
+            {
+                title: 'Solvo', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Encuentra un trabajo que se ajuste a tus sueños.', url: 'https://careers.solvoglobal.com/job-listing/'
+            },
+            {
+                title: 'Solvedex', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Trabajar con los mejores del mundo.', url: 'https://solvedex.homerun.co/'
+            },
         ]
     },
     {
