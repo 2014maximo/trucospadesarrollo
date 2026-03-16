@@ -102,9 +102,9 @@ export const INDEX_BUTTONS_DEV_SITES: IndexButtonsModel[] = [
                 }, description: 'Páginas web en el tiempo. Recopilación gigantesca de páginas web', url: 'https://web.archive.org/'
             },
             {
-                title: 'DigitalOcean', ImgSlider: {
-                    alt: 'Figma Logo', src: 'assets/img/icons/csslab.png', height: 0, width: 0
-                }, description: 'Infraestructura cloud simple diseñada para desarrolladores y startups.', url: 'https://www.digitalocean.com/'
+                title: 'Spline', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Plataforma de diseño 3D y de todo un poquito para desarrollo web.', url: 'https://spline.design/'
             },
             {
                 title: 'Netlify', ImgSlider: {
@@ -209,6 +209,11 @@ export const INDEX_BUTTONS_DEV_SITES: IndexButtonsModel[] = [
                 title: ' ', ImgSlider: {
                     alt: 'Elejandría Logo', src: 'assets/img/icons/elejandria-new.png', height: 70, width: 0
                 }, description: 'Libros de dominio público. Espectaculares libros gratuitos.', url: 'https://www.elejandria.com/'
+            },
+            {
+                title: 'Sobrief', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Resúmenes de libros.', url: 'https://sobrief.com/'
             }
         ]
     },
@@ -386,6 +391,95 @@ export const INDEX_BUTTONS_DEV_SITES: IndexButtonsModel[] = [
                     alt: '', src: '', height: 0, width: 0
                 }, description: 'Trabajar con los mejores del mundo.', url: 'https://solvedex.homerun.co/'
             },
+            {
+                title: 'Talentbox', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Encuentra trabajo soñado como...', url: 'https://talentbox.la/'
+            },
+            {
+                title: 'Think US', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Oportunidades increíbles para:', url: 'https://talentbox.la/'
+            },
+            {
+                title: 'Turing', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Encuentra trabajos remotos con cientos de clientes de Turing', url: 'https://developers.turing.com/'
+            },
+            {
+                title: 'TalentPitch', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Tu talento merece un escenario', url: 'https://website.talentpitch.co/'
+            },
+            {
+                title: 'Unosquare', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Busca trabjo por título, lugar en el mundo.', url: 'https://people.unosquare.com/jobs?filter='
+            },
+            {
+                title: 'Working Nomads', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Trabajos totalmente remotos en todo el mundo, especialmente para nómadas digitales.', url: 'https://www.workingnomads.com/jobs'
+            },
+            {
+                title: 'Just Remote', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Trabajos remotos que se adaptan a tu vida.', url: 'https://justremote.co/'
+            },
+        ]
+    },
+    {
+        id: 'remote',
+        name: '+ Trabajo remoto',
+        individualStyle: {
+            backgroundColor: 'bg-Kotlin',
+            textColor: 'text-dark',
+            fontFamily: 'fuenteSeis',
+            fontSize: 'fs-30',
+            rotation: 'rot-2'
+        },
+        resources: [
+            {
+                title: 'Remote co', ImgSlider: {
+                    alt: '', src: '', height: 60, width: 0
+                }, description: 'Todo sobre el teletrabajo Explora miles de trabajos remotos e híbridos diseñados para ti.', url: 'https://remote.co/'
+            },
+            {
+                title: 'Wellfound', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Descubre que viene despues.', url: 'https://wellfound.com/'
+            },
+            {
+                title: 'Job Board Search', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Diversifica tu búsqueda de empleo o contrata talentos con estos 723 portales de empleo especializados.', url: 'https://jobboardsearch.com/'
+            },
+            {
+                title: 'Toptal', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Toptal es una red exclusiva de los mejores desarrolladores de software, diseñadores, expertos en marketing, consultores de gestión, gerentes de producto y gerentes de proyectos del mundo. Las mejores empresas contratan a los talentos de Toptal para sus proyectos más importantes.', url: 'https://www.toptal.com/'
+            },
+            {
+                title: 'Flexjobs', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Navega y solicita empleos verificados por expertos cerca de ti y de todo el mundo.', url: 'https://www.flexjobs.com/'
+            },
+            {
+                title: 'Himalayas', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'La mejor bolsa de empleo remota y herramientas de búsqueda de empleo con IA.', url: 'https://himalayas.app/'
+            },
+            {
+                title: 'Remote OK', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Aplica a exclusivas ofertas de trabajo remoto.', url: 'https://remoteok.com/'
+            },
+            {
+                title: 'We workremotely', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'La bolsa de trabajo más grande para trabajos remotos.', url: 'https://weworkremotely.com/'
+            },
+
         ]
     },
     {
@@ -410,6 +504,149 @@ export const INDEX_BUTTONS_DEV_SITES: IndexButtonsModel[] = [
                 }, description: 'El hogar del freelancer. De igual forma hablar en ingles es indispensable.', url: 'https://www.freelancermap.com/'
             }
         ]
-    }
+    },
+    {
+        id: 'iavisual',
+        name: 'IA - DISEÑO',
+        individualStyle: {
+            backgroundColor: 'bg-Kubernetes',
+            textColor: 'text-dark',
+            fontFamily: 'fuenteSeis',
+            fontSize: 'fs-30',
+            rotation: 'rot-2'
+        },
+        resources: [
+            {
+                title: 'Napkin', ImgSlider: {
+                    alt: '', src: '', height: 60, width: 0
+                }, description: 'Obtén elementos visuales de tu texto Napkin convierte tu texto en elementos visuales para que compartir tus ideas sea rápido y efectivo. Opciones adicionales con pago.', url: 'https://www.napkin.ai/'
+            },
+            {
+                title: 'Apob', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Crear influencers digitales.', url: 'https://apob.ai/es/'
+            },
+            {
+                title: 'Meshy', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Herramienta IA crear modelos 3D con excelentes maneras de aplicación.', url: 'https://www.meshy.ai/'
+            },
+
+        ]
+    },
+    {
+        id: 'iageneral',
+        name: 'IA - GENERALES',
+        individualStyle: {
+            backgroundColor: 'bg-Java',
+            textColor: 'text-white',
+            fontFamily: 'fuenteSeis',
+            fontSize: 'fs-30',
+            rotation: 'rot-1'
+        },
+        resources: [
+            {
+                title: 'Aifindy', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Directorio de herramientas de inteligencia artificial.', url: 'https://aifindy.com/'
+            },
+            {
+                title: 'Kortix', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Es una herramienta IA, como en especie de grupo de empleados haciendo muchas tareas, adicional se puede integrar con otras aplicaciones para gestionar como el google calendar hacer una investigación y agregar eventos y tareas en el calendario.', url: 'https://www.kortix.com/'
+            },
+        ]
+    },
+        {
+        id: 'idiomas',
+        name: 'IDIOMAS',
+        individualStyle: {
+            backgroundColor: 'bg-Android',
+            textColor: 'text-dark',
+            fontFamily: 'fuenteSeis',
+            fontSize: 'fs-30',
+            rotation: 'rot-2'
+        },
+        resources: [
+            {
+                title: 'Little language lessons', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Una serie de experimentos mini para aprender idiomas con Gemini.', url: 'https://labs.google/lll/en'
+            },
+
+        ]
+    },
+    {
+        id: 'archivos',
+        name: 'Archivos - gestión de archivos',
+        individualStyle: {
+            backgroundColor: 'bg-Html',
+            textColor: 'text-white',
+            fontFamily: 'fuenteSeis',
+            fontSize: 'fs-30',
+            rotation: 'rot-2'
+        },
+        resources: [
+            {
+                title: 'Toffeeshare', ImgSlider: {
+                    alt: '', src: 'https://toffeeshare.com/static/media/logo.42a58a0d.png', height: 60, width: 0
+                }, description: 'Una forma de enviar archivos sin limite de tamaño, sin que se queden con tus archivos, de modo peer to peer.', url: 'https://toffeeshare.com/es'
+            }
+        ]
+    },
+    {
+        id: 'reparacion',
+        name: 'Reparación',
+        individualStyle: {
+            backgroundColor: 'bg-Net',
+            textColor: 'text-white',
+            fontFamily: 'fuenteSeis',
+            fontSize: 'fs-30',
+            rotation: 'rot-2'
+        },
+        resources: [
+            {
+                title: 'Ifixit', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Enorme guía de reparación de carros, electrodomésticos, celulares, computadores consolas, etc.', url: 'https://es.ifixit.com/'
+            }
+        ]
+    },
+    {
+        id: 'musica',
+        name: 'Música',
+        individualStyle: {
+            backgroundColor: 'bg-Linux',
+            textColor: 'text-white',
+            fontFamily: 'fuenteSeis',
+            fontSize: 'fs-30',
+            rotation: 'rot-2'
+        },
+        resources: [
+            {
+                title: 'Split My Song', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Herramienta IA para separar pistas de música.', url: 'https://www.splitmysong.com/'
+            }
+        ]
+    },
+    {
+        id: 'deportes',
+        name: 'Deportes',
+        individualStyle: {
+            backgroundColor: 'bg-White',
+            textColor: 'text-dark',
+            fontFamily: 'fuenteSeis',
+            fontSize: 'fs-30',
+            rotation: 'rot-2'
+        },
+        resources: [
+            {
+                title: 'Workout', ImgSlider: {
+                    alt: '', src: '', height: 0, width: 0
+                }, description: 'Aplicación para crear y seguir planes de ejercicio.', url: 'https://workout.cool/es'
+            }
+        ]
+    },
 
 ];
