@@ -1,0 +1,49 @@
+import { DatosPost, EstilosPost, RefImg } from "@models/categorias.model"
+
+export const ESTILO_AI: EstilosPost = {
+    color: 'c-Ai',
+    colorFondo: 'bg-Ai'
+}
+
+export const AI: DatosPost[] = [
+    {
+        id: 'b8a6b071-c54a-486f-aa25-3facc2f5bacc',
+        nombre: 'AI.ai.nombre', // Category post AI
+        referenciaBusqueda:'AI.ai.referenciaBusqueda',
+        descripcion: [
+            'AI.ai.descripcion.tx1'],
+        descripcionCorta: 'AI.ai.descripcionCorta',
+        ruta: 'ai',
+        componente: 'AiComponent',
+        categoria: 'ai',
+        mostrarEnPostHome: false,
+        estilos: ESTILO_AI,
+        fechaCreacion: '2021-01-01',
+        fechaActualizacion: '2021-01-01',
+        imgHorizontal:new RefImg(),
+        imgVertical:'',
+        imgCuadro:'',
+        posicion: 'rot-2',
+        estado: 'inactivo'
+    },
+    {
+        id: 'ba0e987b-1a18-4b42-9719-1ff2045b57b6',
+        nombre: 'Spec driven development (SDD)', // Spec driven development (SDD)
+        referenciaBusqueda:'',
+        descripcion: [
+            'AI.ai.descripcion.tx1'],
+        descripcionCorta: 'AI.ai.descripcionCorta',
+        ruta: 'ai',
+        componente: 'AiComponent',
+        categoria: 'ai',
+        mostrarEnPostHome: true,
+        estilos: ESTILO_AI,
+        fechaCreacion: '2026-03-28',
+        fechaActualizacion: '',
+        imgHorizontal: new RefImg('https://plantillas_dev.gitlab.io/assets/img/posts/developer/webs-recomendadas.jpg'),
+        imgVertical:'',
+        imgCuadro:'',
+        posicion: 'rot-2',
+        estado: 'activo'
+    },
+]

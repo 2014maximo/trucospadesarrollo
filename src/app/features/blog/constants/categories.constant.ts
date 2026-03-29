@@ -1,4 +1,4 @@
-import { ANGULAR } from './posts/posts-angular.constant'; 
+import { ANGULAR } from './posts/posts-angular.constant';
 import { ANDROID } from './posts/posts-android.constant';
 import { CSS } from './posts/posts-css.constant';
 import { DART } from './posts/posts-dart.constant';
@@ -24,18 +24,44 @@ import { CategoriaPostModel } from '../models/categorias.model';
 import { TERMINOS_ANGULAR } from './glosary/terminos.angular.constant';
 import { TERMINOS_DEVELOPER } from './glosary/terminos.developer.constant';
 import { TERMINOS_HTML } from './glosary/terminos.html.constant';
+import { AI } from './posts/posts-ai.contant';
 
 
 
 export const CATEGORIA: CategoriaPostModel[] = [
     {
         id:1,
+        nombre: 'ai',
+        posicion: 'rot-2',
+        abertura: '80%',
+        rutaIcono: 'assets/img/categorias/ia.png',
+        alturaIcono: '100',
+        estado:'activo',
+        glosario: [],
+        ruta: 'blog/ai',
+        colorFondo: 'bg-Ai',
+        color: 'c-Ai',
+        descripcion: [
+            {
+                linkAlAutor:'',
+                autor:'',
+                descripciones:[
+                    ''
+                ]
+            }
+        ],
+        descripcionCorta: '',
+        post: AI,
+        subcategorias: []
+    },
+    {
+        id: 2,
         nombre: 'android',
         posicion: 'pos-z',
-        abertura: '',
+        abertura: '80%',
         rutaIcono: 'assets/img/categorias/android.png',
-        alturaIcono: '80%',
-        estado:'inactivo',
+        alturaIcono: '80',
+        estado: 'activo',
         ruta: 'android',
         glosario: [],
         colorFondo: 'bg-Android',
@@ -43,7 +69,7 @@ export const CATEGORIA: CategoriaPostModel[] = [
         descripcion: [
             {
                 autor: '',
-                linkAlAutor:'',
+                linkAlAutor: '',
                 descripciones: [
                     'Android ...'
                 ]
@@ -54,13 +80,13 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:2,
+        id: 3,
         nombre: 'angular',
         posicion: 'rot-2',
         abertura: '80%',
         rutaIcono: 'assets/img/categorias/angular.png',
         alturaIcono: '80',
-        estado:'activo',
+        estado: 'activo',
         ruta: 'blog/angular',
         colorFondo: 'bg-Angular',
         glosario: TERMINOS_ANGULAR,
@@ -79,20 +105,20 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: SUB_NG
     },
     {
-        id:3,
+        id: 4,
         nombre: 'css',
         posicion: 'pos-z',
         abertura: '80%',
         rutaIcono: 'assets/img/categorias/css.png',
         alturaIcono: '80',
-        estado:'activo',
+        estado: 'activo',
         glosario: [],
         ruta: 'css',
         colorFondo: 'bg-Css',
         color: 'c-Css',
         descripcion: [{
-            autor:'',
-            linkAlAutor:'',
+            autor: '',
+            linkAlAutor: '',
             descripciones: [
                 '']
         }],
@@ -101,21 +127,21 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:4,
+        id: 5,
         nombre: 'dart',
         posicion: 'rot-2',
         abertura: '',
         rutaIcono: 'assets/img/icons/dart-note.png',
         alturaIcono: '80',
-        estado:'inactivo',
+        estado: 'inactivo',
         glosario: [],
         ruta: 'dart',
         colorFondo: 'bg-Dart',
         color: 'c-Dart',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
+                autor: '',
+                linkAlAutor: '',
                 descripciones: ['']
             }
         ],
@@ -124,22 +150,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:5,
+        id: 6,
         nombre: 'db',
         posicion: 'rot-2',
         abertura: '',
         rutaIcono: 'assets/img/icons/DB-note.png',
         alturaIcono: '80',
-        estado:'inactivo',
+        estado: 'inactivo',
         glosario: [],
         ruta: 'db',
         colorFondo: 'bg-Sql',
         color: 'c-Sql',
         descripcion: [
             {
-                autor:'',
+                autor: '',
                 linkAlAutor: '',
-                descripciones:[
+                descripciones: [
                     ''
                 ]
             }
@@ -149,13 +175,13 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:6,
+        id: 7,
         nombre: 'developer',
         posicion: 'rot-2',
         abertura: '80%',
         rutaIcono: 'assets/img/categorias/developer.png',
         alturaIcono: '90',
-        estado:'activo',
+        estado: 'activo',
         ruta: 'blog/developer',
         glosario: TERMINOS_DEVELOPER,
         colorFondo: 'bg-Developer',
@@ -174,22 +200,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:7,
+        id: 8,
         nombre: 'electron',
         posicion: 'pos-z',
         abertura: '',
         rutaIcono: 'assets/img/icons/electron-note.png',
         alturaIcono: '90',
-        estado:'inactivo',
+        estado: 'inactivo',
         ruta: 'electron',
         glosario: [],
         colorFondo: 'bg-Electron',
         color: 'c-Electron',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
-                descripciones:[
+                autor: '',
+                linkAlAutor: '',
+                descripciones: [
                     ''
                 ]
             }
@@ -199,22 +225,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:8,
+        id: 9,
         nombre: 'flutter',
         posicion: 'rot-1',
         abertura: '',
         rutaIcono: 'assets/img/icons/flutter-note.png',
         alturaIcono: '80',
-        estado:'inactivo',
+        estado: 'inactivo',
         glosario: [],
         ruta: 'flutter',
         colorFondo: 'bg-Flutter',
         color: 'c-Flutter',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
-                descripciones:[
+                autor: '',
+                linkAlAutor: '',
+                descripciones: [
                     ''
                 ]
             }
@@ -224,22 +250,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:9,
+        id: 10,
         nombre: 'git',
         posicion: 'rot-3',
         abertura: '',
         rutaIcono: 'assets/img/icons/git-note.png',
         alturaIcono: '80',
-        estado:'inactivo',
+        estado: 'inactivo',
         glosario: [],
         ruta: 'git',
         colorFondo: 'bg-Git',
         color: 'c-Git',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
-                descripciones:[
+                autor: '',
+                linkAlAutor: '',
+                descripciones: [
                     ''
                 ]
             }
@@ -249,20 +275,20 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:10,
+        id: 11,
         nombre: 'html',
         posicion: 'pos-z',
         abertura: '80%',
         rutaIcono: 'assets/img/categorias/html-white.png',
         alturaIcono: '80',
-        estado:'activo',
+        estado: 'activo',
         ruta: 'html',
         glosario: TERMINOS_HTML,
         colorFondo: 'bg-Html',
         color: 'c-Html',
         descripcion: [{
-            autor:'',
-            descripciones:[
+            autor: '',
+            descripciones: [
                 ''
             ],
             linkAlAutor: ''
@@ -272,22 +298,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:11,
+        id: 12,
         nombre: 'java',
         posicion: 'rot-2',
         abertura: '80%',
         rutaIcono: 'assets/img/categorias/logo-java.png',
         alturaIcono: '100',
-        estado:'activo',
+        estado: 'activo',
         glosario: [],
         ruta: 'java',
         colorFondo: 'bg-Java',
         color: 'c-Java',
         descripcion: [
             {
-                linkAlAutor:'',
-                autor:'',
-                descripciones:[
+                linkAlAutor: '',
+                autor: '',
+                descripciones: [
                     ''
                 ]
             }
@@ -297,22 +323,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:12,
+        id: 13,
         nombre: 'javascript',
         abertura: '',
         posicion: 'rot-2',
         rutaIcono: 'assets/img/icons/js-note.png',
         alturaIcono: '80',
-        estado:'inactivo',
+        estado: 'inactivo',
         ruta: 'javascript',
         glosario: [],
         colorFondo: 'bg-Javascript',
         color: 'c-Javascript',
         descripcion: [
             {
-                linkAlAutor:'',
-                autor:'',
-                descripciones:[
+                linkAlAutor: '',
+                autor: '',
+                descripciones: [
                     ''
                 ]
             }
@@ -322,21 +348,21 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:13,
+        id: 14,
         nombre: 'kotlin',
         posicion: 'pos-z',
         abertura: '80%',
         rutaIcono: 'assets/img/categorias/kotlin-white.png',
         alturaIcono: '60',
-        estado:'activo',
+        estado: 'activo',
         ruta: 'kotlin',
         glosario: [],
         colorFondo: 'bg-Kotlin',
         color: 'c-Kotlin',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
+                autor: '',
+                linkAlAutor: '',
                 descripciones: [
                     ''
                 ]
@@ -347,21 +373,21 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:14,
+        id: 15,
         nombre: 'kubernetes',
         posicion: 'pos-z',
         abertura: '',
         rutaIcono: 'assets/img/icons/kubernetes-note.png',
         alturaIcono: '100',
-        estado:'inactivo',
+        estado: 'inactivo',
         glosario: [],
         ruta: 'kubernetes',
         colorFondo: 'bg-Kubernetes',
         color: 'c-Kubernetes',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
+                autor: '',
+                linkAlAutor: '',
                 descripciones: [
                     ''
                 ]
@@ -372,22 +398,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:13,
+        id: 16,
         nombre: 'linux',
         posicion: 'rot-2',
         abertura: '',
         rutaIcono: 'assets/img/icons/linux-note.png',
         alturaIcono: '80',
-        estado:'inactivo',
+        estado: 'inactivo',
         glosario: [],
         ruta: 'linux',
         colorFondo: 'bg-Linux',
         color: 'c-Linux',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
-                descripciones:[
+                autor: '',
+                linkAlAutor: '',
+                descripciones: [
                     ''
                 ]
             }
@@ -397,22 +423,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:14,
+        id: 17,
         nombre: 'net',
         posicion: 'rot-2',
         abertura: '',
         rutaIcono: 'assets/img/icons/net-note.png',
         alturaIcono: '80',
         glosario: [],
-        estado:'inactivo',
+        estado: 'inactivo',
         ruta: 'net',
         colorFondo: 'bg-Net',
         color: 'c-Net',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
-                descripciones:[
+                autor: '',
+                linkAlAutor: '',
+                descripciones: [
                     ''
                 ]
             }
@@ -422,22 +448,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:15,
+        id: 18,
         nombre: 'php',
         posicion: 'rot-2',
         abertura: '80%',
         rutaIcono: 'assets/img/categorias/php.png',
         alturaIcono: '70',
-        estado:'activo',
+        estado: 'activo',
         glosario: [],
         ruta: 'php',
         colorFondo: 'bg-Php',
         color: 'c-Php',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
-                descripciones:[
+                autor: '',
+                linkAlAutor: '',
+                descripciones: [
                     ''
                 ]
             }
@@ -447,22 +473,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:16,
+        id: 19,
         nombre: 'react',
         posicion: 'rot-2',
         abertura: '',
         rutaIcono: 'assets/img/icons/react-note.png',
         alturaIcono: '100',
-        estado:'inactivo',
+        estado: 'inactivo',
         glosario: [],
         ruta: 'react',
         colorFondo: 'bg-React',
         color: ' c-React',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
-                descripciones:[
+                autor: '',
+                linkAlAutor: '',
+                descripciones: [
                     ''
                 ]
             }
@@ -472,22 +498,22 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:17,
+        id: 20,
         nombre: 'typescript',
         posicion: 'rot-2',
         abertura: '80%',
         rutaIcono: 'assets/img/categorias/typescript.png',
         alturaIcono: '40',
-        estado:'activo',
+        estado: 'activo',
         glosario: [],
         ruta: 'typescript',
         colorFondo: 'bg-Typescript',
         color: ' c-Typescript',
         descripcion: [
             {
-                autor:'',
-                linkAlAutor:'',
-                descripciones:[
+                autor: '',
+                linkAlAutor: '',
+                descripciones: [
                     ''
                 ]
             }
@@ -497,13 +523,13 @@ export const CATEGORIA: CategoriaPostModel[] = [
         subcategorias: []
     },
     {
-        id:18,
+        id: 21,
         nombre: 'wordpress',
         posicion: 'rot-2',
         abertura: '',
         rutaIcono: 'assets/img/icons/wordpress-note.png',
         alturaIcono: '110',
-        estado:'inactivo',
+        estado: 'inactivo',
         glosario: [],
         ruta: 'wordpress',
         colorFondo: 'bg-Wordpress',
@@ -511,8 +537,8 @@ export const CATEGORIA: CategoriaPostModel[] = [
         descripcion: [
             {
                 autor: '',
-                linkAlAutor:'',
-                descripciones:[
+                linkAlAutor: '',
+                descripciones: [
                     'Wordpress se inicio como ...'
                 ]
             }

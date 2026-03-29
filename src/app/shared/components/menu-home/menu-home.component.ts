@@ -30,12 +30,11 @@ export class MenuHomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let dato = datosCategoria('android',12);
   }
 
   private inicializarVariables(){
     this.menus = {
-      menuUno: this.extraerMenu(['android','angular','css', 'dart']),
+      menuUno: this.extraerMenu(['ai','android','angular','css', 'dart']),
       menuDos: this.extraerMenu(['db','developer','electron', 'flutter']),
       menuTres: this.extraerMenu(['git','html','java', 'javascript']),
       menuCuatro: this.extraerMenu(['kotlin','kubernetes','linux', 'net']),
@@ -59,8 +58,6 @@ export class MenuHomeComponent implements OnInit {
       this.pasoDeIndice.push(grupo);
     });
   }
-
-
 
 
   private extraerMenu(referencias: string[]):any[]{

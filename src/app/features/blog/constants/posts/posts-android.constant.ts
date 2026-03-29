@@ -24,6 +24,6 @@ export const ANDROID: DatosPost[] = [
         estilos: ESTILO_ANDROID,
         fechaCreacion: '2021-04-02',
         fechaActualizacion: '2021-04-02',
-        estado: 'inactivo',
+        estado: 'activo',
     }
 ]
