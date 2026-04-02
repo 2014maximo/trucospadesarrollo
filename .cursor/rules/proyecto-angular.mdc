@@ -1,0 +1,13 @@
+---
+description: Estándares generales del proyecto Angular 19
+alwaysApply: true
+---
+
+# Proyecto Trucospadesarrollo (Angular 19)
+
+- Respeta la arquitectura por **features** existente (`core`, `shared`, `features`). No introducir patrones nuevos sin necesidad.
+- Encaja con el estilo del código cercano: imports, nombres en español donde ya se usa, componentes y rutas como en archivos vecinos.
+- **i18n:** claves en `src/assets/i18n/` con **ngx-translate**. Al añadir textos, actualizar **es**, **en** y **fr**; idiomas futuros seguirán el mismo criterio en nuevos JSON bajo `src/assets/i18n/`.
+- **Tests:** tras crear o modificar componentes con `*.spec.ts`, ejecutar `npm test` y corregir fallos (providers, `TranslateModule`, etc.).
+- Evita refactors amplios no solicitados; el diff debe centrarse en el objetivo del usuario.
+- Procedimientos formales del blog: seguir **`docs/specs/blog-nuevo-post.md`** cuando el trabajo sea un nuevo post o metadatos de publicación.

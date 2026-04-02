@@ -40,7 +40,7 @@ export const AI: DatosPost[] = [
         estilos: ESTILO_AI,
         fechaCreacion: '2026-03-28',
         fechaActualizacion: '',
-        imgHorizontal: new RefImg('https://plantillas_dev.gitlab.io/assets/img/posts/developer/webs-recomendadas.jpg'),
+        imgHorizontal: new RefImg('https://plantillas_dev.gitlab.io/assets/img/posts/ai/concept-SDD.jpg'),
         imgVertical:'',
         imgCuadro:'',
         posicion: 'rot-2',

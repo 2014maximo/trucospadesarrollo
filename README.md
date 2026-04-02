@@ -2,6 +2,8 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
+Especificaciones y contribución: ver [CONTRIBUTING.md](CONTRIBUTING.md) y [docs/specs/](docs/specs/) (p. ej. nuevos posts: [docs/specs/blog-nuevo-post.md](docs/specs/blog-nuevo-post.md)). Contexto para asistentes: [AGENTS.md](AGENTS.md).
+
 # SCAFOLDING
 src/
 ├── app/

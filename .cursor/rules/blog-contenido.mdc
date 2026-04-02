@@ -1,0 +1,17 @@
+---
+description: Reglas para trabajo en el módulo blog (posts, rutas, constantes)
+globs: src/app/features/blog/**/*
+alwaysApply: false
+---
+
+# Feature Blog
+
+Antes de dar por terminada una tarea de nuevo contenido o ruta, cumple **`docs/specs/blog-nuevo-post.md`**:
+
+1. Componente del post en la carpeta de categoría adecuada.
+2. Entrada en el archivo constante `constants/posts/posts-*` (`DatosPost`: `id` UUID v4, rutas y claves i18n coherentes).
+3. Ruta lazy en el `*.routes.ts` de la categoría.
+4. Claves nuevas en **`es.json`**, **`en.json`** y **`fr.json`**.
+5. **`npm test`** si hay cambios en specs del componente.
+
+Si la categoría usa otro nombre de archivo constante (p. ej. sufijo `contant`), respeta el nombre existente en el repo.
