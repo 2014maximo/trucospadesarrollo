@@ -10,6 +10,8 @@ import { HeaderPostSupplementComponent } from 'src/app/shared/components/header-
 import { IndexButtonsComponent } from 'src/app/shared/components/index-buttons/index-buttons.component';
 import { ContentIndexComponent } from "src/app/shared/components/content-index/content-index.component";
 import { CommonModule } from '@angular/common';
+import { ContentAuthorModel } from 'src/app/shared/models/content-author.model';
+import { ContentAuthorComponent } from 'src/app/shared/components/content-author/content-author.component';
 
 @Component({
   selector: 'app-dev-sites',
@@ -17,6 +19,7 @@ import { CommonModule } from '@angular/common';
     FooterComponent,
     CommonModule,
     IndexButtonsComponent,
+    ContentAuthorComponent,
     HeaderPostSupplementComponent,
     HeaderComponent,
   ],
@@ -30,6 +33,7 @@ export class DevSitesComponent {
   public publicacion = new DatosPost();
   public categoria = new CategoriaPostModel();
   public ideasExtraMoney = EXT_MONEY;
+  public datesAuthor = new ContentAuthorModel();
   public indexButtons = [
     { title: 'Diseño Gráfico', description: 'Explora nuestros recursos de diseño creativo y profesional con las mejores herramientas.' },
     { title: 'Desarrollo Web', description: 'Aprende las últimas tecnologías y frameworks para crear páginas rápidas y modernas.' },
@@ -41,6 +45,11 @@ export class DevSitesComponent {
     this.publicacion = postActual(this.idPublicacion)[0];
     this.breadcrumb = cargarBreadcrumb(this.publicacion);
     this.categoria = CATEGORIA.filter(e => e.nombre === this.publicacion.categoria)[0];
+    this.datesAuthor = {
+      name:'Alex M.',
+      srcAvatar:'assets/img/author.png',
+      linkRefenceAuthor: 'https://2014maximo.github.io/alexmunoz/'
+    }
   }
 
   scroll(el: HTMLElement) {

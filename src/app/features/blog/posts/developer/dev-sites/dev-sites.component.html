@@ -4,12 +4,18 @@
 <article>
     <app-header-post-supplement [idPublicacion]="idPublicacion"
         [rutaIconoSugerido]="categoria.rutaIcono"></app-header-post-supplement>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <app-content-author [datesAuthor]="datesAuthor"></app-content-author>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
 
 
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">
-
             <app-index-buttons></app-index-buttons>
         </div>
         <div class="col-md-1"></div>

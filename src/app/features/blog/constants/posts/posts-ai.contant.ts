@@ -9,10 +9,15 @@ export const AI: DatosPost[] = [
     {
         id: 'b8a6b071-c54a-486f-aa25-3facc2f5bacc',
         nombre: 'AI.ai.nombre', // Category post AI
-        referenciaBusqueda:'AI.ai.referenciaBusqueda',
+        referenciaBusqueda:'AI.ai.referenciaBusqueda', // artificial intelligence, ml, deep learning
         descripcion: [
-            'AI.ai.descripcion.tx1'],
-        descripcionCorta: 'AI.ai.descripcionCorta',
+            'AI.ai.descripcion.tx1',
+            'AI.ai.descripcion.tx2',
+            'AI.ai.descripcion.tx3',
+            'AI.ai.descripcion.tx4',
+            'AI.ai.descripcion.tx5'
+        ], // ‘Artificial Intelligence’, as developers from...
+        descripcionCorta: '',
         ruta: 'ai',
         componente: 'AiComponent',
         categoria: 'ai',
@@ -29,11 +34,11 @@ export const AI: DatosPost[] = [
     {
         id: 'ba0e987b-1a18-4b42-9719-1ff2045b57b6',
         nombre: 'Spec driven development (SDD)', // Spec driven development (SDD)
-        referenciaBusqueda:'',
+        referenciaBusqueda:'', // artificial intelligence, ml, deep learning
         descripcion: [
-            'AI.ai.descripcion.tx1'],
-        descripcionCorta: 'AI.ai.descripcionCorta',
-        ruta: 'ai',
+            'AI.ai.descripcion.tx1'], // 
+        descripcionCorta: '',
+        ruta: 'blog/ai/sdd',
         componente: 'AiComponent',
         categoria: 'ai',
         mostrarEnPostHome: true,

@@ -154,6 +154,20 @@
     "PreguntaLenguajes": "In which programming, scripting and markup languages have you worked intensively during the last year and which ones do you want to work on during the next year? (31.771 respondents.)",
     "PreguntaBasesDatos": "In which database environments have you done extensive development work during the past year and which ones do you want to work on during the next year? (26.083 respondents.)",
     "PreguntaIDEs": "Which development environments did you use regularly last year and which ones do you want to work with next year? (26.143 respondents.)",
+    "AI": {
+		"ai": {
+			"nombre": "Artificial Intelligence",
+			"referenciaBusqueda": "artificial intelligence, ml, deep learning",
+			"descripcion": {
+				"tx1": "'Artificial Intelligence'—when Copilot first launched, I didn't think much of artificial intelligence because of the mistakes it made (even though I used it and certain features were a big help); to me, it was just another invention that would take a while to evolve or would eventually fade into obscurity. It was like that new employee who joined the company and you could tell he was making mistakes just to get fired right after his probation period. However, later on, when I started seeing for myself the video creations it could produce and the musical effects it was achieving, I told myself that this was already on another level.",
+				"tx2":"Today, since the launch of this publication, I can say that it has transformed the way large tech companies like Google, Amazon, and others operate, freeing thousands of employees from their silos. It is revolutionizing everything at breakneck speed.",
+				"tx3":"I want to share a very personal opinion and say that it’s quite clear that, like many other commercial products, artificial intelligence is yet another tool created purely for economic and power-related interests. Paradoxically, it’s being built and shaped by developers who, in many cases, are illogically treating us as if we were unworthy. But anyway, I don’t intend in this introduction to describe everything that has changed or to lament what I perceive as unfair.",
+				"tx4":"We must certainly accept that it will radically improve and transform the global landscape, and as developers who think logically, we need to use it effectively and let it make us better at our work—rather than letting it do the work for us, rendering us useless and leaving us clueless about what we’re doing while we use it.",
+				"tx5":"To get right to the point, as developers, by now we should already be familiar with terms like “MCP,” “RAW,” “prompt engineering,” “machine learning,” and so on. However, we’ll aim to explain these concepts in layman’s terms and delve into the most important topics in this category…"
+			},
+			"descripcionCorta": ""
+		}
+	},
     "ANDROID": {
         "android": {
             "nombre": "Android",

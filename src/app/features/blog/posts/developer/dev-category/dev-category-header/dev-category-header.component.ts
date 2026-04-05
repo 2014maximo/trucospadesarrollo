@@ -5,13 +5,16 @@ import { CategoriaPostModel, DatosPost, GlosarioModel, SubCategoriaModel } from 
 import { IndiceDeContenidosModel } from '@models/indice.model';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { postActual } from '@shared//global-functions';
+import { ContentAuthorComponent } from 'src/app/shared/components/content-author/content-author.component';
 import { ContentIndexComponent } from 'src/app/shared/components/content-index/content-index.component';
+import { ContentAuthorModel } from 'src/app/shared/models/content-author.model';
 import { AddsModel } from 'src/app/shared/models/post.model';
 
 @Component({
   selector: 'app-dev-category-header',
   imports: [
     CommonModule,
+    ContentAuthorComponent,
     TranslateModule],
   templateUrl: './dev-category-header.component.html',
   styleUrl: './dev-category-header.component.css'
@@ -20,6 +23,8 @@ export class DevCategoryHeaderComponent {
   @Input() nombreCategoria : string = '';
   @Input() idPost : string = '';
   @Input() adds = new AddsModel();
+
+  public datesAuthor = new ContentAuthorModel();
 
   public indice: IndiceDeContenidosModel [] = [];
   public glosario: GlosarioModel[] = [];
@@ -32,7 +37,6 @@ export class DevCategoryHeaderComponent {
 
   ngOnInit(): void {
     this.inicializarVariables();
-    console.log(this.adds, 'ADDS');
   }
 
   private inicializarVariables(){
@@ -55,7 +59,13 @@ export class DevCategoryHeaderComponent {
     this.categoria? this.subCategorias = this.categoria.subcategorias : [];
     this.categoria? this.glosario = this.categoria.glosario : [];
 
-    this.publicacion = postActual(this.idPost)[0]
+    this.publicacion = postActual(this.idPost)[0];
+    console.log(this.publicacion);
+    this.datesAuthor = {
+      name:'Alex M.',
+      srcAvatar:'assets/img/author.png',
+      linkRefenceAuthor: 'https://2014maximo.github.io/alexmunoz/'
+    }
   }
 
   traducirTexto(texto: string): string {

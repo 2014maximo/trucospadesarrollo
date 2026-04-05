@@ -154,6 +154,20 @@
     "PreguntaLenguajes": "Dans quels langages de programmation, de script et de balisage avez-vous travaillé de manière intensive au cours de l'année écoulée et quels sont ceux sur lesquels vous souhaitez travailler au cours de l'année prochaine (31.771 répondants) ?",
     "PreguntaBasesDatos": "Quels sont les environnements de base de données sur lesquels vous avez effectué un travail de développement approfondi au cours de l'année écoulée et quels sont ceux sur lesquels vous souhaitez travailler au cours de l'année à venir (26.083 personnes interrogées) ?",
     "PreguntaIDEs": "Quels sont les environnements de développement que vous avez utilisés régulièrement l'année dernière et avec lesquels vous souhaitez travailler l'année prochaine (26.143 répondants) ?",
+    "AI": {
+		"ai": {
+			"nombre": "Intelligence artificielle",
+			"referenciaBusqueda": "Intelligence artificielle, ml, apprentissage profond",
+			"descripcion": {
+				"tx1": "« Intelligence artificielle » : au début de Copilot, je n'accordais pas beaucoup d'importance à l'intelligence artificielle à cause des maladresses qu'elle commettait (même si je l'utilisais et que certaines petites choses m'étaient d'une grande aide) ; pour moi, ce n'était qu'une invention de plus qui mettrait du temps à évoluer ou qui finirait par tomber dans l'oubli. C'était un peu comme ce nouvel employé qui arrive dans l'entreprise et dont on remarque qu'il commet des erreurs pour finir par partir juste après sa période d'essai. Cependant, plus tard, lorsque j'ai commencé à découvrir par moi-même les créations vidéo qu'il était capable de réaliser, les effets musicaux qu'il produisait, je me suis dit que c'était déjà d'un tout autre niveau.",
+				"tx2":"Aujourd'hui, depuis la création de cette publication, je peux affirmer qu'elle a transformé les méthodes de travail des grandes entreprises technologiques telles que Google, Amazon, etc., permettant ainsi à des milliers d'employés de sortir de leurs cellules de travail. Elle est en train de tout révolutionner à un rythme effréné.",
+				"tx3":"Je voudrais partager ici une opinion très personnelle et dire qu’il est tout à fait évident que, comme beaucoup d’autres produits commerciaux, l’intelligence artificielle n’est qu’un élément de plus créé dans un but purement économique et de pouvoir. Paradoxalement, elle est développée et façonnée par des développeurs qui, dans de nombreux cas, nous traitent de manière illogique comme si nous étions indignes. Mais bon, je ne prétends pas, dans cette introduction, décrire tout ce qui a changé ni me lamenter sur ce qui me semble injuste.",
+				"tx4":"Il faut sans aucun doute admettre que cela va améliorer et transformer radicalement le paysage mondial et, en tant que développeurs dotés d'un esprit logique, nous devons l'utiliser efficacement et lui permettre de nous rendre meilleurs dans notre domaine, plutôt que de la laisser faire le travail à notre place, nous rendre inutiles et nous laisser dans l'ignorance totale de ce que nous faisons pendant que nous l'utilisons.",
+				"tx5":"Pour entrer dans le vif du sujet, en tant que développeurs, nous devrions déjà avoir des notions sur des concepts tels que « MCP », « RAW », « PROMPT Engineering », « Machine Learning », etc. Cependant, nous allons essayer d'expliquer ces notions de manière simple, comme pour des « débutants », et aborder les thèmes les plus importants de cette catégorie…"
+			},
+			"descripcionCorta": ""
+		}
+	},
     "ANDROID": {
         "android": {
             "nombre": "Android",

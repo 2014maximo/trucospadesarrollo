@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, HostBinding, Input } from '@angular/core';
+import { ImageAdapterModel } from '../../models/image-adapter.model';
 
 @Component({
 	selector: 'app-image-adapter',
@@ -8,6 +9,7 @@ import { Component, HostBinding, Input } from '@angular/core';
 	styleUrl: './image-adapter.component.css'
 })
 export class ImageAdapterComponent {
+	@Input() ObjectImageAdapter: ImageAdapterModel = new ImageAdapterModel();
 	@Input() src: string = '';
 	@Input() alt: string = '';
 	@Input() width: string = 'auto';

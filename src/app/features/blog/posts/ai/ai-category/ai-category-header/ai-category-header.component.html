@@ -1,1 +1,16 @@
-<p>ai-category-header works!</p>
+<div class="espacio"></div>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="row">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 border-bottom pb-3">
+                <p *ngFor="let description of publicacion.descripcion" class="c7 f-open-sans-c fs-20 lh-20">
+                    {{ traducirTexto(description) }}
+                </p>
+                <app-content-author [datesAuthor]="datesAuthor"></app-content-author> <!-- Alex M. -->
+            </div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>

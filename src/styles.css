@@ -110,23 +110,23 @@ html {
 }
 
 .fuenteTres {
-    font-family: var(--fuente-tres);
+    font-family: var(--fuente-tres); /* OperatorMono */
 }
 
 .fuenteCuatro {
-    font-family: var(--fuente-cuatro);
+    font-family: var(--fuente-cuatro); /* Alex Brush */
 }
 
 .fuenteSeis {
-    font-family: var(--fuente-seis);
+    font-family: var(--fuente-seis); /* Shadows Into Light */
 }
 
 .fuenteSiete {
-    font-family: var(--fuente-siete);
+    font-family: var(--fuente-siete); /* Cutive Mono */
 }
 
 .fuenteOcho {
-    font-family: var(--fuente-ocho);
+    font-family: var(--fuente-ocho); /* Six Caps */
 }
 
 .f-yanone {
