@@ -10,6 +10,7 @@ import { FirstDescriptionBlockComponent } from 'src/app/shared/components/first-
 import { BACKEND_ROADMAP } from '../constants/backend-roadmap.constant';
 import { DEV_FUNDAMENTALS } from '../constants/dev-fundamentals.constant';
 import { ImageAdapterComponent } from 'src/app/shared/components/image-adapter/image-adapter.component';
+import { ImageAdapterModel } from 'src/app/shared/models/image-adapter.model';
 
 @Component({
   selector: 'app-dev-category-content',
@@ -32,6 +33,11 @@ export class DevCategoryContentComponent {
   public frontendRoadMap = FRONTEND_ROADMAP;
   public backendRoadMap = BACKEND_ROADMAP;
   public fundamentalsRoadMap = DEV_FUNDAMENTALS;
+  public fundamentalsRoadmapImage: ImageAdapterModel = Object.assign(new ImageAdapterModel(), {
+    src: 'assets/img/extructures/roadmap - fundamentos dev.drawio.png',
+    alt: 'Roadmap de fundamentos para desarrollo de software',
+    customClass: 'img-fluid'
+  });
 
   constructor(private translate: TranslateService){
   }

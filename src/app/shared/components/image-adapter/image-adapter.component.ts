@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, HostBinding, Input } from '@angular/core';
+import { Component, HostBinding, Input, OnDestroy } from '@angular/core';
 import { ImageAdapterModel } from '../../models/image-adapter.model';
 
 @Component({
@@ -8,30 +8,25 @@ import { ImageAdapterModel } from '../../models/image-adapter.model';
 	templateUrl: './image-adapter.component.html',
 	styleUrl: './image-adapter.component.css'
 })
-export class ImageAdapterComponent {
-	@Input() ObjectImageAdapter: ImageAdapterModel = new ImageAdapterModel();
-	@Input() src: string = '';
-	@Input() alt: string = '';
-	@Input() width: string = 'auto';
-	@Input() height: string = 'auto';
-	@Input() objectFit: 'contain' | 'cover' | 'fill' | 'none' | 'scale-down' = 'contain';
-	@Input() borderRadius: string = '0';
-	@Input() showZoomIcon: boolean = true;
-	@Input() zoomIconPosition: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' = 'top-right';
-	@Input() customClass: string = '';
+export class ImageAdapterComponent implements OnDestroy {
+	@Input() image: ImageAdapterModel = new ImageAdapterModel();
 
-	@HostBinding('class') get hostClasses() {
-		return `image-adapter ${this.customClass}`;
+	@HostBinding('class') get hostClasses(): string {
+		return `image-adapter ${this.image.customClass}`.trim();
 	}
 
 	isModalOpen = false;
 
+	get hasSrc(): boolean {
+		return !!this.image?.src?.trim();
+	}
+
 	get imageStyles() {
 		return {
-			width: this.width,
-			height: this.height,
-			objectFit: this.objectFit,
-			borderRadius: this.borderRadius
+			width: this.image.width,
+			height: this.image.height,
+			objectFit: this.image.objectFit,
+			borderRadius: this.image.borderRadius
 		};
 	}
 

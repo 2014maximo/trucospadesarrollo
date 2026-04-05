@@ -7,6 +7,7 @@ Antes de implementar cambios sustanciales (nuevos posts, nuevas rutas de blog, c
 ### Especificaciones actuales
 
 - **Nuevo post del blog:** [docs/specs/blog-nuevo-post.md](docs/specs/blog-nuevo-post.md)
+- **Imagen con zoom (`app-image-adapter`):** [docs/specs/shared-image-adapter.md](docs/specs/shared-image-adapter.md)
 
 ## Stack y estructura
 

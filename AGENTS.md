@@ -12,6 +12,7 @@ Este repositorio usa **desarrollo guiado por especificaciones**: los procedimien
 | Documento | Uso |
 |-----------|-----|
 | [docs/specs/blog-nuevo-post.md](docs/specs/blog-nuevo-post.md) | Alta de publicación: componente, constante, rutas, i18n (es/en/fr), tests. |
+| [docs/specs/shared-image-adapter.md](docs/specs/shared-image-adapter.md) | `ImageAdapterComponent`: modelo único `ImageAdapterModel`, uso y tests. |
 
 Si trabajas fuera de Cursor, el mismo contenido aplica; en Cursor, las reglas en `.cursor/rules/` reforzarán estos puntos según el tipo de archivo.
 

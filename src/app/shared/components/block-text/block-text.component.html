@@ -2,7 +2,7 @@
 
 <div *ngFor="let blocks of block.groupblock" class="group-text">
     <h4 [style]="blocks?.title?.style || ''">{{ traducirTexto(blocks?.title?.textI18n || '') }}</h4>
-    <app-image-adapter ></app-image-adapter>
+    <app-image-adapter *ngIf="blocks.image?.src" [image]="blocks.image!"></app-image-adapter>
     <p *ngFor="let paragraphs of blocks.paragraph" class="{{paragraphs?.style || ''}}">
         {{ traducirTexto(paragraphs?.textI18n || '') }}
     </p>
