@@ -1,0 +1,34 @@
+.espaciado {
+  height: 1rem;
+}
+
+.post-base__mensaje {
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.post-base__cabecera {
+  margin-bottom: 1.5rem;
+}
+
+.post-base__titulo {
+  margin-bottom: 0.5rem;
+}
+
+.post-base__meta {
+  margin: 0;
+  opacity: 0.85;
+  font-size: 0.95rem;
+}
+
+.post-base__resumen {
+  margin-bottom: 1.5rem;
+}
+
+.post-base__cuerpo {
+  margin-bottom: 2rem;
+}
+
+.go-up {
+  cursor: pointer;
+}
