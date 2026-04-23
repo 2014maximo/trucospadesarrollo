@@ -14,46 +14,48 @@ import { ContentAuthorModel } from 'src/app/shared/models/content-author.model';
 import { ContentAuthorComponent } from 'src/app/shared/components/content-author/content-author.component';
 
 @Component({
-  selector: 'app-dev-sites',
-  imports: [
-    FooterComponent,
-    CommonModule,
-    IndexButtonsComponent,
-    ContentAuthorComponent,
-    HeaderPostSupplementComponent,
-    HeaderComponent,
-  ],
-  templateUrl: './dev-sites.component.html',
-  styleUrl: './dev-sites.component.css'
+	selector: 'app-dev-sites',
+	imports: [
+		FooterComponent,
+		CommonModule,
+		IndexButtonsComponent,
+		ContentAuthorComponent,
+		HeaderPostSupplementComponent,
+		HeaderComponent,
+	],
+	templateUrl: './dev-sites.component.html',
+	styleUrl: './dev-sites.component.css'
 })
 export class DevSitesComponent {
 
-  public idPublicacion = '6f3b8325-3262-421f-ac5a-7ed4946487a6';
-  public breadcrumb = new CategoriaModel();
-  public publicacion = new DatosPost();
-  public categoria = new CategoriaPostModel();
-  public ideasExtraMoney = EXT_MONEY;
-  public datesAuthor = new ContentAuthorModel();
-  public indexButtons = [
-    { title: 'Diseño Gráfico', description: 'Explora nuestros recursos de diseño creativo y profesional con las mejores herramientas.' },
-    { title: 'Desarrollo Web', description: 'Aprende las últimas tecnologías y frameworks para crear páginas rápidas y modernas.' },
-    { title: 'Servidores & Hosting', description: 'Configura tus proyectos de manera profesional, garantizando alta disponibilidad.' }
-  ];
+	public idPublicacion = '6f3b8325-3262-421f-ac5a-7ed4946487a6';
+	public breadcrumb = new CategoriaModel();
+	public publicacion = new DatosPost();
+	public categoria = new CategoriaPostModel();
+	public ideasExtraMoney = EXT_MONEY;
+	public datesAuthor = new ContentAuthorModel();
+	public indexButtons = [
+		{ title: 'Diseño Gráfico', description: 'Explora nuestros recursos de diseño creativo y profesional con las mejores herramientas.' },
+		{ title: 'Desarrollo Web', description: 'Aprende las últimas tecnologías y frameworks para crear páginas rápidas y modernas.' },
+		{ title: 'Servidores & Hosting', description: 'Configura tus proyectos de manera profesional, garantizando alta disponibilidad.' }
+	];
 
 
-  ngOnInit(): void {
-    this.publicacion = postActual(this.idPublicacion)[0];
-    this.breadcrumb = cargarBreadcrumb(this.publicacion);
-    this.categoria = CATEGORIA.filter(e => e.nombre === this.publicacion.categoria)[0];
-    this.datesAuthor = {
-      name:'Alex M.',
-      srcAvatar:'assets/img/author.png',
-      linkRefenceAuthor: 'https://2014maximo.github.io/alexmunoz/'
-    }
-  }
+	ngOnInit(): void {
+		this.publicacion = postActual(this.idPublicacion)[0];
+		this.breadcrumb = cargarBreadcrumb(this.publicacion);
+		this.categoria = CATEGORIA.filter(e => e.nombre === this.publicacion.categoria)[0];
 
-  scroll(el: HTMLElement) {
-    el.scrollIntoView();
-  }
+		this.datesAuthor = {
+			name: 'Alex M.',
+			srcAvatar: 'assets/img/author.png',
+			linkRefenceAuthor: 'https://2014maximo.github.io/alexmunoz/'
+		}
+		
+	}
+
+	scroll(el: HTMLElement) {
+		el.scrollIntoView();
+	}
 
 }

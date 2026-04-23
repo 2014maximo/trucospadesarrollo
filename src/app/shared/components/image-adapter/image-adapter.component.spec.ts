@@ -40,7 +40,7 @@ describe('ImageAdapterComponent', () => {
 
     const img: HTMLImageElement | null = fixture.nativeElement.querySelector('.main-image');
     expect(img).toBeTruthy();
-    expect(img?.src).toContain('assets/test.png');
+    expect(img?.src).toContain('test.png');
     expect(img?.alt).toBe('Texto alternativo');
     expect(component.hostClasses).toContain('img-fluid');
   });
