@@ -11,4 +11,9 @@ export const AI_ROUTES: Routes = [
     loadComponent: () => import('./ai-spec-driven-development/ai-spec-driven-development.component')
       .then(m => m.AiSpecDrivenDevelopmentComponent)
   },
+  {
+    path: ':slug',
+    loadComponent: () => import('../../components/post-base/post-base.component')
+      .then(m => m.PostBaseComponent)
+  }
 ];

@@ -1404,5 +1404,11 @@
             },
             "descripcionCorta": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
         }
+    },
+    "BLOG_POST_BASE": {
+        "loading": "Chargement de la publication…",
+        "notFound": "Publication introuvable.",
+        "error": "Impossible de charger le contenu. Réessayez plus tard.",
+        "noApi": "L’URL de l’API WordPress n’est pas configurée. Définissez `BLOG_WP_REST_BASE_URL` dans `src/app/features/blog/config/blog-wp-rest.config.ts`."
     }
 }

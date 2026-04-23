@@ -1808,5 +1808,11 @@
             },
             "descripcionCorta": "With the help of AI, applications and websites are now beginning to receive a boost and can now serve an incredible number of purposes, such as..."
         }
+    },
+    "BLOG_POST_BASE": {
+        "loading": "Loading post…",
+        "notFound": "Post not found.",
+        "error": "Could not load content. Please try again later.",
+        "noApi": "The WordPress API URL is not configured. Set `BLOG_WP_REST_BASE_URL` in `src/app/features/blog/config/blog-wp-rest.config.ts`."
     }
 }

@@ -1,0 +1,43 @@
+<div #target></div>
+<app-header></app-header>
+<div class="espaciado"></div>
+
+<article class="post-base">
+  @if (estado === 'sin-api') {
+    <p class="post-base__mensaje" data-testid="post-base-sin-api">{{ 'BLOG_POST_BASE.noApi' | translate }}</p>
+  }
+  @if (estado === 'cargando') {
+    <p class="post-base__mensaje" data-testid="post-base-cargando">{{ 'BLOG_POST_BASE.loading' | translate }}</p>
+  }
+  @if (estado === 'error') {
+    <p class="post-base__mensaje" data-testid="post-base-error">{{ 'BLOG_POST_BASE.error' | translate }}</p>
+  }
+  @if (estado === 'no-encontrado') {
+    <p class="post-base__mensaje" data-testid="post-base-no-encontrado">{{ 'BLOG_POST_BASE.notFound' | translate }}</p>
+  }
+  @if (estado === 'listo' && post) {
+    <div class="row">
+      <div class="col-md-1"></div>
+      <div class="col-md-10">
+        <header class="post-base__cabecera">
+          <h1 class="post-base__titulo">{{ post.titulo }}</h1>
+          @if (post.nombreAutor) {
+            <p class="post-base__meta">{{ post.nombreAutor }}</p>
+          }
+        </header>
+        @if (resumenSeguro) {
+          <section class="post-base__resumen wp-excerpt" [innerHTML]="resumenSeguro"></section>
+        }
+        @if (contenidoSeguro) {
+          <section class="post-base__cuerpo wp-content" [innerHTML]="contenidoSeguro"></section>
+        }
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  }
+</article>
+
+<app-footer></app-footer>
+<div class="go-up" (click)="scroll(target)">
+  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+</div>

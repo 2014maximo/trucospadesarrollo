@@ -61,8 +61,20 @@ Mantener este archivo actualizado cuando cambie el flujo.
 9. **Publicación**  
    Commit y despliegue según el flujo del repositorio.
 
+## Flujo alternativo: post dinámico (WordPress Headless)
+
+Si la publicación vive en WordPress y solo necesitas el **slug** en la URL del blog Angular, **no** hace falta generar un componente por post. Sigue en su lugar la especificación **[blog-headless-content.md](blog-headless-content.md)**:
+
+- Configurar `BLOG_WP_REST_BASE_URL` en `src/app/features/blog/config/blog-wp-rest.config.ts`.
+- Asegurar que el slug del post en WordPress coincide con el segmento `:slug` bajo la categoría (`/blog/developer/{slug}`, etc.).
+- Mantener `BLOG_POST_BASE.*` en i18n si añades textos nuevos del shell del post.
+- Ejecutar `npm test` si tocas `BlogContentService` o `PostBaseComponent`.
+
+Puedes seguir usando `DatosPost` en constantes solo para **tarjetas del índice / SEO interno**, mientras el cuerpo lo sirve el API.
+
 ## Referencias de código
 
 - Modelo de metadatos: `src/app/features/blog/models/categorias.model.ts` (`DatosPost`).
 - Rutas del blog: `src/app/features/blog/blog.routes.ts` y rutas por categoría bajo `src/app/features/blog/posts/`.
 - Guía breve legacy en el repo (redirige aquí): `src/app/features/blog/posts/extructure-post.md`.
+- Contenido headless WordPress: [blog-headless-content.md](blog-headless-content.md).

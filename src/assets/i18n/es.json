@@ -1815,5 +1815,11 @@
 			},
 			"descripcionCorta": "Detalle de los elementos que hacen parte de Typescript, detallando en contraparte a Javascript."
 		}
+	},
+	"BLOG_POST_BASE": {
+		"loading": "Cargando publicación…",
+		"notFound": "No se encontró la publicación.",
+		"error": "No se pudo cargar el contenido. Inténtalo de nuevo más tarde.",
+		"noApi": "La URL del API de WordPress no está configurada. Define `BLOG_WP_REST_BASE_URL` en `src/app/features/blog/config/blog-wp-rest.config.ts`."
 	}
 }

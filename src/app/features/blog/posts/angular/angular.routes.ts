@@ -10,5 +10,10 @@ export const ANGULAR_ROUTES: Routes = [
     path: 'instalacion',
     loadComponent: () => import('./ng-instalation/ng-instalation.component')
       .then(m => m.NgInstalationComponent)
+  },
+  {
+    path: ':slug',
+    loadComponent: () => import('../../components/post-base/post-base.component')
+      .then(m => m.PostBaseComponent)
   }
 ];
