@@ -65,8 +65,8 @@ Mantener este archivo actualizado cuando cambie el flujo.
 
 Si la publicación vive en WordPress y solo necesitas el **slug** en la URL del blog Angular, **no** hace falta generar un componente por post. Sigue en su lugar la especificación **[blog-headless-content.md](blog-headless-content.md)**:
 
-- Configurar `BLOG_WP_REST_BASE_URL` en `src/app/features/blog/config/blog-wp-rest.config.ts`.
-- Asegurar que el slug del post en WordPress coincide con el segmento `:slug` bajo la categoría (`/blog/developer/{slug}`, etc.).
+- Configurar `BLOG_WP_GRAPHQL_URL` en `src/app/features/blog/config/blog-wp-graphql.config.ts`.
+- La URL paramétrica `/blog/:categoria/:slug` es genérica y manejará automáticamente la petición a través del `PostBaseComponent` sin requerir declarar nuevas rutas `*.routes.ts`.
 - Mantener `BLOG_POST_BASE.*` en i18n si añades textos nuevos del shell del post.
 - Ejecutar `npm test` si tocas `BlogContentService` o `PostBaseComponent`.
 

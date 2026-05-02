@@ -1,7 +1,3 @@
-.espaciado {
-  height: 1rem;
-}
-
 .post-base__mensaje {
   padding: 1rem 1.5rem;
   text-align: center;
@@ -31,4 +27,9 @@
 
 .go-up {
   cursor: pointer;
+}
+
+.texto-lateral {
+  transform: rotate(-90deg);
+  display: inline-block;
 }

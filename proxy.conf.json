@@ -1,0 +1,7 @@
+{
+  "/wp-json": {
+    "target": "http://localhost/wordpress",
+    "secure": false,
+    "changeOrigin": true
+  }
+}

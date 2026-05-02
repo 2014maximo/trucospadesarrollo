@@ -1,9 +1,10 @@
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 import { Observable, map, of } from 'rxjs';
 import { PostViewModel } from '../models/post-view.model';
-import { WpPostDto } from '../models/wp-post.dto';
-import { BLOG_WP_REST_URL } from '../tokens/blog-wp-rest-url.token';
+import { WpGraphqlResponse, WpGraphqlPostNode } from '../models/wp-post.dto';
+import { BLOG_WP_GRAPHQL_URL_TOKEN } from '../tokens/blog-wp-graphql-url.token';
 
 @Injectable({
   providedIn: 'root'
@@ -11,15 +12,16 @@ import { BLOG_WP_REST_URL } from '../tokens/blog-wp-rest-url.token';
 export class BlogContentService {
   constructor(
     private readonly http: HttpClient,
-    @Inject(BLOG_WP_REST_URL) private readonly apiBase: string
-  ) {}
+    @Inject(BLOG_WP_GRAPHQL_URL_TOKEN) private readonly apiBase: string,
+    private translate: TranslateService
+  ) { }
 
   hasBaseUrl(): boolean {
     return this.apiBase.trim().length > 0;
   }
 
   /**
-   * Obtiene un post por slug desde WordPress (`GET /posts?slug=...&_embed=1`).
+   * Obtiene un post por slug desde WordPress usando GraphQL.
    * Emite `null` si no hay resultados o el slug está vacío.
    */
   getPostBySlug(slug: string): Observable<PostViewModel | null> {
@@ -28,28 +30,85 @@ export class BlogContentService {
       return of(null);
     }
 
-    const params = new HttpParams()
-      .set('slug', trimmed)
-      .set('_embed', '1');
+    const currentLang = this.translate.currentLang || 'es';
+    const apiUrlWithLang = `${this.apiBase}?lang=${currentLang}`;
+
+    const query = `
+      query GetPost($slug: String!) {
+        posts(where: {name: $slug}) {
+          nodes {
+            id
+            title
+            content
+            excerpt
+            date
+            uri
+            postId
+            modified
+            contentauthormodel {
+              autorDelPost
+              introduction
+              fieldGroupName
+              avatar {
+                node {
+                  sourceUrl
+                  uri
+                }
+              }
+              linkAAutor {
+                url
+                title
+                target
+              }
+              additionalparagraphs {
+                fieldGroupName
+                paragraphsmore
+              }
+            }
+            categories {
+              nodes {
+                name
+              }
+            }
+          }
+        }
+      }
+    `;
 
     return this.http
-      .get<WpPostDto[]>(`${this.apiBase}/posts`, { params })
+      .post<WpGraphqlResponse>(apiUrlWithLang, {
+        query,
+        variables: { slug: trimmed }
+      })
       .pipe(
-        map(lista => lista[0] ?? null),
+        map(response => response.data?.posts?.nodes?.[0] ?? null),
         map(post => (post ? this.toViewModel(post) : null))
       );
   }
 
-  private toViewModel(post: WpPostDto): PostViewModel {
+  private toViewModel(post: WpGraphqlPostNode): PostViewModel {
+    const authorModel = post.contentauthormodel;
+    const categoryName = post.categories?.nodes?.[0]?.name ?? '';
+
     return {
-      id: String(post.id),
-      slug: post.slug,
-      titulo: this.stripRenderedToText(post.title?.rendered ?? ''),
-      contenidoHtml: post.content?.rendered ?? '',
-      resumenHtml: post.excerpt?.rendered ?? '',
+      id: String(post.postId ?? post.id),
+      slug: post.uri?.replace(/^\/|\/$/g, '').split('/').pop() ?? '',
+      titulo: this.stripRenderedToText(post.title ?? ''),
+      contenidoHtml: post.content ?? '',
+      resumenHtml: post.excerpt ?? '',
       fechaPublicacion: post.date,
       fechaModificacion: post.modified,
-      nombreAutor: post._embedded?.author?.[0]?.name ?? ''
+      nombreAutor: authorModel?.autorDelPost ?? '',
+      categoria: categoryName,
+      contentAuthor: {
+        name: authorModel?.autorDelPost ?? '',
+        srcAvatar: authorModel?.avatar?.node?.sourceUrl ?? '',
+        linkRefenceAuthor: authorModel?.linkAAutor?.url ?? '',
+        introduction: authorModel?.introduction ?? '',
+        additionalParagraphs: Array.isArray(authorModel?.additionalparagraphs) 
+          ? authorModel.additionalparagraphs.map(p => p?.paragraphsmore ?? '') 
+          : []
+      }
     };
   }
 

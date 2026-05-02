@@ -1,5 +1,6 @@
-/** Modelo de vista listo para enlazar en `PostBaseComponent`. */
+import { ContentAuthorModel } from '../../../shared/models/content-author.model';
 
+/** Modelo de vista listo para enlazar en `PostBaseComponent`. */
 export interface PostViewModel {
   id: string;
   slug: string;
@@ -9,4 +10,6 @@ export interface PostViewModel {
   fechaPublicacion: string;
   fechaModificacion: string;
   nombreAutor: string;
+  categoria: string;
+  contentAuthor?: ContentAuthorModel;
 }

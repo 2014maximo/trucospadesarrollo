@@ -1,39 +1,69 @@
 <div #target></div>
+
 <app-header></app-header>
 <div class="espaciado"></div>
 
 <article class="post-base">
   @if (estado === 'sin-api') {
-    <p class="post-base__mensaje" data-testid="post-base-sin-api">{{ 'BLOG_POST_BASE.noApi' | translate }}</p>
+  <p class="post-base__mensaje" data-testid="post-base-sin-api">{{ 'BLOG_POST_BASE.noApi' | translate }}</p>
   }
   @if (estado === 'cargando') {
-    <p class="post-base__mensaje" data-testid="post-base-cargando">{{ 'BLOG_POST_BASE.loading' | translate }}</p>
+  <p class="post-base__mensaje" data-testid="post-base-cargando">{{ 'BLOG_POST_BASE.loading' | translate }}</p>
   }
   @if (estado === 'error') {
-    <p class="post-base__mensaje" data-testid="post-base-error">{{ 'BLOG_POST_BASE.error' | translate }}</p>
+  <p class="post-base__mensaje" data-testid="post-base-error">{{ 'BLOG_POST_BASE.error' | translate }}</p>
   }
   @if (estado === 'no-encontrado') {
-    <p class="post-base__mensaje" data-testid="post-base-no-encontrado">{{ 'BLOG_POST_BASE.notFound' | translate }}</p>
+  <p class="post-base__mensaje" data-testid="post-base-no-encontrado">{{ 'BLOG_POST_BASE.notFound' | translate }}</p>
   }
   @if (estado === 'listo' && post) {
-    <div class="row">
-      <div class="col-md-1"></div>
-      <div class="col-md-10">
-        <header class="post-base__cabecera">
-          <h1 class="post-base__titulo">{{ post.titulo }}</h1>
-          @if (post.nombreAutor) {
-            <p class="post-base__meta">{{ post.nombreAutor }}</p>
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+
+      <div class="row">
+        <div class="col-md-5 d-flex flex-column">
+          <div>
+            @if (categoriaData?.rutaIcono) {
+            <img [src]="categoriaData?.rutaIcono" alt="" height="50" width="auto" class="drop">
+            }
+          </div>
+          <div class="espacio"></div>
+          <br>
+          <div class="d-flex">
+            <time class="tc-gray-two f-shadow-into-l fs-25 lh-25 m-0 p-0 texto-lateral m-0">
+              {{ (post.fechaModificacion ? post.fechaModificacion : post.fechaPublicacion) | date:'MMMM d, y' |
+              titlecase }}
+            </time>
+          </div>
+          <div class="espaciado"></div>
+        </div>
+        <div class="col-md-7">
+          <h1 class="tituloPost fuenteOcho pb-2">{{ post.titulo }}</h1>
+          @if (resumenSeguro) {
+          <section class="post-base__resumen wp-excerpt c7 f-open-sans-c fs-20 lh-25" [innerHTML]="resumenSeguro">
+          </section>
           }
-        </header>
-        @if (resumenSeguro) {
-          <section class="post-base__resumen wp-excerpt" [innerHTML]="resumenSeguro"></section>
-        }
-        @if (contenidoSeguro) {
-          <section class="post-base__cuerpo wp-content" [innerHTML]="contenidoSeguro"></section>
-        }
+          @for (parrafo of parrafosAdicionalesSeguros; track $index) {
+          <section class="post-base__resumen wp-excerpt c7 f-open-sans-c fs-20 lh-25 mt-3" [innerHTML]="parrafo">
+          </section>
+          }
+        </div>
       </div>
-      <div class="col-md-1"></div>
+
+      @if (post.contentAuthor) {
+      <div class="espacio"></div>
+      <app-content-author [datesAuthor]="post.contentAuthor"></app-content-author>
+      }
+
+      @if (contenidoSeguro) {
+      <div class="espaciado"></div>
+      <section class="post-base__cuerpo wp-content" [innerHTML]="contenidoSeguro"></section>
+      }
+
     </div>
+    <div class="col-md-1"></div>
+  </div>
   }
 </article>
 

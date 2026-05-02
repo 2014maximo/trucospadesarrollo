@@ -15,7 +15,8 @@ function publicacionMock(): PostViewModel {
     resumenHtml: '<p>Resumen</p>',
     fechaPublicacion: '2026-01-01',
     fechaModificacion: '2026-01-02',
-    nombreAutor: 'Autor'
+    nombreAutor: 'Autor',
+    categoria: 'categoria-test'
   };
 }
 
@@ -89,7 +90,7 @@ describe('PostBaseComponent', () => {
       fixture.detectChanges();
 
       expect(component.estado).toBe('listo');
-      const titulo: HTMLElement | null = fixture.nativeElement.querySelector('.post-base__titulo');
+      const titulo: HTMLElement | null = fixture.nativeElement.querySelector('.tituloPost');
       expect(titulo?.textContent).toContain('Título de prueba');
       const cuerpo: HTMLElement | null = fixture.nativeElement.querySelector('.post-base__cuerpo');
       expect(cuerpo?.textContent).toContain('Contenido');

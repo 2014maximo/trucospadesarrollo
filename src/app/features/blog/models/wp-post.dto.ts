@@ -1,26 +1,62 @@
-/** Fragmento del DTO de un post en la REST API de WordPress (`/wp/v2/posts`). */
+/** DTO de un post en la API GraphQL de WordPress. */
 
-export interface WpRenderedField {
-  rendered: string;
-  protected?: boolean;
+export interface WpGraphqlAvatar {
+  node?: {
+    sourceUrl?: string;
+    uri?: string;
+  };
 }
 
-export interface WpAuthorDto {
-  name?: string;
-  slug?: string;
+export interface WpGraphqlLink {
+  url?: string;
+  title?: string;
+  target?: string;
 }
 
-export interface WpEmbeddedDto {
-  author?: WpAuthorDto[];
+export interface WpGraphqlContentAuthorModel {
+  autorDelPost?: string;
+  introduction?: string;
+  fieldGroupName?: string;
+  avatar?: WpGraphqlAvatar;
+  linkAAutor?: WpGraphqlLink;
+  additionalparagraphs?: WpGraphqlAdditionalParagraphs[];
 }
 
-export interface WpPostDto {
-  id: number;
-  slug: string;
+export interface WpGraphqlCategoryNode {
+  name: string;
+}
+
+export interface WpGraphqlCategories {
+  nodes: WpGraphqlCategoryNode[];
+}
+
+export interface WpGraphqlAdditionalParagraphs {
+  fieldGroupName?: string;
+  paragraphsmore?: string;
+}
+
+
+export interface WpGraphqlPostNode {
+  id: string;
+  title: string;
+  content: string;
+  excerpt: string;
   date: string;
+  uri: string;
+  postId: number;
   modified: string;
-  title: WpRenderedField;
-  content: WpRenderedField;
-  excerpt: WpRenderedField;
-  _embedded?: WpEmbeddedDto;
+  contentauthormodel?: WpGraphqlContentAuthorModel;
+  categories?: WpGraphqlCategories;
+}
+
+export interface WpGraphqlPosts {
+  nodes: WpGraphqlPostNode[];
+}
+
+export interface WpGraphqlData {
+  posts: WpGraphqlPosts;
+}
+
+export interface WpGraphqlResponse {
+  data: WpGraphqlData;
 }
