@@ -12,16 +12,16 @@ import { GoUpComponent } from '../shared/components/go-up/go-up.component';
 @Component({
 	selector: 'app-home',
 	imports: [
-    HeaderComponent,
-	FooterHomeComponent,
-    CommonModule,
-    MenuHomeComponent,
-    SliderHomeComponent,
-    GaleryPostComponent,
-	TopTecnologyComponent,
-    PhrasesComponent,
-	GoUpComponent
-],
+		HeaderComponent,
+		FooterHomeComponent,
+		CommonModule,
+		MenuHomeComponent,
+		SliderHomeComponent,
+		GaleryPostComponent,
+		TopTecnologyComponent,
+		PhrasesComponent,
+		GoUpComponent
+	],
 	standalone: true,
 	templateUrl: './home.component.html',
 	styleUrl: './home.component.css'
@@ -29,7 +29,6 @@ import { GoUpComponent } from '../shared/components/go-up/go-up.component';
 export class HomeComponent {
 
 	constructor() {
-		console.log('HomeComponent created')
 	}
 
 	scroll(el: HTMLElement) {

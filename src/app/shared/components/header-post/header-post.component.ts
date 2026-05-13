@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { FormGroup, FormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CATEGORIA } from '@constants/categories.constant';
 import { CategoriaPostModel, DatosPost } from '@models/categorias.model';
@@ -32,7 +33,7 @@ export class HeaderPostComponent {
 	public todosLosPostTraducidos: DatosPost[] = [];
 	public mostrarResultados: boolean = false;
 	public encontrados: DatosPost[] = [];
-	public lang = navigator.language;
+	public lang: string = 'es';
 	public lenguajes: string[] = ['es', 'en', 'fr'];
 	public idiomaActual: string = '';
 	public ondestroy$: Subject<boolean> = new Subject();
@@ -54,14 +55,21 @@ export class HeaderPostComponent {
 
 	constructor(private router: Router,
 		public translate: TranslateService,
-		private traduccion: TraduccionService) {
+		private traduccion: TraduccionService,
+		@Inject(PLATFORM_ID) private platformId: Object) {
 
-		if (localStorage.getItem("idioma")) {
-			this.idiomaActual = localStorage.getItem('idioma') ?? '';
+		if (isPlatformBrowser(this.platformId)) {
+			if (localStorage.getItem("idioma")) {
+				this.idiomaActual = localStorage.getItem('idioma') ?? '';
+			} else {
+				this.idiomaActual = navigator.language.split('-')[0];
+			}
+			translate.setDefaultLang(navigator.language.split('-')[0]);
 		} else {
-			this.idiomaActual = navigator.language.split('-')[0];
+			this.idiomaActual = 'es';
+			translate.setDefaultLang('es');
 		}
-		translate.setDefaultLang(navigator.language.split('-')[0]);
+
 		translate.use(this.idiomaActual);
 		this.cargarListaLenguajes(this.idiomaActual);
 		this.traducirColeccion(this.idiomaActual);

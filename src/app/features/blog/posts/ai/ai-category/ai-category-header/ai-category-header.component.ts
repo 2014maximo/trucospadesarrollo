@@ -28,7 +28,7 @@ export class AiCategoryHeaderComponent {
   public subCategorias: SubCategoriaModel[] = [];
   public publicacion = new DatosPost();
 
-  constructor(private translate: TranslateService){}
+  constructor(private translate: TranslateService) { }
 
 
   ngOnInit(): void {
@@ -55,11 +55,11 @@ export class AiCategoryHeaderComponent {
     this.categoria ? this.subCategorias = this.categoria.subcategorias : [];
     this.categoria ? this.glosario = this.categoria.glosario : [];
     this.publicacion = postActual(this.idPost)[0];
-    console.log((this.publicacion.descripcion[0]));
+
 
     this.datesAuthor = {
-      name:'Alex M.',
-      srcAvatar:'assets/img/author.png',
+      name: 'Alex M.',
+      srcAvatar: 'assets/img/author.png',
       linkRefenceAuthor: 'https://2014maximo.github.io/alexmunoz/'
     }
   }

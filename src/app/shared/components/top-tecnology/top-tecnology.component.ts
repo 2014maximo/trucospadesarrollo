@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { TOP_FRAMEWORKS } from './constants/frameworks.constant';
 import { CommonModule } from '@angular/common';
@@ -18,6 +19,12 @@ export class TopTecnologyComponent {
   languages = TOP_LANGUAGE;
   databases = TOP_DATABASES;
   ides = TOP_IDES;
-  widthScreen = window.innerWidth;
+  widthScreen = 1024;
+
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.widthScreen = window.innerWidth;
+    }
+  }
 
 }

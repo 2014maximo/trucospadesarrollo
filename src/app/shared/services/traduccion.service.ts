@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { CATEGORIA } from '@constants/categories.constant';
 import { DatosPost } from '@models/categorias.model';
 
@@ -20,7 +21,7 @@ export class TraduccionService {
 	private cambioIdiomaSubject = new Subject<string>();
 	public cambioIdioma$ = this.cambioIdiomaSubject.asObservable();
 
-	constructor(private translate: TranslateService) {
+	constructor(private translate: TranslateService, @Inject(PLATFORM_ID) private platformId: Object) {
 		this.cargarPost();
 		this.processTraduction();
 	}
@@ -43,17 +44,23 @@ export class TraduccionService {
 		this.traducirColeccion();
 	}
 
-	public processTraduction(){
-		if (localStorage.getItem("idioma")) {
-			this.idiomaActual = localStorage.getItem('idioma') ?? '';
+	public processTraduction() {
+		if (isPlatformBrowser(this.platformId)) {
+			if (localStorage.getItem("idioma")) {
+				this.idiomaActual = localStorage.getItem('idioma') ?? '';
+			} else {
+				this.idiomaActual = navigator.language.split('-')[0];
+			}
+			this.translate.setDefaultLang(navigator.language.split('-')[0]);
 		} else {
-			this.idiomaActual = navigator.language.split('-')[0];
+			// Fallback predeterminado cuando se está renderizando en el servidor (SSR)
+			this.idiomaActual = 'es';
+			this.translate.setDefaultLang('es');
 		}
-		this.translate.setDefaultLang(navigator.language.split('-')[0]);
+
 		this.translate.use(this.idiomaActual);
 		this.cargarListaLenguajes(this.idiomaActual);
 		this.traducirColeccion();
-		console.log('Proceso de traducciones completado');
 	}
 
 	async traducirColeccion() {
@@ -78,7 +85,7 @@ export class TraduccionService {
 				ruta: this.todosLosPost[i].ruta,
 				imgSlider: this.todosLosPost[i].imgSlider
 			}
-			if(this.todosLosPost[i].mostrarEnPostHome){
+			if (this.todosLosPost[i].mostrarEnPostHome) {
 				this.todosLosPostTraducidos.push(grupo)
 			}
 		}
@@ -94,11 +101,15 @@ export class TraduccionService {
 		}
 	}
 
-	public async traducirReferencia(ref: string):Promise<string> {
-		try{
+	public async traducirReferencia(ref: string): Promise<string> {
+		if (!isPlatformBrowser(this.platformId)) {
+			// Evitar que el servidor SSR se quede colgado esperando peticiones HTTP de traducción
+			return ref;
+		}
+		try {
 			let traduccion = await firstValueFrom(this.translate.get(ref));
 			return traduccion;
-		}catch{
+		} catch {
 			return 'NO-TRASLATE'
 		}
 	}

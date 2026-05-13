@@ -20,29 +20,29 @@ import { AddsModel } from 'src/app/shared/models/post.model';
   styleUrl: './dev-category-header.component.css'
 })
 export class DevCategoryHeaderComponent {
-  @Input() nombreCategoria : string = '';
-  @Input() idPost : string = '';
+  @Input() nombreCategoria: string = '';
+  @Input() idPost: string = '';
   @Input() adds = new AddsModel();
 
   public datesAuthor = new ContentAuthorModel();
 
-  public indice: IndiceDeContenidosModel [] = [];
+  public indice: IndiceDeContenidosModel[] = [];
   public glosario: GlosarioModel[] = [];
 
   public categoria = new CategoriaPostModel();
-  public subCategorias:SubCategoriaModel[] = [];
+  public subCategorias: SubCategoriaModel[] = [];
   public publicacion = new DatosPost();
 
-  constructor(private translate: TranslateService){}
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.inicializarVariables();
   }
 
-  private inicializarVariables(){
+  private inicializarVariables() {
     this.categoria = CATEGORIA.filter((cat: CategoriaPostModel) => cat.nombre === this.nombreCategoria)[0];
     let post: DatosPost[] = this.categoria.post;
-    post.forEach( (post:DatosPost, i:number ) => {
+    post.forEach((post: DatosPost, i: number) => {
       let seleccionado: IndiceDeContenidosModel = {
         color: '',
         colorFondo: post.estilos.colorFondo,
@@ -55,15 +55,14 @@ export class DevCategoryHeaderComponent {
       this.indice.push(seleccionado)
     });
 
-    
-    this.categoria? this.subCategorias = this.categoria.subcategorias : [];
-    this.categoria? this.glosario = this.categoria.glosario : [];
+
+    this.categoria ? this.subCategorias = this.categoria.subcategorias : [];
+    this.categoria ? this.glosario = this.categoria.glosario : [];
 
     this.publicacion = postActual(this.idPost)[0];
-    console.log(this.publicacion);
     this.datesAuthor = {
-      name:'Alex M.',
-      srcAvatar:'assets/img/author.png',
+      name: 'Alex M.',
+      srcAvatar: 'assets/img/author.png',
       linkRefenceAuthor: 'https://2014maximo.github.io/alexmunoz/'
     }
   }

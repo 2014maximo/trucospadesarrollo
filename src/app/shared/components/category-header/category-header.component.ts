@@ -19,28 +19,27 @@ import { AddsModel } from '../../models/post.model';
   styleUrl: './category-header.component.css'
 })
 export class CategoryHeaderComponent implements OnInit {
-  @Input() nombreCategoria : string = '';
-  @Input() idPost : string = '';
+  @Input() nombreCategoria: string = '';
+  @Input() idPost: string = '';
   @Input() adds = new AddsModel();
 
-  public indice: IndiceDeContenidosModel [] = [];
+  public indice: IndiceDeContenidosModel[] = [];
   public glosario: GlosarioModel[] = [];
 
   public categoria = new CategoriaPostModel();
-  public subCategorias:SubCategoriaModel[] = [];
+  public subCategorias: SubCategoriaModel[] = [];
   public publicacion = new DatosPost();
 
-  constructor(private translate: TranslateService){}
+  constructor(private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.inicializarVariables();
-    console.log(this.adds, 'ADDS');
   }
 
-  private inicializarVariables(){
+  private inicializarVariables() {
     this.categoria = CATEGORIA.filter((cat: CategoriaPostModel) => cat.nombre === this.nombreCategoria)[0];
     let post: DatosPost[] = this.categoria.post;
-    post.forEach( (post:DatosPost, i:number ) => {
+    post.forEach((post: DatosPost, i: number) => {
       let seleccionado: IndiceDeContenidosModel = {
         color: '',
         colorFondo: post.estilos.colorFondo,
@@ -53,9 +52,9 @@ export class CategoryHeaderComponent implements OnInit {
       this.indice.push(seleccionado)
     });
 
-    
-    this.categoria? this.subCategorias = this.categoria.subcategorias : [];
-    this.categoria? this.glosario = this.categoria.glosario : [];
+
+    this.categoria ? this.subCategorias = this.categoria.subcategorias : [];
+    this.categoria ? this.glosario = this.categoria.glosario : [];
 
     this.publicacion = postActual(this.idPost)[0]
   }

@@ -1,6 +1,7 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
 import { FrasesModel } from '../../models/phrases.model';
 import { firstValueFrom, Subject } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { PHRASES } from './constants/phrases.constant';
 import { CommonModule } from '@angular/common';
@@ -15,22 +16,22 @@ import Typewriter from 'typewriter-effect';
 })
 export class PhrasesComponent implements OnInit {
 
-  public frases: FrasesModel[]=[];
+  public frases: FrasesModel[] = [];
   private ondestroy$: Subject<boolean> = new Subject();
-  
+
   phrases = ['Angular es genial', 'Simula escritura', 'Escribe como humano'];
   displayText = '';
   currentPhraseIndex = 0;
   charIndex = 0;
-  author='';
-  colorAuthor=''
+  author = '';
+  colorAuthor = ''
 
-  constructor(private translate: TranslateService, private el: ElementRef){
+  constructor(private translate: TranslateService, private el: ElementRef, @Inject(PLATFORM_ID) private platformId: Object) {
     const transla = new TraslateForce(this.translate);
-        transla.listTranslates();
+    transla.listTranslates();
   }
 
-  
+
   ngOnInit(): void {
     this.inicializarVariables();
   }
@@ -66,19 +67,19 @@ export class PhrasesComponent implements OnInit {
     }
   }
 
-/*   private cargarFrases(){
-    this.webService.consultarFrases()
-    .pipe(takeUntil(this.ondestroy$))
-    .subscribe({
-      next:(resp) => {
-        this.procesarCargaFrases(resp);
-      }
-    })
-  } */
+  /*   private cargarFrases(){
+      this.webService.consultarFrases()
+      .pipe(takeUntil(this.ondestroy$))
+      .subscribe({
+        next:(resp) => {
+          this.procesarCargaFrases(resp);
+        }
+      })
+    } */
 
-  async procesarCargarFrases(){
+  async procesarCargarFrases() {
     // this.frases = resp;
-    for(let i=0; i < PHRASES.length; i++){
+    for (let i = 0; i < PHRASES.length; i++) {
       let frase = {
         frase: await this.traducirReferencia(PHRASES[i].frase),
         autor: await this.traducirReferencia(PHRASES[i].autor),
@@ -88,22 +89,21 @@ export class PhrasesComponent implements OnInit {
       }
       this.frases.push(frase);
     }
-    this.frases.sort((a,b) => { return Math.random() - 0.5});
+    this.frases.sort((a, b) => { return Math.random() - 0.5 });
 
-    if(this.frases[1].frase){
+    if (this.frases[1].frase && isPlatformBrowser(this.platformId)) {
       this.typeNextCharacter();
-      console.log(this.frases,'PHRASES');
     }
 
   }
 
-  public async traducirReferencia(ref: string):Promise<string> {
-		try{
-			let traduccion = await firstValueFrom(this.translate.get(ref));
-			return traduccion;
-		}catch{
-			return 'NO-TRASLATE'
-		}
-	}
+  public async traducirReferencia(ref: string): Promise<string> {
+    try {
+      let traduccion = await firstValueFrom(this.translate.get(ref));
+      return traduccion;
+    } catch {
+      return 'NO-TRASLATE'
+    }
+  }
 
 }

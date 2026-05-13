@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { Subject, takeUntil } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CATEGORIA } from '@constants/categories.constant';
@@ -25,10 +26,13 @@ export class GaleryPostComponent implements OnInit {
   public todosLosPost: DatosPost[] = [];
   public postPaginar: DatosPost[] = [];
   public ultimosPost: any[] = [];
-  public anchoPantalla = window.innerWidth;
+  public anchoPantalla = 1024; // Valor seguro por defecto para SSR
   public ondestroy$: Subject<boolean> = new Subject();
 
-  constructor(private translate: TranslateService, private traduccion: TraduccionService) {
+  constructor(private translate: TranslateService, private traduccion: TraduccionService, @Inject(PLATFORM_ID) private platformId: Object) {
+    if (isPlatformBrowser(this.platformId)) {
+      this.anchoPantalla = window.innerWidth;
+    }
     const transla = new TraslateForce(this.translate);
     transla.listTranslates();
   }

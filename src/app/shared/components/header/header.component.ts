@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { CategoriaModel } from '../../models/post.model';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CATEGORIA } from '@constants/categories.constant';
@@ -35,7 +36,7 @@ export class HeaderComponent {
 	public todosLosPostTraducidos: DatosPost[] = [];
 	public mostrarResultados: boolean = false;
 	public encontrados: DatosPost[] = [];
-	public lang = navigator.language;
+	public lang: string = 'es';
 	public lenguajes: string[] = ['es', 'en', 'fr'];
 	public idiomaActual: string = '';
 	public ondestroy$: Subject<boolean> = new Subject();
@@ -56,27 +57,32 @@ export class HeaderComponent {
 	};
 
 	constructor(private router: Router,
-				public translate: TranslateService,
-				private traduccion: TraduccionService) {
+		public translate: TranslateService,
+		private traduccion: TraduccionService,
+		@Inject(PLATFORM_ID) private platformId: Object) {
 
-		if (localStorage.getItem("idioma")) {
-			this.idiomaActual = localStorage.getItem('idioma') ?? '';
+		if (isPlatformBrowser(this.platformId)) {
+			const browserLang = navigator.language.split('-')[0];
+
+			if (localStorage.getItem("idioma")) {
+				this.idiomaActual = localStorage.getItem('idioma') ?? browserLang;
+			} else {
+				this.idiomaActual = browserLang;
+			}
+
 		} else {
-			this.idiomaActual = navigator.language.split('-')[0];
+			this.idiomaActual = 'es';
 		}
-		translate.setDefaultLang(navigator.language.split('-')[0]);
-		translate.use(this.idiomaActual);
+
+		this.translate.setDefaultLang('es');
+		this.translate.use(this.idiomaActual);
 		this.cargarListaLenguajes(this.idiomaActual);
 		this.traducirColeccion(this.idiomaActual);
-
-		this.inicializarVariables();
+		this.translate.addLangs(['fr', 'en', 'es']);
 		this.formBasic = new FormGroup({
 			'busqueda': new FormControl('')
 		});
-
-		this.translate.addLangs(['fr', 'en', 'es']);
-	    this.translate.setDefaultLang('es');
-	    this.translate.use('es');
+		this.inicializarVariables();
 	}
 
 	private inicializarVariables() {
@@ -106,21 +112,21 @@ export class HeaderComponent {
 		}
 	}
 
-	openSearch(){
+	openSearch() {
 		this.showSearch = !this.showSearch;
 		this.showMenu = !this.showMenu;
 	}
-	closeOptions(){
+	closeOptions() {
 		this.showMenu = true;
 		this.showSearch = false;
 		this.showLanguajes = false;
 		this.showCategories = false
 	}
-	openLanguage(){
+	openLanguage() {
 		this.showLanguajes = !this.showLanguajes;
 		this.showMenu = !this.showMenu;
 	}
-	openCategories(){
+	openCategories() {
 		this.showCategories = !this.showCategories;
 		this.showMenu = !this.showMenu;
 	}

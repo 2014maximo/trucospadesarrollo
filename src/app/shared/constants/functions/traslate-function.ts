@@ -14,12 +14,17 @@ export class TraslateForce {
     }
 
     public listTranslates(){
-        if (localStorage.getItem("idioma")) {
-			this.idiomaActual = localStorage.getItem('idioma') ?? '';
+        if (typeof window !== 'undefined' && typeof localStorage !== 'undefined') {
+			if (localStorage.getItem("idioma")) {
+				this.idiomaActual = localStorage.getItem('idioma') ?? '';
+			} else {
+				this.idiomaActual = navigator.language.split('-')[0];
+			}
+			this.translate.setDefaultLang(navigator.language.split('-')[0]);
 		} else {
-			this.idiomaActual = navigator.language.split('-')[0];
+			this.idiomaActual = 'es';
+			this.translate.setDefaultLang('es');
 		}
-		this.translate.setDefaultLang(navigator.language.split('-')[0]);
 		this.translate.use(this.idiomaActual);
 		this.cargarListaLenguajes(this.idiomaActual);
     }

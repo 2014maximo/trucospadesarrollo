@@ -15,7 +15,6 @@ export class FallbackTranslatePipe implements PipeTransform {
 		const translation = await firstValueFrom(this.translate.get(value));
 
 		// return value if translation is not found
-		console.log(translation, "se ejecuto el pipe");
-		return typeof(translation) === 'object'? value : translation;
+		return typeof (translation) === 'object' ? value : translation;
 	}
 }
