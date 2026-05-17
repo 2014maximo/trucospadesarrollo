@@ -3,7 +3,8 @@ import { Inject, Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Observable, map, of } from 'rxjs';
 import { PostViewModel } from '../models/post-view.model';
-import { WpGraphqlResponse, WpGraphqlPostNode } from '../models/wp-post.dto';
+import { CategoryViewModel } from '../models/category-view.model';
+import { WpGraphqlResponse, WpGraphqlPostNode, WpGraphqlPagesResponse, WpGraphqlPageNode } from '../models/wp-post.dto';
 import { BLOG_WP_GRAPHQL_URL_TOKEN } from '../tokens/blog-wp-graphql-url.token';
 
 @Injectable({
@@ -122,5 +123,57 @@ export class BlogContentService {
     const el = document.createElement('div');
     el.innerHTML = html;
     return (el.textContent ?? el.innerText ?? '').trim();
+  }
+
+  // ── Categorías headless (pages) ───────────────────────────────────────────
+
+  /**
+   * Obtiene el contenido de una categoría desde WordPress usando la query de
+   * páginas (`pages`) filtrada por slug.
+   * Emite `null` si no hay resultados o el slug está vacío.
+   */
+  getCategoryBySlug(slug: string): Observable<CategoryViewModel | null> {
+    const trimmed = slug?.trim() ?? '';
+    if (!trimmed || !this.hasBaseUrl()) {
+      return of(null);
+    }
+
+    const currentLang = this.translate.currentLang || 'es';
+    const apiUrlWithLang = `${this.apiBase}?lang=${currentLang}`;
+
+    const query = `
+      query GetCategory($slug: String!) {
+        pages(where: { name: $slug }) {
+          edges {
+            node {
+              id
+              title
+              content
+              slug
+              uri
+            }
+          }
+        }
+      }
+    `;
+
+    return this.http
+      .post<WpGraphqlPagesResponse>(apiUrlWithLang, {
+        query,
+        variables: { slug: trimmed }
+      })
+      .pipe(
+        map(response => response.data?.pages?.edges?.[0]?.node ?? null),
+        map(page => (page ? this.toPageViewModel(page) : null))
+      );
+  }
+
+  private toPageViewModel(page: WpGraphqlPageNode): CategoryViewModel {
+    return {
+      id: page.id,
+      slug: page.slug ?? page.uri?.replace(/^\/|\/$/g, '').split('/').pop() ?? '',
+      titulo: this.stripRenderedToText(page.title ?? ''),
+      contenidoHtml: page.content ?? ''
+    };
   }
 }

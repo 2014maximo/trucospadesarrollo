@@ -160,10 +160,10 @@
 			"referenciaBusqueda": "inteligencia artificial, ml, deep learning",
 			"descripcion": {
 				"tx1": "'Inteligencia Artificial', en los inicios de Copilot no le daba tanta importancia a la inteligencia artificial por las torpezas que cometía (a pesar de que lo usaba y ciertas cositas fueron de gran ayuda), para mí era solo alguna invención más que se demoraría en evolucionar o que terminaría en el olvido. Era como ese empleado nuevo que entraba a la empresa y notabas cómo cometía errores para salir justo después de su periodo de prueba. Sin embargo, más adelante, cuando por mi cuenta empecé a ver las creaciones de video que podía lograr, los efectos musicales que estaba logrando, me dije que esto ya era otro nivel.",
-				"tx2":"Hoy en día, a partir de la creación de esta publicación, puedo decir que cambió el modo de trabajo de empresas de tecnología grandes como Google, Amazon, etc., permitiendo la liberación de miles de empleados de sus células de trabajo. Está revolucionando todo a gran velocidad.",
-				"tx3":"Quiero dejar una opinión muy personal y decir que es muy evidente que, como muchos otros productos comerciales, la inteligencia artificial es un elemento más creado con intereses puramente económicos y de poder. Contradictoriamente, está siendo construida y moldeada por desarrolladores a los que, en muchos escenarios, nos están sacando como a indignos ilógicamente. Pero bueno, no pretendo en esta intro describir todo lo que ha cambiado o llorar por lo que me parezca injusto.",
-				"tx4":"Hay que aceptar sin duda que mejorará y cambiará radicalmente el panorama mundial y, como desarrolladores pensando lógicamente, hay que usarla efectivamente y permitir que nos vuelva mejores en el campo, en vez de permitir que nos haga la tarea, nos vuelva inútiles y no tengamos ni idea de lo que estamos haciendo mientras la utilizamos.",
-				"tx5":"Para entrar en materia y como desarrolladores, a partir de este punto ya tendríamos nociones como 'MCP', 'RAW', 'PROMPT Engineering', 'Machine Learning', etc. Sin embargo, se buscará aclarar como para 'DUMMIES' y entrar en los temas más clave de esta categoría…"
+				"tx2": "Hoy en día, a partir de la creación de esta publicación, puedo decir que cambió el modo de trabajo de empresas de tecnología grandes como Google, Amazon, etc., permitiendo la liberación de miles de empleados de sus células de trabajo. Está revolucionando todo a gran velocidad.",
+				"tx3": "Quiero dejar una opinión muy personal y decir que es muy evidente que, como muchos otros productos comerciales, la inteligencia artificial es un elemento más creado con intereses puramente económicos y de poder. Contradictoriamente, está siendo construida y moldeada por desarrolladores a los que, en muchos escenarios, nos están sacando como a indignos ilógicamente. Pero bueno, no pretendo en esta intro describir todo lo que ha cambiado o llorar por lo que me parezca injusto.",
+				"tx4": "Hay que aceptar sin duda que mejorará y cambiará radicalmente el panorama mundial y, como desarrolladores pensando lógicamente, hay que usarla efectivamente y permitir que nos vuelva mejores en el campo, en vez de permitir que nos haga la tarea, nos vuelva inútiles y no tengamos ni idea de lo que estamos haciendo mientras la utilizamos.",
+				"tx5": "Para entrar en materia y como desarrolladores, a partir de este punto ya tendríamos nociones como 'MCP', 'RAW', 'PROMPT Engineering', 'Machine Learning', etc. Sin embargo, se buscará aclarar como para 'DUMMIES' y entrar en los temas más clave de esta categoría…"
 			},
 			"descripcionCorta": ""
 		}
@@ -1821,5 +1821,11 @@
 		"notFound": "No se encontró la publicación.",
 		"error": "No se pudo cargar el contenido. Inténtalo de nuevo más tarde.",
 		"noApi": "La URL del API de WordPress no está configurada. Define `BLOG_WP_REST_BASE_URL` en `src/app/features/blog/config/blog-wp-rest.config.ts`."
+	},
+	"BLOG_CATEGORY_BASE": {
+		"loading": "Cargando categoría…",
+		"notFound": "No se encontró la categoría.",
+		"error": "No se pudo cargar el contenido. Inténtalo de nuevo más tarde.",
+		"noApi": "La URL del API de WordPress no está configurada. Define BLOG_WP_GRAPHQL_URL en blog-wp-graphql.config.ts."
 	}
 }

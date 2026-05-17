@@ -1,0 +1,84 @@
+<div #target></div>
+<app-header></app-header>
+<div class="espaciado"></div>
+
+<article class="category-base">
+  <!-- ── Estados intermedios ─────────────────────────────────────── -->
+  @if (estado === 'cargando') {
+  <p class="category-base__mensaje" data-testid="category-base-cargando">
+    {{ 'BLOG_CATEGORY_BASE.loading' | translate }}
+  </p>
+  }
+  @if (estado === 'error') {
+  <p class="category-base__mensaje" data-testid="category-base-error">
+    {{ 'BLOG_CATEGORY_BASE.error' | translate }}
+  </p>
+  }
+  @if (estado === 'no-encontrado') {
+  <p class="category-base__mensaje" data-testid="category-base-no-encontrado">
+    {{ 'BLOG_CATEGORY_BASE.notFound' | translate }}
+  </p>
+  }
+
+  <!-- ── Sin API: cabecera estática con datos locales ─────────────── -->
+  @if (estado === 'sin-api') {
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-5 d-flex flex-column align-items-start">
+          @if (categoriaLocal?.rutaIcono) {
+          <img [src]="categoriaLocal?.rutaIcono" alt="" height="80" width="auto" class="drop">
+          }
+        </div>
+        <div class="col-md-7">
+          <h1 class="tituloPost fuenteOcho pb-2">{{ categoriaLocal?.nombre | uppercase }}</h1>
+          <p class="c7 f-open-sans-c fs-20 lh-20" data-testid="category-base-sin-api">
+            {{ 'BLOG_CATEGORY_BASE.noApi' | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+  }
+
+  <!-- ── Contenido dinámico del CMS ──────────────────────────────── -->
+  @if (estado === 'listo' && categoria) {
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+
+      <!-- Cabecera: ícono + título -->
+      <div class="row align-items-center">
+        <div class="col-md-5 d-flex flex-column">
+          @if (categoriaLocal?.rutaIcono) {
+          <img [src]="categoriaLocal?.rutaIcono" alt="" height="80" width="auto" class="drop">
+          }
+        </div>
+        <div class="col-md-7">
+          <h1 class="tituloPost fuenteOcho pb-2">{{ categoria.titulo | uppercase }}</h1>
+        </div>
+      </div>
+
+      <div class="espaciado"></div>
+
+      <!-- Cuerpo HTML proveniente del CMS -->
+      @if (contenidoSeguro) {
+      <section
+        class="category-base__cuerpo wp-content c7 f-open-sans-c fs-20 lh-25"
+        data-testid="category-base-contenido"
+        [innerHTML]="contenidoSeguro">
+      </section>
+      }
+
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+  }
+</article>
+
+<app-footer></app-footer>
+<div class="go-up" (click)="scroll(target)">
+  <i class="fa fa-chevron-up" aria-hidden="true"></i>
+</div>

@@ -60,3 +60,26 @@ export interface WpGraphqlData {
 export interface WpGraphqlResponse {
   data: WpGraphqlData;
 }
+
+// ── Pages (categorías headless) ──────────────────────────────────────────────
+
+/** Nodo de una página en la API GraphQL de WordPress. */
+export interface WpGraphqlPageNode {
+  id: string;
+  title: string;
+  content: string;
+  slug?: string;
+  uri?: string;
+}
+
+export interface WpGraphqlPages {
+  edges: { node: WpGraphqlPageNode }[];
+}
+
+export interface WpGraphqlPagesData {
+  pages: WpGraphqlPages;
+}
+
+export interface WpGraphqlPagesResponse {
+  data: WpGraphqlPagesData;
+}

@@ -1,0 +1,20 @@
+.category-base__mensaje {
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.tituloPost {
+  text-transform: uppercase;
+  line-height: 80px;
+  font-size: 95px;
+  color: white;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+.category-base__cuerpo {
+  margin-bottom: 2rem;
+}
+
+.go-up {
+  cursor: pointer;
+}
