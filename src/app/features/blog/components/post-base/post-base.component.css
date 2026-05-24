@@ -32,4 +32,6 @@
 .texto-lateral {
   transform: rotate(-90deg);
   display: inline-block;
+  position: relative;
+  left: -40px;
 }

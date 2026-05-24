@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
+import { DynamicContentComponent } from 'src/app/shared/components/dynamic-content/dynamic-content.component';
+import { HeaderPostSupplementComponent } from 'src/app/shared/components/header-post-supplement/header-post-supplement.component';
 import { PostViewModel } from '../../models/post-view.model';
 import { BlogContentService } from '../../services/blog-content.service';
-import { ContentAuthorComponent } from 'src/app/shared/components/content-author/content-author.component';
 import { CATEGORIA } from '../../constants/categories.constant';
 import { CategoriaPostModel } from '../../models/categorias.model';
 
@@ -16,22 +16,18 @@ export type PostBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error' | 
 @Component({
   selector: 'app-post-base',
   standalone: true,
-  imports: [CommonModule, TranslateModule, HeaderComponent, FooterComponent, ContentAuthorComponent],
+  imports: [CommonModule, TranslateModule, HeaderComponent, FooterComponent, DynamicContentComponent, HeaderPostSupplementComponent],
   templateUrl: './post-base.component.html',
   styleUrl: './post-base.component.css'
 })
 export class PostBaseComponent implements OnInit {
   estado: PostBaseEstado = 'cargando';
   post: PostViewModel | null = null;
-  contenidoSeguro: SafeHtml | null = null;
-  resumenSeguro: SafeHtml | null = null;
-  parrafosAdicionalesSeguros: SafeHtml[] = [];
   categoriaData?: CategoriaPostModel;
 
   constructor(
     private readonly route: ActivatedRoute,
     private readonly blogContent: BlogContentService,
-    private readonly sanitizer: DomSanitizer
   ) { }
 
   ngOnInit(): void {
@@ -51,31 +47,53 @@ export class PostBaseComponent implements OnInit {
         if (!publicacion) {
           this.estado = 'no-encontrado';
           this.post = null;
-          this.contenidoSeguro = null;
-          this.resumenSeguro = null;
           return;
         }
         this.post = publicacion;
-        this.categoriaData = CATEGORIA.find(c => c.nombre.toLowerCase() === publicacion.categoria?.toLowerCase());
-        this.contenidoSeguro = this.sanitizer.bypassSecurityTrustHtml(publicacion.contenidoHtml);
-        this.resumenSeguro = publicacion.contentAuthor?.introduction?.trim()
-          ? this.sanitizer.bypassSecurityTrustHtml(publicacion.contentAuthor.introduction)
-          : null;
-        this.parrafosAdicionalesSeguros = (publicacion.contentAuthor?.additionalParagraphs || [])
-          .filter(p => typeof p === 'string' && p.trim().length > 0)
-          .map(p => this.sanitizer.bypassSecurityTrustHtml(p));
+        this.categoriaData = CATEGORIA.find(
+          c => c.nombre.toLowerCase() === publicacion.categoriaNombre?.toLowerCase()
+        );
         this.estado = 'listo';
       },
       error: () => {
         this.estado = 'error';
         this.post = null;
-        this.contenidoSeguro = null;
-        this.resumenSeguro = null;
       }
     });
   }
 
   scroll(el: HTMLElement): void {
     el.scrollIntoView();
+  }
+
+  /** Ruta al PNG del ícono de la categoría (assets locales como fallback) */
+  get rutaIconoCategoria(): string {
+    if (this.categoriaData?.rutaIcono) {
+      return this.categoriaData.rutaIcono;
+    }
+    const nombre = this.post?.categoriaNombre?.toLowerCase() ?? '';
+    return nombre ? `assets/img/categorias/${nombre}.png` : '';
+  }
+
+  /**
+   * Extrae cada párrafo del extracto HTML de WordPress como texto limpio.
+   * Toma el contenido de cada <p>...</p> y elimina cualquier etiqueta HTML interna.
+   * SSR-safe: usa regex, no requiere DOM.
+   */
+  get extractoParrafos(): string[] {
+    const html = this.post?.resumenHtml ?? '';
+    if (!html.trim()) return [];
+
+    // Extrae el contenido entre etiquetas <p>
+    const parrafos = html.match(/<p[^>]*>([\s\S]*?)<\/p>/gi) ?? [];
+
+    if (parrafos.length > 0) {
+      return parrafos
+        .map(p => p.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim())
+        .filter(t => t.length > 0);
+    }
+
+    // Fallback: si no hay <p>, limpia todo el HTML y devuelve como párrafo único
+    return [html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim()].filter(t => t.length > 0);
   }
 }

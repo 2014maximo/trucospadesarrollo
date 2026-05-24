@@ -63,12 +63,12 @@
 
       <div class="espaciado"></div>
 
-      <!-- Cuerpo HTML proveniente del CMS -->
-      @if (contenidoSeguro) {
+      <!-- Cuerpo dinámico: HTML + componentes Angular embebidos desde WordPress -->
+      @if (categoria.contenidoHtml) {
       <section
         class="category-base__cuerpo wp-content c7 f-open-sans-c fs-20 lh-25"
-        data-testid="category-base-contenido"
-        [innerHTML]="contenidoSeguro">
+        data-testid="category-base-contenido">
+        <app-dynamic-content [content]="categoria.contenidoHtml"></app-dynamic-content>
       </section>
       }
 

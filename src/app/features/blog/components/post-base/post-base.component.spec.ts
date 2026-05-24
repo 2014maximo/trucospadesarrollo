@@ -15,8 +15,8 @@ function publicacionMock(): PostViewModel {
     resumenHtml: '<p>Resumen</p>',
     fechaPublicacion: '2026-01-01',
     fechaModificacion: '2026-01-02',
-    nombreAutor: 'Autor',
-    categoria: 'categoria-test'
+    categoria: 'categoria-test',
+    categoriaNombre: 'Developer'
   };
 }
 

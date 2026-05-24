@@ -1,7 +1,11 @@
 <app-header-post [categoria]="breadcrumb"></app-header-post>
 <div class="espaciado"></div>
-<app-header-post-supplement [idPublicacion]="idPublicacion"
-    [rutaIconoSugerido]="categoria.rutaIcono"></app-header-post-supplement>
+<app-header-post-supplement
+    [rutaIcono]="categoria.rutaIcono"
+    [titulo]="publicacion.nombre"
+    [descripcion]="publicacion.descripcion"
+    [fecha]="publicacion.fechaActualizacion || publicacion.fechaCreacion">
+</app-header-post-supplement>
 
 <div class="espaciado"></div>
 

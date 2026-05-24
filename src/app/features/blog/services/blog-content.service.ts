@@ -36,39 +36,22 @@ export class BlogContentService {
 
     const query = `
       query GetPost($slug: String!) {
-        posts(where: {name: $slug}) {
+        posts(where: { name: $slug }) {
           nodes {
             id
             title
             content
             excerpt
             date
-            uri
-            postId
             modified
-            contentauthormodel {
-              autorDelPost
-              introduction
-              fieldGroupName
-              avatar {
-                node {
-                  sourceUrl
-                  uri
-                }
-              }
-              linkAAutor {
-                url
-                title
-                target
-              }
-              additionalparagraphs {
-                fieldGroupName
-                paragraphsmore
-              }
-            }
+            uri
+            authorId
             categories {
-              nodes {
-                name
+              edges {
+                node {
+                  id
+                  name
+                }
               }
             }
           }
@@ -82,41 +65,35 @@ export class BlogContentService {
         variables: { slug: trimmed }
       })
       .pipe(
-        map(response => response.data?.posts?.nodes?.[0] ?? null),
+        map(response => {
+          console.log('[BlogContentService] getPostBySlug — respuesta raw de la API:', response);
+          return response.data?.posts?.nodes?.[0] ?? null;
+        }),
         map(post => (post ? this.toViewModel(post) : null))
       );
   }
 
   private toViewModel(post: WpGraphqlPostNode): PostViewModel {
-    const authorModel = post.contentauthormodel;
-    const categoryName = post.categories?.nodes?.[0]?.name ?? '';
+    const categoryEdgeNode = post.categories?.edges?.[0]?.node;
+    const categoryId = categoryEdgeNode?.id ?? '';
+    const categoryName = categoryEdgeNode?.name ?? '';
 
     return {
-      id: String(post.postId ?? post.id),
+      id: post.id,
       slug: post.uri?.replace(/^\/|\/$/g, '').split('/').pop() ?? '',
-      titulo: this.stripRenderedToText(post.title ?? ''),
+      titulo: this.stripHtmlToText(post.title ?? ''),
       contenidoHtml: post.content ?? '',
       resumenHtml: post.excerpt ?? '',
       fechaPublicacion: post.date,
       fechaModificacion: post.modified,
-      nombreAutor: authorModel?.autorDelPost ?? '',
-      categoria: categoryName,
-      contentAuthor: {
-        name: authorModel?.autorDelPost ?? '',
-        srcAvatar: authorModel?.avatar?.node?.sourceUrl ?? '',
-        linkRefenceAuthor: authorModel?.linkAAutor?.url ?? '',
-        introduction: authorModel?.introduction ?? '',
-        additionalParagraphs: Array.isArray(authorModel?.additionalparagraphs) 
-          ? authorModel.additionalparagraphs.map(p => p?.paragraphsmore ?? '') 
-          : []
-      }
+      categoria: categoryId,
+      categoriaNombre: categoryName,
     };
   }
 
-  private stripRenderedToText(html: string): string {
-    if (!html) {
-      return '';
-    }
+  private stripHtmlToText(html: string): string {
+    if (!html) return '';
+    // SSR-safe: usa regex si no hay DOM disponible
     if (typeof document === 'undefined') {
       return html.replace(/<[^>]+>/g, '').trim();
     }
@@ -163,7 +140,10 @@ export class BlogContentService {
         variables: { slug: trimmed }
       })
       .pipe(
-        map(response => response.data?.pages?.edges?.[0]?.node ?? null),
+        map(response => {
+          console.log('[BlogContentService] getCategoryBySlug — respuesta raw de la API:', response);
+          return response.data?.pages?.edges?.[0]?.node ?? null;
+        }),
         map(page => (page ? this.toPageViewModel(page) : null))
       );
   }
@@ -172,7 +152,7 @@ export class BlogContentService {
     return {
       id: page.id,
       slug: page.slug ?? page.uri?.replace(/^\/|\/$/g, '').split('/').pop() ?? '',
-      titulo: this.stripRenderedToText(page.title ?? ''),
+      titulo: this.stripHtmlToText(page.title ?? ''),
       contenidoHtml: page.content ?? ''
     };
   }

@@ -1,3 +1,5 @@
 .texto-lateral {
     transform: rotate(-90deg);
+    position: relative;
+    left: -40px;
 }

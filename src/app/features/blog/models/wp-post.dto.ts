@@ -1,40 +1,19 @@
-/** DTO de un post en la API GraphQL de WordPress. */
+/** DTO de la API GraphQL de WordPress (sin campos ACF). */
 
-export interface WpGraphqlAvatar {
-  node?: {
-    sourceUrl?: string;
-    uri?: string;
-  };
-}
+// ── Posts ────────────────────────────────────────────────────────────────────
 
-export interface WpGraphqlLink {
-  url?: string;
-  title?: string;
-  target?: string;
-}
-
-export interface WpGraphqlContentAuthorModel {
-  autorDelPost?: string;
-  introduction?: string;
-  fieldGroupName?: string;
-  avatar?: WpGraphqlAvatar;
-  linkAAutor?: WpGraphqlLink;
-  additionalparagraphs?: WpGraphqlAdditionalParagraphs[];
-}
-
-export interface WpGraphqlCategoryNode {
+export interface WpGraphqlCategoryEdgeNode {
+  id: string;
   name: string;
 }
 
+export interface WpGraphqlCategoryEdge {
+  node: WpGraphqlCategoryEdgeNode;
+}
+
 export interface WpGraphqlCategories {
-  nodes: WpGraphqlCategoryNode[];
+  edges: WpGraphqlCategoryEdge[];
 }
-
-export interface WpGraphqlAdditionalParagraphs {
-  fieldGroupName?: string;
-  paragraphsmore?: string;
-}
-
 
 export interface WpGraphqlPostNode {
   id: string;
@@ -42,10 +21,9 @@ export interface WpGraphqlPostNode {
   content: string;
   excerpt: string;
   date: string;
-  uri: string;
-  postId: number;
   modified: string;
-  contentauthormodel?: WpGraphqlContentAuthorModel;
+  uri: string;
+  authorId?: string;
   categories?: WpGraphqlCategories;
 }
 
@@ -63,7 +41,6 @@ export interface WpGraphqlResponse {
 
 // ── Pages (categorías headless) ──────────────────────────────────────────────
 
-/** Nodo de una página en la API GraphQL de WordPress. */
 export interface WpGraphqlPageNode {
   id: string;
   title: string;

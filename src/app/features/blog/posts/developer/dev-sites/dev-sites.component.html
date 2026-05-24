@@ -2,8 +2,12 @@
 <app-header></app-header>
 <div class="espaciado"></div>
 <article>
-    <app-header-post-supplement [idPublicacion]="idPublicacion"
-        [rutaIconoSugerido]="categoria.rutaIcono"></app-header-post-supplement>
+    <app-header-post-supplement
+        [rutaIcono]="categoria.rutaIcono"
+        [titulo]="publicacion.nombre"
+        [descripcion]="publicacion.descripcion"
+        [fecha]="publicacion.fechaActualizacion || publicacion.fechaCreacion">
+    </app-header-post-supplement>
     <div class="row">
         <div class="col-md-1"></div>
         <div class="col-md-10">

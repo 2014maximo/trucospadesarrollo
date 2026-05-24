@@ -1,5 +1,3 @@
-import { ContentAuthorModel } from '../../../shared/models/content-author.model';
-
 /** Modelo de vista listo para enlazar en `PostBaseComponent`. */
 export interface PostViewModel {
   id: string;
@@ -9,7 +7,7 @@ export interface PostViewModel {
   resumenHtml: string;
   fechaPublicacion: string;
   fechaModificacion: string;
-  nombreAutor: string;
   categoria: string;
-  contentAuthor?: ContentAuthorModel;
+  /** Nombre legible de la categoría (ej: "Developer") para construir la ruta del ícono */
+  categoriaNombre: string;
 }

@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
+import { DynamicContentComponent } from 'src/app/shared/components/dynamic-content/dynamic-content.component';
 import { CategoryViewModel } from '../../models/category-view.model';
 import { CategoriaPostModel } from '../../models/categorias.model';
 import { BlogContentService } from '../../services/blog-content.service';
@@ -25,7 +25,7 @@ export type CategoryBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error
 @Component({
   selector: 'app-category-base',
   standalone: true,
-  imports: [CommonModule, TranslateModule, HeaderComponent, FooterComponent],
+  imports: [CommonModule, TranslateModule, HeaderComponent, FooterComponent, DynamicContentComponent],
   templateUrl: './category-base.component.html',
   styleUrl: './category-base.component.css'
 })
@@ -33,12 +33,10 @@ export class CategoryBaseComponent implements OnInit {
   estado: CategoryBaseEstado = 'cargando';
   categoria: CategoryViewModel | null = null;
   categoriaLocal?: CategoriaPostModel;
-  contenidoSeguro: SafeHtml | null = null;
 
   constructor(
     private readonly route: ActivatedRoute,
     private readonly blogContent: BlogContentService,
-    private readonly sanitizer: DomSanitizer
   ) {}
 
   ngOnInit(): void {
@@ -65,17 +63,14 @@ export class CategoryBaseComponent implements OnInit {
         if (!pagina) {
           this.estado = 'no-encontrado';
           this.categoria = null;
-          this.contenidoSeguro = null;
           return;
         }
         this.categoria = pagina;
-        this.contenidoSeguro = this.sanitizer.bypassSecurityTrustHtml(pagina.contenidoHtml);
         this.estado = 'listo';
       },
       error: () => {
         this.estado = 'error';
         this.categoria = null;
-        this.contenidoSeguro = null;
       }
     });
   }
