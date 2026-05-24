@@ -1,6 +1,8 @@
 {
   "version": 2,
-  "framework": "angular",
   "buildCommand": "pnpm run build",
-  "outputDirectory": "dist/trucospadesarrollo/browser"
+  "outputDirectory": "dist/trucospadesarrollo/browser",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
