@@ -31,13 +31,20 @@ export class PostBaseComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    console.log('[PostBase] ngOnInit — URL completa:', window?.location?.href ?? 'N/A');
+
     if (!this.blogContent.hasBaseUrl()) {
+      console.warn('[PostBase] Sin URL de API configurada → estado: sin-api');
       this.estado = 'sin-api';
       return;
     }
 
     const slug = this.route.snapshot.paramMap.get('slug') ?? '';
+    const categoria = this.route.snapshot.paramMap.get('categoria') ?? '';
+    console.log('[PostBase] Parámetros de ruta → categoria:', categoria, '| slug:', slug);
+
     if (!slug.trim()) {
+      console.warn('[PostBase] Slug vacío → estado: no-encontrado');
       this.estado = 'no-encontrado';
       return;
     }
@@ -45,17 +52,21 @@ export class PostBaseComponent implements OnInit {
     this.blogContent.getPostBySlug(slug).subscribe({
       next: publicacion => {
         if (!publicacion) {
+          console.warn('[PostBase] La API devolvió null para slug:', slug, '→ estado: no-encontrado');
           this.estado = 'no-encontrado';
           this.post = null;
           return;
         }
+        console.log('[PostBase] Post cargado OK:', publicacion);
         this.post = publicacion;
         this.categoriaData = CATEGORIA.find(
           c => c.nombre.toLowerCase() === publicacion.categoriaNombre?.toLowerCase()
         );
+        console.log('[PostBase] Categoría local encontrada:', this.categoriaData?.nombre ?? 'ninguna (usará fallback PNG)');
         this.estado = 'listo';
       },
-      error: () => {
+      error: (err) => {
+        console.error('[PostBase] Error al llamar la API:', err);
         this.estado = 'error';
         this.post = null;
       }
