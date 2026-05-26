@@ -31,7 +31,7 @@ export class PostBaseComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log('[PostBase] ngOnInit — URL completa:', window?.location?.href ?? 'N/A');
+    // console.log('[PostBase] ngOnInit — URL completa:', window?.location?.href ?? 'N/A');
 
     if (!this.blogContent.hasBaseUrl()) {
       console.warn('[PostBase] Sin URL de API configurada → estado: sin-api');
