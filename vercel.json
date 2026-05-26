@@ -3,22 +3,11 @@
   "buildCommand": "npm run build",
   "outputDirectory": "dist/trucospadesarrollo/browser",
   "functions": {
-    "dist/trucospadesarrollo/server/server.mjs": {
-      "runtime": "nodejs20.x"
+    "api/index.mjs": {
+      "includeFiles": "dist/trucospadesarrollo/server/**"
     }
   },
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|map|json|txt|webp|avif|webm|mp4|xml))",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/dist/trucospadesarrollo/server/server.mjs"
-    }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index.mjs" }
   ]
 }
