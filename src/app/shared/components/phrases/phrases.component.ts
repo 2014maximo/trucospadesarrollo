@@ -1,12 +1,14 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild, Inject, PLATFORM_ID } from '@angular/core';
-import { FrasesModel } from '../../models/phrases.model';
-import { firstValueFrom, Subject } from 'rxjs';
+import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { isPlatformBrowser } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { firstValueFrom } from 'rxjs';
+import { IFrasesModel } from '../../models/phrases.model';
 import { PHRASES } from './constants/phrases.constant';
-import { CommonModule } from '@angular/common';
-import { TraslateForce } from '@shared//traslate-function';
-import Typewriter from 'typewriter-effect';
+
+export type PhrasesEstado = 'cargando' | 'listo' | 'error';
+
+type TypePhase = 'phrase' | 'author' | 'wait' | 'delete';
 
 @Component({
   selector: 'app-phrases',
@@ -16,93 +18,100 @@ import Typewriter from 'typewriter-effect';
 })
 export class PhrasesComponent implements OnInit {
 
-  public frases: FrasesModel[] = [];
-  private ondestroy$: Subject<boolean> = new Subject();
-
-  phrases = ['Angular es genial', 'Simula escritura', 'Escribe como humano'];
-  displayText = '';
+  estado: PhrasesEstado = 'cargando';
+  frases: IFrasesModel[] = [];
+  displayPhrase = '';
+  displayAuthor = '';
   currentPhraseIndex = 0;
   charIndex = 0;
-  author = '';
-  colorAuthor = ''
+  colorAuthor = '';
 
-  constructor(private translate: TranslateService, private el: ElementRef, @Inject(PLATFORM_ID) private platformId: Object) {
-    const transla = new TraslateForce(this.translate);
-    transla.listTranslates();
-  }
+  private typePhase: TypePhase = 'phrase';
 
+  constructor(
+    private translate: TranslateService,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit(): void {
     this.inicializarVariables();
   }
 
-  ngOnDestroy(): void {
-    this.ondestroy$.next(true);
-  }
-
-  private inicializarVariables() {
+  private inicializarVariables(): void {
     this.procesarCargarFrases();
   }
 
-  typeNextCharacter(): void {
-    if (this.charIndex < this.frases[this.currentPhraseIndex].frase.length) {
-      this.displayText += this.frases[this.currentPhraseIndex].frase[this.charIndex];
-      this.author = this.frases[this.currentPhraseIndex].autor;
-      this.colorAuthor = this.frases[this.currentPhraseIndex].colorText;
-      this.charIndex++;
-      setTimeout(() => this.typeNextCharacter(), 100);
-    } else {
-      setTimeout(() => this.deletePhrase(), 2000);
-    }
-  }
-
-  deletePhrase(): void {
-    if (this.charIndex > 0) {
-      this.displayText = this.displayText.slice(0, -1);
-      this.charIndex--;
-      setTimeout(() => this.deletePhrase(), 50);
-    } else {
-      this.currentPhraseIndex = (this.currentPhraseIndex + 1) % this.frases.length;
-      setTimeout(() => this.typeNextCharacter(), 500);
-    }
-  }
-
-  /*   private cargarFrases(){
-      this.webService.consultarFrases()
-      .pipe(takeUntil(this.ondestroy$))
-      .subscribe({
-        next:(resp) => {
-          this.procesarCargaFrases(resp);
-        }
-      })
-    } */
-
-  async procesarCargarFrases() {
-    // this.frases = resp;
-    for (let i = 0; i < PHRASES.length; i++) {
-      let frase = {
-        frase: await this.traducirReferencia(PHRASES[i].frase),
-        autor: await this.traducirReferencia(PHRASES[i].autor),
-        borde: PHRASES[i].borde,
-        colorText: PHRASES[i].colorText,
-        id: PHRASES[i].id
-      }
-      this.frases.push(frase);
-    }
-    this.frases.sort((a, b) => { return Math.random() - 0.5 });
-
-    if (this.frases[1].frase && isPlatformBrowser(this.platformId)) {
-      this.typeNextCharacter();
-    }
-
-  }
-
-  public async traducirReferencia(ref: string): Promise<string> {
+  async procesarCargarFrases(): Promise<void> {
     try {
-      let traduccion = await firstValueFrom(this.translate.get(ref));
-      return traduccion;
+      const traducciones = await Promise.all(
+        PHRASES.map(async (p) => ({
+          frase: await firstValueFrom(this.translate.get(p.frase)),
+          autor: await firstValueFrom(this.translate.get(p.autor)),
+          borde: p.borde,
+          colorText: p.colorText,
+          id: p.id,
+        }))
+      );
+
+      this.frases = traducciones.sort((a, b) => Math.random() - 0.5);
+
+      if (this.frases.length > 0 && isPlatformBrowser(this.platformId)) {
+        this.typeNext();
+      }
+
+      this.estado = 'listo';
     } catch {
-      return 'NO-TRASLATE'
+      this.estado = 'error';
+    }
+  }
+
+  typeNext(): void {
+    const current = this.frases[this.currentPhraseIndex];
+
+    switch (this.typePhase) {
+      case 'phrase':
+        if (this.charIndex < current.frase.length) {
+          this.displayPhrase += current.frase[this.charIndex];
+          this.colorAuthor = current.colorText;
+          this.charIndex++;
+          setTimeout(() => this.typeNext(), 100);
+        } else {
+          this.typePhase = 'author';
+          this.charIndex = 0;
+          this.typeNext();
+        }
+        break;
+
+      case 'author':
+        if (this.charIndex < current.autor.length) {
+          this.displayAuthor += current.autor[this.charIndex];
+          this.charIndex++;
+          setTimeout(() => this.typeNext(), 100);
+        } else {
+          this.typePhase = 'wait';
+          setTimeout(() => this.typeNext(), 20000);
+        }
+        break;
+
+      case 'wait':
+        this.typePhase = 'delete';
+        this.typeNext();
+        break;
+
+      case 'delete':
+        if (this.displayAuthor.length > 0) {
+          this.displayAuthor = this.displayAuthor.slice(0, -1);
+          setTimeout(() => this.typeNext(), 50);
+        } else if (this.displayPhrase.length > 0) {
+          this.displayPhrase = this.displayPhrase.slice(0, -1);
+          setTimeout(() => this.typeNext(), 50);
+        } else {
+          this.currentPhraseIndex = (this.currentPhraseIndex + 1) % this.frases.length;
+          this.typePhase = 'phrase';
+          this.charIndex = 0;
+          setTimeout(() => this.typeNext(), 500);
+        }
+        break;
     }
   }
 

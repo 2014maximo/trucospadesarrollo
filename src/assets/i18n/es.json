@@ -150,6 +150,10 @@
 			"autor": "Mario Alonso Puig"
 		}
 	},
+	"PHRASES": {
+		"loading": "Cargando frases...",
+		"error": "Error al cargar las frases"
+	},
 	"PreguntaFramework": "¿En qué marcos y tecnologías web ha trabajado intensamente durante el último año y en cuáles desea trabajar el próximo año? (23.678 Encuestados.)",
 	"PreguntaLenguajes": "¿En qué lenguajes de programación, scripting y marcado ha trabajado intensamente durante el último año y en cuáles desea trabajar durante el próximo año? (31.771 encuestados.)",
 	"PreguntaBasesDatos": "¿En qué entornos de bases de datos ha realizado un amplio trabajo de desarrollo durante el último año y en cuáles desea trabajar durante el próximo año? (26.083 encuestados.)",

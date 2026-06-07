@@ -6,75 +6,75 @@ import { CategoriaPostModel, DatosPost, SubCategoriaModel } from '@models/catego
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-slider-home',
-  imports: [
-    CommonModule
-  ],
-  templateUrl: './slider-home.component.html',
-  styleUrl: './slider-home.component.css'
+	selector: 'app-slider-home',
+	imports: [
+		CommonModule
+	],
+	templateUrl: './slider-home.component.html',
+	styleUrl: './slider-home.component.css'
 })
 export class SliderHomeComponent {
 
-  public sliders: any;
-  public categoria: CategoriaPostModel[] = CATEGORIA as [];
+	public sliders: any;
+	public categoria: CategoriaPostModel[] = CATEGORIA as [];
 
-  constructor(private ruta: Router) {
-  }
+	constructor(private ruta: Router) {
+	}
 
-  ngOnInit(): void {
-    this.inicializarVariables();
-  }
+	ngOnInit(): void {
+		this.inicializarVariables();
+	}
 
-  inicializarVariables(){
-    this.sliders = this.extraerUltimosPost();
-    let grupo = this.extraerUltimosPost();
+	inicializarVariables() {
+		this.sliders = this.extraerUltimosPost();
+		let grupo = this.extraerUltimosPost();
 
-  }
+	}
 
-  private extraerUltimosPost(): SliderModel[]{
+	private extraerUltimosPost(): SliderModel[] {
 
-    let slidersSeleccionados: any[] =[];
-    let grupoSliders: SliderModel[] = [];
-    let incremento:number = 0;
+		let slidersSeleccionados: any[] = [];
+		let grupoSliders: SliderModel[] = [];
+		let incremento: number = 0;
 
-    CATEGORIA.forEach((e:CategoriaPostModel, i:number)=>{
-      e.post.forEach((element:any) => {
-        slidersSeleccionados.push(element)
-      });
-      e.subcategorias.forEach((s:SubCategoriaModel) => {
-        s.post.forEach((p: DatosPost) => {
-          slidersSeleccionados.push(p);
-        });
-      })
-    }); // SE EXTRAEN LOS POST DEL ÁRBOL
+		CATEGORIA.forEach((e: CategoriaPostModel, i: number) => {
+			e.post.forEach((element: any) => {
+				slidersSeleccionados.push(element)
+			});
+			e.subcategorias.forEach((s: SubCategoriaModel) => {
+				s.post.forEach((p: DatosPost) => {
+					slidersSeleccionados.push(p);
+				});
+			})
+		}); // SE EXTRAEN LOS POST DEL ÁRBOL
 
-    slidersSeleccionados = slidersSeleccionados.filter((element:any) => 
-      element.mostrarEnPostHome
-    );// SE RETIRAN LOS POST CATEGORIA
+		slidersSeleccionados = slidersSeleccionados.filter((element: any) =>
+			element.mostrarEnPostHome
+		);// SE RETIRAN LOS POST CATEGORIA
 
-    slidersSeleccionados.sort( (a:DatosPost, b:DatosPost) =>  
-      this.convertirFechaANumero(b.fechaActualizacion) - this.convertirFechaANumero(a.fechaActualizacion)
-    );// SE ORDENAN POR FECHA ASCENDENTE
+		slidersSeleccionados.sort((a: DatosPost, b: DatosPost) =>
+			this.convertirFechaANumero(b.fechaActualizacion) - this.convertirFechaANumero(a.fechaActualizacion)
+		);// SE ORDENAN POR FECHA ASCENDENTE
 
 
-    for(let i=0; i < slidersSeleccionados.length; i++){
-      if(slidersSeleccionados[i].imgSlider){
-        grupoSliders.push(slidersSeleccionados[i].imgSlider)
-      }
-    }
-    
-    return grupoSliders
-  }
+		for (let i = 0; i < slidersSeleccionados.length; i++) {
+			if (slidersSeleccionados[i].imgSlider) {
+				grupoSliders.push(slidersSeleccionados[i].imgSlider)
+			}
+		}
 
-  public convertirFechaANumero(fecha:string):number{
-    let numero = +(new Date(fecha).getTime());
-    return +numero;
-  }
+		return grupoSliders
+	}
 
-  irAlPath(path: string){
-    this.ruta.navigate(['/',path]);
-    console.log(path,'ir')
-  }
+	public convertirFechaANumero(fecha: string): number {
+		let numero = +(new Date(fecha).getTime());
+		return +numero;
+	}
+
+	irAlPath(path: string) {
+		this.ruta.navigate(['/', path]);
+		console.log(path, 'ir')
+	}
 
 }
 

@@ -150,6 +150,10 @@
 			"autor": "Mario Alonso Puig"
 		}
 	},
+	"PHRASES": {
+		"loading": "Chargement des phrases...",
+		"error": "Erreur lors du chargement des phrases"
+	},
 	"PreguntaFramework": "Quels sont les cadres et technologies web sur lesquels vous avez travaillé intensivement l'année dernière et sur lesquels vous souhaitez travailler l'année prochaine (23.678 répondants) ?",
 	"PreguntaLenguajes": "Dans quels langages de programmation, de script et de balisage avez-vous travaillé de manière intensive au cours de l'année écoulée et quels sont ceux sur lesquels vous souhaitez travailler au cours de l'année prochaine (31.771 répondants) ?",
 	"PreguntaBasesDatos": "Quels sont les environnements de base de données sur lesquels vous avez effectué un travail de développement approfondi au cours de l'année écoulée et quels sont ceux sur lesquels vous souhaitez travailler au cours de l'année à venir (26.083 personnes interrogées) ?",
