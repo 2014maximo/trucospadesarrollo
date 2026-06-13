@@ -15,6 +15,14 @@ export interface WpGraphqlCategories {
   edges: WpGraphqlCategoryEdge[];
 }
 
+export interface WpGraphqlFeaturedImageNode {
+  sourceUrl: string;
+}
+
+export interface WpGraphqlFeaturedImage {
+  node: WpGraphqlFeaturedImageNode;
+}
+
 export interface WpGraphqlPostNode {
   id: string;
   title: string;
@@ -25,6 +33,7 @@ export interface WpGraphqlPostNode {
   uri: string;
   authorId?: string;
   categories?: WpGraphqlCategories;
+  featuredImage?: WpGraphqlFeaturedImage;
 }
 
 export interface WpGraphqlPosts {

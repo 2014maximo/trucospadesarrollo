@@ -10,4 +10,6 @@ export interface PostViewModel {
   categoria: string;
   /** Nombre legible de la categoría (ej: "Developer") para construir la ruta del ícono */
   categoriaNombre: string;
+  /** URL de la imagen destacada del post */
+  imagenDestacada?: string;
 }

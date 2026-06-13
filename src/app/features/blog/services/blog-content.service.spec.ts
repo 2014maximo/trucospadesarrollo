@@ -78,8 +78,11 @@ describe('BlogContentService', () => {
                   avatar: { node: { filePath: '/avatar.png' } },
                   linkAAutor: { url: 'http://link', title: 'Alex', target: '_blank' }
                 },
+                featuredImage: {
+                  node: { sourceUrl: 'https://example.com/imagen.jpg' }
+                },
                 categories: {
-                  nodes: [{ name: 'Desarrollo' }]
+                  edges: [{ node: { id: 'cat-1', name: 'Desarrollo' } }]
                 }
               }
             ]
@@ -94,10 +97,80 @@ describe('BlogContentService', () => {
           titulo: 'Título',
           contenidoHtml: '<p>Cuerpo</p>',
           resumenHtml: '<p>Resumen</p>',
-          nombreAutor: 'Alex',
-          categoria: 'Desarrollo'
+          categoria: 'cat-1',
+          categoriaNombre: 'Desarrollo',
+          imagenDestacada: 'https://example.com/imagen.jpg'
         })
       );
+    });
+
+    describe('getLatestPosts', () => {
+      it('debe solicitar la query con el count por defecto', () => {
+        service.getLatestPosts().subscribe();
+
+        const req = httpMock.expectOne(r =>
+          r.url.startsWith(apiBase) && r.method === 'POST'
+        );
+
+        expect(req.request.body.variables.count).toBe(10);
+        req.flush({ data: { posts: { nodes: [] } } });
+      });
+
+      it('debe mapear múltiples posts a PostViewModel[]', () => {
+        let resultado: any;
+        service.getLatestPosts(3).subscribe(p => (resultado = p));
+
+        const req = httpMock.expectOne(r =>
+          r.url.startsWith(apiBase) && r.method === 'POST'
+        );
+        req.flush({
+          data: {
+            posts: {
+              nodes: [
+                {
+                  id: '1',
+                  uri: '/post-uno/',
+                  date: '2026-01-01T00:00:00',
+                  title: 'Post Uno',
+                  content: '<p>Uno</p>',
+                  excerpt: '<p>Resumen uno</p>',
+                  featuredImage: { node: { sourceUrl: 'https://example.com/img1.jpg' } },
+                  categories: { edges: [{ node: { id: 'c1', name: 'Angular' } }] }
+                },
+                {
+                  id: '2',
+                  uri: '/post-dos/',
+                  date: '2026-01-02T00:00:00',
+                  title: 'Post Dos',
+                  content: '<p>Dos</p>',
+                  excerpt: '<p>Resumen dos</p>',
+                  featuredImage: { node: { sourceUrl: 'https://example.com/img2.jpg' } },
+                  categories: { edges: [] }
+                }
+              ]
+            }
+          }
+        });
+
+        expect(resultado.length).toBe(2);
+        expect(resultado[0].titulo).toBe('Post Uno');
+        expect(resultado[0].imagenDestacada).toBe('https://example.com/img1.jpg');
+        expect(resultado[0].categoriaNombre).toBe('Angular');
+        expect(resultado[1].titulo).toBe('Post Dos');
+        expect(resultado[1].imagenDestacada).toBe('https://example.com/img2.jpg');
+      });
+
+      it('debe emitir array vacío si la API no devuelve nodos', () => {
+        let resultado: any;
+        service.getLatestPosts().subscribe(p => (resultado = p));
+
+        const req = httpMock.expectOne(r =>
+          r.url.startsWith(apiBase) && r.method === 'POST'
+        );
+        req.flush({ data: { posts: { nodes: [] } } });
+
+        expect(resultado).toEqual([]);
+      });
     });
   });
 

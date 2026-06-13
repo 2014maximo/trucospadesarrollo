@@ -1,22 +1,49 @@
+@if (estado === 'oculto') {
+}
+@if (estado === 'cargando') {
+<div class="slider-home__mensaje" data-testid="slider-cargando">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Cargando...</span>
+  </div>
+</div>
+}
+@if (estado === 'error') {
+<div class="slider-home__mensaje text-danger" data-testid="slider-error">
+  Error al cargar el carrusel
+</div>
+}
+@if (estado === 'listo' && slides.length > 0) {
 <div class="row">
-	<div class="col-md-2"></div>
-	<div class="col-md-8">
-		<div id="carouselFade" class="carousel slide carousel-fade sombraUno" data-bs-ride="carousel">
-			<div class="carousel-inner text-center">
-				<div *ngFor="let slide of sliders; let i = index" class="carousel-item {{ i==1? 'active':'' }}">
-					<img [src]="slide.ruta" [alt]="slide.alt" height="auto" width="auto"
-						class="shadow-one cursor-p d-block w-100" (click)="irAlPath(slide.post)">
-				</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="visually-hidden">Next</span>
-			</button>
-		</div>
-	</div>
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
+      data-testid="slider-list">
+      <div class="carousel-inner">
+        @for (slide of slides; track slide.ruta + '_' + $index; let i = $index) {
+        <div class="carousel-item" [class.active]="i === 0">
+          <div class="slider-home__slide" [class.slider-home__slide--reverse]="i % 2 !== 0"
+            (click)="irAlPost(slide.ruta)">
+            <div class="slider-home__imagen">
+              <img [src]="slide.imagenUrl" [alt]="slide.alt" class="slider-home__img" />
+            </div>
+            <div class="slider-home__info">
+              <span class="slider-home__categoria">{{ slide.categoria }}</span>
+              <h2 class="slider-home__titulo">{{ slide.titulo }}</h2>
+            </div>
+          </div>
+        </div>
+        }
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselFade" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselFade" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </div>
 </div>
 <div class="espaciado"></div>
+}

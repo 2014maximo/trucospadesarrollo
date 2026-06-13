@@ -46,6 +46,11 @@ export class BlogContentService {
             modified
             uri
             authorId
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
             categories {
               edges {
                 node {
@@ -73,6 +78,57 @@ export class BlogContentService {
       );
   }
 
+  /**
+   * Obtiene los últimos `count` posts desde WordPress, ordenados por fecha descendente.
+   * Emite array vacío si no hay URL base configurada.
+   */
+  getLatestPosts(count: number = 10): Observable<PostViewModel[]> {
+    if (!this.hasBaseUrl()) {
+      return of([]);
+    }
+
+    const currentLang = this.translate.currentLang || 'es';
+    const apiUrlWithLang = `${this.apiBase}?lang=${currentLang}`;
+
+    const query = `
+      query GetLatestPosts($count: Int!) {
+        posts(first: $count, where: { orderby: { field: DATE, order: DESC } }) {
+          nodes {
+            id
+            title
+            uri
+            date
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            categories {
+              edges {
+                node {
+                  id
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    `;
+
+    return this.http
+      .post<WpGraphqlResponse>(apiUrlWithLang, {
+        query,
+        variables: { count }
+      })
+      .pipe(
+        map(response => {
+          const nodes = response.data?.posts?.nodes ?? [];
+          return nodes.map(post => this.toViewModel(post));
+        })
+      );
+  }
+
   private toViewModel(post: WpGraphqlPostNode): PostViewModel {
     const categoryEdgeNode = post.categories?.edges?.[0]?.node;
     const categoryId = categoryEdgeNode?.id ?? '';
@@ -88,6 +144,7 @@ export class BlogContentService {
       fechaModificacion: post.modified,
       categoria: categoryId,
       categoriaNombre: categoryName,
+      imagenDestacada: post.featuredImage?.node?.sourceUrl ?? '',
     };
   }
 
