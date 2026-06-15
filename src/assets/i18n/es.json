@@ -1831,5 +1831,10 @@
 		"notFound": "No se encontró la categoría.",
 		"error": "No se pudo cargar el contenido. Inténtalo de nuevo más tarde.",
 		"noApi": "La URL del API de WordPress no está configurada. Define BLOG_WP_GRAPHQL_URL en blog-wp-graphql.config.ts."
+	},
+	"BLOG_GALLERY": {
+		"loading": "Cargando publicaciones…",
+		"error": "No se pudieron cargar las publicaciones. Inténtalo de nuevo más tarde.",
+		"noApi": "La URL del API de WordPress no está configurada. Define BLOG_WP_GRAPHQL_URL en blog-wp-graphql.config.ts."
 	}
 }

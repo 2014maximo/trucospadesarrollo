@@ -98,6 +98,8 @@ export class BlogContentService {
             title
             uri
             date
+            modified
+            excerpt
             featuredImage {
               node {
                 sourceUrl
@@ -157,6 +159,60 @@ export class BlogContentService {
     const el = document.createElement('div');
     el.innerHTML = html;
     return (el.textContent ?? el.innerText ?? '').trim();
+  }
+
+  /**
+   * Busca posts por término desde WordPress usando GraphQL search.
+   * Emite array vacío si no hay término o URL base configurada.
+   */
+  searchPosts(query: string, count: number = 8): Observable<PostViewModel[]> {
+    const trimmed = query?.trim() ?? '';
+    if (!trimmed || !this.hasBaseUrl()) {
+      return of([]);
+    }
+
+    const currentLang = this.translate.currentLang || 'es';
+    const apiUrlWithLang = `${this.apiBase}?lang=${currentLang}`;
+
+    const graphqlQuery = `
+      query SearchPosts($search: String!, $count: Int!) {
+        posts(first: $count, where: { search: $search }) {
+          nodes {
+            id
+            title
+            uri
+            date
+            modified
+            excerpt
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            categories {
+              edges {
+                node {
+                  id
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    `;
+
+    return this.http
+      .post<WpGraphqlResponse>(apiUrlWithLang, {
+        query: graphqlQuery,
+        variables: { search: trimmed, count }
+      })
+      .pipe(
+        map(response => {
+          const nodes = response.data?.posts?.nodes ?? [];
+          return nodes.map(post => this.toViewModel(post));
+        })
+      );
   }
 
   // ── Categorías headless (pages) ───────────────────────────────────────────

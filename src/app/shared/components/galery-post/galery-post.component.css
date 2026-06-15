@@ -71,6 +71,10 @@
     background-size: cover;
     border: 0.7px solid  #464141 ;
 }
+.imgPost img {
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}
 .active{
     color: yellow;
 }

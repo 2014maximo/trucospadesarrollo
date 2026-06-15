@@ -1420,5 +1420,10 @@
 		"notFound": "Catégorie introuvable.",
 		"error": "Impossible de charger le contenu. Veuillez réessayer plus tard.",
 		"noApi": "L'URL de l'API WordPress n'est pas configurée. Définissez BLOG_WP_GRAPHQL_URL dans blog-wp-graphql.config.ts."
+	},
+	"BLOG_GALLERY": {
+		"loading": "Chargement des publications…",
+		"error": "Impossible de charger les publications. Veuillez réessayer plus tard.",
+		"noApi": "L'URL de l'API WordPress n'est pas configurée. Définissez BLOG_WP_GRAPHQL_URL dans blog-wp-graphql.config.ts."
 	}
 }

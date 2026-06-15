@@ -24,11 +24,12 @@
                 <form class="formUno mb-2" [formGroup]="formBasic">
                     <input (blur)="desaparecerTablaBusqueda()" class="inputUno text-light fuente bg-transparent"
                         type="search" placeholder="{{ 'Buscar' | translate }}" aria-label="Search"
-                        formControlName="busqueda" (keyup)="buscar($event)">
+                        formControlName="busqueda" (input)="buscar()">
                 </form>
                 <div *ngIf="mostrarResultados">
+                    <p *ngIf="buscando" class="text-light f-open-sans-c m-0 p-0">Buscando...</p>
                     <p *ngFor="let item of encontrados" class="text-light f-open-sans-c cursor-p m-0 p-0"
-                        (click)="irAlPost(item.ruta)">{{ item.nombre }}</p>
+                        (click)="irAlPost(item.ruta)">{{ item.titulo }}</p>
                 </div>
             </div>
             <div class="col-1">
@@ -87,11 +88,12 @@
             <form class="formUno mb-2" [formGroup]="formBasic">
                 <input (blur)="desaparecerTablaBusqueda()" class="inputUno text-light fuente bg-transparent"
                     type="search" placeholder="{{ 'Buscar' | translate }}" aria-label="Search"
-                    formControlName="busqueda" (keyup)="buscar($event)">
+                    formControlName="busqueda" (input)="buscar()">
             </form>
             <div *ngIf="mostrarResultados">
+                <p *ngIf="buscando" class="text-light f-open-sans-c m-0 p-0">Buscando...</p>
                 <p *ngFor="let item of encontrados" class="text-light f-open-sans-c cursor-p m-0 p-0"
-                    (click)="irAlPost(item.ruta)">{{ item.nombre }}</p>
+                    (click)="irAlPost(item.ruta)">{{ item.titulo }}</p>
             </div>
         </div>
         <div class="bg-dark p-5" *ngIf="showLanguajes">

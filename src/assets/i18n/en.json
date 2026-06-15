@@ -1824,5 +1824,10 @@
 		"notFound": "Category not found.",
 		"error": "Could not load the content. Please try again later.",
 		"noApi": "The WordPress API URL is not configured. Set BLOG_WP_GRAPHQL_URL in blog-wp-graphql.config.ts."
+	},
+	"BLOG_GALLERY": {
+		"loading": "Loading posts…",
+		"error": "Could not load posts. Please try again later.",
+		"noApi": "The WordPress API URL is not configured. Set BLOG_WP_GRAPHQL_URL in blog-wp-graphql.config.ts."
 	}
 }

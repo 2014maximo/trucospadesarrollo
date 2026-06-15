@@ -80,7 +80,9 @@ export function datosCategoria(cat: string, referencia: number): any{
     return categoria.nombre === cat
   });
 
-  categoriaFiltrada;
+  if (categoriaFiltrada.length === 0) {
+    return '';
+  }
 
   switch (referencia) {
     case 1:

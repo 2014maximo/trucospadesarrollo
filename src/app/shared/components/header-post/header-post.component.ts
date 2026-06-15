@@ -2,194 +2,197 @@ import { Component, EventEmitter, Input, Output, Inject, PLATFORM_ID } from '@an
 import { isPlatformBrowser } from '@angular/common';
 import { FormGroup, FormControl, ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { CATEGORIA } from '@constants/categories.constant';
-import { CategoriaPostModel, DatosPost } from '@models/categorias.model';
+import { CategoriaPostModel } from '@models/categorias.model';
 import { IndiceDeContenidosModel } from '@models/indice.model';
-import { firstValueFrom, Subject } from 'rxjs';
+import { Subject, debounceTime, distinctUntilChanged, switchMap, of, takeUntil } from 'rxjs';
 import { CategoriaModel } from '../../models/post.model';
 import { Router } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TraduccionService } from '../../services/traduccion.service';
-import { busquedaGeneral } from '@shared//global-functions';
 import { ContentIndexComponent } from '../content-index/content-index.component';
 import { CommonModule } from '@angular/common';
+import { BlogContentService } from 'src/app/features/blog/services/blog-content.service';
+import { PostViewModel } from 'src/app/features/blog/models/post-view.model';
+
+interface SearchResultItem {
+  titulo: string;
+  ruta: string;
+}
 
 @Component({
-	selector: 'app-header-post',
-	imports: [
-		TranslateModule,
-		ReactiveFormsModule,
-		FormsModule,
-		CommonModule,
-		ContentIndexComponent
-	],
-	templateUrl: './header-post.component.html',
-	styleUrl: './header-post.component.css'
+  selector: 'app-header-post',
+  imports: [
+    TranslateModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CommonModule,
+    ContentIndexComponent
+  ],
+  templateUrl: './header-post.component.html',
+  styleUrl: './header-post.component.css'
 })
 export class HeaderPostComponent {
 
-	public formBasic: FormGroup;
-	public categorias = CATEGORIA;
-	public todosLosPost: DatosPost[] = [];
-	public todosLosPostTraducidos: DatosPost[] = [];
-	public mostrarResultados: boolean = false;
-	public encontrados: DatosPost[] = [];
-	public lang: string = 'es';
-	public lenguajes: string[] = ['es', 'en', 'fr'];
-	public idiomaActual: string = '';
-	public ondestroy$: Subject<boolean> = new Subject();
-	public categoriasMenu = false;
-	public pasoDeIndice: IndiceDeContenidosModel[] = [];
-	public claseContenedor: string = '';
-	public showSearch: boolean = false;
-	public showMenu: boolean = true;
-	public showLanguajes: boolean = false;
-	public showCategories: boolean = false;
-	@Output() recargarTraduccion: EventEmitter<any> = new EventEmitter();
+  public formBasic: FormGroup;
+  public categorias = CATEGORIA;
+  public mostrarResultados: boolean = false;
+  public encontrados: SearchResultItem[] = [];
+  public buscando: boolean = false;
+  public lang: string = 'es';
+  public lenguajes: string[] = ['es', 'en', 'fr'];
+  public idiomaActual: string = '';
+  public ondestroy$: Subject<boolean> = new Subject();
+  public categoriasMenu = false;
+  public pasoDeIndice: IndiceDeContenidosModel[] = [];
+  public claseContenedor: string = '';
+  public showSearch: boolean = false;
+  public showMenu: boolean = true;
+  public showLanguajes: boolean = false;
+  public showCategories: boolean = false;
+  @Output() recargarTraduccion: EventEmitter<any> = new EventEmitter();
 
-	@Input() categoria: CategoriaModel = {
-		activo: false,
-		categoria: '',
-		ruta: '',
-		colorText: ''
-	};
+  @Input() categoria: CategoriaModel = {
+    activo: false,
+    categoria: '',
+    ruta: '',
+    colorText: ''
+  };
 
-	constructor(private router: Router,
-		public translate: TranslateService,
-		private traduccion: TraduccionService,
-		@Inject(PLATFORM_ID) private platformId: Object) {
+  private searchTerm$ = new Subject<string>();
 
-		if (isPlatformBrowser(this.platformId)) {
-			if (localStorage.getItem("idioma")) {
-				this.idiomaActual = localStorage.getItem('idioma') ?? '';
-			} else {
-				this.idiomaActual = navigator.language.split('-')[0];
-			}
-			translate.setDefaultLang(navigator.language.split('-')[0]);
-		} else {
-			this.idiomaActual = 'es';
-			translate.setDefaultLang('es');
-		}
+  constructor(private router: Router,
+    public translate: TranslateService,
+    private traduccion: TraduccionService,
+    private blogContent: BlogContentService,
+    @Inject(PLATFORM_ID) private platformId: Object) {
 
-		translate.use(this.idiomaActual);
-		this.cargarListaLenguajes(this.idiomaActual);
-		this.traducirColeccion(this.idiomaActual);
+    if (isPlatformBrowser(this.platformId)) {
+      if (localStorage.getItem("idioma")) {
+        this.idiomaActual = localStorage.getItem('idioma') ?? '';
+      } else {
+        this.idiomaActual = navigator.language.split('-')[0];
+      }
+      translate.setDefaultLang(navigator.language.split('-')[0]);
+    } else {
+      this.idiomaActual = 'es';
+      translate.setDefaultLang('es');
+    }
 
-		this.inicializarVariables();
-		this.formBasic = new FormGroup({
-			'busqueda': new FormControl('')
-		});
+    translate.use(this.idiomaActual);
+    this.cargarListaLenguajes(this.idiomaActual);
 
-		this.translate.addLangs(['fr', 'en', 'es']);
-		this.translate.setDefaultLang('es');
-		this.translate.use('es');
-	}
+    this.inicializarVariables();
+    this.formBasic = new FormGroup({
+      'busqueda': new FormControl('')
+    });
 
-	private inicializarVariables() {
-		this.todosLosPostTraducidos = this.traduccion.todosLosPostTraducidos;
-		CATEGORIA.forEach((cat: CategoriaPostModel, i: number) => {
-			let grupo: IndiceDeContenidosModel = {
-				color: '',
-				colorFondo: cat.colorFondo,
-				estado: cat.estado,
-				nombre: cat.nombre.toUpperCase(),
-				posicion: cat.posicion,
-				ruta: cat.ruta,
-				rutaInterna: ''
-			}
-			this.pasoDeIndice.push(grupo);
-		});
-	}
+    this.translate.addLangs(['fr', 'en', 'es']);
+    this.translate.setDefaultLang('es');
+    this.translate.use('es');
+    this.configurarBusqueda();
+  }
 
-	public buscar(e: any) {
-		let buscar = this.formBasic.value.busqueda;
-		if (e.key && buscar) {
+  private inicializarVariables() {
+    CATEGORIA.forEach((cat: CategoriaPostModel) => {
+      let grupo: IndiceDeContenidosModel = {
+        color: '',
+        colorFondo: cat.colorFondo,
+        estado: cat.estado,
+        nombre: cat.nombre.toUpperCase(),
+        posicion: cat.posicion,
+        ruta: cat.ruta,
+        rutaInterna: ''
+      }
+      this.pasoDeIndice.push(grupo);
+    });
+  }
 
-			this.mostrarResultados = true;
-			this.encontrados = busquedaGeneral(this.todosLosPostTraducidos, 'referenciaBusqueda', buscar);
-		} else {
-			this.mostrarResultados = false;
-		}
-	}
+  private configurarBusqueda(): void {
+    this.searchTerm$.pipe(
+      debounceTime(300),
+      distinctUntilChanged(),
+      switchMap(term => {
+        if (!term.trim()) return of([]);
+        return this.blogContent.searchPosts(term, 8);
+      }),
+      takeUntil(this.ondestroy$)
+    ).subscribe({
+      next: (posts: PostViewModel[]) => {
+        this.buscando = false;
+        this.encontrados = posts.map(p => this.toSearchResult(p));
+      },
+      error: () => {
+        this.buscando = false;
+        this.encontrados = [];
+      }
+    });
+  }
 
-	openSearch() {
-		this.showSearch = !this.showSearch;
-		this.showMenu = !this.showMenu;
-	}
-	closeOptions() {
-		this.showMenu = true;
-		this.showSearch = false;
-		this.showLanguajes = false;
-		this.showCategories = false
-	}
-	openLanguage() {
-		this.showLanguajes = !this.showLanguajes;
-		this.showMenu = !this.showMenu;
-	}
-	openCategories() {
-		this.showCategories = !this.showCategories;
-		this.showMenu = !this.showMenu;
-	}
+  private toSearchResult(post: PostViewModel): SearchResultItem {
+    const categoriaLower = (post.categoriaNombre || '').toLowerCase();
+    return {
+      titulo: post.titulo,
+      ruta: `/blog/${categoriaLower}/${post.slug}`
+    };
+  }
 
-	public desaparecerTablaBusqueda() {
-		setTimeout(() => {
-			this.mostrarResultados = false;
-			this.formBasic.get('busqueda')?.setValue('');
-		}, 2000)
-	}
+  public buscar(): void {
+    const termino = (this.formBasic.value.busqueda ?? '').trim();
+    if (termino.length === 0) {
+      this.mostrarResultados = false;
+      this.encontrados = [];
+      return;
+    }
+    this.mostrarResultados = true;
+    this.buscando = true;
+    this.searchTerm$.next(termino);
+  }
 
-	public irAlPost(post: string) {
-		this.router.navigateByUrl(post);
-	}
+  openSearch() {
+    this.showSearch = !this.showSearch;
+    this.showMenu = !this.showMenu;
+  }
+  closeOptions() {
+    this.showMenu = true;
+    this.showSearch = false;
+    this.showLanguajes = false;
+    this.showCategories = false
+  }
+  openLanguage() {
+    this.showLanguajes = !this.showLanguajes;
+    this.showMenu = !this.showMenu;
+  }
+  openCategories() {
+    this.showCategories = !this.showCategories;
+    this.showMenu = !this.showMenu;
+  }
 
-	public procesoCambioLenguaje(a: string) {
-		localStorage.setItem("idioma", a);
-		this.idiomaActual = a;
-		this.traduccion.cambiarIdioma(a);
-		this.cargarListaLenguajes(a);
-		this.traducirColeccion(a);
-	}
+  public desaparecerTablaBusqueda() {
+    setTimeout(() => {
+      this.mostrarResultados = false;
+      this.buscando = false;
+      this.formBasic.get('busqueda')?.setValue('');
+    }, 2000)
+  }
 
-	cargarListaLenguajes(a: string) {
-		this.lenguajes = ['es', 'en', 'fr'];
+  public irAlPost(post: string) {
+    this.router.navigateByUrl(post);
+  }
 
-		let indice = this.lenguajes.indexOf(a);
-		if (indice !== -1) {
-			this.lenguajes = this.lenguajes.slice(0, indice).concat(this.lenguajes.slice(indice + 1));
-		}
-	}
+  public procesoCambioLenguaje(a: string) {
+    localStorage.setItem("idioma", a);
+    this.idiomaActual = a;
+    this.traduccion.cambiarIdioma(a);
+    this.cargarListaLenguajes(a);
+  }
 
-	async traducirColeccion(idioma: string) {
-		for (let i = 0; i < this.todosLosPost.length; i++) {
-			this.todosLosPostTraducidos.push({
-				categoria: this.todosLosPost[i].categoria,
-				componente: this.todosLosPost[i].componente,
-				descripcion: this.todosLosPost[i].descripcion,
-				descripcionCorta: await this.traducirReferencia(this.todosLosPost[i].descripcionCorta),
-				estado: this.todosLosPost[i].estado,
-				estilos: this.todosLosPost[i].estilos,
-				fechaActualizacion: this.todosLosPost[i].fechaActualizacion,
-				fechaCreacion: this.todosLosPost[i].fechaCreacion,
-				id: this.todosLosPost[i].id,
-				imgCuadro: this.todosLosPost[i].imgCuadro,
-				imgHorizontal: this.todosLosPost[i].imgHorizontal,
-				imgVertical: this.todosLosPost[i].imgVertical,
-				mostrarEnPostHome: this.todosLosPost[i].mostrarEnPostHome,
-				nombre: await this.traducirReferencia(this.todosLosPost[i].nombre),
-				posicion: this.todosLosPost[i].posicion,
-				referenciaBusqueda: await this.traducirReferencia(this.todosLosPost[i].referenciaBusqueda),
-				ruta: this.todosLosPost[i].ruta,
-				imgSlider: this.todosLosPost[i].imgSlider
-			})
-		}
-	}
+  cargarListaLenguajes(a: string) {
+    this.lenguajes = ['es', 'en', 'fr'];
 
-	async traducirReferencia(ref: string) {
-		try {
-			let traduccion = await firstValueFrom(this.translate.get(ref));
-			return traduccion;
-		} catch {
-			return 'NO-TRANSLATE'
-		}
-	}
+    let indice = this.lenguajes.indexOf(a);
+    if (indice !== -1) {
+      this.lenguajes = this.lenguajes.slice(0, indice).concat(this.lenguajes.slice(indice + 1));
+    }
+  }
 
 }
