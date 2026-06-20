@@ -8,6 +8,7 @@ import { PhrasesComponent } from "../shared/components/phrases/phrases.component
 import { FooterHomeComponent } from '../shared/components/footer-home/footer-home.component';
 import { TopTecnologyComponent } from '../shared/components/top-tecnology/top-tecnology.component';
 import { GoUpComponent } from '../shared/components/go-up/go-up.component';
+import { CategoriesComponent } from '../shared/components/categories/categories.component';
 
 @Component({
 	selector: 'app-home',
@@ -20,6 +21,7 @@ import { GoUpComponent } from '../shared/components/go-up/go-up.component';
 		GaleryPostComponent,
 		TopTecnologyComponent,
 		PhrasesComponent,
+		CategoriesComponent,
 		GoUpComponent
 	],
 	standalone: true,

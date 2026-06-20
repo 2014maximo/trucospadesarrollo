@@ -100,9 +100,20 @@ export class GaleryPostComponent implements OnInit {
       ruta: `/blog/${categoriaLower}/${post.slug}`,
       categoriaNombre: post.categoriaNombre,
       categoriaRuta: datosCategoria(categoriaLower, 11) || `/blog/${categoriaLower}`,
-      categoriaIcono: datosCategoria(categoriaLower, 12) || '',
+      categoriaIcono: this.resolverIconoCategoria(categoriaLower),
       fecha: ((post.fechaModificacion || post.fechaPublicacion) || '').substring(0, 10)
     };
+  }
+
+  private resolverIconoCategoria(categoriaLower: string): string {
+    const desdeConstante = datosCategoria(categoriaLower, 12);
+    if (desdeConstante) {
+      return desdeConstante;
+    }
+    if (!categoriaLower) {
+      return '';
+    }
+    return `assets/img/categorias/${categoriaLower}-white.png`;
   }
 
   private stripHtml(html: string): string {
