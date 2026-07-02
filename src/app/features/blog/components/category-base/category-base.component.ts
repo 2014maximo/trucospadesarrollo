@@ -5,8 +5,10 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { DynamicContentComponent } from 'src/app/shared/components/dynamic-content/dynamic-content.component';
+import { ContentIndexComponent } from 'src/app/shared/components/content-index/content-index.component';
+import { IndiceDeContenidosModel } from 'src/app/shared/models/indice.model';
 import { CategoryViewModel } from '../../models/category-view.model';
-import { CategoriaPostModel } from '../../models/categorias.model';
+import { CategoriaPostModel, DatosPost } from '../../models/categorias.model';
 import { BlogContentService } from '../../services/blog-content.service';
 import { CATEGORIA } from '../../constants/categories.constant';
 
@@ -25,7 +27,7 @@ export type CategoryBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error
 @Component({
   selector: 'app-category-base',
   standalone: true,
-  imports: [CommonModule, TranslateModule, HeaderComponent, FooterComponent, DynamicContentComponent],
+  imports: [CommonModule, TranslateModule, HeaderComponent, FooterComponent, DynamicContentComponent, ContentIndexComponent],
   templateUrl: './category-base.component.html',
   styleUrl: './category-base.component.css'
 })
@@ -33,6 +35,7 @@ export class CategoryBaseComponent implements OnInit {
   estado: CategoryBaseEstado = 'cargando';
   categoria: CategoryViewModel | null = null;
   categoriaLocal?: CategoriaPostModel;
+  indice: IndiceDeContenidosModel[] = [];
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -46,6 +49,22 @@ export class CategoryBaseComponent implements OnInit {
     this.categoriaLocal = CATEGORIA.find(
       c => c.nombre.toLowerCase() === slug.toLowerCase()
     );
+
+    // Construir índice de contenidos a partir de los posts locales de la categoría
+    this.indice = [];
+    if (this.categoriaLocal) {
+      this.categoriaLocal.post.forEach((post: DatosPost) => {
+        this.indice.push({
+          color: '',
+          colorFondo: post.estilos.colorFondo,
+          estado: post.estado,
+          nombre: post.nombre,
+          posicion: post.posicion,
+          ruta: post.ruta,
+          rutaInterna: ''
+        });
+      });
+    }
 
     if (!slug.trim()) {
       this.estado = 'no-encontrado';

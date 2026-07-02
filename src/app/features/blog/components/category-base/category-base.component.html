@@ -25,19 +25,10 @@
   <div class="row">
     <div class="col-md-1"></div>
     <div class="col-md-10">
-      <div class="row">
-        <div class="col-md-5 d-flex flex-column align-items-start">
-          @if (categoriaLocal?.rutaIcono) {
-          <img [src]="categoriaLocal?.rutaIcono" alt="" height="80" width="auto" class="drop">
-          }
-        </div>
-        <div class="col-md-7">
-          <h1 class="tituloPost fuenteOcho pb-2">{{ categoriaLocal?.nombre | uppercase }}</h1>
-          <p class="c7 f-open-sans-c fs-20 lh-20" data-testid="category-base-sin-api">
-            {{ 'BLOG_CATEGORY_BASE.noApi' | translate }}
-          </p>
-        </div>
-      </div>
+      <h1 class="tituloPost fuenteOcho pb-2">{{ categoriaLocal?.nombre | uppercase }}</h1>
+      <p class="c7 f-open-sans-c fs-20 lh-20" data-testid="category-base-sin-api">
+        {{ 'BLOG_CATEGORY_BASE.noApi' | translate }}
+      </p>
     </div>
     <div class="col-md-1"></div>
   </div>
@@ -49,17 +40,16 @@
     <div class="col-md-1"></div>
     <div class="col-md-10">
 
-      <!-- Cabecera: ícono + título -->
-      <div class="row align-items-center">
-        <div class="col-md-5 d-flex flex-column">
-          @if (categoriaLocal?.rutaIcono) {
-          <img [src]="categoriaLocal?.rutaIcono" alt="" height="80" width="auto" class="drop">
-          }
+      <!-- Título de la categoría -->
+      <h1 class="tituloPost fuenteOcho pb-2">{{ categoria.titulo | uppercase }}</h1>
+
+      <!-- Índice de contenidos de la categoría -->
+       <div class="row">
+        <div class="col-md-8">
+          <app-content-index [indice]="indice" [clase]="'mt-2'"></app-content-index>
         </div>
-        <div class="col-md-7">
-          <h1 class="tituloPost fuenteOcho pb-2">{{ categoria.titulo | uppercase }}</h1>
-        </div>
-      </div>
+        <div class="col-md-4"></div>
+       </div>
 
       <div class="espaciado"></div>
 
