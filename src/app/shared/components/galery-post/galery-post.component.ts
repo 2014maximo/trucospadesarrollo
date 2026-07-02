@@ -35,11 +35,8 @@ export class GaleryPostComponent implements OnInit {
   @Input() itemIniciales: number = 0;
 
   public estado: GalleryEstado = 'cargando';
-  public grupoGaleria: any[] = [];
-  public postPorPantalla: string[] = ['9', '18'];
   public todosLosPost: GalleryPostItem[] = [];
   public postPaginar: GalleryPostItem[] = [];
-  public anchoPantalla = 1024;
   public ondestroy$: Subject<boolean> = new Subject();
 
   constructor(
@@ -48,9 +45,6 @@ export class GaleryPostComponent implements OnInit {
     private blogContent: BlogContentService,
     @Inject(PLATFORM_ID) private platformId: Object
   ) {
-    if (isPlatformBrowser(this.platformId)) {
-      this.anchoPantalla = window.innerWidth;
-    }
     const transla = new TraslateForce(this.translate);
     transla.listTranslates();
   }
@@ -135,7 +129,7 @@ export class GaleryPostComponent implements OnInit {
   }
 
   public recibirCantidadElementos(e: GalleryPostItem[]) {
-    this.postPaginar = Object.assign([], e);
+    this.postPaginar = [...e];
   }
 
   public retornarDatoCategoria(categoria: string, referencia: number): string {

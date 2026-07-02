@@ -1,123 +1,131 @@
 <!-- Estado: sin API configurada -->
 @if (estado === 'sin-api') {
 <div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-10">
-    <div class="row">
-      <div class="col-md-4">
-        <h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
-      </div>
-    </div>
-    <div class="text-center p-5">
-      <p class="text-light f-open-sans-c fs-20">{{ 'BLOG_GALLERY.noApi' | translate }}</p>
-    </div>
-  </div>
-  <div class="col-md-1"></div>
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
+
+	</div>
+	<div class="col-md-1"></div>
+</div>
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="text-center p-5">
+			<p class="text-light f-open-sans-c fs-20">{{ 'BLOG_GALLERY.noApi' | translate }}</p>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
 </div>
 }
 
 <!-- Estado: cargando -->
 @if (estado === 'cargando') {
 <div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-10">
-    <div class="row">
-      <div class="col-md-4">
-        <h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
-      </div>
-    </div>
-    <div class="text-center p-5">
-      <div class="spinner-border text-primary" role="status">
-        <span class="visually-hidden">{{ 'BLOG_GALLERY.loading' | translate }}</span>
-      </div>
-      <p class="text-light f-open-sans-c fs-20 mt-3">{{ 'BLOG_GALLERY.loading' | translate }}</p>
-    </div>
-  </div>
-  <div class="col-md-1"></div>
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
+	</div>
+	<div class="col-md-1"></div>
+</div>
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="text-center p-5">
+			<div class="spinner-border text-primary" role="status">
+				<span class="visually-hidden">{{ 'BLOG_GALLERY.loading' | translate }}</span>
+			</div>
+			<p class="text-light f-open-sans-c fs-20 mt-3">{{ 'BLOG_GALLERY.loading' | translate }}</p>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
 </div>
 }
 
 <!-- Estado: error -->
 @if (estado === 'error') {
 <div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-10">
-    <div class="row">
-      <div class="col-md-4">
-        <h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
-      </div>
-    </div>
-    <div class="text-center p-5">
-      <p class="text-danger f-open-sans-c fs-20">{{ 'BLOG_GALLERY.error' | translate }}</p>
-    </div>
-  </div>
-  <div class="col-md-1"></div>
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
+	</div>
+	<div class="col-md-1"></div>
+</div>
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="text-center p-5">
+			<p class="text-danger f-open-sans-c fs-20">{{ 'BLOG_GALLERY.error' | translate }}</p>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
 </div>
 }
 
 <!-- Estado: vacío -->
 @if (estado === 'vacio') {
 <div class="row">
-  <div class="col-md-1"></div>
-  <div class="col-md-10">
-    <div class="row">
-      <div class="col-md-4">
-        <h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
-      </div>
-    </div>
-    <div class="text-center p-5">
-      <p class="text-light f-open-sans-c fs-20">{{ 'No hay publicaciones disponibles.' }}</p>
-    </div>
-  </div>
-  <div class="col-md-1"></div>
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
+	</div>
+	<div class="col-md-1"></div>
+</div>
+<div class="row">
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="text-center p-5">
+			<p class="text-light f-open-sans-c fs-20">{{ 'No hay publicaciones disponibles.' }}</p>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
 </div>
 }
 
 <!-- Estado: listo (galería cargada) -->
 @if (estado === 'listo') {
 <div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <div class="row">
-            <div class="col-md-4">
-                <h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
-            </div>
-            <div class="col-md-8"></div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4 p-5" *ngFor="let post of this.postPaginar">
-                <div class="d-flex justify-content-end mb-2 drop-two">
-                    <a href="{{ post.categoriaRuta }}">
-                        <img src="{{ post.categoriaIcono }}" alt="" height="30" width="auto">
-                    </a>
-                </div>
-                <div class="pr-3 pt-3 imgPost">
-                    <img [ngClass]="tipoSombra(post.imagenUrl)"
-                        src="{{ post.imagenUrl }}"
-                        alt="{{ post.titulo }}"
-                        width="100%"
-                        height="auto">
-                </div>
-                <div class="mt-5">
-                    <h4 class="tituloPost f-bebas">{{ post.titulo }}</h4>
-                </div>
-                <p class="f-open-sans-c fs-20 lh-20 text-light">{{ post.resumen }}</p>
-                <time><p class="f-shadow-into-l text-light fs-15 m-0">{{ post.fecha }}</p></time>
-                <a class="f-open-sans-c leerMas mt-2" href="{{ post.ruta }}">{{ 'LeerMas' | translate }} &gt;</a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <app-paginator (paginados)="recibirCantidadElementos($event)"
-                                [contenedor]="todosLosPost"
-                                [itemsPorPantalla]="postPorPantalla"
-                                [mostrarItemsPorPantalla]="false"
-                                [itemIniciales]="anchoPantalla > 768? 9:3"></app-paginator>
-            </div>
-            <div class="col-md-4"></div>
-        </div>
-    </div>
-    <div class="col-md-1"></div>
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="row">
+			<div class="col-md-4 p-0">
+				<h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
+			</div>
+			<div class="col-md-8"></div>
+		</div>
+		<div class="row">
+			@for (post of this.postPaginar; track post.id) {
+			<div class="col-12 col-md-6 col-lg-4 pt-5 pb-5 pe-5">
+				<div class="d-flex justify-content-end mb-2 drop-two">
+					<a href="{{ post.categoriaRuta }}">
+						<img src="{{ post.categoriaIcono }}" alt="" height="30" width="auto">
+					</a>
+				</div>
+				<div class="pr-3 pt-3 imgPost">
+					<img [ngClass]="tipoSombra(post.imagenUrl)" src="{{ post.imagenUrl }}" alt="{{ post.titulo }}"
+						width="100%" height="auto">
+				</div>
+				<div class="mt-5">
+					<h4 class="tituloPost f-bebas">{{ post.titulo }}</h4>
+				</div>
+				<p class="f-open-sans-c fs-20 lh-20 text-light">{{ post.resumen }}</p>
+				<time>
+					<p class="f-shadow-into-l text-light fs-15 m-0">{{ post.fecha }}</p>
+				</time>
+				<a class="f-open-sans-c leerMas mt-2" href="{{ post.ruta }}">{{ 'LeerMas' | translate }} &gt;</a>
+			</div>
+			}
+		</div>
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<app-paginator (paginados)="recibirCantidadElementos($event)" [contenedor]="todosLosPost"
+					[itemsPorPantalla]="['9','18']" [mostrarItemsPorPantalla]="false"
+					[itemIniciales]="itemIniciales > 0 ? itemIniciales : 9" [itemsMobile]="3"></app-paginator>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+	<div class="col-md-1"></div>
 </div>
 }

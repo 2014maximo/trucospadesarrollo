@@ -6,5 +6,9 @@ export class CategoriesPageModel {
     alt: string = '';
     linkCategory = '';
     class: string = '';
-    state: string = ''
+    state: string = '';
+    nameCategorie: string = '';
+    posicion: string = '';
+    colorFondo: string = '';
+    color: string = '';
 }

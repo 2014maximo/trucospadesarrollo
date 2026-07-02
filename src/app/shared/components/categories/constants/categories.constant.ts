@@ -9,7 +9,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-ia',
 		class: 'drop box',
 		linkCategory: '/blog/ia',
-		state: 'active'
+		state: 'active',
+		nameCategorie: 'ai',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Ai',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/android.png',
@@ -19,7 +23,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-android',
 		class: 'drop box',
 		linkCategory: '/blog/android',
-		state: 'inactive'
+		state: 'inactive',
+		nameCategorie: 'android',
+		posicion: 'pos-z',
+		colorFondo: 'bg-Android',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/angular.png',
@@ -29,7 +37,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-angular',
 		class: 'drop box',
 		linkCategory: '/blog/angular',
-		state: 'active'
+		state: 'active',
+		nameCategorie: 'angular',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Angular',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/css-dark.png',
@@ -39,7 +51,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-css',
 		class: 'drop box',
 		linkCategory: '/blog/css',
-		state: 'active'
+		state: 'active',
+		nameCategorie: 'css',
+		posicion: 'pos-z',
+		colorFondo: 'bg-Css',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/dart-dark.png',
@@ -49,7 +65,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-dart',
 		class: 'drop box',
 		linkCategory: '/blog/dart',
-		state: 'inactive'
+		state: 'inactive',
+		nameCategorie: 'dart',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Dart',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/sql.png',
@@ -59,7 +79,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-db',
 		class: 'drop box',
 		linkCategory: '/blog/db',
-		state: 'inactive'
+		state: 'inactive',
+		nameCategorie: 'db',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Sql',
+		color: 'text-dark'
 	},
 	{
 		iconDark: 'assets/img/categorias/developer.png',
@@ -69,7 +93,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-developer',
 		class: 'drop box',
 		linkCategory: '/blog/developer',
-		state: 'active'
+		state: 'active',
+		nameCategorie: 'developer',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Developer',
+		color: 'text-dark'
 	},
 	{
 		iconDark: 'assets/img/categorias/electron-dark.png',
@@ -79,7 +107,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-electron',
 		class: 'drop box',
 		linkCategory: '/blog/electron',
-		state: 'inactive'
+		state: 'inactive',
+		nameCategorie: 'electron',
+		posicion: 'pos-z',
+		colorFondo: 'bg-Electron',
+		color: 'text-dark'
 	},
 	{
 		iconDark: 'assets/img/categorias/flutter-dark.png',
@@ -89,7 +121,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-flutter',
 		class: 'drop box',
 		linkCategory: '/blog/flutter',
-		state: 'inactive'
+		state: 'inactive',
+		nameCategorie: 'flutter',
+		posicion: 'rot-1',
+		colorFondo: 'bg-Flutter',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/git-dark.png',
@@ -99,7 +135,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-git',
 		class: 'drop box',
 		linkCategory: '/blog/git',
-		state: 'inactive'
+		state: 'inactive',
+		nameCategorie: 'git',
+		posicion: 'rot-3',
+		colorFondo: 'bg-Git',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/html-dark.png',
@@ -109,7 +149,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-html',
 		class: 'drop box',
 		linkCategory: '/blog/html',
-		state: 'inactive'
+		state: 'inactive',
+		nameCategorie: 'html',
+		posicion: 'pos-z',
+		colorFondo: 'bg-Html',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/logo-java.png',
@@ -119,7 +163,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-java',
 		class: 'drop box',
 		linkCategory: '/blog/java',
-		state: 'inactive'
+		state: 'inactive',
+		nameCategorie: 'java',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Java',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/javascript.png',
@@ -129,7 +177,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-javascript',
 		class: 'drop box',
 		linkCategory: '/blog/javascript',
-		state: 'active'
+		state: 'active',
+		nameCategorie: 'javascript',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Javascript',
+		color: 'text-dark'
 	},
 	{
 		iconDark: 'assets/img/categorias/kotlin-dark.png',
@@ -139,7 +191,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-kotlin',
 		class: 'drop box',
 		linkCategory: '/blog/kotlin',
-		state: 'inactive'
+		state: 'inactive',
+		nameCategorie: 'kotlin',
+		posicion: 'pos-z',
+		colorFondo: 'bg-Kotlin',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/linux-dark.png',
@@ -149,7 +205,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-linux',
 		class: 'drop box',
 		linkCategory: '/blog/linux',
-		state: 'active'
+		state: 'active',
+		nameCategorie: 'linux',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Linux',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/typescript-dark.png',
@@ -159,7 +219,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-typescript',
 		class: 'drop box',
 		linkCategory: '/blog/typescript',
-		state: 'active'
+		state: 'active',
+		nameCategorie: 'typescript',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Typescript',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/web-dark.png',
@@ -169,7 +233,11 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-web',
 		class: 'drop box',
 		linkCategory: '/blog/web',
-		state: 'active'
+		state: 'active',
+		nameCategorie: 'web',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Web',
+		color: 'text-light'
 	},
 	{
 		iconDark: 'assets/img/categorias/windows-dark.png',
@@ -179,6 +247,10 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-windows',
 		class: 'drop box',
 		linkCategory: '/blog/windows',
-		state: 'active'
+		state: 'active',
+		nameCategorie: 'windows',
+		posicion: 'rot-2',
+		colorFondo: 'bg-Windows',
+		color: 'text-light'
 	}
 ]

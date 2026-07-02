@@ -2,7 +2,7 @@
     <div id="head" class="bg-dark header fixed-top text-primary pt-3 pb-3 grandes transparenciaUno">
         <div class="row">
             <div class="col-1"></div>
-            <div class="col-2">
+            <div class="col-4">
                 <a href="home" class="cursor-p text-decoration-none">
                     <div class="fuenteOcho fs-30 text-light m-0">{{ 'titulo_blog' | translate }}</div>
                     <span *ngIf="categoria.activo">
@@ -15,10 +15,6 @@
                         </a>
                     </span>
                 </a>
-            </div>
-            <div class="col-2 d-flex justify-content-around f-open-sans-c">
-                <a class="text-decoration-none mt-2" href="#categories">{{'Categorias' | translate }}</a>
-                <a class="text-decoration-none mt-2" href="#contact">{{'Contacto' | translate }}</a>
             </div>
             <div class="col-5">
                 <form class="formUno mb-2" [formGroup]="formBasic">
@@ -38,7 +34,7 @@
                         <img src="assets/img/icons/traduccion.png" alt="icon png" height="40px" width="auto"
                             class="drop">
                     </a>
-                    <div class="dropdown-menu bg-transparent border text-light">
+                    <div class="dropdown-menu bg-transparent text-light">
                         <a *ngFor="let lenguaje of lenguajes"
                             class="d-flex dropdown-item cursor-p translate-item justify-content-between"
                             (click)="procesoCambioLenguaje(lenguaje)">{{lenguaje}} <img

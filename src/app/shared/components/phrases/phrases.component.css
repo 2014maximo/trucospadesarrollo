@@ -39,20 +39,67 @@
     font-family: var(--fuente-cuatro);
 }
 .comillas {
-    font-size: 100px;
+    font-size: clamp(48px, 12vw, 100px);
     line-height: 40px;
     font-family: 'OperatorMono';
-    margin-top: 7rem;
+    margin-top: clamp(2rem, 10vw, 7rem);
 }
 .text-phrases{
-    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.3), 
+    text-shadow: 1px 1px 2px rgba(139, 69, 19, 0.3),
              -1px -1px 1px rgba(245, 222, 179, 0.8);
     font-weight: 500;
+    font-size: clamp(1rem, 4vw, 1.875rem);
+    line-height: 1.3;
 }
 .text-author{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    font-size: clamp(1.5rem, 6vw, 3.125rem);
 }
 .parchment{
     width: 700px;
     height: 722px
+}
+
+@media (max-width: 767.98px) {
+    .parchment {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 700 / 722;
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .comillas {
+        font-size: 40px;
+        line-height: 28px;
+        margin-top: 1.25rem;
+    }
+    .text-phrases {
+        font-size: 1.05rem;
+        line-height: 1.3;
+    }
+    .text-author {
+        font-size: 1.5rem;
+    }
+    .parchment {
+        padding: 1.25rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .comillas {
+        font-size: 32px;
+        margin-top: 0.75rem;
+    }
+    .text-phrases {
+        font-size: 0.9rem;
+        line-height: 1.25;
+    }
+    .text-author {
+        font-size: 1.2rem;
+    }
+    .parchment {
+        padding: 1rem;
+    }
 }

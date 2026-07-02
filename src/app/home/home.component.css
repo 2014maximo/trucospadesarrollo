@@ -1,3 +1,15 @@
 .go-up {
     user-select: none
 }
+
+.space-between-components{
+    height: 150px;
+}
+
+
+
+@media (max-width: 768px) {
+    .space-between-components{
+        height: 90px;
+    }
+}

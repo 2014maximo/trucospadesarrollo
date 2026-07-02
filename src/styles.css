@@ -420,12 +420,36 @@ html {
     color: #35697d;
 }
 
+.bg-Ai {
+    background-color: #ff6f00;
+}
+
+.c-Ai {
+    color: #ff6f00;
+}
+
 .bg-Sena {
     background-color: #fe6719;
 }
 
 .c-Sena {
     color: #fe6719;
+}
+
+.bg-Web {
+    background-color: #1a73e8;
+}
+
+.c-Web {
+    color: #1a73e8;
+}
+
+.bg-Windows {
+    background-color: #0078d4;
+}
+
+.c-Windows {
+    color: #0078d4;
 }
 
 /* HEADER  ----------------*/
@@ -468,13 +492,6 @@ textarea#texarea {
 
 #bt-enviar {
     border: none;
-}
-
-.comillas {
-    font-size: 100px;
-    line-height: 40px;
-    font-family: 'OperatorMono';
-    margin-top: 7rem;
 }
 
 a {

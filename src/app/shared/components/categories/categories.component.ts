@@ -2,15 +2,27 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { CATEGORIES } from './constants/categories.constant';
 import { CategoriesPageModel } from '../../models/categories-page.model';
+import { ContentIndexComponent } from '../content-index/content-index.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { IndiceDeContenidosModel } from '@models/indice.model';
 
 @Component({
 	selector: 'app-categories',
-	imports: [RouterLink],
+	imports: [
+		ContentIndexComponent,
+		TranslateModule,
+		RouterLink],
 	templateUrl: './categories.component.html',
 	styleUrl: './categories.component.css'
 })
 export class CategoriesComponent {
 	public categories = CATEGORIES;
+	public pasoDeIndice: IndiceDeContenidosModel [] = [];
+
+
+	constructor(private translate: TranslateService){
+		this.inicializarVariables();
+	}
 
 	get chunkedCategories(): CategoriesPageModel[][] {
 		const active = this.categories.filter(c => c.state === 'active');
@@ -20,4 +32,19 @@ export class CategoriesComponent {
 		}
 		return result;
 	}
+
+	private inicializarVariables(){
+    this.categories.forEach( (cat: CategoriesPageModel) => {
+      let grupo: IndiceDeContenidosModel = {
+        color: cat.color,
+        colorFondo: cat.colorFondo,
+        estado: cat.state === 'active' ? 'activo' : 'inactivo',
+        nombre: cat.nameCategorie.toUpperCase(),
+        posicion: cat.posicion,
+        ruta: cat.linkCategory,
+        rutaInterna: ''
+      }
+      this.pasoDeIndice.push(grupo);
+    });
+  }
 }
