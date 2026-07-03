@@ -8,7 +8,8 @@ import { DynamicContentComponent } from 'src/app/shared/components/dynamic-conte
 import { ContentIndexComponent } from 'src/app/shared/components/content-index/content-index.component';
 import { IndiceDeContenidosModel } from 'src/app/shared/models/indice.model';
 import { CategoryViewModel } from '../../models/category-view.model';
-import { CategoriaPostModel, DatosPost } from '../../models/categorias.model';
+import { PostViewModel } from '../../models/post-view.model';
+import { CategoriaPostModel } from '../../models/categorias.model';
 import { BlogContentService } from '../../services/blog-content.service';
 import { CATEGORIA } from '../../constants/categories.constant';
 
@@ -50,22 +51,6 @@ export class CategoryBaseComponent implements OnInit {
       c => c.nombre.toLowerCase() === slug.toLowerCase()
     );
 
-    // Construir índice de contenidos a partir de los posts locales de la categoría
-    this.indice = [];
-    if (this.categoriaLocal) {
-      this.categoriaLocal.post.forEach((post: DatosPost) => {
-        this.indice.push({
-          color: '',
-          colorFondo: post.estilos.colorFondo,
-          estado: post.estado,
-          nombre: post.nombre,
-          posicion: post.posicion,
-          ruta: post.ruta,
-          rutaInterna: ''
-        });
-      });
-    }
-
     if (!slug.trim()) {
       this.estado = 'no-encontrado';
       return;
@@ -86,6 +71,7 @@ export class CategoryBaseComponent implements OnInit {
         }
         this.categoria = pagina;
         this.estado = 'listo';
+        this.cargarIndicePosts(slug);
       },
       error: () => {
         this.estado = 'error';
@@ -96,5 +82,31 @@ export class CategoryBaseComponent implements OnInit {
 
   scroll(el: HTMLElement): void {
     el.scrollIntoView();
+  }
+
+  /**
+   * Construye el índice de contenidos a partir de los posts de la categoría
+   * obtenidos desde WordPress. El link se arma con el prefijo de enrutamiento
+   * de la app (`/blog/{categoria}/`) más el slug del post (último segmento del
+   * `uri` de WP), produciendo rutas absolutas como
+   * "/blog/angular/instalacion-de-angular-y-recomendaciones".
+   */
+  private cargarIndicePosts(categoria: string): void {
+    this.blogContent.getPostsByCategory(categoria).subscribe({
+      next: posts => {
+        this.indice = posts.map((post: PostViewModel) => ({
+          color: this.categoriaLocal?.color ?? '',
+          colorFondo: this.categoriaLocal?.colorFondo ?? '',
+          estado: 'activo',
+          nombre: post.titulo,
+          posicion: '',
+          ruta: post.slug ? `/blog/${categoria}/${post.slug}` : '',
+          rutaInterna: ''
+        }));
+      },
+      error: () => {
+        this.indice = [];
+      }
+    });
   }
 }

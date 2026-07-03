@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CategoryBaseComponent } from './category-base.component';
 import { BlogContentService } from '../../services/blog-content.service';
 import { CategoryViewModel } from '../../models/category-view.model';
+import { PostViewModel } from '../../models/post-view.model';
 
 const mockCategoria: CategoryViewModel = {
   id: '1',
@@ -12,6 +13,21 @@ const mockCategoria: CategoryViewModel = {
   titulo: 'Developer',
   contenidoHtml: '<p>Contenido de la categoría</p>'
 };
+
+const mockPosts: PostViewModel[] = [
+  {
+    id: '10',
+    slug: 'instalacion-de-angular-y-recomendaciones',
+    uri: '/instalacion-de-angular-y-recomendaciones/',
+    titulo: 'Instalación de Angular y recomendaciones',
+    contenidoHtml: '',
+    resumenHtml: '',
+    fechaPublicacion: '',
+    fechaModificacion: '',
+    categoria: '',
+    categoriaNombre: 'angular'
+  }
+];
 
 describe('CategoryBaseComponent', () => {
   let component: CategoryBaseComponent;
@@ -21,9 +37,11 @@ describe('CategoryBaseComponent', () => {
   function createComponent(slug: string, hasApi: boolean = true) {
     blogContentSpy = jasmine.createSpyObj('BlogContentService', [
       'hasBaseUrl',
-      'getCategoryBySlug'
+      'getCategoryBySlug',
+      'getPostsByCategory'
     ]);
     blogContentSpy.hasBaseUrl.and.returnValue(hasApi);
+    blogContentSpy.getPostsByCategory.and.returnValue(of(mockPosts));
 
     TestBed.configureTestingModule({
       imports: [CategoryBaseComponent, TranslateModule.forRoot()],
@@ -78,5 +96,17 @@ describe('CategoryBaseComponent', () => {
     expect(component.categoria).toEqual(mockCategoria);
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('[data-testid="category-base-contenido"]')).toBeTruthy();
+  });
+
+  it('debe construir el índice con el uri absoluto de cada post de la categoría', () => {
+    createComponent('angular');
+    blogContentSpy.getCategoryBySlug.and.returnValue(of(mockCategoria));
+    fixture.detectChanges();
+
+    expect(blogContentSpy.getPostsByCategory).toHaveBeenCalledWith('angular');
+    expect(component.indice.length).toBe(1);
+    expect(component.indice[0].ruta).toBe('/blog/angular/instalacion-de-angular-y-recomendaciones');
+    expect(component.indice[0].nombre).toBe('Instalación de Angular y recomendaciones');
+    expect(component.indice[0].estado).toBe('activo');
   });
 });

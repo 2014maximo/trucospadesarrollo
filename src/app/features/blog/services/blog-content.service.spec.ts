@@ -94,6 +94,7 @@ describe('BlogContentService', () => {
         jasmine.objectContaining({
           id: '42',
           slug: 'hola',
+          uri: '/hola/',
           titulo: 'Título',
           contenidoHtml: '<p>Cuerpo</p>',
           resumenHtml: '<p>Resumen</p>',
@@ -170,6 +171,58 @@ describe('BlogContentService', () => {
         req.flush({ data: { posts: { nodes: [] } } });
 
         expect(resultado).toEqual([]);
+      });
+    });
+
+    describe('getPostsByCategory', () => {
+      it('no debe llamar al HTTP si la categoría está vacía', done => {
+        service.getPostsByCategory('   ').subscribe(res => {
+          expect(res).toEqual([]);
+          done();
+        });
+      });
+
+      it('debe solicitar la query con la variable categoryName', () => {
+        service.getPostsByCategory('angular').subscribe();
+
+        const req = httpMock.expectOne(r =>
+          r.url.startsWith(apiBase) && r.method === 'POST'
+        );
+
+        expect(req.request.body.variables.categoryName).toBe('angular');
+        req.flush({ data: { posts: { nodes: [] } } });
+      });
+
+      it('debe mapear los posts a PostViewModel[] incluyendo el uri', () => {
+        let resultado: any;
+        service.getPostsByCategory('angular').subscribe(p => (resultado = p));
+
+        const req = httpMock.expectOne(r =>
+          r.url.startsWith(apiBase) && r.method === 'POST'
+        );
+        req.flush({
+          data: {
+            posts: {
+              nodes: [
+                {
+                  id: '1',
+                  uri: '/blog/angular/instalacion-de-angular-y-recomendaciones/',
+                  date: '2026-01-01T00:00:00',
+                  title: 'Instalación de Angular',
+                  content: '<p>Cuerpo</p>',
+                  excerpt: '<p>Resumen</p>',
+                  featuredImage: { node: { sourceUrl: 'https://example.com/img.jpg' } },
+                  categories: { edges: [{ node: { id: 'c1', name: 'Angular' } }] }
+                }
+              ]
+            }
+          }
+        });
+
+        expect(resultado.length).toBe(1);
+        expect(resultado[0].uri).toBe('/blog/angular/instalacion-de-angular-y-recomendaciones/');
+        expect(resultado[0].slug).toBe('instalacion-de-angular-y-recomendaciones');
+        expect(resultado[0].titulo).toBe('Instalación de Angular');
       });
     });
   });

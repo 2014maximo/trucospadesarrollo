@@ -139,6 +139,7 @@ export class BlogContentService {
     return {
       id: post.id,
       slug: post.uri?.replace(/^\/|\/$/g, '').split('/').pop() ?? '',
+      uri: post.uri ?? '',
       titulo: this.stripHtmlToText(post.title ?? ''),
       contenidoHtml: post.content ?? '',
       resumenHtml: post.excerpt ?? '',
@@ -216,6 +217,61 @@ export class BlogContentService {
   }
 
   // ── Categorías headless (pages) ───────────────────────────────────────────
+
+  /**
+   * Obtiene los posts de una categoría desde WordPress usando GraphQL
+   * (filtrado por `categoryName`). Emite array vacío si no hay URL base
+   * configurada o la categoría está vacía.
+   */
+  getPostsByCategory(categoria: string): Observable<PostViewModel[]> {
+    const trimmed = categoria?.trim() ?? '';
+    if (!trimmed || !this.hasBaseUrl()) {
+      return of([]);
+    }
+
+    const currentLang = this.translate.currentLang || 'es';
+    const apiUrlWithLang = `${this.apiBase}?lang=${currentLang}`;
+
+    const query = `
+      query GetPostsByCategory($categoryName: String!) {
+        posts(where: { categoryName: $categoryName }) {
+          nodes {
+            id
+            title
+            uri
+            excerpt
+            date
+            modified
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            categories {
+              edges {
+                node {
+                  id
+                  name
+                }
+              }
+            }
+          }
+        }
+      }
+    `;
+
+    return this.http
+      .post<WpGraphqlResponse>(apiUrlWithLang, {
+        query,
+        variables: { categoryName: trimmed }
+      })
+      .pipe(
+        map(response => {
+          const nodes = response.data?.posts?.nodes ?? [];
+          return nodes.map(post => this.toViewModel(post));
+        })
+      );
+  }
 
   /**
    * Obtiene el contenido de una categoría desde WordPress usando la query de

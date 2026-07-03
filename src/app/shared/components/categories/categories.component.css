@@ -135,10 +135,19 @@ a:hover {
     .title-menu {
         display: none;
     }
+    .fadeShowComponent990{
+        display: none;
+    }
 }
 
 @media (min-width: 991px) {
     .title-menu-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .fadeShowComponent767{
         display: none;
     }
 }

@@ -12,4 +12,6 @@ export interface PostViewModel {
   categoriaNombre: string;
   /** URL de la imagen destacada del post */
   imagenDestacada?: string;
+  /** URI canónica del post tal como la devuelve WordPress (ej: "/blog/angular/mi-post/"). */
+  uri?: string;
 }
