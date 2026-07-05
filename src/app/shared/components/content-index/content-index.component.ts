@@ -1,9 +1,10 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, SimpleChanges } from '@angular/core';
 import { CATEGORIA } from '@constants/categories.constant';
 import { CategoriaPostModel, DatosPost, SubCategoriaModel } from '@models/categorias.model';
 import { IndiceDeContenidosModel } from '@models/indice.model';
 import { TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
+import { posicionAleatoria } from '../../constants/functions/posicion.util';
 
 @Component({
   selector: 'app-content-index',
@@ -11,7 +12,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './content-index.component.html',
   styleUrl: './content-index.component.css'
 })
-export class ContentIndexComponent implements OnInit {
+export class ContentIndexComponent implements OnInit, OnChanges {
 
   @Input() indice: IndiceDeContenidosModel [] = [
     {
@@ -48,8 +49,31 @@ export class ContentIndexComponent implements OnInit {
         this.cargarCategorias();
         break;
     }
+
+    this.asignarPosiciones();
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    // Cuando el caller reasigna `indice` tras el primer render (p.ej. tras una
+    // petición HTTP asíncrona en category-base), volvemos a asignar las
+    // posiciones deterministas a todos los items.
+    if (changes['indice'] && !changes['indice'].isFirstChange()) {
+      this.asignarPosiciones();
+    }
+  }
+
+  /**
+   * Asigna una posición determinista a **todos** los items del índice,
+   * sobrescribiendo cualquier valor previo. SSR-safe (hash de la semilla):
+   * misma semilla produce siempre el mismo valor en server y client.
+   */
+  private asignarPosiciones(): void {
+    this.indice.forEach((item: IndiceDeContenidosModel, i: number) => {
+      const seed = (item.ruta as string) || item.nombre || String(i);
+      item.posicion = posicionAleatoria(seed);
+    });
+  }
+  
   private cargarCategorias(){
     this.posts.forEach(( p:DatosPost, indice:number) => {
       this.indice[indice].color = p.estilos.color;
@@ -59,6 +83,7 @@ export class ContentIndexComponent implements OnInit {
       this.indice[indice].posicion = p.posicion;
       this.indice[indice].ruta = p.ruta;
     })
+    console.log(this.indice, 'INDICE')
   }
 
   private cargarSubcategorias(){

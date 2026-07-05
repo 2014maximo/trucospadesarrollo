@@ -22,7 +22,7 @@
     <div class="col-md-10">
 
       <!-- Cabecera: ícono de categoría + fecha + título + excerpt -->
-      <app-header-post-supplement [rutaIcono]="rutaIconoCategoria" [titulo]="post.titulo"
+      <app-header-post-supplement [categoria]="post.categoriaNombre" [titulo]="post.titulo"
         [descripcion]="extractoParrafos" [fecha]="post.fechaModificacion || post.fechaPublicacion">
       </app-header-post-supplement>
 

@@ -3,10 +3,12 @@ import { provideRouter } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { CategoriesComponent } from './categories.component';
+import { ThemeService } from '../../services/theme.service';
 
 describe('CategoriesComponent', () => {
   let component: CategoriesComponent;
   let fixture: ComponentFixture<CategoriesComponent>;
+  let themeService: ThemeService;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -17,6 +19,8 @@ describe('CategoriesComponent', () => {
 
     fixture = TestBed.createComponent(CategoriesComponent);
     component = fixture.componentInstance;
+    themeService = TestBed.inject(ThemeService);
+    themeService.setTheme('dark');
     fixture.detectChanges();
   });
 
@@ -50,5 +54,16 @@ describe('CategoriesComponent', () => {
     for (const item of component.pasoDeIndice) {
       expect(item.nombre).toBe(item.nombre.toUpperCase());
     }
+  });
+
+  it('iconoCategoria devuelve iconLight en modo dark', () => {
+    const ai = component.categories.find(c => c.nameCategorie === 'ai')!;
+    expect(component.iconoCategoria(ai)).toBe(ai.iconLight);
+  });
+
+  it('iconoCategoria devuelve iconDark en modo light', () => {
+    themeService.setTheme('light');
+    const ai = component.categories.find(c => c.nameCategorie === 'ai')!;
+    expect(component.iconoCategoria(ai)).toBe(ai.iconDark);
   });
 });

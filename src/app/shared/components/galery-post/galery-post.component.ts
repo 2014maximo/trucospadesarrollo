@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, Input, OnInit, Inject, PLATFORM_ID, inject } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { Subject, takeUntil } from 'rxjs';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -9,6 +9,8 @@ import { TraduccionService } from '../../services/traduccion.service';
 import { CommonModule } from '@angular/common';
 import { PaginatorComponent } from '../paginator/paginator.component';
 import { TraslateForce } from '@shared//traslate-function';
+import { ThemeService } from '../../services/theme.service';
+import { resolverIconoCategoria } from '../categories/categories.helper';
 
 interface GalleryPostItem {
   id: string;
@@ -18,7 +20,6 @@ interface GalleryPostItem {
   ruta: string;
   categoriaNombre: string;
   categoriaRuta: string;
-  categoriaIcono: string;
   fecha: string;
 }
 
@@ -34,6 +35,8 @@ export class GaleryPostComponent implements OnInit {
 
   @Input() itemIniciales: number = 0;
 
+  private readonly themeService = inject(ThemeService);
+
   public estado: GalleryEstado = 'cargando';
   public todosLosPost: GalleryPostItem[] = [];
   public postPaginar: GalleryPostItem[] = [];
@@ -47,6 +50,16 @@ export class GaleryPostComponent implements OnInit {
   ) {
     const transla = new TraslateForce(this.translate);
     transla.listTranslates();
+  }
+
+  /** Tema activo: 'dark' => iconLight, 'light' => iconDark. */
+  get theme(): 'light' | 'dark' {
+    return this.themeService.theme();
+  }
+
+  /** Resuelve el ícono de categoría según el tema activo (reactive al cambio de tema). */
+  public iconoCategoria(categoriaNombre: string): string {
+    return resolverIconoCategoria(categoriaNombre, this.themeService.theme());
   }
 
   ngOnInit(): void {
@@ -94,20 +107,8 @@ export class GaleryPostComponent implements OnInit {
       ruta: `/blog/${categoriaLower}/${post.slug}`,
       categoriaNombre: post.categoriaNombre,
       categoriaRuta: datosCategoria(categoriaLower, 11) || `/blog/${categoriaLower}`,
-      categoriaIcono: this.resolverIconoCategoria(categoriaLower),
       fecha: ((post.fechaModificacion || post.fechaPublicacion) || '').substring(0, 10)
     };
-  }
-
-  private resolverIconoCategoria(categoriaLower: string): string {
-    const desdeConstante = datosCategoria(categoriaLower, 12);
-    if (desdeConstante) {
-      return desdeConstante;
-    }
-    if (!categoriaLower) {
-      return '';
-    }
-    return `assets/img/categorias/${categoriaLower}-white.png`;
   }
 
   private stripHtml(html: string): string {

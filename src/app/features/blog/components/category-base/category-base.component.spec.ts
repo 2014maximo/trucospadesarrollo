@@ -108,5 +108,19 @@ describe('CategoryBaseComponent', () => {
     expect(component.indice[0].ruta).toBe('/blog/angular/instalacion-de-angular-y-recomendaciones');
     expect(component.indice[0].nombre).toBe('Instalación de Angular y recomendaciones');
     expect(component.indice[0].estado).toBe('activo');
+    // Angular tiene fondo oscuro (bg-Angular) → texto blanco
+    expect(component.indice[0].color).toBe('text-white');
+    expect(component.indice[0].colorFondo).toBe('bg-Angular');
+  });
+
+  it('debe usar texto oscuro para categorías de fondo muy claro', () => {
+    createComponent('developer');
+    blogContentSpy.getCategoryBySlug.and.returnValue(of(mockCategoria));
+    fixture.detectChanges();
+
+    expect(blogContentSpy.getPostsByCategory).toHaveBeenCalledWith('developer');
+    // Developer tiene fondo claro (bg-Developer) → texto oscuro
+    expect(component.indice[0].color).toBe('text-dark');
+    expect(component.indice[0].colorFondo).toBe('bg-Developer');
   });
 });

@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, computed, inject } from '@angular/core';
 import { CommonModule, DatePipe } from '@angular/common';
+import { ThemeService } from '../../services/theme.service';
+import { resolverIconoCategoria } from '../categories/categories.helper';
 
 @Component({
   selector: 'app-header-post-supplement',
@@ -9,16 +11,23 @@ import { CommonModule, DatePipe } from '@angular/common';
 })
 export class HeaderPostSupplementComponent {
 
-  /** Ruta al PNG de la categoría: assets/img/categorias/nombreCategoria.png */
-  @Input() rutaIcono: string = '';
+  private readonly themeService = inject(ThemeService);
+
+  /** Nombre de la categoría (p. ej. 'Developer'). Se resuelve a su ícono desde CATEGORIES. */
+  readonly categoria = input<string>('');
 
   /** Título del post (ya traducido o en texto directo) */
-  @Input() titulo: string = '';
+  readonly titulo = input<string>('');
 
   /** Párrafos del extracto/descripción del post */
-  @Input() descripcion: string[] = [];
+  readonly descripcion = input<string[]>([]);
 
   /** Fecha de actualización si existe, si no la de creación */
-  @Input() fecha: string = '';
+  readonly fecha = input<string>('');
+
+  /** Ruta al PNG de la categoría según el tema activo (dark => iconLight, light => iconDark). */
+  readonly rutaIcono = computed(() =>
+    resolverIconoCategoria(this.categoria(), this.themeService.theme())
+  );
 
 }

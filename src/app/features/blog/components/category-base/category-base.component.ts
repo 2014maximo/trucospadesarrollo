@@ -33,6 +33,16 @@ export type CategoryBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error
   styleUrl: './category-base.component.css'
 })
 export class CategoryBaseComponent implements OnInit {
+  /** Fondos de categoría muy claros: sobre ellos el texto debe ser oscuro. */
+  private static readonly FONDOS_CLAROS = new Set([
+    'bg-Electron',
+    'bg-React',
+    'bg-Javascript',
+    'bg-Sql',
+    'bg-Db',
+    'bg-Developer'
+  ]);
+
   estado: CategoryBaseEstado = 'cargando';
   categoria: CategoryViewModel | null = null;
   categoriaLocal?: CategoriaPostModel;
@@ -95,7 +105,7 @@ export class CategoryBaseComponent implements OnInit {
     this.blogContent.getPostsByCategory(categoria).subscribe({
       next: posts => {
         this.indice = posts.map((post: PostViewModel) => ({
-          color: this.categoriaLocal?.color ?? '',
+          color: this.colorTexto(this.categoriaLocal?.colorFondo),
           colorFondo: this.categoriaLocal?.colorFondo ?? '',
           estado: 'activo',
           nombre: post.titulo,
@@ -108,5 +118,17 @@ export class CategoryBaseComponent implements OnInit {
         this.indice = [];
       }
     });
+  }
+
+  /**
+   * Decide el color de texto del índice según el fondo de la categoría:
+   * blanco para fondos oscuros/medios, oscuro para fondos muy claros, y
+   * herencia (cadena vacía) cuando no hay fondo local definido.
+   */
+  private colorTexto(colorFondo?: string): string {
+    if (!colorFondo) {
+      return '';
+    }
+    return CategoryBaseComponent.FONDOS_CLAROS.has(colorFondo) ? 'text-dark' : 'text-white';
   }
 }

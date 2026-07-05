@@ -13,7 +13,7 @@
             style='background-image:url("assets/img/categorias/tablaMenu1.png");background-repeat:no-repeat;background-size:cover;'>
             @for (cat of row; track cat.linkCategory) {
             <div class="linkCategoria" [routerLink]="[cat.linkCategory]">
-                <img [src]="cat.iconLight" [alt]="cat.alt" [height]="cat.height" [attr.width]="cat.width"
+                <img [src]="iconoCategoria(cat)" [alt]="cat.alt" [height]="cat.height" [attr.width]="cat.width"
                     [class]="cat.class">
             </div>
             }

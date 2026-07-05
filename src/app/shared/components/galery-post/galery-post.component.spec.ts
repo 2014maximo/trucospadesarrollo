@@ -4,6 +4,7 @@ import { of, throwError, Subject } from 'rxjs';
 import { BlogContentService } from 'src/app/features/blog/services/blog-content.service';
 import { PostViewModel } from 'src/app/features/blog/models/post-view.model';
 import { TraduccionService } from '../../services/traduccion.service';
+import { ThemeService } from '../../services/theme.service';
 import { GaleryPostComponent } from './galery-post.component';
 
 function postMock(overrides?: Partial<PostViewModel>): PostViewModel {
@@ -26,6 +27,7 @@ describe('GaleryPostComponent', () => {
   let fixture: ComponentFixture<GaleryPostComponent>;
   let blogContent: jasmine.SpyObj<BlogContentService>;
   let traduccion: jasmine.SpyObj<TraduccionService>;
+  let themeService: ThemeService;
 
   beforeEach(async () => {
     blogContent = jasmine.createSpyObj<BlogContentService>('BlogContentService', [
@@ -46,6 +48,8 @@ describe('GaleryPostComponent', () => {
 
     fixture = TestBed.createComponent(GaleryPostComponent);
     component = fixture.componentInstance;
+    themeService = TestBed.inject(ThemeService);
+    themeService.setTheme('dark');
   });
 
   it('debe crearse', () => {
@@ -163,6 +167,30 @@ describe('GaleryPostComponent', () => {
     it('referenciaImagen debe devolver contenido si no está vacío', () => {
       expect(component.referenciaImagen('default', 'contenido')).toBe('contenido');
       expect(component.referenciaImagen('default', '')).toBe('default');
+    });
+  });
+
+  describe('iconoCategoria (resolución según tema)', () => {
+    it('en modo dark devuelve iconLight de CATEGORIES', () => {
+      themeService.setTheme('dark');
+      expect(component.iconoCategoria('ai')).toBe('assets/img/categorias/ia-white.png');
+    });
+
+    it('en modo light devuelve iconDark de CATEGORIES', () => {
+      themeService.setTheme('light');
+      expect(component.iconoCategoria('ai')).toBe('assets/img/categorias/ia-dark.png');
+    });
+
+    it('con categoría desconocida usa fallback por convención', () => {
+      themeService.setTheme('dark');
+      expect(component.iconoCategoria('inventada')).toBe('assets/img/categorias/inventada-white.png');
+
+      themeService.setTheme('light');
+      expect(component.iconoCategoria('inventada')).toBe('assets/img/categorias/inventada-dark.png');
+    });
+
+    it('con cadena vacía devuelve vacío', () => {
+      expect(component.iconoCategoria('')).toBe('');
     });
   });
 });

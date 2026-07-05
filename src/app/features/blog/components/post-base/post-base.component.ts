@@ -8,8 +8,6 @@ import { DynamicContentComponent } from 'src/app/shared/components/dynamic-conte
 import { HeaderPostSupplementComponent } from 'src/app/shared/components/header-post-supplement/header-post-supplement.component';
 import { PostViewModel } from '../../models/post-view.model';
 import { BlogContentService } from '../../services/blog-content.service';
-import { CATEGORIA } from '../../constants/categories.constant';
-import { CategoriaPostModel } from '../../models/categorias.model';
 
 export type PostBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error' | 'sin-api';
 
@@ -23,7 +21,6 @@ export type PostBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error' | 
 export class PostBaseComponent implements OnInit {
   estado: PostBaseEstado = 'cargando';
   post: PostViewModel | null = null;
-  categoriaData?: CategoriaPostModel;
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -59,10 +56,6 @@ export class PostBaseComponent implements OnInit {
         }
         console.log('[PostBase] Post cargado OK:', publicacion);
         this.post = publicacion;
-        this.categoriaData = CATEGORIA.find(
-          c => c.nombre.toLowerCase() === publicacion.categoriaNombre?.toLowerCase()
-        );
-        console.log('[PostBase] Categoría local encontrada:', this.categoriaData?.nombre ?? 'ninguna (usará fallback PNG)');
         this.estado = 'listo';
       },
       error: (err) => {
@@ -75,15 +68,6 @@ export class PostBaseComponent implements OnInit {
 
   scroll(el: HTMLElement): void {
     el.scrollIntoView();
-  }
-
-  /** Ruta al PNG del ícono de la categoría (assets locales como fallback) */
-  get rutaIconoCategoria(): string {
-    if (this.categoriaData?.rutaIcono) {
-      return this.categoriaData.rutaIcono;
-    }
-    const nombre = this.post?.categoriaNombre?.toLowerCase() ?? '';
-    return nombre ? `assets/img/categorias/${nombre}.png` : '';
   }
 
   /**
