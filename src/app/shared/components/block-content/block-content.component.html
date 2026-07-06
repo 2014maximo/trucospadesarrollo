@@ -1,0 +1,22 @@
+
+@for (rowBlock of blockContent; track $index) {
+    <div class="row">
+        @for (colBlock of rowBlock.blocks; track $index) {
+            <div [class]="colBlock.initialStyle">
+                @for (contentBlock of colBlock.columns; track $index) {
+                    <h4 [class]="contentBlock.title?.styleText">
+                        {{ contentBlock.title?.text }}
+                    </h4>
+                    <h5 [class]="contentBlock.subtitle?.styleText">
+                        {{ contentBlock.subtitle?.text }}
+                    </h5>
+                    @for (paragraph of contentBlock.paragraph; track $index) {
+                        <p [class]="paragraph.styleText">
+                            {{ paragraph.text }}
+                        </p>
+                    }
+                }
+            </div>
+        }
+    </div>
+}
