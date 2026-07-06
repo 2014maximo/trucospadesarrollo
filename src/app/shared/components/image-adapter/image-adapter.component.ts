@@ -21,6 +21,14 @@ export class ImageAdapterComponent implements OnDestroy {
 		return !!this.image?.src?.trim();
 	}
 
+	get isTypeB(): boolean {
+		return this.image?.typeImage === 'type-B';
+	}
+
+	get typeBWidth(): string {
+		return this.image?.width && this.image.width !== 'auto' ? this.image.width : '100%';
+	}
+
 	get imageStyles() {
 		return {
 			width: this.image.width,

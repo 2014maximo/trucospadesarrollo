@@ -1,4 +1,6 @@
-
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
 @for (rowBlock of blockContent; track $index) {
     <div class="row">
         @for (colBlock of rowBlock.blocks; track $index) {
@@ -15,8 +17,13 @@
                             {{ paragraph.text }}
                         </p>
                     }
+                
+                    
                 }
             </div>
         }
     </div>
 }
+    </div>
+    <div class="col-md-1"></div>
+</div>

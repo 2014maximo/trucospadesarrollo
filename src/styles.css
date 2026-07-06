@@ -868,3 +868,7 @@ code.language-html {
 .minborder-bottom {
     border-bottom: 0.7px solid #464141;
 }
+
+.bord {
+    border: .7px solid #464141;
+}
