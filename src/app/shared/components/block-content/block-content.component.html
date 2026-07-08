@@ -17,8 +17,10 @@
                             {{ paragraph.text }}
                         </p>
                     }
-                
-                    
+                    @if (contentBlock.image) 
+                    {
+                        <app-image-adapter [image]="contentBlock.image"></app-image-adapter>
+                    }
                 }
             </div>
         }

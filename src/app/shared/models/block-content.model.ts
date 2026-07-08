@@ -15,6 +15,7 @@ export class ColumnsBlocks {
     subtitle?: TextModel = new TextModel();
     image?: ImageAdapterModel = new ImageAdapterModel();
     paragraph?: TextModel[]=[];
+    blocks?: RowBlocks[]=[];
 }
 
 export class TextModel {

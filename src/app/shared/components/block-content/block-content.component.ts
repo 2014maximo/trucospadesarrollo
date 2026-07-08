@@ -47,6 +47,20 @@ export class BlockContentComponent {
 				{
 					initialStyle:'col-md-8',
 					columns:[
+						{
+							image:{
+								src:'https://plantillas_dev.gitlab.io/assets/img/posts/developer/busqueda-empleo.jpg',
+								alt:'busqueda',
+								height:'552',
+								width:'auto',
+								typeImage: 'type-B',
+								creditTarget:'_blank',
+								creditUrl:'https://unsplash.com/',
+								creditText:'Jeremy Bishop - Unsplash',
+								creditClasses:'f-open-sans-c c7'
+
+							}
+						}
 						
 					]
 				}

@@ -1,5 +1,5 @@
-import { CommonModule } from '@angular/common';
-import { Component, HostBinding, Input, OnDestroy } from '@angular/core';
+import { CommonModule, isPlatformBrowser } from '@angular/common';
+import { Component, HostBinding, Inject, Input, OnDestroy, PLATFORM_ID } from '@angular/core';
 import { ImageAdapterModel } from '../../models/image-adapter.model';
 
 @Component({
@@ -9,6 +9,8 @@ import { ImageAdapterModel } from '../../models/image-adapter.model';
 	styleUrl: './image-adapter.component.css'
 })
 export class ImageAdapterComponent implements OnDestroy {
+
+	constructor(@Inject(PLATFORM_ID) private platformId: Object){}
 	@Input() image: ImageAdapterModel = new ImageAdapterModel();
 
 	@HostBinding('class') get hostClasses(): string {
@@ -56,6 +58,8 @@ export class ImageAdapterComponent implements OnDestroy {
 	}
 
 	ngOnDestroy(): void {
+		if (isPlatformBrowser(this.platformId)) {
 		document.body.style.overflow = '';
+		}
 	}
 }
