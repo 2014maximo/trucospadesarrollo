@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ContentAuthorComponent } from '../content-author/content-author.component';
 import { GaleryPostComponent } from '../galery-post/galery-post.component';
+import { BlockContentComponent } from '../block-content/block-content.component';
 
 // ── Tipos internos ────────────────────────────────────────────────────────────
 
@@ -47,29 +48,33 @@ const COMPONENT_REGISTRY: Record<string, ComponentEntry> = {
     component: GaleryPostComponent,
     inputName: 'itemIniciales', // GaleryPostComponent usa datos internos; se puede ampliar
   },
+  'block-content': {
+    component: BlockContentComponent,
+    inputName: 'blockContent',
+  },
   // Agregar aquí los próximos componentes:
   // 'block-text':   { component: BlockTextComponent,  inputName: 'data' },
   // 'gallery-slider': { component: GallerySliderComponent, inputName: 'data' },
 };
 
-// ── Regex de parsing (SSR-safe, sin DOM APIs) ─────────────────────────────────
+// Regex de parsing (SSR-safe, sin DOM APIs)
 //
 // Formato esperado en el campo `content` de WordPress:
 //
-//   <script type="application/json" data-component-id="ID">
+//   <script type="application/json" data-component-id="opcional-solo-debug">
 //     { "type": "content-author", "data": { ... } }
 //   </script>
-//   [ng-component id="ID"]
+//   [ng-component]
 //
-// NOTA: WordPress puede convertir las comillas rectas " del shortcode en
-// comillas tipográficas (“ ” « »). El grupo de caracteres WP_QUOTES las acepta
-// todas para que el match no falle en ningún caso.
-//
-const WP_QUOTES = '["\u201C\u201D\u00AB\u00BB]';
-const COMPONENT_BLOCK_REGEX = new RegExp(
-  `<script\\s+type="application\/json"\\s+data-component-id="([^"]+)">[\\s\\S]*?<\/script>\\s*\\[ng-component\\s+id=${WP_QUOTES}([^"\u201C\u201D\u00AB\u00BB]+)${WP_QUOTES}\\]`,
-  'g'
-);
+// El marcador NO lleva id: el emparejamiento con su <script> es siempre por
+// posicion en el texto (el primer [ng-component] despues de un </script> le
+// pertenece a ese script), asi que no hay nada que WordPress pueda
+// desincronizar. Antes el marcador era `[ng-component id="ID"]`, pero
+// wptexturize corrompia las comillas de forma impredecible (tipograficas,
+// angulares, e incluso el simbolo de pulgada `&#8243;` pegado a un numero) y
+// obligaba a mantener dos IDs sincronizados a mano.
+const COMPONENT_BLOCK_REGEX =
+  /<script\s+type="application\/json"(?:\s+data-component-id="([^"]*)")?\s*>([\s\S]*?)<\/script>\s*\[ng-component\]/g;
 
 @Component({
   selector: 'app-dynamic-content',
@@ -118,17 +123,7 @@ export class DynamicContentComponent implements OnChanges {
     let match: RegExpExecArray | null;
 
     while ((match = COMPONENT_BLOCK_REGEX.exec(clean)) !== null) {
-      const [fullMatch, jsonId] = match;
-      // Grupo 1 = data-component-id del <script>, Grupo 2 = id del shortcode
-      const shortcodeId = match[2];
-
-      // Los IDs deben coincidir (consistencia)
-      if (jsonId !== shortcodeId) {
-        console.warn(
-          `[DynamicContentComponent] IDs desincronizados: script="${jsonId}" shortcode="${shortcodeId}"`
-        );
-        continue;
-      }
+      const [fullMatch, debugId, jsonBody] = match;
 
       // Segmento HTML previo al bloque de componente
       const htmlBefore = clean.slice(lastIndex, match.index);
@@ -136,16 +131,13 @@ export class DynamicContentComponent implements OnChanges {
         result.push(this.makeHtmlSegment(htmlBefore));
       }
 
-      // Extraer el cuerpo JSON directamente del match completo
-      const jsonBody = this.extractJsonBody(fullMatch);
-
       // Intentar parsear el JSON y resolver el componente
-      const componentSegment = this.tryBuildComponentSegment(jsonBody);
+      const componentSegment = this.tryBuildComponentSegment(jsonBody.trim());
       if (componentSegment) {
         result.push(componentSegment);
       } else {
         console.warn(
-          `[DynamicContentComponent] No se pudo resolver el componente para id="${jsonId}". JSON: ${jsonBody}`
+          `[DynamicContentComponent] No se pudo resolver el componente${debugId ? ` (id="${debugId}")` : ''}. JSON: ${jsonBody}`
         );
       }
 
@@ -162,33 +154,33 @@ export class DynamicContentComponent implements OnChanges {
   }
 
   /**
-   * Extrae el cuerpo JSON del bloque completo capturado.
-   * Busca entre el primer `>` (cierre del tag <script>) y el `</script>`.
-   */
-  private extractJsonBody(fullMatch: string): string {
-    const start = fullMatch.indexOf('>') + 1;
-    const end = fullMatch.indexOf('<\/script>') !== -1
-      ? fullMatch.indexOf('<\/script>')
-      : fullMatch.indexOf('</script>');
-    return end > start ? fullMatch.slice(start, end).trim() : '';
-  }
-
-  /**
-   * Elimina artefactos que WordPress Gutenberg genera al guardar bloques HTML:
+   * Elimina/normaliza artefactos que WordPress Gutenberg genera al guardar bloques:
    *   - <script data-wp-block-html="js">...<\/script>  (duplicado del bloque original)
-   * Estos wrappers causan contenido duplicado y deben descartarse.
+   *   - El bloque de código o el shortcode [ng-component] envueltos en su propio
+   *     <p class="wp-block-paragraph">...</p> (wpautop puede separarlos del
+   *     <script> si no quedaron en el mismo bloque "HTML personalizado").
+   * Sin este "desenvolvimiento" el regex principal no los reconoce como
+   * contiguos y el componente nunca se resuelve.
    */
   private stripWpArtifacts(raw: string): string {
-    return raw.replace(/<script\s+data-wp-block-html=["'][^"']*["'][\s\S]*?<\/script>/g, '');
+    let clean = raw.replace(/<script\s+data-wp-block-html=["'][^"']*["'][\s\S]*?<\/script>/g, '');
+
+    clean = clean.replace(
+      /<p[^>]*>\s*(\[ng-component\])\s*<\/p>/gi,
+      '$1'
+    );
+
+    clean = clean.replace(
+      /<p[^>]*>\s*(<script\s+type="application\/json"[\s\S]*?<\/script>)\s*<\/p>/gi,
+      '$1'
+    );
+
+    return clean;
   }
 
   private tryBuildComponentSegment(jsonBody: string): ComponentSegment | null {
-    let parsed: { type?: string; data?: unknown };
-    try {
-      parsed = JSON.parse(jsonBody);
-    } catch {
-      return null;
-    }
+    const parsed = this.parseLenientJson(jsonBody);
+    if (!parsed) return null;
 
     const type = parsed?.type;
     if (!type || typeof type !== 'string') return null;
@@ -211,5 +203,37 @@ export class DynamicContentComponent implements OnChanges {
       kind: 'html',
       safeHtml: this.sanitizer.bypassSecurityTrustHtml(html),
     };
+  }
+
+  /**
+   * Intenta JSON.parse estricto primero. Si falla, normaliza sintaxis de
+   * objeto JS habitual (claves sin comillas, comillas simples, comas
+   * colgantes) — lo que se suele pegar por error copiando el mock de
+   * TypeScript — y reintenta. Si aun así falla, loguea el error real.
+   */
+  private parseLenientJson(jsonBody: string): { type?: string; data?: unknown } | null {
+    try {
+      return JSON.parse(jsonBody);
+    } catch {
+      // sigue con el intento permisivo
+    }
+
+    const normalized = jsonBody
+      // claves sin comillas: { foo: ... } o , foo: ...  →  "foo":
+      .replace(/([{,]\s*)([A-Za-z_$][\w$]*)\s*:/g, '$1"$2":')
+      // comillas simples de string → dobles (sin tocar comillas dobles internas)
+      .replace(/'((?:\\.|[^'\\])*)'/g, (_m, inner: string) => `"${inner.replace(/"/g, '\\"')}"`)
+      // comas colgantes antes de } o ]
+      .replace(/,(\s*[}\]])/g, '$1');
+
+    try {
+      return JSON.parse(normalized);
+    } catch (err) {
+      console.warn(
+        `[DynamicContentComponent] JSON inválido en el bloque de componente: ${(err as Error).message}`,
+        jsonBody
+      );
+      return null;
+    }
   }
 }
