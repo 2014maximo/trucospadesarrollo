@@ -1,0 +1,3 @@
+@import '../../about-shared.css';
+
+.fShadowsIntoLight { font-family: var(--f-shadows-into-light); }

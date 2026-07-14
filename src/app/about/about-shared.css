@@ -1,0 +1,8 @@
+.shadow-three { box-shadow: 5px 5px 15px rgba(0,0,0,0.5); }
+
+.title-block {
+    font-size: 50px;
+    line-height: 50px;
+    font-family: var(--f-shadows-into-light);
+    color: #fff;
+}

@@ -14,3 +14,18 @@
     z-index: 999;
     user-select: none;
 }
+
+.parallax-portfolio {
+    background-image: url("../../assets/img/portfolio/background.jpg");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #1d1d1d;
+    position: relative;
+    color: white;
+}
+.parallax-portfolio::before {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    opacity: 0.6;
+}

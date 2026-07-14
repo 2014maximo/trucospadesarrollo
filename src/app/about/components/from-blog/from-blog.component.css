@@ -1,3 +1,7 @@
+@import '../../about-shared.css';
+
+.shadow-two { box-shadow: 3px 3px 10px rgba(0,0,0,0.4); }
+
 .leerMas {
     color: #78726d;
     text-shadow: 3px 3px 2px #000000;

@@ -1,1 +1,8 @@
+@import '../../about-shared.css';
+
+.fs-110 { font-size: 110px; }
+.lh-90 { line-height: 90px; }
+.fw-7 { font-weight: 700; }
+.f-operator-m { font-family: var(--fuente-tres); }
+
 @media (max-width: 576px) { .testimonial { padding: 3rem; } .description { padding: 3rem; } }

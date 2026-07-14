@@ -1,3 +1,5 @@
+.fSixCaps { font-family: var(--fuente-ocho); }
+
 .wrappers {
     position: relative; height: 40px; width: 40px; display: block;
     background: #fff; text-align: center; border-radius: 50%;
