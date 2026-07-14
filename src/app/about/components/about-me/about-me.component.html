@@ -6,21 +6,8 @@
         </a>
     </div>
     <div class="col-md-12 col-xl-6 text-center">
-        <button data-bs-toggle="modal" class="l-button bg-Wordpress text-light f-shadow-into-l cursor-p mb-2 pos-z fs-30 border-0" data-bs-target="#exampleModal">
+        <button type="button" class="l-button bg-Wordpress text-light f-shadow-into-l cursor-p mb-2 pos-z fs-30 border-0" (click)="onContactClick()">
             {{ 'contactame' | translate }}
         </button>
-    </div>
-</div>
-
-<div class="modal fade" id="exampleModal" data-bs-backdrop="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content shadow-three bg-dark bg-gradient">
-            <div class="modal-header">
-                <button type="button" class="btn-close text-light" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <app-form-contact></app-form-contact>
-            </div>
-        </div>
     </div>
 </div>

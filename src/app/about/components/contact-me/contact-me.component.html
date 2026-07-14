@@ -1,28 +1,36 @@
 <div class="row bg-transparent">
     <div class="col-md-2"></div>
     <div class="col-md-8 f-open-sans-c">
-        <div class="contact-me p-5" data-aos="fade-up" data-aos-duration="3000">
-            <div class="bg-dark shadow-three mr-5 ml-5">
-                <div class="row fs-20 lh-20">
-                    <div class="col-lg-4 imgAlex"></div>
-                    <div class="col-lg-8 text-light p-5">
-                        <div class="hello">{{ 'hola' | translate }}</div>
-                        <h2>{{ 'soy' | translate }} Alex Munoz</h2>
-                        <p>{{ 'softDev' | translate }}</p>
-                        <div class="col-lg-4 d-lg-none">
-                            <img src="assets/img/portfolio/alex-sarku.jpg" alt="avatar-alex" class="img-fluid d-block d-xxl-none">
+        <div class="contact-me pt-5 pb-5" data-aos="fade-up" data-aos-duration="3000">
+            <div class="flip-container" [class.flipped]="flipped">
+                <div class="flip-inner">
+                    <div class="flip-front bg-dark shadow-three">
+                        <div class="row fs-20 lh-20">
+                            <div class="col-lg-4 imgAlex"></div>
+                            <div class="col-lg-8 text-light p-5">
+                                <div class="hello">{{ 'hola' | translate }}</div>
+                                <h2>{{ 'soy' | translate }} Alex Munoz</h2>
+                                <p>{{ 'softDev' | translate }}</p>
+                                <div class="col-lg-4 d-lg-none">
+                                    <img src="assets/img/portfolio/alex-sarku.jpg" alt="avatar-alex" class="img-fluid d-block d-xxl-none">
+                                </div>
+                                <hr>
+                                <app-about-me (contactClick)="flip()"></app-about-me>
+                            </div>
                         </div>
-                        <hr>
-                        <app-about-me></app-about-me>
+                        <div class="dropdown f-open-sans-c text-center itemTranslate">
+                            <a type="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
+                                <img src="assets/img/portfolio/traduccion.png" alt="icon png" height="40px" width="auto" class="drop">
+                            </a>
+                            <div class="dropdown-menu bg-dark border text-light">
+                                <a *ngIf="defaultLanguage === 'en'" class="dropdown-item text-light" (click)="changeLanguage('es')">Es</a>
+                                <a *ngIf="defaultLanguage === 'es'" class="dropdown-item text-light" (click)="changeLanguage('en')">En</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="dropdown f-open-sans-c text-center itemTranslate">
-                    <a type="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
-                        <img src="assets/img/portfolio/traduccion.png" alt="icon png" height="40px" width="auto" class="drop">
-                    </a>
-                    <div class="dropdown-menu bg-dark border text-light">
-                        <a *ngIf="defaultLanguage === 'en'" class="dropdown-item text-light" (click)="changeLanguage('es')">Es</a>
-                        <a *ngIf="defaultLanguage === 'es'" class="dropdown-item text-light" (click)="changeLanguage('en')">En</a>
+                    <div class="flip-back bg-dark shadow-three text-light p-5">
+                        <button type="button" class="btn-close text-light float-end" (click)="flip()" aria-label="Close"></button>
+                        <app-form-contact></app-form-contact>
                     </div>
                 </div>
             </div>

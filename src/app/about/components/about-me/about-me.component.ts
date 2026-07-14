@@ -1,8 +1,7 @@
-import { Component, OnInit, OnDestroy, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import { FormContactComponent } from '../form-contact/form-contact.component';
 import * as AOS from 'aos';
 import { Subscription } from 'rxjs';
 import { LangChangeEvent } from '@ngx-translate/core';
@@ -10,11 +9,12 @@ import { LangChangeEvent } from '@ngx-translate/core';
 @Component({
     selector: 'app-about-me',
     standalone: true,
-    imports: [FormContactComponent, TranslateModule, CommonModule],
+    imports: [TranslateModule, CommonModule],
     templateUrl: './about-me.component.html',
     styleUrl: './about-me.component.css'
 })
 export class AboutMeComponent implements OnInit, OnDestroy {
+    @Output() contactClick = new EventEmitter<void>();
     espanol = true;
     private langChangeSubscription: Subscription | null = null;
 
@@ -47,5 +47,9 @@ export class AboutMeComponent implements OnInit, OnDestroy {
 
     changeDownload() {
         this.espanol = !this.espanol;
+    }
+
+    onContactClick() {
+        this.contactClick.emit();
     }
 }

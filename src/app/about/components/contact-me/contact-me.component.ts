@@ -2,17 +2,19 @@ import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AboutMeComponent } from '../about-me/about-me.component';
+import { FormContactComponent } from '../form-contact/form-contact.component';
 import * as AOS from 'aos';
 
 @Component({
     selector: 'app-contact-me',
     standalone: true,
-    imports: [TranslateModule, CommonModule, AboutMeComponent],
+    imports: [TranslateModule, CommonModule, AboutMeComponent, FormContactComponent],
     templateUrl: './contact-me.component.html',
     styleUrl: './contact-me.component.css'
 })
 export class ContactMeComponent implements OnInit {
     defaultLanguage = 'es';
+    flipped = false;
 
     constructor(
         public translate: TranslateService,
@@ -31,5 +33,9 @@ export class ContactMeComponent implements OnInit {
     changeLanguage(language: string) {
         this.translate.use(language);
         this.defaultLanguage = language;
+    }
+
+    flip() {
+        this.flipped = !this.flipped;
     }
 }
