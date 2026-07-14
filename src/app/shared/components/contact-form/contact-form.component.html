@@ -1,0 +1,18 @@
+<div class="form-group f-open-sans-c">
+    <form [formGroup]="contactForm" (ngSubmit)="enviar()">
+        <input type="email" class="form-control tc-yellow-two" id="email"
+            placeholder="{{ 'Email' | translate }}" formControlName="email">
+        <textarea class="form-control tc-yellow-two" id="texarea" rows="3"
+            placeholder="{{ 'Comentarios' | translate }}" formControlName="comentarios"></textarea>
+
+        <!-- Honeypot anti-spam: campo oculto que un humano nunca completa -->
+        <input type="text" formControlName="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button type="submit" id="bt-enviar" class="p-2 btn-block bg-warning sombraUno w-100"
+            [disabled]="contactForm.invalid || enviando">
+            {{ enviando ? ('CONTACT.enviando' | translate) : ('Enviar' | translate) }}
+        </button>
+        <p *ngIf="enviado" class="text-success mt-2 text-center">{{ 'CONTACT.enviado' | translate }}</p>
+        <p *ngIf="error" class="text-danger mt-2 text-center">{{ 'CONTACT.error' | translate }}</p>
+    </form>
+</div>

@@ -9,6 +9,11 @@
     "Categorias": "Categorías",
     "Contacto": "Contacto",
     "Enviar": "Enviar",
+    "CONTACT": {
+        "enviando": "Enviando...",
+        "enviado": "Mensaje enviado correctamente.",
+        "error": "No se pudo enviar el mensaje. Intenta de nuevo más tarde."
+    },
     "Glosario": "Glosario",
     "LoQueMasGusta": "Lo que más gusta",
     "Idioma": "Idioma",

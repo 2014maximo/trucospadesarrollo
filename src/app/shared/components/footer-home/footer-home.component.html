@@ -15,16 +15,7 @@
             </div>
             <div class="col-md-6">
                 <div class="text-center">
-                    <div class="form-group f-open-sans-c">
-                        <form [formGroup]="formContact">
-                            <input type="email" class="form-control tc-yellow-two" id="email"
-                                placeholder="{{ 'Email' | translate }}" formControlName="email">
-                            <textarea class="form-control tc-yellow-two" id="texarea" rows="3"
-                                placeholder="{{ 'Comentarios' | translate }}" formControlName="comentarios"></textarea>
-                            <button type="submit" id="bt-enviar" class="p-2 btn-block bg-warning sombraUno w-100"
-                                (click)="enviar()">{{ 'Enviar' | translate }}</button>
-                        </form>
-                    </div>
+                    <app-contact-form></app-contact-form>
                 </div>
             </div>
         </div>

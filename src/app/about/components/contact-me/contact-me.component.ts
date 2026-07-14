@@ -2,13 +2,13 @@ import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { AboutMeComponent } from '../about-me/about-me.component';
-import { FormContactComponent } from '../form-contact/form-contact.component';
+import { ContactFormComponent } from '../../../shared/components/contact-form/contact-form.component';
 import * as AOS from 'aos';
 
 @Component({
     selector: 'app-contact-me',
     standalone: true,
-    imports: [TranslateModule, CommonModule, AboutMeComponent, FormContactComponent],
+    imports: [TranslateModule, CommonModule, AboutMeComponent, ContactFormComponent],
     templateUrl: './contact-me.component.html',
     styleUrl: './contact-me.component.css'
 })

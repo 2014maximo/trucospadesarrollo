@@ -9,6 +9,11 @@
     "Categorias": "Catégories",
     "Contacto": "Contact",
     "Enviar": "Envoyer",
+    "CONTACT": {
+        "enviando": "Envoi en cours...",
+        "enviado": "Message envoyé avec succès.",
+        "error": "Le message n'a pas pu être envoyé. Veuillez réessayer plus tard."
+    },
     "Glosario": "Glossaire",
     "LoQueMasGusta": "Les plus populaires",
     "Idioma": "Langue",

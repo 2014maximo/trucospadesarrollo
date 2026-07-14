@@ -6,5 +6,13 @@
     "pathRewrite": {
       "^/graphql": "/wordpress/graphql"
     }
+  },
+  "/wp-json": {
+    "target": "http://localhost",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/wp-json": "/wordpress/wp-json"
+    }
   }
 }
