@@ -1,0 +1,60 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h3 class="text-center title-block">{{ 'blog' | translate }}</h3>
+
+        @if (estado === 'cargando') {
+        <div class="text-center p-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">{{ 'BLOG_GALLERY.loading' | translate }}</span>
+            </div>
+            <p class="text-light f-open-sans-c fs-20 mt-3">{{ 'BLOG_GALLERY.loading' | translate }}</p>
+        </div>
+        }
+
+        @if (estado === 'sin-api') {
+        <div class="text-center p-5">
+            <p class="text-light f-open-sans-c fs-20">{{ 'BLOG_GALLERY.noApi' | translate }}</p>
+        </div>
+        }
+
+        @if (estado === 'error') {
+        <div class="text-center p-5">
+            <p class="text-danger f-open-sans-c fs-20">{{ 'BLOG_GALLERY.error' | translate }}</p>
+        </div>
+        }
+
+        @if (estado === 'vacio') {
+        <div class="text-center p-5">
+            <p class="text-light f-open-sans-c fs-20">{{ 'BLOG_GALLERY.empty' | translate }}</p>
+        </div>
+        }
+
+        @if (estado === 'listo') {
+        <div class="row">
+            @for (post of posts; track post.id) {
+            <div class="col-sm-4 pe-3 ps-3">
+                <div class="post">
+                    <div class="d-flex justify-content-end mb-2 drop-two">
+                        <a href="{{ post.categoriaRuta }}">
+                            <img src="{{ iconoCategoria(post.categoriaNombre) }}" class="drop" alt="{{ post.categoriaNombre }}" height="30" width="auto">
+                        </a>
+                    </div>
+                    <div class="pr-3 pt-3 imgPost">
+                        <img class="shadow-two img-fluid" alt="{{ post.titulo }}" src="{{ post.imagenUrl }}" height="220" width="auto">
+                    </div>
+                    <div class="mt-5">
+                        <h4 class="tituloPostGallery f-bebas text-light lh-25">{{ post.titulo }}</h4>
+                    </div>
+                    <p class="f-open-sans-c fs-17 lh-17 text-light descriptionText">{{ post.resumen }}</p>
+                    <time><p class="f-shadow-into-l text-light fs-15 m-0">{{ post.fecha }}</p></time>
+                    <a class="f-open-sans-c leerMas mt-2" href="{{ post.ruta }}">{{ 'leerMas' | translate }} &gt;</a>
+                </div>
+            </div>
+            }
+        </div>
+        }
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="espaciado"></div>

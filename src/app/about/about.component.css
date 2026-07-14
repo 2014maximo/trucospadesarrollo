@@ -1,0 +1,16 @@
+.go-up {
+    color: white;
+    position: fixed;
+    right: 35px;
+    bottom: 35px;
+    padding: 10px;
+    background: black;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 1px 39px 39px #000000;
+    z-index: 999;
+    user-select: none;
+}

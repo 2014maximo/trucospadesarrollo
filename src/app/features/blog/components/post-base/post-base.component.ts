@@ -31,7 +31,7 @@ export class PostBaseComponent implements OnInit {
     // console.log('[PostBase] ngOnInit — URL completa:', window?.location?.href ?? 'N/A');
 
     if (!this.blogContent.hasBaseUrl()) {
-      console.warn('[PostBase] Sin URL de API configurada → estado: sin-api');
+      // console.warn('[PostBase] Sin URL de API configurada → estado: sin-api');
       this.estado = 'sin-api';
       return;
     }
@@ -41,7 +41,7 @@ export class PostBaseComponent implements OnInit {
     console.log('[PostBase] Parámetros de ruta → categoria:', categoria, '| slug:', slug);
 
     if (!slug.trim()) {
-      console.warn('[PostBase] Slug vacío → estado: no-encontrado');
+      // console.warn('[PostBase] Slug vacío → estado: no-encontrado');
       this.estado = 'no-encontrado';
       return;
     }
@@ -49,7 +49,7 @@ export class PostBaseComponent implements OnInit {
     this.blogContent.getPostBySlug(slug).subscribe({
       next: publicacion => {
         if (!publicacion) {
-          console.warn('[PostBase] La API devolvió null para slug:', slug, '→ estado: no-encontrado');
+          // console.warn('[PostBase] La API devolvió null para slug:', slug, '→ estado: no-encontrado');
           this.estado = 'no-encontrado';
           this.post = null;
           return;

@@ -1,0 +1,60 @@
+<div class="row bg-transparent skills">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h3 class="title-block text-center">{{ 'habilidades' | translate }}</h3>
+        <div class="bg-dark shadow-three mt-2 remove-padding">
+            <ul class="nav nav-tabs f-open-sans-c" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button type="button" class="btn btn-outline-secondary active mb-1 me-1">
+                        <i class="bi bi-caret-up text-light" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" role="tab" aria-controls="home-tab-pane" aria-selected="true"></i>
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button type="button" class="btn btn-outline-secondary mb-1">
+                        <i class="bi bi-caret-down text-light" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" role="tab" aria-controls="profile-tab-pane" aria-selected="true"></i>
+                    </button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <div class="row pb-1 pt-5">
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/html-white.png" class="drop" alt="logo-html" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/css.png" class="drop" alt="logo-css" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/javascript.png" class="drop" alt="logo-javascript" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/angular.png" class="drop" alt="logo-angular" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/RXJS.png" class="drop" alt="logo-rxjs" height="40" width="auto"><p class="text-light text-center f-open-sans-c">RxJS</p></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/redux.png" class="drop" alt="logo-redux" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/primeng.png" class="drop" alt="logo-primeNg" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/ionic.png" class="drop" alt="logo-ionic" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/flutter_text_white.png" class="drop" alt="logo-flutter" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/git-light.png" class="drop" alt="logo-git" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/Node.js_logo_black.png" class="drop" alt="logo-nodeJs" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/wordpress2.png" class="drop" alt="logo-wordpress" height="40" width="auto"><p class="text-light text-center f-open-sans-c">Wordpress</p></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/php.png" class="drop" alt="logo-php" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/sql.png" class="drop" alt="logo-sql" height="40" width="auto"></div>
+                        <div class="col p-4 text-center"><img src="assets/img/portfolio/logos/Firebase-Logo.png" class="drop" alt="logo-firebase" height="40" width="auto"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <div class="row" data-aos="flip-left">
+                        <div class="col text-center"><circle-progress [percent]="85" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#f37001'" [innerStrokeColor]="'#f37001'" [animation]="true" [animationDuration]="300"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/html-white.png" class="drop" alt="logo-html" height="40" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="70" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#438bab'" [innerStrokeColor]="'#438bab'" [animation]="true" [animationDuration]="300"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/css.png" class="drop" alt="logo-css" height="40" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="60" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#f6d037'" [innerStrokeColor]="'#f6d037'" [animation]="true" [animationDuration]="300"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/javascript.png" class="drop" alt="logo-javascript" height="40" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="75" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#ca1717'" [innerStrokeColor]="'#b52e31'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/angular.png" class="drop" alt="logo-angular" height="40" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="50" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#e10d8d'" [innerStrokeColor]="'#e10d8d'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/RXJS.png" class="drop mx-auto" alt="logo-rxjs" height="40" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="55" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#7448b8'" [innerStrokeColor]="'#7448b8'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/redux.png" class="drop" alt="logo-redux" height="40" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="50" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#176bff'" [innerStrokeColor]="'#176bff'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/ionic.png" class="drop mx-auto" alt="logo-ionic" height="30" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="55" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#065b9c'" [innerStrokeColor]="'#065b9c'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/flutter_text_white.png" class="drop" alt="logo-flutter" height="50" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="40" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#f05133'" [innerStrokeColor]="'#f05133'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/git-light.png" class="drop" alt="logo-git" height="30" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="40" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#417e38'" [innerStrokeColor]="'#417e38'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/Node.js_logo_black.png" class="drop" alt="logo-nodeJs" height="40" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="70" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#35697d'" [innerStrokeColor]="'#35697d'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/wordpress2.png" class="drop mx-auto" alt="logo-wordpress" height="40" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="55" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#45538b'" [innerStrokeColor]="'#45538b'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/php.png" class="drop" alt="logo-php" height="30" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="65" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#0077d5'" [innerStrokeColor]="'#0077d5'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/sql.png" class="drop" alt="logo-sql" height="40" width="auto"></div></div>
+                        <div class="col text-center"><circle-progress [percent]="65" [radius]="50" [outerStrokeWidth]="20" [innerStrokeWidth]="1" [outerStrokeColor]="'#dd2c00'" [innerStrokeColor]="'#dd2c00'" [animation]="true" [animationDuration]="400"></circle-progress><div class="text-center"><img src="assets/img/portfolio/logos/Firebase-Logo.png" class="drop" alt="logo-firebase" height="50" width="auto"></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>

@@ -1,1 +1,17 @@
-<p>about works!</p>
+<div class="parallax-portfolio" #target></div>
+
+<div class="row fondoNegro">
+    <div class="col-md-12">
+        <app-contact-me></app-contact-me>
+        <app-skills></app-skills>
+        <app-experience></app-experience>
+        <app-projects></app-projects>
+        <app-hobbies></app-hobbies>
+        <app-from-blog></app-from-blog>
+        <app-testimonials></app-testimonials>
+        <app-footer></app-footer>
+    </div>
+</div>
+<div class="go-up" (click)="scroll(target)">
+    <i class="bi bi-arrow-up-circle"></i>
+</div>

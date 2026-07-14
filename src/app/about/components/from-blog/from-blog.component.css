@@ -1,0 +1,36 @@
+.leerMas {
+    color: #78726d;
+    text-shadow: 3px 3px 2px #000000;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.leerMas:hover {
+    color: #fff;
+}
+
+@media (max-width: 576px) {
+    .post {
+        padding: 3rem;
+    }
+}
+
+.tituloPostGallery {
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 5px;
+    font-size: 30px;
+    line-height: 30px;
+    text-shadow: 3px 3px 2px #000000;
+}
+
+.imgPost {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 0.7px solid #464141;
+}
+
+.imgPost img {
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+}

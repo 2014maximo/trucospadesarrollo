@@ -1,0 +1,33 @@
+<h3 class="text-center title-block">{{ 'experiencia' | translate }}</h3>
+<div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+        <div class="row" *ngFor="let era of EXPERIENCES">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2 class="text-center text-light fShadowsIntoLight">{{ era.era | translate }}</h2>
+                    </div>
+                </div>
+                <div class="row" *ngFor="let experience of era.experience; let i = index">
+                    <div *ngIf="!itsEvenNumber(i)" class="col-md-6"></div>
+                    <div class="col-md-6 {{ experience.styles.class }}">
+                        <div class="bg-dark shadow-three text-light p-5 f-open-sans-c me-2" [attr.data-aos]="experience.styles.dataAos" data-aos-offset="500" data-aos-easing="ease-in-sine" data-aos-duration="800">
+                            <b class="fs-20">{{ experience.entity | translate }}</b><br>
+                            {{ experience.workPerformed | translate }}<br>
+                            {{ experience.dateRange }}<br>
+                            {{ experience.place }}<br>
+                            <ul>
+                                <li *ngFor="let knoledge of experience.knowledgeAcquired">{{ knoledge | translate }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div *ngIf="itsEvenNumber(i)" class="col-md-6"></div>
+                </div>
+            </div>
+            <div class="espacio"></div>
+        </div>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+<div class="row"><div class="col-md-12"><div class="espaciado"></div></div></div>

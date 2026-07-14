@@ -7,14 +7,12 @@ import { PhrasesComponent } from "../shared/components/phrases/phrases.component
 import { FooterHomeComponent } from '../shared/components/footer-home/footer-home.component';
 import { GoUpComponent } from '../shared/components/go-up/go-up.component';
 import { CategoriesComponent } from '../shared/components/categories/categories.component';
-import { BlockContentComponent } from '../shared/components/block-content/block-content.component';
 
 @Component({
 	selector: 'app-home',
 	imports: [
 		HeaderComponent,
 		FooterHomeComponent,
-		BlockContentComponent,
 		CommonModule,
 		SliderHomeComponent,
 		GaleryPostComponent,

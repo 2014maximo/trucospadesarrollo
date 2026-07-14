@@ -1,0 +1,10 @@
+.contact-me { position: relative; bottom: 250px; }
+.itemTranslate { position: absolute; top: 91px; right: 88px; }
+.dropdown-item:hover { color: #000 !important; }
+.dropdown-item { cursor: pointer !important; }
+.imgAlex {
+    background-image: url("../../../../assets/img/portfolio/alex-sarku.jpg");
+    background-position: center center;
+    background-size: cover;
+}
+.dropdown-toggle { user-select: none; }

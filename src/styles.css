@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:300,300i,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
@@ -871,4 +872,72 @@ code.language-html {
 
 .bord {
     border: .7px solid #464141;
+}
+
+/* ===== PORTFOLIO STYLES ===== */
+
+:root {
+    --f-open-sans-c: 'Open Sans Condensed', sans-serif;
+    --f-shadows-into-light: 'Shadows Into Light';
+}
+
+.f-open-sans-c { font-family: var(--f-open-sans-c); }
+.fShadowsIntoLight, .f-shadow-into-l { font-family: var(--f-shadows-into-light); }
+.fSixCaps { font-family: var(--fuente-ocho); }
+
+.shadow-three { box-shadow: 5px 5px 15px rgba(0,0,0,0.5); }
+.shadow-two { box-shadow: 3px 3px 10px rgba(0,0,0,0.4); }
+
+.title-block {
+    font-size: 50px;
+    line-height: 50px;
+    font-family: var(--f-shadows-into-light);
+    color: #fff;
+}
+
+.l-button {
+    height: 45px;
+    white-space: pre;
+    text-align: center;
+    margin: 1px;
+}
+.l-button:hover { box-shadow: 5px 5px 5px #000; }
+
+.fs-15 { font-size: 15px; }
+.fs-17 { font-size: 17px; }
+.fs-20 { font-size: 20px; }
+.fs-25 { font-size: 25px; }
+.fs-30 { font-size: 30px; }
+.fs-110 { font-size: 110px; }
+.lh-17 { line-height: 17px; }
+.lh-20 { line-height: 20px; }
+.lh-25 { line-height: 25px; }
+.lh-90 { line-height: 90px; }
+
+.espacio { height: 40px; }
+.espaciado { height: 60px; }
+
+.cursor-p { cursor: pointer; }
+.pos-z { z-index: 3; }
+
+.fw-7 { font-weight: 700; }
+
+.border-end { border-right: 2px solid #464141; }
+.border-start { border-left: 2px solid #464141; }
+
+.f-operator-m { font-family: var(--fuente-tres); }
+
+.parallax-portfolio {
+    background-image: url("assets/img/portfolio/background.jpg");
+    min-height: 400px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #1d1d1d;
+    position: relative;
+    color: white;
+}
+.parallax-portfolio::before {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+    opacity: 0.6;
 }

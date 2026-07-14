@@ -1,0 +1,12 @@
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="mt-4 f-open-sans-c">
+    <div class="mb-3">
+        <input type="email" id="email" class="form-control bg-dark text-light" formControlName="email" placeholder="*Correo">
+    </div>
+    <div class="mb-3">
+        <textarea id="comments" class="form-control bg-dark text-light" formControlName="comments" rows="4" placeholder="*Mensaje"></textarea>
+    </div>
+    <button type="submit" class="btn bg-warning bg-gradient w-100" [disabled]="contactForm.invalid || sending">
+        {{ sending ? 'Enviando...' : 'Enviar' }}
+    </button>
+    <p *ngIf="sent" class="text-success mt-2 text-center">Mensaje enviado correctamente.</p>
+</form>

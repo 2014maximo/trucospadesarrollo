@@ -1,0 +1,44 @@
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <h3 class="text-center title-block">{{ 'testimonial' | translate }}</h3>
+        <div class="bg-dark shadow-three mt-2 pt-5 pb-5 about-me" data-aos="fade-up" data-aos-duration="3000">
+            <div id="carouselTestimonials" class="carousel slide">
+                <div class="carousel-inner">
+                    <div *ngFor="let testimonial of TESTIMONIALS; let i = index" class="carousel-item {{ i === 0 ? 'active' : '' }}">
+                        <div class="row">
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8 testimonial">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <span class="text-light f-operator-m fs-110 m-0 lh-90 text-end">&ldquo;</span>
+                                    </div>
+                                    <div class="col-md-10 description">
+                                        <p class="text-light f-open-sans-c fs-20 lh-20">{{ testimonial.description | translate }}</p>
+                                    </div>
+                                </div>
+                                <hr class="bg-secondary">
+                                <div class="d-flex">
+                                    <img src="{{ testimonial.srcImg }}" alt="photo" width="70" height="70" class="rounded-circle m-2">
+                                </div>
+                                <p class="text-light f-open-sans-c fs-25 lh-25 fw-7 m-0">{{ testimonial.author }}</p>
+                                <p class="text-light f-open-sans-c">{{ testimonial.workPerformed | translate }}</p>
+                            </div>
+                            <div class="col-sm-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<div class="espaciado"></div>
