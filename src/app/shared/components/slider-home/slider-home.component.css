@@ -46,7 +46,7 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #6c63ff;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 .slider-home__titulo {
@@ -84,18 +84,25 @@
   width: 5%;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1199px) {
   .slider-home__slide,
   .slider-home__slide--reverse {
     flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
     min-height: auto;
   }
 
   .slider-home__imagen {
     flex: none;
     width: 100%;
+    height: auto;
     min-height: 200px;
-    max-height: 250px;
+    max-height: 500px;
+  }
+
+  .slider-home__img {
+    height: auto;
   }
 
   .slider-home__info {
