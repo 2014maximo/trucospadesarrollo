@@ -16,7 +16,11 @@
 <div class="row">
   <div class="col-12 col-xl-1"></div>
   <div class="col-12 col-xl-10">
-    <div id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
+    <div class="slider-home__info-mobile" (click)="irAlPost(slideActual.ruta)">
+      <span class="slider-home__categoria">{{ slideActual.categoria }}</span>
+      <h2 class="slider-home__titulo">{{ slideActual.titulo }}</h2>
+    </div>
+    <div #carousel id="carouselFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
       data-testid="slider-list">
       <div class="carousel-inner">
         @for (slide of slides; track slide.ruta + '_' + $index; let i = $index) {

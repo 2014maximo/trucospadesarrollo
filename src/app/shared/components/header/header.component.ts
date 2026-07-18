@@ -2,8 +2,8 @@ import { Component, Input, Output, EventEmitter, Inject, PLATFORM_ID } from '@an
 import { isPlatformBrowser } from '@angular/common';
 import { CategoriaModel } from '../../models/post.model';
 import { FormControl, FormGroup } from '@angular/forms';
-import { CATEGORIA } from '@constants/categories.constant';
-import { CategoriaPostModel } from '@models/categorias.model';
+import { CATEGORIES } from '../categories/constants/categories.constant';
+import { CategoriesPageModel } from '../../models/categories-page.model';
 import { Router } from '@angular/router';
 import { Subject, debounceTime, distinctUntilChanged, switchMap, of, takeUntil } from 'rxjs';
 import { TraduccionService } from '../../services/traduccion.service';
@@ -37,7 +37,6 @@ interface SearchResultItem {
 export class HeaderComponent {
 
   public formBasic: FormGroup;
-  public categorias = CATEGORIA;
   public mostrarResultados: boolean = false;
   public encontrados: SearchResultItem[] = [];
   public buscando: boolean = false;
@@ -94,14 +93,14 @@ export class HeaderComponent {
   }
 
   private inicializarVariables() {
-    CATEGORIA.forEach((cat: CategoriaPostModel) => {
+    CATEGORIES.forEach((cat: CategoriesPageModel) => {
       let grupo: IndiceDeContenidosModel = {
-        color: '',
+        color: cat.color,
         colorFondo: cat.colorFondo,
-        estado: cat.estado,
-        nombre: cat.nombre.toUpperCase(),
+        estado: cat.state === 'active' ? 'activo' : 'inactivo',
+        nombre: cat.nameCategorie.toUpperCase(),
         posicion: cat.posicion,
-        ruta: cat.ruta,
+        ruta: cat.linkCategory,
         rutaInterna: ''
       }
       this.pasoDeIndice.push(grupo);
