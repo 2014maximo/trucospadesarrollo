@@ -4,6 +4,20 @@
   padding-left: 15px;
   box-shadow:  5px 5px #000000
 }
+
+::ng-deep .categories-header app-content-index .l-menu {
+  transition: transform 0.3s ease;
+}
+
+::ng-deep .categories-header app-content-index .l-menu:hover {
+  transform: rotate(0deg) !important;
+}
+
+::ng-deep .categories-header app-content-index .l-menu.active {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
 .resource-explorer {
   width: 100%;
   max-width: 900px;

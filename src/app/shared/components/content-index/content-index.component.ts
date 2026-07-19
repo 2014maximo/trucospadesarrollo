@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, Input, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
 import { CATEGORIA } from '@constants/categories.constant';
 import { CategoriaPostModel, DatosPost, SubCategoriaModel } from '@models/categorias.model';
 import { IndiceDeContenidosModel } from '@models/indice.model';
@@ -28,6 +28,8 @@ export class ContentIndexComponent implements OnInit, OnChanges {
   @Input() categoria: string = '';
   @Input() contenido: string = '';
   @Input() clase: string = '';
+  @Input() activeId: string = '';
+  @Output() itemSelected = new EventEmitter<IndiceDeContenidosModel>();
   
   public posts: DatosPost[] = [];
   public subcategorias: SubCategoriaModel[] = [];
@@ -103,6 +105,13 @@ export class ContentIndexComponent implements OnInit, OnChanges {
     let el = document.getElementById(id);
     // @ts-ignore: Object is possibly 'null'.
     el.scrollIntoView();
+  }
+
+  onItemClick(item: IndiceDeContenidosModel, event: Event): void {
+    if (this.itemSelected.observed) {
+      event.preventDefault();
+      this.itemSelected.emit(item);
+    }
   }
 
   public validaEstado(estado: string):boolean{

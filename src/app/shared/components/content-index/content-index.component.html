@@ -1,5 +1,5 @@
 <div class="row {{ clase }}">
-    <div *ngFor="let contenido of filtrarIndiceActivo(indice)" title="{{ traducirTexto(contenido.nombre,2) }}" class="col {{ validaEstado(contenido.estado)? contenido.colorFondo : '' }} {{ contenido.posicion }} l-menu cursor-p px-3">
+    <div *ngFor="let contenido of filtrarIndiceActivo(indice)" title="{{ traducirTexto(contenido.nombre,2) }}" class="col {{ validaEstado(contenido.estado)? contenido.colorFondo : '' }} {{ contenido.posicion }} l-menu cursor-p px-3" [class.active]="activeId && activeId === contenido.rutaInterna">
         <a *ngIf="contenido.rutaInterna" (click)="scroll(contenido.rutaInterna)" class="{{ contenido.color }} text-uppercase" >
             <del *ngIf="!validaEstado(contenido.estado)">{{ traducirTexto(contenido.nombre,1) }} ...</del>
             <span *ngIf="validaEstado(contenido.estado)">{{ traducirTexto(contenido.nombre,1) }} ...</span>
@@ -11,6 +11,9 @@
         <a *ngIf="validaEstado(contenido.estado) && contenido.rutaExterna" href="{{ contenido.rutaExterna }}" target="_blank" class="{{ contenido.color }} text-uppercase" >
             <del *ngIf="!validaEstado(contenido.estado)">{{ traducirTexto(contenido.nombre,1) }} ...</del>
             <span *ngIf="validaEstado(contenido.estado)">{{ traducirTexto(contenido.nombre,1) }} ...</span>
+        </a>
+        <a *ngIf="itemSelected.observed" (click)="onItemClick(contenido, $event)" class="{{ contenido.color }} text-uppercase cursor-p" >
+            <span>{{ traducirTexto(contenido.nombre,1) }} ...</span>
         </a>
     </div>
 </div>

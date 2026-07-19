@@ -1,10 +1,6 @@
 <div class="resource-explorer">
     <div class="categories-header">
-        <button *ngFor="let category of categories"
-            class="text-uppercase button-index {{category.individualStyle.backgroundColor}} {{category.individualStyle.textColor}} {{category.individualStyle.fontFamily}} {{category.individualStyle.fontSize}} {{category.individualStyle.rotation}}"
-            [class.active]="selectedCategory?.id === category.id" (click)="selectCategory(category)">
-            {{ category.name }}
-        </button>
+        <app-content-index [indice]="indiceItems" [activeId]="selectedCategory?.id" (itemSelected)="onItemSelected($event)"></app-content-index>
     </div>
 
     <div class="slider-wrapper-reveal" [class.show]="selectedCategory" [class.fade-out]="isAnimating">

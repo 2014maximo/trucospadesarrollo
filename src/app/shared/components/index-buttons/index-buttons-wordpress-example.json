@@ -1,0 +1,88 @@
+{
+  "type": "index-buttons",
+  "data": [
+    {
+      "id": "herramientas-web",
+      "name": "Herramientas Web",
+      "individualStyle": {
+        "backgroundColor": "bg-Developer",
+        "textColor": "text-white",
+        "fontFamily": "fuenteSeis",
+        "fontSize": "fs-30",
+        "rotation": "rot-1"
+      },
+      "resources": [
+        {
+          "title": "Google Search Console",
+          "description": "Herramienta para posicionar tu web en Google. Aunque con los análisis de IA, las tendencias parecen tener otro rumbo.",
+          "ImgSlider": {
+            "alt": "Google Search Console Logo",
+            "src": "https://tu-wordpress.com/wp-content/uploads/google-search-console.png",
+            "height": 60,
+            "width": 0
+          },
+          "url": "https://search.google.com/search-console/about"
+        },
+        {
+          "title": "Firebase",
+          "description": "Plataforma de desarrollo backend de Google.",
+          "ImgSlider": {
+            "alt": "Firebase Logo",
+            "src": "https://tu-wordpress.com/wp-content/uploads/firebase.png",
+            "height": 70,
+            "width": 0
+          },
+          "url": "https://firebase.google.com/"
+        }
+      ]
+    },
+    {
+      "id": "templates",
+      "name": "Templates",
+      "individualStyle": {
+        "backgroundColor": "bg-Android",
+        "textColor": "text-white",
+        "fontFamily": "fuenteSeis",
+        "fontSize": "fs-30",
+        "rotation": "rot-2"
+      },
+      "resources": [
+        {
+          "title": "Envato",
+          "description": "Miles de plantillas en múltiples formatos, cuando se ponen en venta la creatividad no tiene límites.",
+          "ImgSlider": {
+            "alt": "Envato Logo",
+            "src": "https://tu-wordpress.com/wp-content/uploads/envato.png",
+            "height": 40,
+            "width": 0
+          },
+          "url": "https://elements.envato.com/es/graphic-templates/websites"
+        }
+      ]
+    },
+    {
+      "id": "utilidades",
+      "name": "Utilidades Web",
+      "individualStyle": {
+        "backgroundColor": "bg-Electron",
+        "textColor": "text-dark",
+        "fontFamily": "fuenteSeis",
+        "fontSize": "fs-30",
+        "rotation": "rot-3"
+      },
+      "resources": [
+        {
+          "title": "Web Dev",
+          "description": "Increíble la cantidad de herramientas en esta web para optimizar webs, aprender y poner a punto tu web.",
+          "ImgSlider": {
+            "alt": "Web Dev Logo",
+            "src": "https://tu-wordpress.com/wp-content/uploads/web-dev.png",
+            "height": 60,
+            "width": 0
+          },
+          "url": "https://web.dev/"
+        }
+      ]
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { ContentAuthorComponent } from '../content-author/content-author.component';
 import { GaleryPostComponent } from '../galery-post/galery-post.component';
 import { BlockContentComponent } from '../block-content/block-content.component';
+import { IndexButtonsComponent } from '../index-buttons/index-buttons.component';
 
 // ── Tipos internos ────────────────────────────────────────────────────────────
 
@@ -51,6 +52,10 @@ const COMPONENT_REGISTRY: Record<string, ComponentEntry> = {
   'block-content': {
     component: BlockContentComponent,
     inputName: 'blockContent',
+  },
+  'index-buttons': {
+    component: IndexButtonsComponent,
+    inputName: 'categories',
   },
   // Agregar aquí los próximos componentes:
   // 'block-text':   { component: BlockTextComponent,  inputName: 'data' },

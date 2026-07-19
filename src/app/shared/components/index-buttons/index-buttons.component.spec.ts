@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { IndexButtonsComponent } from './index-buttons.component';
 
@@ -8,7 +9,7 @@ describe('IndexButtonsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [IndexButtonsComponent]
+      imports: [IndexButtonsComponent, TranslateModule.forRoot()]
     })
     .compileComponents();
 
