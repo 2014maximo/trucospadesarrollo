@@ -4,6 +4,10 @@ export class IndexButtonsModel {
     public name: string = '';
     public individualStyle: IndexButtonsStyleModel = new IndexButtonsStyleModel();
     public resources: IndexButtonsResourcesModel[] = [];
+    public estado?: string;
+    constructor(){
+        this.estado = 'activo'
+    }
 }
 
 export class IndexButtonsStyleModel {

@@ -123,8 +123,7 @@ export class ContentIndexComponent implements OnInit, OnChanges {
   }
 
   traducirTexto(texto: string, recortar:number): string {
-    let txt: string = texto? this.translate.instant(texto):'';
-    let recorte = recortar === 1? this.recortarTexto(txt) : txt;
+    let recorte = recortar === 1? this.recortarTexto(texto) : texto;
 
     
     return typeof(recorte) == 'object'? texto : recorte;
