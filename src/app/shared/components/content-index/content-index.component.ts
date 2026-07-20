@@ -109,7 +109,6 @@ export class ContentIndexComponent implements OnInit, OnChanges {
 
   onItemClick(item: IndiceDeContenidosModel, event: Event): void {
     if (this.itemSelected.observed) {
-      event.preventDefault();
       this.itemSelected.emit(item);
     }
   }

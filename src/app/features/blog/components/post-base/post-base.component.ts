@@ -54,7 +54,6 @@ export class PostBaseComponent implements OnInit {
           this.post = null;
           return;
         }
-        console.log('[PostBase] Post cargado OK:', publicacion);
         this.post = publicacion;
         this.estado = 'listo';
       },
