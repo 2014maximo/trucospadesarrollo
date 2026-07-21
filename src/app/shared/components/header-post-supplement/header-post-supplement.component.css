@@ -4,3 +4,33 @@
     left: -25px;
     bottom: -15px;
 }
+
+.titulo-post-responsive {
+    text-transform: uppercase;
+    font-size: 90px;
+    line-height: 95px;
+    color: #fff;
+    text-shadow: black .1em .1em .2em;
+    font-family: var(--fuente-ocho);
+}
+
+@media (max-width: 768px) {
+    .titulo-post-responsive {
+        font-size: 75px;
+        line-height: 75px;
+    }
+}
+
+@media (max-width: 576px) {
+    .titulo-post-responsive {
+        font-size: 55px;
+        line-height: 55px;
+    }
+}
+
+@media (max-width: 400px) {
+    .titulo-post-responsive {
+        font-size: 36px;
+        line-height: 36px;
+    }
+}

@@ -1,0 +1,41 @@
+.content-index-btn.l-menu {
+    height: 45px;
+    box-shadow: 5px 5px 5px #000000;
+}
+
+.content-index-btn.l-menu a {
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    .content-index-btn.l-menu {
+        height: 35px;
+        box-shadow: 3px 3px 3px #000000;
+    }
+    
+    .content-index-btn.l-menu a {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content-index-btn.l-menu {
+        height: 28px;
+        box-shadow: 2px 2px 2px #000000;
+    }
+    
+    .content-index-btn.l-menu a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 400px) {
+    .content-index-btn.l-menu {
+        height: 25px;
+        box-shadow: 2px 2px 2px #000000;
+    }
+    
+    .content-index-btn.l-menu a {
+        font-size: 14px;
+    }
+}
