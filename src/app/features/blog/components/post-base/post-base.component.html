@@ -28,7 +28,6 @@
 
       <!-- Cuerpo dinámico: HTML + componentes Angular embebidos desde WordPress -->
       @if (post.contenidoHtml) {
-      <div class="espacio"></div>
       <section class="post-base__cuerpo wp-content">
         <app-dynamic-content [content]="post.contenidoHtml"></app-dynamic-content>
       </section>
