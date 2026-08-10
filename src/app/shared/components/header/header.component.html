@@ -29,19 +29,7 @@
                 </div>
             </div>
             <div class="col-1">
-                <div class="dropdown f-open-sans-c text-center">
-                    <a type="button" data-bs-toggle="dropdown" aria-expanded="false" class="dropdown-toggle">
-                        <img src="assets/img/icons/traduccion.png" alt="icon png" height="40px" width="auto"
-                            class="drop">
-                    </a>
-                    <div class="dropdown-menu bg-transparent text-light">
-                        <a *ngFor="let lenguaje of lenguajes"
-                            class="d-flex dropdown-item cursor-p translate-item justify-content-between"
-                            (click)="procesoCambioLenguaje(lenguaje)">{{lenguaje}} <img
-                                src="assets/img/icons/languaje-{{lenguaje}}.png" alt="incon languaje" height="20px"
-                                width="auto"></a>
-                    </div>
-                </div>
+                <app-language-switcher></app-language-switcher>
             </div>
             <div class="col-1"></div>
         </div>

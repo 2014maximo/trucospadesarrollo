@@ -7,10 +7,12 @@
     text-shadow: 3px 3px 2px #000000;
     font-size: 18px;
     line-height: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .leerMas:hover {
-    color: #fff;
+    color: #ffc107;
 }
 
 @media (max-width: 576px) {

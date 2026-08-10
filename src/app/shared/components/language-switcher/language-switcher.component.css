@@ -1,0 +1,11 @@
+.translate-item {
+    color: #fff;
+}
+
+.translate-item:hover {
+    color: #002451;
+}
+
+.dropdown-toggle {
+    user-select: none;
+}

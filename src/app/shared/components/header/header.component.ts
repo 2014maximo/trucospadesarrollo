@@ -15,6 +15,7 @@ import { CommonModule } from '@angular/common';
 import { ContentIndexComponent } from '../content-index/content-index.component';
 import { BlogContentService } from 'src/app/features/blog/services/blog-content.service';
 import { PostViewModel } from 'src/app/features/blog/models/post-view.model';
+import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
 
 interface SearchResultItem {
   titulo: string;
@@ -28,7 +29,8 @@ interface SearchResultItem {
     ReactiveFormsModule,
     FormsModule,
     CommonModule,
-    ContentIndexComponent
+    ContentIndexComponent,
+    LanguageSwitcherComponent
   ],
   standalone: true,
   templateUrl: './header.component.html',
