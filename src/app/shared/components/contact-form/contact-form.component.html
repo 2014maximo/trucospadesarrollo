@@ -8,7 +8,7 @@
         <!-- Honeypot anti-spam: campo oculto que un humano nunca completa -->
         <input type="text" formControlName="website" class="honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
 
-        <button type="submit" id="bt-enviar" class="p-2 btn-block bg-warning sombraUno w-100"
+        <button type="submit" id="bt-enviar" class="p-2 btn-block bg-warning shadow-three w-100"
             [disabled]="contactForm.invalid || enviando">
             {{ enviando ? ('CONTACT.enviando' | translate) : ('Enviar' | translate) }}
         </button>

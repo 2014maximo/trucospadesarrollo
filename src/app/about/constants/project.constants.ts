@@ -2,17 +2,22 @@ import { IProject } from "../models/project.model";
 
 export const PROJECTS: IProject[] = [
     {
-        title: 'E-commerce Dashboard',
-        description: 'dECommerceDashboard',
-        technologies: ['Flutter Web', 'Dark', 'Firebase'],
-        githubUrl: 'https://github.com/tuUsuario/ecommerce-dashboard',
-        demoUrl: 'https://demo-ecommerce-dashboard.com',
-        imageUrl: 'assets/img/portfolio/projects/ecommerce-dashboard.png',
+        title: 'Trucospadesarrollo',
+        description: 'dTrucos',
+        technologies: ['Angular Universal', 'Api Headless WordPress', 'GraphQL'],
+        githubUrl: 'https://github.com/2014maximo/trucospadesarrollo',
+        demoUrl: 'https://www.trucospadesarrollo.com/',
+        imageUrl: '',
         features: [
-            'auth',
-            'invReal',
-            'aVentas',
-            'pResponsive'
+            'fSeo',
+            'fTresIdiomas',
+            'fContenidoAct',
+            'fRss',
+            'fModoOscuro',
+            'fTiempoLectura',
+            'fComentarios',
+            'fSitemap',
+            'fPwa'
         ]
     },
     {
@@ -20,27 +25,51 @@ export const PROJECTS: IProject[] = [
         description: 'dWorface',
         technologies: ['Firebase', 'Angular', 'CSS', 'html-to-image', 'Github pages'],
         githubUrl: 'https://github.com/2014maximo/workface',
-        imageUrl: 'https://2014maximo.github.io/workface/assets/img/icons/logo-workface-white.png',
         demoUrl: 'https://2014maximo.github.io/workface/home',
+        imageUrl: '',
         features: [
             'aFiresAuth',
             'eFirestore',
             'gImagenes',
-            'inAngular'
+            'inAngular',
+            'fExportPdf',
+            'fPlantillasCv',
+            'fModoOscuro',
+            'fHistorialCv',
+            'fCompartirLink'
         ]
     },
     {
-        title: 'PathPilot',
-        description: 'dPathPilot',
-        technologies: ['Angular', 'Github pages', 'API de Google Maps'],
-        githubUrl: 'https://github.com/tuUsuario/weather-pwa',
-        demoUrl: 'https://weather-pwa-demo.com',
-        imageUrl: 'assets/img/portfolio/projects/weather-app.png',
+        title: 'Auralash',
+        description: 'dAuralash',
+        technologies: ['Astro', 'Tailwind', 'Github pages'],
+        githubUrl: 'https://github.com/2014maximo/auralash',
+        demoUrl: 'https://2014maximo.github.io/auralash/',
+        imageUrl: '',
         features: [
-            'aFiresAuth',
-            'interIntui',
-            'apiGoogle',
-            'VRutas'
+            'fSeo',
+            'fResponsive',
+            'fFormContacto',
+            'fIntegracionRedes',
+            'fViewTransitions',
+            'fLighthouse100'
+        ]
+    },
+    {
+        title: 'Linkpark',
+        description: 'dLinkpark',
+        technologies: ['Astro', 'Tailwind', 'Github pages'],
+        githubUrl: 'https://github.com/2014maximo/linkpark',
+        demoUrl: 'https://2014maximo.github.io/linkpark/',
+        imageUrl: '',
+        features: [
+            'fDragDrop',
+            'fResponsive',
+            'fTemplates',
+            'fAnaliticas',
+            'fPersonalizacion',
+            'fQrCode',
+            'fCategorias'
         ]
     }
 ];

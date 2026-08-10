@@ -1,0 +1,29 @@
+# Dependencias
+node_modules/
+
+# Build output
+dist/
+
+# Firebase
+firebase.json
+
+# Vercel
+vercel.json
+
+# Proxy config
+proxy.conf.json
+
+# Tests
+*.spec.ts
+
+# Cache y temporales
+.angular/
+.cache/
+
+# Logs
+*.log
+
+# Documentación externa (no relevante para el grafo)
+docs/block-content-wordpress.md
+docs/wordpress-contact-form-endpoint.php
+docs/wordpress-contact-form-setup.md
