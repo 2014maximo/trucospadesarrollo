@@ -45,7 +45,3 @@ Thumbs.db
 .firebase
 *-debug.log
 .runtimeconfig.json
-
-# Graphify - commitear graphify-out/ excepto estos archivos
-graphify-out/cost.json
-graphify-out/cache/
