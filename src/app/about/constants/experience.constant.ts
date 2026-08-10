@@ -148,7 +148,7 @@ export const EXPERIENCE: IEras[] = [
             {
                 entity: "freelance",
                 workPerformed: "softDev",
-                dateRange: "2023-2024",
+                dateRange: "2024-2026",
                 place: "Medellin",
                 knowledgeAcquired: [
                     "construccionWeb",
