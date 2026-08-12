@@ -10,10 +10,10 @@
                     <!-- Iterate over resources of selected category -->
                     <div class="slide" *ngFor="let resource of selectedCategory.resources">
                         <div class="slide-content">
-                            <img src="{{resource.ImgSlider.src}}" alt="{{resource.ImgSlider.alt}}" height="{{resource.ImgSlider.height}}" width="auto">
-                            <h3 class="fuenteOcho fw-5">{{resource.title}}</h3>
+                            <img *ngIf="resource.ImgSlider.src" src="{{resource.ImgSlider.src}}" alt="{{resource.ImgSlider.alt}}" height="{{resource.ImgSlider.height}}" width="auto">
+                            <h3 *ngIf="!resource.ImgSlider.src" class="fuenteOcho fw-5">{{resource.title}}</h3>
                             <p class="f-open-sans-c fs-20 lh-25">{{resource.description}}</p>
-                            <a [href]="resource.url" target="_blank" rel="noopener noreferrer" class="access-btn f-open-sans-c">
+                            <a [href]="resource.url" target="_blank" rel="noopener noreferrer" class="access-btn fuenteSeis">
                                 Visitar sitio <span class="arrow-icon ">&rarr;</span>
                             </a>
                         </div>
@@ -24,10 +24,13 @@
             <button class="slider-btn prev-btn" (click)="prevSlide()">&#10094;</button>
             <button class="slider-btn next-btn" (click)="nextSlide()">&#10095;</button>
 
-            <div class="slider-indicators">
-                <span *ngFor="let resource of selectedCategory.resources; let i = index" class="dot"
-                    [class.active]="i === currentSlideIndex" (click)="setSlide(i)">
-                </span>
+            <div class="slider-titles-indicators">
+                <button *ngFor="let resource of selectedCategory.resources; let i = index" 
+                    class="title-indicator"
+                    [class.active]="i === currentSlideIndex" 
+                    (click)="setSlide(i)">
+                    {{resource.title}}
+                </button>
             </div>
         </div>
     </div>
