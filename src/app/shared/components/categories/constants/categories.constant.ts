@@ -237,7 +237,7 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		nameCategorie: 'web',
 		posicion: 'rot-2',
 		colorFondo: 'bg-Web',
-		color: 'text-light'
+		color: 'text-light bg-Web'
 	},
 	{
 		iconDark: 'assets/img/categorias/windows-dark.png',

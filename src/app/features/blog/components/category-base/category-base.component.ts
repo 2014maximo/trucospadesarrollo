@@ -9,9 +9,9 @@ import { ContentIndexComponent } from 'src/app/shared/components/content-index/c
 import { IndiceDeContenidosModel } from 'src/app/shared/models/indice.model';
 import { CategoryViewModel } from '../../models/category-view.model';
 import { PostViewModel } from '../../models/post-view.model';
-import { CategoriaPostModel } from '../../models/categorias.model';
 import { BlogContentService } from '../../services/blog-content.service';
-import { CATEGORIA } from '../../constants/categories.constant';
+import { CATEGORIES } from 'src/app/shared/components/categories/constants/categories.constant';
+import { CategoriesPageModel } from 'src/app/shared/models/categories-page.model';
 
 export type CategoryBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error' | 'sin-api';
 
@@ -22,7 +22,7 @@ export type CategoryBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error
  * URL esperada: /blog/:categoria  (p.ej. /blog/developer)
  *
  * Si la API no está configurada muestra un mensaje estático usando los datos
- * locales de `CATEGORIA` como fallback, de modo que la página siempre tenga
+ * locales de `CATEGORIES` como fallback, de modo que la página siempre tenga
  * contenido básico incluso sin conectividad al CMS.
  */
 @Component({
@@ -45,7 +45,7 @@ export class CategoryBaseComponent implements OnInit {
 
   estado: CategoryBaseEstado = 'cargando';
   categoria: CategoryViewModel | null = null;
-  categoriaLocal?: CategoriaPostModel;
+  categoriaLocal?: CategoriesPageModel;
   indice: IndiceDeContenidosModel[] = [];
 
   constructor(
@@ -56,9 +56,9 @@ export class CategoryBaseComponent implements OnInit {
   ngOnInit(): void {
     const slug = this.route.snapshot.paramMap.get('categoria') ?? '';
 
-    // Cargar datos locales como referencia (ícono, color, lista de posts, etc.)
-    this.categoriaLocal = CATEGORIA.find(
-      c => c.nombre.toLowerCase() === slug.toLowerCase()
+    // Cargar datos locales como referencia (ícono, color, etc.)
+    this.categoriaLocal = CATEGORIES.find(
+      c => c.nameCategorie.toLowerCase() === slug.toLowerCase()
     );
 
     if (!slug.trim()) {
