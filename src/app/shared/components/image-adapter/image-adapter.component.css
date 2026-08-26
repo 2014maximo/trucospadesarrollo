@@ -155,6 +155,16 @@
   }
 }
 
+/* type-C: imagen sin marco, enlazada a creditUrl */
+.type-c-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.type-c-static {
+  cursor: default;
+}
+
 /* type-B: imagen con marco */
 .marcoFoto {
   position: relative;

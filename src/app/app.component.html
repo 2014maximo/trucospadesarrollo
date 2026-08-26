@@ -1,3 +1,5 @@
+<app-cookie-consent-banner *ngIf="!cookieConsentService.hasGivenConsent()" />
+
 <div class="fondoNegro">
 	<router-outlet />
 </div>

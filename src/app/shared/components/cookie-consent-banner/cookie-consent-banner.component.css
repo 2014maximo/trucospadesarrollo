@@ -1,0 +1,9 @@
+.cookie-consent-banner .form-check-input:checked {
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.cookie-consent-banner .btn-outline-light:hover {
+  background-color: #ffffff;
+  color: #212529;
+}

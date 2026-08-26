@@ -23,6 +23,7 @@ export class IndexButtonsResourcesModel {
     public description: string = '';
     public ImgSlider: IndexButtonsImgSliderModel = new IndexButtonsImgSliderModel();
     public url: string = '';
+    public showTitleWithImage?: boolean;
 }
 
 export class IndexButtonsImgSliderModel {
@@ -30,4 +31,5 @@ export class IndexButtonsImgSliderModel {
     public src: string = '';
     public height: number = 0;
     public width: number = 0;
+    public cssClass?: string;
 }

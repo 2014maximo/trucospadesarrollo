@@ -1,0 +1,57 @@
+<div class="cookie-consent-banner fixed-bottom bottom-0 start-0 end-0 py-3 py-sm-5 background-secondary text-white">
+  <div class="container">
+    <div class="row gy-3 gx-0">
+      <div class="col-12 col-sm-6 col-md-4">
+        <h4 class="mb-2">{{ 'cookieConsent.title' | translate }}</h4>
+        <p class="mb-3 small">{{ 'cookieConsent.description' | translate }}</p>
+        <div class="d-flex flex-column flex-sm-row gap-2">
+          <button class="btn btn-outline-light btn-sm flex-fill" (click)="rechazarTodo()">{{ 'cookieConsent.reject_all' | translate }}</button>
+          <button class="btn btn-primary btn-sm flex-fill" (click)="aceptarTodo()">{{ 'cookieConsent.accept_all' | translate }}</button>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <h4 class="mb-2">{{ 'cookieConsent.essential' | translate }}</h4>
+        <p class="mb-1 small text-muted">Siempre activas</p>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="essential" disabled checked>
+          <label class="form-check-label" for="essential">{{ 'cookieConsent.essential' | translate }}</label>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <h4 class="mb-2">{{ 'cookieConsent.analytics' | translate }}</h4>
+        <p class="mb-1 small text-muted">Estadísticas anonimas</p>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="analytics" [checked]="cookieConsent.estaCategoriaActiva('analytics')"
+            (click)="cookieConsent.toggleCategoria('analytics')">
+          <label class="form-check-label" for="analytics">{{ 'cookieConsent.analytics' | translate }}</label>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <h4 class="mb-2">{{ 'cookieConsent.marketing' | translate }}</h4>
+        <p class="mb-1 small text-muted">Publicidad y seguimiento</p>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="marketing" [checked]="cookieConsent.estaCategoriaActiva('marketing')"
+            (click)="cookieConsent.toggleCategoria('marketing')">
+          <label class="form-check-label" for="marketing">{{ 'cookieConsent.marketing' | translate }}</label>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <h4 class="mb-2">{{ 'cookieConsent.preferences' | translate }}</h4>
+        <p class="mb-1 small text-muted">Configuraciones de usuario</p>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="preferences" [checked]="cookieConsent.estaCategoriaActiva('preferences')"
+            (click)="cookieConsent.toggleCategoria('preferences')">
+          <label class="form-check-label" for="preferences">{{ 'cookieConsent.preferences' | translate }}</label>
+        </div>
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-link text-white w-100 small mt-3" (click)="personalizar()">{{ 'cookieConsent.customize' | translate }}</button>
+      </div>
+    </div>
+  </div>
+</div>

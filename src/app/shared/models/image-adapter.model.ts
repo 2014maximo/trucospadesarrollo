@@ -8,7 +8,7 @@ export class ImageAdapterModel {
 	showZoomIcon?: boolean = true;
 	zoomIconPosition?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left' = 'top-right';
 	customClass?: string = '';
-	typeImage: 'type-A' | 'type-B' = 'type-A';
+	typeImage: 'type-A' | 'type-B' | 'type-C' = 'type-A';
 	creditUrl?: string = '';
 	creditText?: string = '';
 	creditTarget?: string = '_blank';

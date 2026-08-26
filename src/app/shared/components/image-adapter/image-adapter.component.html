@@ -15,8 +15,33 @@
     </a>
   </ng-container>
 
+  <!-- type-C: imagen sin marco, enlazada a creditUrl (sin creditText) -->
+  <ng-container *ngIf="isTypeC">
+    <a
+      *ngIf="image.creditUrl; else typeCStatic"
+      [href]="image.creditUrl"
+      [target]="image.creditTarget"
+      class="type-c-link"
+    >
+      <img
+        [src]="image.src"
+        [alt]="image.alt"
+        [ngStyle]="imageStyles"
+        class="main-image"
+      />
+    </a>
+    <ng-template #typeCStatic>
+      <img
+        [src]="image.src"
+        [alt]="image.alt"
+        [ngStyle]="imageStyles"
+        class="main-image type-c-static"
+      />
+    </ng-template>
+  </ng-container>
+
   <!-- type-A: imagen con zoom y modal -->
-  <ng-container *ngIf="!isTypeB">
+  <ng-container *ngIf="!isTypeB && !isTypeC">
     <div class="image-container">
       <img
         [src]="image.src"

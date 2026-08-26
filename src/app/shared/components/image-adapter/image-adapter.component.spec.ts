@@ -110,4 +110,46 @@ describe('ImageAdapterComponent', () => {
     fixture.detectChanges();
     expect(fixture.nativeElement.querySelector('a')).toBeNull();
   });
+
+  it('type-C debe renderizar la imagen sin marco dentro de un enlace a creditUrl', () => {
+    component.image = Object.assign(new ImageAdapterModel(), {
+      src: 'assets/test.png',
+      alt: 'Alt',
+      typeImage: 'type-C',
+      creditUrl: 'https://unsplash.com/',
+      creditText: 'No debe mostrarse'
+    });
+    fixture.detectChanges();
+
+    expect(component.isTypeC).toBe(true);
+    expect(fixture.nativeElement.querySelector('.marcoFoto')).toBeNull();
+    expect(fixture.nativeElement.querySelector('.bord')).toBeNull();
+
+    const link: HTMLAnchorElement | null = fixture.nativeElement.querySelector('a.type-c-link');
+    expect(link).toBeTruthy();
+    expect(link?.getAttribute('href')).toBe('https://unsplash.com/');
+    expect(link?.getAttribute('target')).toBe('_blank');
+
+    const img: HTMLImageElement | null = link?.querySelector('img.main-image') ?? null;
+    expect(img).toBeTruthy();
+    expect(img?.src).toContain('test.png');
+    expect(img?.alt).toBe('Alt');
+
+    expect(fixture.nativeElement.querySelector('small')).toBeNull();
+    expect(fixture.nativeElement.querySelector('.zoom-icon')).toBeNull();
+    expect(component.isModalOpen).toBe(false);
+  });
+
+  it('type-C debe renderizar la imagen estática sin enlace si creditUrl está vacío', () => {
+    component.image = Object.assign(new ImageAdapterModel(), {
+      src: 'assets/test.png',
+      typeImage: 'type-C'
+    });
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('a')).toBeNull();
+    const img: HTMLImageElement | null = fixture.nativeElement.querySelector('img.main-image');
+    expect(img).toBeTruthy();
+    expect(img?.src).toContain('test.png');
+  });
 });

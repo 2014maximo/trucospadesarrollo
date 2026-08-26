@@ -288,5 +288,18 @@
     "fAnaliticas": "Analíticas de clics por link",
     "fPersonalizacion": "Personalización visual (colores, avatar)",
     "fQrCode": "Generación automática de código QR",
-    "fCategorias": "Carpetas y categorías de links"
+    "fCategorias": "Carpetas y categorías de links",
+    "cookieConsent": {
+        "title": "Política de Cookies",
+        "description": "Utilizamos cookies para mejorar tu experiencia en nuestro sitio. Puedes aceptar todas las cookies, rechazar las no esenciales o configurar tus preferencias.",
+        "accept_all": "Aceptar todo",
+        "reject_all": "Rechazar todo",
+        "customize": "Personalizar",
+        "save": "Guardar preferencias",
+        "essential": "Cookies esenciales",
+        "analytics": "Cookies analíticas",
+        "marketing": "Cookies de marketing",
+        "preferences": "Cookies de preferencias",
+        "learn_more": "Más información"
+    }
 }

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { INDEX_BUTTONS_DEV_SITES } from '../../../features/blog/posts/developer/dev-sites/constants/index-buttons.constant';
 import { IndexButtonsModel } from '../../models/index-buttons.model';
 import { ContentIndexComponent } from '../content-index/content-index.component';
@@ -14,6 +14,7 @@ import { IndiceDeContenidosModel } from '../../models/indice.model';
 export class IndexButtonsComponent {
 
   @Input() categories: IndexButtonsModel[] = INDEX_BUTTONS_DEV_SITES;
+  @ViewChild('carouselReveal') carouselReveal?: ElementRef<HTMLElement>;
 
   selectedCategory: any = null;
   currentSlideIndex = 0;
@@ -32,14 +33,22 @@ export class IndexButtonsComponent {
   }
 
   selectCategory(category: any): void {
-    if (this.selectedCategory?.id === category.id) return;
+    if (this.selectedCategory?.id === category.id) {
+      this.scrollToCarousel();
+      return;
+    }
 
     this.isAnimating = true;
     setTimeout(() => {
       this.selectedCategory = category;
       this.currentSlideIndex = 0;
       this.isAnimating = false;
+      setTimeout(() => this.scrollToCarousel());
     }, 300);
+  }
+
+  private scrollToCarousel(): void {
+    this.carouselReveal?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 
   onItemSelected(indice: IndiceDeContenidosModel): void {

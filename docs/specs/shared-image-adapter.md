@@ -10,15 +10,15 @@ Componente compartido que muestra una imagen con zoom en modal. Toda la configur
 | `alt` | `string` | `''` | Texto alternativo (accesibilidad). |
 | `width` | `string` | `'auto'` | Ancho CSS de la imagen principal. En `type-B` defaultea a `'100%'` si queda en `'auto'`. |
 | `height` | `string` | `'auto'` | Alto CSS. |
-| `objectFit` | `'contain' \| 'cover' \| ...` | `'contain'` | `object-fit` de la imagen (solo `type-A`). |
-| `borderRadius` | `string` | `'0'` | Radio de borde (solo `type-A`). |
+| `objectFit` | `'contain' \| 'cover' \| ...` | `'contain'` | `object-fit` de la imagen (`type-A` y `type-C`). |
+| `borderRadius` | `string` | `'0'` | Radio de borde (`type-A` y `type-C`). |
 | `showZoomIcon` | `boolean` | `true` | Muestra el botón para abrir el modal (solo `type-A`). |
 | `zoomIconPosition` | `'top-right' \| ...` | `'top-right'` | Posición del icono de zoom (solo `type-A`). |
 | `customClass` | `string` | `''` | Clases en el host del componente (p. ej. `img-fluid`). |
-| `typeImage` | `'type-A' \| 'type-B'` | `'type-A'` | Modo de visualización. `type-A`: imagen con zoom + modal. `type-B`: imagen con marco `.bord` + crédito (estática, sin modal). |
-| `creditUrl` | `string` | `''` | URL del `<a>` de crédito (solo `type-B`). Si está vacío, no se renderiza el enlace. |
+| `typeImage` | `'type-A' \| 'type-B' \| 'type-C'` | `'type-A'` | Modo de visualización. `type-A`: imagen con zoom + modal. `type-B`: imagen con marco `.bord` + crédito (estática, sin modal). `type-C`: imagen sin marco convertida en enlace a `creditUrl` (sin modal ni `creditText`). |
+| `creditUrl` | `string` | `''` | URL del `<a>` de crédito (`type-B`) o del enlace que envuelve la imagen (`type-C`). Si está vacío, no se renderiza el enlace. |
 | `creditText` | `string` | `''` | Texto del `<small>` de crédito (solo `type-B`). |
-| `creditTarget` | `string` | `'_blank'` | Atributo `target` del enlace de crédito (solo `type-B`). |
+| `creditTarget` | `string` | `'_blank'` | Atributo `target` del enlace de crédito (`type-B` y `type-C`). |
 | `creditClasses` | `string` | `'f-open-sans-c c7'` | Clases del `<small>` de crédito (solo `type-B`). |
 
 ## Uso en plantillas
@@ -80,6 +80,23 @@ fotoCreditada: ImageAdapterModel = Object.assign(new ImageAdapterModel(), {
 
 > Notas: `.bord` es global (`src/styles.css`); `.marcoFoto` está autocircuito en el CSS del componente. En `type-B`, `width` defaultea a `'100%'` si se deja en `'auto'`.
 
+### Modo `type-C` (imagen clicable sin marco)
+
+Renderiza la imagen **sin** el marco de `type-B` y la envuelve en un `<a>` que apunta a `creditUrl` (con `creditTarget`). **No** muestra `creditText`, **no** abre modal ni muestra el icono de zoom. Si `creditUrl` está vacío, la imagen se renderiza estática sin enlace. Aplica `width`, `height`, `objectFit` y `borderRadius` como `type-A`.
+
+```typescript
+fotoClicable: ImageAdapterModel = Object.assign(new ImageAdapterModel(), {
+  src: 'assets/img/posts/busqueda-empleo.jpg',
+  alt: 'Predisposición en la búsqueda de empleo',
+  typeImage: 'type-C',
+  creditUrl: 'https://unsplash.com/'
+});
+```
+
+```html
+<app-image-adapter [image]="fotoClicable"></app-image-adapter>
+```
+
 ## Integración con `BlockTextModel`
 
 `GroupBlockTextModel` incluye `image?: ImageAdapterModel`. En plantilla:
@@ -93,7 +110,7 @@ El `*ngIf` evita instancias vacías cuando no hay imagen en ese bloque.
 ## Pruebas unitarias
 
 - Ejecutar: `npm test`.
-- El spec del componente (`image-adapter.component.spec.ts`) comprueba que sin `src` no hay `<img>`, que con un `ImageAdapterModel` completo se enlazan `src`, `alt` y `customClass` en el host, y los comportamientos de `type-B` (`.marcoFoto` con `src`/`alt`, crédito `<a>`/`<small>`, ausencia de icono de zoom).
+- El spec del componente (`image-adapter.component.spec.ts`) comprueba que sin `src` no hay `<img>`, que con un `ImageAdapterModel` completo se enlazan `src`, `alt` y `customClass` en el host, los comportamientos de `type-B` (`.marcoFoto` con `src`/`alt`, crédito `<a>`/`<small>`, ausencia de icono de zoom) y los de `type-C` (imagen sin marco dentro de `<a>` hacia `creditUrl` sin `creditText`, e imagen estática si `creditUrl` está vacío).
 
 ## Qué no hacer
 

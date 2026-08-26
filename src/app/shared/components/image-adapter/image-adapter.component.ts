@@ -27,6 +27,10 @@ export class ImageAdapterComponent implements OnDestroy {
 		return this.image?.typeImage === 'type-B';
 	}
 
+	get isTypeC(): boolean {
+		return this.image?.typeImage === 'type-C';
+	}
+
 	get typeBWidth(): string {
 		return this.image?.width && this.image.width !== 'auto' ? this.image.width : '100%';
 	}
