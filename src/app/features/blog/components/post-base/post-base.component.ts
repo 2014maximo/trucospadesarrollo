@@ -8,6 +8,7 @@ import { DynamicContentComponent } from 'src/app/shared/components/dynamic-conte
 import { HeaderPostSupplementComponent } from 'src/app/shared/components/header-post-supplement/header-post-supplement.component';
 import { PostViewModel } from '../../models/post-view.model';
 import { BlogContentService } from '../../services/blog-content.service';
+import { SeoService } from 'src/app/shared/services/seo.service';
 
 export type PostBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error' | 'sin-api';
 
@@ -22,9 +23,12 @@ export class PostBaseComponent implements OnInit {
   estado: PostBaseEstado = 'cargando';
   post: PostViewModel | null = null;
 
+  private categoriaRuta = '';
+
   constructor(
     private readonly route: ActivatedRoute,
     private readonly blogContent: BlogContentService,
+    private readonly seo: SeoService,
   ) { }
 
   ngOnInit(): void {
@@ -38,6 +42,7 @@ export class PostBaseComponent implements OnInit {
 
     const slug = this.route.snapshot.paramMap.get('slug') ?? '';
     const categoria = this.route.snapshot.paramMap.get('categoria') ?? '';
+    this.categoriaRuta = categoria;
     console.log('[PostBase] Parámetros de ruta → categoria:', categoria, '| slug:', slug);
 
     if (!slug.trim()) {
@@ -56,6 +61,7 @@ export class PostBaseComponent implements OnInit {
         }
         this.post = publicacion;
         this.estado = 'listo';
+        this.seo.actualizarPost(publicacion, this.categoriaRuta);
       },
       error: (err) => {
         console.error('[PostBase] Error al llamar la API:', err);

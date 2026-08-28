@@ -90,7 +90,7 @@ describe('PostBaseComponent', () => {
       fixture.detectChanges();
 
       expect(component.estado).toBe('listo');
-      const titulo: HTMLElement | null = fixture.nativeElement.querySelector('.tituloPost');
+      const titulo: HTMLElement | null = fixture.nativeElement.querySelector('.titulo-post-responsive');
       expect(titulo?.textContent).toContain('Título de prueba');
       const cuerpo: HTMLElement | null = fixture.nativeElement.querySelector('.post-base__cuerpo');
       expect(cuerpo?.textContent).toContain('Contenido');

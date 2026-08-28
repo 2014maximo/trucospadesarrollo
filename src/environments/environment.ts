@@ -3,5 +3,6 @@ export const environment = {
   // Ruta relativa: el proxy de Angular CLI la redirige a WordPress local.
   // Ver proxy.conf.json para la configuración del destino.
   graphql: '/graphql',
-  contactApi: '/wp-json/trucos/v1/contact'
+  contactApi: '/wp-json/trucos/v1/contact',
+  siteUrl: 'http://localhost:4200'
 };

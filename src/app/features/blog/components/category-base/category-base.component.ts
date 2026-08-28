@@ -12,6 +12,7 @@ import { PostViewModel } from '../../models/post-view.model';
 import { BlogContentService } from '../../services/blog-content.service';
 import { CATEGORIES } from 'src/app/shared/components/categories/constants/categories.constant';
 import { CategoriesPageModel } from 'src/app/shared/models/categories-page.model';
+import { SeoService } from 'src/app/shared/services/seo.service';
 
 export type CategoryBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error' | 'sin-api';
 
@@ -51,6 +52,7 @@ export class CategoryBaseComponent implements OnInit {
   constructor(
     private readonly route: ActivatedRoute,
     private readonly blogContent: BlogContentService,
+    private readonly seo: SeoService,
   ) {}
 
   ngOnInit(): void {
@@ -81,6 +83,7 @@ export class CategoryBaseComponent implements OnInit {
         }
         this.categoria = pagina;
         this.estado = 'listo';
+        this.seo.actualizarCategoria(pagina, slug);
         this.cargarIndicePosts(slug);
       },
       error: () => {

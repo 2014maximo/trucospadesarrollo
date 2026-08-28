@@ -2,6 +2,7 @@
 <app-header></app-header>
 <div class="espaciado"></div>
 
+<main>
 <article class="category-base">
   <!-- ── Estados intermedios ─────────────────────────────────────── -->
   @if (estado === 'cargando') {
@@ -67,6 +68,7 @@
   </div>
   }
 </article>
+</main>
 
 <app-footer></app-footer>
 <div class="go-up" (click)="scroll(target)">

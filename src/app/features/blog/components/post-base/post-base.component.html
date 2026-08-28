@@ -3,6 +3,7 @@
 <app-header></app-header>
 <div class="espaciado"></div>
 
+<main>
 <article class="post-base">
   @if (estado === 'sin-api') {
   <p class="post-base__mensaje" data-testid="post-base-sin-api">{{ 'BLOG_POST_BASE.noApi' | translate }}</p>
@@ -38,6 +39,7 @@
   </div>
   }
 </article>
+</main>
 
 <app-footer></app-footer>
 <div class="go-up" (click)="scroll(target)">

@@ -6,7 +6,7 @@
         <div class="espacio"></div>
         <br>
         <div class="d-flex">
-            <time class="tc-gray-two f-shadow-into-l fs-20 lh-20 m-0 p-0 texto-lateral m-0">
+            <time [attr.datetime]="fecha() | date:'yyyy-MM-dd'" class="tc-gray-two f-shadow-into-l fs-20 lh-20 m-0 p-0 texto-lateral m-0">
                 {{ fecha() | date }}
             </time>
         </div>
