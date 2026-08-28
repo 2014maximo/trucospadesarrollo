@@ -140,6 +140,35 @@ describe('ImageAdapterComponent', () => {
     expect(component.isModalOpen).toBe(false);
   });
 
+  it('type-C debe proyectar creditClasses en la imagen cuando hay creditUrl', () => {
+    component.image = Object.assign(new ImageAdapterModel(), {
+      src: 'assets/test.png',
+      typeImage: 'type-C',
+      creditUrl: 'https://unsplash.com/',
+      creditClasses: 'f-open-sans-c c7'
+    });
+    fixture.detectChanges();
+
+    const img: HTMLImageElement | null = fixture.nativeElement.querySelector('a.type-c-link img.main-image');
+    expect(img).toBeTruthy();
+    expect(img?.classList).toContain('f-open-sans-c');
+    expect(img?.classList).toContain('c7');
+  });
+
+  it('type-C debe proyectar creditClasses en la imagen estática si creditUrl está vacío', () => {
+    component.image = Object.assign(new ImageAdapterModel(), {
+      src: 'assets/test.png',
+      typeImage: 'type-C',
+      creditClasses: 'f-open-sans-c c7'
+    });
+    fixture.detectChanges();
+
+    const img: HTMLImageElement | null = fixture.nativeElement.querySelector('img.main-image');
+    expect(img).toBeTruthy();
+    expect(img?.classList).toContain('f-open-sans-c');
+    expect(img?.classList).toContain('c7');
+  });
+
   it('type-C debe renderizar la imagen estática sin enlace si creditUrl está vacío', () => {
     component.image = Object.assign(new ImageAdapterModel(), {
       src: 'assets/test.png',

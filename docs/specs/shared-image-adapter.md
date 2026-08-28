@@ -19,7 +19,7 @@ Componente compartido que muestra una imagen con zoom en modal. Toda la configur
 | `creditUrl` | `string` | `''` | URL del `<a>` de crédito (`type-B`) o del enlace que envuelve la imagen (`type-C`). Si está vacío, no se renderiza el enlace. |
 | `creditText` | `string` | `''` | Texto del `<small>` de crédito (solo `type-B`). |
 | `creditTarget` | `string` | `'_blank'` | Atributo `target` del enlace de crédito (`type-B` y `type-C`). |
-| `creditClasses` | `string` | `'f-open-sans-c c7'` | Clases del `<small>` de crédito (solo `type-B`). |
+| `creditClasses` | `string` | `'f-open-sans-c c7'` | Clases del `<small>` de crédito en `type-B` y del `<img>` en `type-C`. |
 
 ## Uso en plantillas
 
@@ -82,7 +82,7 @@ fotoCreditada: ImageAdapterModel = Object.assign(new ImageAdapterModel(), {
 
 ### Modo `type-C` (imagen clicable sin marco)
 
-Renderiza la imagen **sin** el marco de `type-B` y la envuelve en un `<a>` que apunta a `creditUrl` (con `creditTarget`). **No** muestra `creditText`, **no** abre modal ni muestra el icono de zoom. Si `creditUrl` está vacío, la imagen se renderiza estática sin enlace. Aplica `width`, `height`, `objectFit` y `borderRadius` como `type-A`.
+Renderiza la imagen **sin** el marco de `type-B` y la envuelve en un `<a>` que apunta a `creditUrl` (con `creditTarget`). **No** muestra `creditText`, **no** abre modal ni muestra el icono de zoom. Si `creditUrl` está vacío, la imagen se renderiza estática sin enlace. Aplica `width`, `height`, `objectFit` y `borderRadius` como `type-A`, y proyecta `creditClasses` sobre el `<img>` (tanto dentro del enlace como en la variante estática).
 
 ```typescript
 fotoClicable: ImageAdapterModel = Object.assign(new ImageAdapterModel(), {
@@ -110,7 +110,7 @@ El `*ngIf` evita instancias vacías cuando no hay imagen en ese bloque.
 ## Pruebas unitarias
 
 - Ejecutar: `npm test`.
-- El spec del componente (`image-adapter.component.spec.ts`) comprueba que sin `src` no hay `<img>`, que con un `ImageAdapterModel` completo se enlazan `src`, `alt` y `customClass` en el host, los comportamientos de `type-B` (`.marcoFoto` con `src`/`alt`, crédito `<a>`/`<small>`, ausencia de icono de zoom) y los de `type-C` (imagen sin marco dentro de `<a>` hacia `creditUrl` sin `creditText`, e imagen estática si `creditUrl` está vacío).
+- El spec del componente (`image-adapter.component.spec.ts`) comprueba que sin `src` no hay `<img>`, que con un `ImageAdapterModel` completo se enlazan `src`, `alt` y `customClass` en el host, los comportamientos de `type-B` (`.marcoFoto` con `src`/`alt`, crédito `<a>`/`<small>`, ausencia de icono de zoom) y los de `type-C` (imagen sin marco dentro de `<a>` hacia `creditUrl` sin `creditText`, proyección de `creditClasses` en el `<img>`, e imagen estática si `creditUrl` está vacío).
 
 ## Qué no hacer
 
