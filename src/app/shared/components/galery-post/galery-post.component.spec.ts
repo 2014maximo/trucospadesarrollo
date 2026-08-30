@@ -6,6 +6,15 @@ import { PostViewModel } from 'src/app/features/blog/models/post-view.model';
 import { TraduccionService } from '../../services/traduccion.service';
 import { ThemeService } from '../../services/theme.service';
 import { GaleryPostComponent } from './galery-post.component';
+import { ContentAuthorModel } from '../../models/content-author.model';
+
+function autorMock(): ContentAuthorModel {
+  const autor = new ContentAuthorModel();
+  autor.name = 'Alex';
+  autor.srcAvatar = 'https://example.com/avatar.png';
+  autor.linkRefenceAuthor = 'https://example.com/portafolio';
+  return autor;
+}
 
 function postMock(overrides?: Partial<PostViewModel>): PostViewModel {
   return {
@@ -18,7 +27,8 @@ function postMock(overrides?: Partial<PostViewModel>): PostViewModel {
     fechaModificacion: overrides?.fechaModificacion ?? '2026-01-02',
     categoria: overrides?.categoria ?? 'cat-1',
     categoriaNombre: overrides?.categoriaNombre ?? 'Developer',
-    imagenDestacada: overrides?.imagenDestacada ?? 'https://example.com/img.jpg'
+    imagenDestacada: overrides?.imagenDestacada ?? 'https://example.com/img.jpg',
+    autor: overrides?.autor
   };
 }
 
@@ -167,6 +177,46 @@ describe('GaleryPostComponent', () => {
     it('referenciaImagen debe devolver contenido si no está vacío', () => {
       expect(component.referenciaImagen('default', 'contenido')).toBe('contenido');
       expect(component.referenciaImagen('default', '')).toBe('default');
+    });
+
+    it('debe mapear el autor del post al item de la galería', () => {
+      blogContent.getLatestPosts.and.returnValue(of([
+        postMock({ autor: autorMock() })
+      ]));
+      fixture.detectChanges();
+
+      expect(component.todosLosPost[0].autor?.name).toBe('Alex');
+      expect(component.todosLosPost[0].autor?.srcAvatar).toBe('https://example.com/avatar.png');
+    });
+
+    it('debe dejar autor en undefined si el post no trae autor', () => {
+      blogContent.getLatestPosts.and.returnValue(of([postMock()]));
+      fixture.detectChanges();
+
+      expect(component.todosLosPost[0].autor).toBeUndefined();
+    });
+
+    it('debe renderizar app-content-author tipo 2 cuando el post tiene autor', () => {
+      blogContent.getLatestPosts.and.returnValue(of([
+        postMock({ autor: autorMock() })
+      ]));
+      fixture.detectChanges();
+      component.postPaginar = [component.todosLosPost[0]];
+      fixture.detectChanges();
+
+      const autorEl = fixture.nativeElement.querySelector('app-content-author');
+      expect(autorEl).withContext('app-content-author').not.toBeNull();
+      expect(autorEl.getAttribute('ng-reflect-tipo')).toBe('2');
+      expect(fixture.nativeElement.querySelector('.autor-compacto')).not.toBeNull();
+    });
+
+    it('no debe renderizar app-content-author cuando el post no tiene autor', () => {
+      blogContent.getLatestPosts.and.returnValue(of([postMock()]));
+      fixture.detectChanges();
+      component.postPaginar = [component.todosLosPost[0]];
+      fixture.detectChanges();
+
+      expect(fixture.nativeElement.querySelector('app-content-author')).toBeNull();
     });
   });
 

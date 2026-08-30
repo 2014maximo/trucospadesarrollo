@@ -6,6 +6,7 @@ import { FooterComponent } from 'src/app/shared/components/footer/footer.compone
 import { HeaderComponent } from 'src/app/shared/components/header/header.component';
 import { DynamicContentComponent } from 'src/app/shared/components/dynamic-content/dynamic-content.component';
 import { HeaderPostSupplementComponent } from 'src/app/shared/components/header-post-supplement/header-post-supplement.component';
+import { ContentAuthorComponent } from 'src/app/shared/components/content-author/content-author.component';
 import { PostViewModel } from '../../models/post-view.model';
 import { BlogContentService } from '../../services/blog-content.service';
 import { SeoService } from 'src/app/shared/services/seo.service';
@@ -15,7 +16,7 @@ export type PostBaseEstado = 'cargando' | 'listo' | 'no-encontrado' | 'error' | 
 @Component({
   selector: 'app-post-base',
   standalone: true,
-  imports: [CommonModule, TranslateModule, HeaderComponent, FooterComponent, DynamicContentComponent, HeaderPostSupplementComponent],
+  imports: [CommonModule, TranslateModule, HeaderComponent, FooterComponent, DynamicContentComponent, HeaderPostSupplementComponent, ContentAuthorComponent],
   templateUrl: './post-base.component.html',
   styleUrl: './post-base.component.css'
 })

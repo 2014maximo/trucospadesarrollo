@@ -11,6 +11,8 @@ import { PaginatorComponent } from '../paginator/paginator.component';
 import { TraslateForce } from '@shared//traslate-function';
 import { ThemeService } from '../../services/theme.service';
 import { resolverIconoCategoria } from '../categories/categories.helper';
+import { ContentAuthorComponent } from '../content-author/content-author.component';
+import { ContentAuthorModel } from '../../models/content-author.model';
 
 interface GalleryPostItem {
   id: string;
@@ -21,13 +23,14 @@ interface GalleryPostItem {
   categoriaNombre: string;
   categoriaRuta: string;
   fecha: string;
+  autor?: ContentAuthorModel;
 }
 
 export type GalleryEstado = 'cargando' | 'listo' | 'error' | 'vacio' | 'sin-api';
 
 @Component({
   selector: 'app-galery-post',
-  imports: [TranslateModule, CommonModule, PaginatorComponent],
+  imports: [TranslateModule, CommonModule, PaginatorComponent, ContentAuthorComponent],
   templateUrl: './galery-post.component.html',
   styleUrl: './galery-post.component.css'
 })
@@ -107,7 +110,8 @@ export class GaleryPostComponent implements OnInit {
       ruta: `/blog/${categoriaLower}/${post.slug}`,
       categoriaNombre: post.categoriaNombre,
       categoriaRuta: datosCategoria(categoriaLower, 11) || `/blog/${categoriaLower}`,
-      fecha: ((post.fechaModificacion || post.fechaPublicacion) || '').substring(0, 10)
+      fecha: ((post.fechaModificacion || post.fechaPublicacion) || '').substring(0, 10),
+      autor: post.autor
     };
   }
 

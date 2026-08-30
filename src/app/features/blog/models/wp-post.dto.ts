@@ -23,6 +23,19 @@ export interface WpGraphqlFeaturedImage {
   node: WpGraphqlFeaturedImageNode;
 }
 
+// ── Campos personalizados del autor (ACF: contentauthormodel) ───────────────
+
+export interface WpGraphqlContentAuthorFile {
+  url: string;
+}
+
+export interface WpGraphqlContentAuthorModel {
+  autorDelPost?: string;
+  srcavatar?: WpGraphqlContentAuthorFile;
+  linkrefenceauthor?: WpGraphqlContentAuthorFile;
+  introduction?: string;
+}
+
 export interface WpGraphqlPostNode {
   id: string;
   title: string;
@@ -34,6 +47,7 @@ export interface WpGraphqlPostNode {
   authorId?: string;
   categories?: WpGraphqlCategories;
   featuredImage?: WpGraphqlFeaturedImage;
+  contentauthormodel?: WpGraphqlContentAuthorModel;
 }
 
 export interface WpGraphqlPosts {

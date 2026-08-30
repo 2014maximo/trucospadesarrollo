@@ -5,8 +5,17 @@ import { of, throwError } from 'rxjs';
 import { PostViewModel } from '../../models/post-view.model';
 import { BlogContentService } from '../../services/blog-content.service';
 import { PostBaseComponent } from './post-base.component';
+import { ContentAuthorModel } from 'src/app/shared/models/content-author.model';
 
-function publicacionMock(): PostViewModel {
+function autorMock(): ContentAuthorModel {
+  const autor = new ContentAuthorModel();
+  autor.name = 'Alex';
+  autor.srcAvatar = 'https://example.com/avatar.png';
+  autor.linkRefenceAuthor = 'https://example.com/portafolio';
+  return autor;
+}
+
+function publicacionMock(overrides?: Partial<PostViewModel>): PostViewModel {
   return {
     id: '1',
     slug: 'test',
@@ -16,7 +25,8 @@ function publicacionMock(): PostViewModel {
     fechaPublicacion: '2026-01-01',
     fechaModificacion: '2026-01-02',
     categoria: 'categoria-test',
-    categoriaNombre: 'Developer'
+    categoriaNombre: 'Developer',
+    autor: overrides?.autor
   };
 }
 
@@ -94,6 +104,25 @@ describe('PostBaseComponent', () => {
       expect(titulo?.textContent).toContain('Título de prueba');
       const cuerpo: HTMLElement | null = fixture.nativeElement.querySelector('.post-base__cuerpo');
       expect(cuerpo?.textContent).toContain('Contenido');
+    });
+
+    it('debe renderizar app-content-author tipo 3 cuando la publicación tiene autor', () => {
+      blogContent.hasBaseUrl.and.returnValue(true);
+      blogContent.getPostBySlug.and.returnValue(of(publicacionMock({ autor: autorMock() })));
+      fixture.detectChanges();
+
+      const autorEl: HTMLElement | null = fixture.nativeElement.querySelector('app-content-author');
+      expect(autorEl).withContext('app-content-author').not.toBeNull();
+      expect(autorEl?.getAttribute('ng-reflect-tipo')).toBe('3');
+      expect(fixture.nativeElement.querySelector('.autor-post')).not.toBeNull();
+    });
+
+    it('no debe renderizar app-content-author cuando la publicación no tiene autor', () => {
+      blogContent.hasBaseUrl.and.returnValue(true);
+      blogContent.getPostBySlug.and.returnValue(of(publicacionMock()));
+      fixture.detectChanges();
+
+      expect(fixture.nativeElement.querySelector('app-content-author')).toBeNull();
     });
   });
 

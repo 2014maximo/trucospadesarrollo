@@ -27,6 +27,16 @@
         [descripcion]="extractoParrafos" [fecha]="post.fechaModificacion || post.fechaPublicacion">
       </app-header-post-supplement>
 
+      <!-- Autor del post (después del excerpt), alineado con la columna del excerpt -->
+      @if (post.autor) {
+      <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-7">
+          <app-content-author class="d-block mb-4" [datesAuthor]="post.autor" [tipo]="3"></app-content-author>
+        </div>
+      </div>
+      }
+
       <!-- Cuerpo dinámico: HTML + componentes Angular embebidos desde WordPress -->
       @if (post.contenidoHtml) {
       <section class="post-base__cuerpo wp-content">

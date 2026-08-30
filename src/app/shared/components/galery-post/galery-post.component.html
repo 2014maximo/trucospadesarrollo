@@ -109,6 +109,9 @@
 					<h4 class="tituloPost f-bebas">{{ post.titulo }}</h4>
 				</div>
 				<p class="f-open-sans-c fs-20 lh-20 text-light">{{ post.resumen }}</p>
+				@if (post.autor) {
+				<app-content-author class="d-block mb-2" [datesAuthor]="post.autor" [tipo]="2"></app-content-author>
+				}
 				<time>
 					<p class="f-shadow-into-l text-light fs-15 m-0">{{ post.fecha }}</p>
 				</time>

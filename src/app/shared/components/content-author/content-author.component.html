@@ -1,3 +1,12 @@
+@if (tipo === 2 || tipo === 3) {
+<div class="autor-compacto" [class.autor-post]="tipo === 3">
+    <img src="{{datesAuthor.srcAvatar}}" alt="{{datesAuthor.name}}" class="avatar-compacto"
+        [class.avatar-post]="tipo === 3">
+    <a href="{{datesAuthor.linkRefenceAuthor}}" target="_blank" rel="author noopener"
+        class="f-open-sans-c text-light text-decoration-none" [class.fs-15]="tipo === 2"
+        [class.fs-20]="tipo === 3">{{datesAuthor.name}}</a>
+</div>
+} @else {
 <section class="post-meta text-end">
     <img src="{{datesAuthor.srcAvatar}}" alt="" width="auto" height="60" class="rounded-circle mr-3 border mb-1">
     <p class="c7 fuenteCuatro fs-20 lh-20 text-end"><a href="{{datesAuthor.linkRefenceAuthor}}" rel="author"
@@ -5,3 +14,4 @@
     </p>
     <div class="espacio"></div>
 </section>
+}

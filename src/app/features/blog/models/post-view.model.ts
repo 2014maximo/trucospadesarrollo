@@ -1,3 +1,5 @@
+import { ContentAuthorModel } from 'src/app/shared/models/content-author.model';
+
 /** Modelo de vista listo para enlazar en `PostBaseComponent`. */
 export interface PostViewModel {
   id: string;
@@ -14,4 +16,6 @@ export interface PostViewModel {
   imagenDestacada?: string;
   /** URI canónica del post tal como la devuelve WordPress (ej: "/blog/angular/mi-post/"). */
   uri?: string;
+  /** Datos del autor (campos personalizados de WordPress), si el post los tiene. */
+  autor?: ContentAuthorModel;
 }

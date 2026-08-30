@@ -75,8 +75,8 @@ describe('BlogContentService', () => {
                 contentauthormodel: {
                   autorDelPost: 'Alex',
                   introduction: 'Intro',
-                  avatar: { node: { filePath: '/avatar.png' } },
-                  linkAAutor: { url: 'http://link', title: 'Alex', target: '_blank' }
+                  srcavatar: { url: 'http://example.com/avatar.png' },
+                  linkrefenceauthor: { url: 'http://link' }
                 },
                 featuredImage: {
                   node: { sourceUrl: 'https://example.com/imagen.jpg' }
@@ -100,7 +100,13 @@ describe('BlogContentService', () => {
           resumenHtml: '<p>Resumen</p>',
           categoria: 'cat-1',
           categoriaNombre: 'Desarrollo',
-          imagenDestacada: 'https://example.com/imagen.jpg'
+          imagenDestacada: 'https://example.com/imagen.jpg',
+          autor: jasmine.objectContaining({
+            name: 'Alex',
+            srcAvatar: 'http://example.com/avatar.png',
+            linkRefenceAuthor: 'http://link',
+            introduction: 'Intro'
+          })
         })
       );
     });
@@ -171,6 +177,73 @@ describe('BlogContentService', () => {
         req.flush({ data: { posts: { nodes: [] } } });
 
         expect(resultado).toEqual([]);
+      });
+
+      it('debe mapear contentauthormodel a ContentAuthorModel', () => {
+        let resultado: any;
+        service.getLatestPosts(1).subscribe(p => (resultado = p));
+
+        const req = httpMock.expectOne(r =>
+          r.url.startsWith(apiBase) && r.method === 'POST'
+        );
+        req.flush({
+          data: {
+            posts: {
+              nodes: [
+                {
+                  id: '1',
+                  uri: '/post-uno/',
+                  date: '2026-01-01T00:00:00',
+                  title: 'Post Uno',
+                  excerpt: '<p>Resumen</p>',
+                  contentauthormodel: {
+                    autorDelPost: 'Alex',
+                    introduction: 'Intro',
+                    srcavatar: { url: 'https://example.com/avatar.png' },
+                    linkrefenceauthor: { url: 'https://example.com/portafolio' }
+                  },
+                  categories: { edges: [] }
+                }
+              ]
+            }
+          }
+        });
+
+        expect(resultado[0].autor).toEqual(
+          jasmine.objectContaining({
+            name: 'Alex',
+            srcAvatar: 'https://example.com/avatar.png',
+            linkRefenceAuthor: 'https://example.com/portafolio',
+            introduction: 'Intro'
+          })
+        );
+      });
+
+      it('debe dejar autor en undefined si el post no trae contentauthormodel', () => {
+        let resultado: any;
+        service.getLatestPosts(1).subscribe(p => (resultado = p));
+
+        const req = httpMock.expectOne(r =>
+          r.url.startsWith(apiBase) && r.method === 'POST'
+        );
+        req.flush({
+          data: {
+            posts: {
+              nodes: [
+                {
+                  id: '1',
+                  uri: '/post-uno/',
+                  date: '2026-01-01T00:00:00',
+                  title: 'Post Uno',
+                  excerpt: '<p>Resumen</p>',
+                  categories: { edges: [] }
+                }
+              ]
+            }
+          }
+        });
+
+        expect(resultado[0].autor).toBeUndefined();
       });
     });
 

@@ -4,7 +4,8 @@ import { TranslateService } from '@ngx-translate/core';
 import { Observable, map, of } from 'rxjs';
 import { PostViewModel } from '../models/post-view.model';
 import { CategoryViewModel } from '../models/category-view.model';
-import { WpGraphqlResponse, WpGraphqlPostNode, WpGraphqlPagesResponse, WpGraphqlPageNode } from '../models/wp-post.dto';
+import { WpGraphqlResponse, WpGraphqlPostNode, WpGraphqlPagesResponse, WpGraphqlPageNode, WpGraphqlContentAuthorModel } from '../models/wp-post.dto';
+import { ContentAuthorModel } from 'src/app/shared/models/content-author.model';
 import { BLOG_WP_GRAPHQL_URL_TOKEN } from '../tokens/blog-wp-graphql-url.token';
 
 @Injectable({
@@ -46,6 +47,16 @@ export class BlogContentService {
             modified
             uri
             authorId
+            contentauthormodel {
+              autorDelPost
+              srcavatar {
+                url
+              }
+              linkrefenceauthor {
+                url
+              }
+              introduction
+            }
             featuredImage {
               node {
                 sourceUrl
@@ -100,6 +111,16 @@ export class BlogContentService {
             date
             modified
             excerpt
+            contentauthormodel {
+              autorDelPost
+              srcavatar {
+                url
+              }
+              linkrefenceauthor {
+                url
+              }
+              introduction
+            }
             featuredImage {
               node {
                 sourceUrl
@@ -148,7 +169,22 @@ export class BlogContentService {
       categoria: categoryId,
       categoriaNombre: categoryName,
       imagenDestacada: post.featuredImage?.node?.sourceUrl ?? '',
+      autor: this.toAuthorModel(post.contentauthormodel),
     };
+  }
+
+  /** Convierte los campos personalizados de autor a `ContentAuthorModel`, o `undefined` si no hay datos. */
+  private toAuthorModel(contentAuthor?: WpGraphqlContentAuthorModel): ContentAuthorModel | undefined {
+    if (!contentAuthor) {
+      return undefined;
+    }
+
+    const autor = new ContentAuthorModel();
+    autor.name = contentAuthor.autorDelPost ?? '';
+    autor.srcAvatar = contentAuthor.srcavatar?.url ?? '';
+    autor.linkRefenceAuthor = contentAuthor.linkrefenceauthor?.url ?? '';
+    autor.introduction = contentAuthor.introduction ?? '';
+    return autor;
   }
 
   private stripHtmlToText(html: string): string {
