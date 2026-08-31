@@ -35,6 +35,12 @@ export class BlockContentComponent {
 								},
 								{
 									text:'No sirve de nada iniciar una búsqueda sin tenerlo como un objetivo prescindible en la vida. '
+								},
+								{
+									text:'Conoce nuestro directorio de sitios web recomendados.',
+									styleText:'fuenteDos c7 fs-18 lh-20',
+									url:'https://plantillas_dev.gitlab.io/',
+									target:'_blank'
 								}
 							]
 						},

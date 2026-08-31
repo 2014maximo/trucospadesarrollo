@@ -44,7 +44,7 @@ export class PostBaseComponent implements OnInit {
     const slug = this.route.snapshot.paramMap.get('slug') ?? '';
     const categoria = this.route.snapshot.paramMap.get('categoria') ?? '';
     this.categoriaRuta = categoria;
-    console.log('[PostBase] Parámetros de ruta → categoria:', categoria, '| slug:', slug);
+    // console.log('[PostBase] Parámetros de ruta → categoria:', categoria, '| slug:', slug);
 
     if (!slug.trim()) {
       // console.warn('[PostBase] Slug vacío → estado: no-encontrado');

@@ -5,14 +5,26 @@
             <div [class]="colBlock.initialStyle">
                 @for (contentBlock of colBlock.columns; track $index) {
                     <h4 [class]="contentBlock.title?.styleText">
-                        {{ contentBlock.title?.text }}
+                        @if (contentBlock.title?.url) {
+                            <a [href]="contentBlock.title?.url" [target]="contentBlock.title?.target" rel="noopener noreferrer">{{ contentBlock.title?.text }}</a>
+                        } @else {
+                            {{ contentBlock.title?.text }}
+                        }
                     </h4>
                     <h5 [class]="contentBlock.subtitle?.styleText">
-                        {{ contentBlock.subtitle?.text }}
+                        @if (contentBlock.subtitle?.url) {
+                            <a [href]="contentBlock.subtitle?.url" [target]="contentBlock.subtitle?.target" rel="noopener noreferrer">{{ contentBlock.subtitle?.text }}</a>
+                        } @else {
+                            {{ contentBlock.subtitle?.text }}
+                        }
                     </h5>
                     @for (paragraph of contentBlock.paragraph; track $index) {
                         <p [class]="paragraph.styleText">
-                            {{ paragraph.text }}
+                            @if (paragraph.url) {
+                                <a [href]="paragraph.url" [target]="paragraph.target" rel="noopener noreferrer">{{ paragraph.text }}</a>
+                            } @else {
+                                {{ paragraph.text }}
+                            }
                         </p>
                     }
                     @if (contentBlock.image) 

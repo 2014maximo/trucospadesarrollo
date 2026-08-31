@@ -21,4 +21,6 @@ export class ColumnsBlocks {
 export class TextModel {
     text?: string = '';
     styleText?: string = '';
+    url?: string = '';
+    target?: string = '_blank';
 }

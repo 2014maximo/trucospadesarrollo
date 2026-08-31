@@ -82,7 +82,7 @@ export class BlogContentService {
       })
       .pipe(
         map(response => {
-          console.log('[BlogContentService] getPostBySlug — respuesta raw de la API:', response);
+          // console.log('[BlogContentService] getPostBySlug — respuesta raw de la API:', response);
           return response.data?.posts?.nodes?.[0] ?? null;
         }),
         map(post => (post ? this.toViewModel(post) : null))

@@ -211,19 +211,29 @@ export class DynamicContentComponent implements OnChanges {
   }
 
   /**
-   * Intenta JSON.parse estricto primero. Si falla, normaliza sintaxis de
-   * objeto JS habitual (claves sin comillas, comillas simples, comas
-   * colgantes) — lo que se suele pegar por error copiando el mock de
-   * TypeScript — y reintenta. Si aun así falla, loguea el error real.
+   * Intenta JSON.parse estricto primero. Si falla, repara comillas dobles
+   * sin escapar dentro de valores string (error frecuente al redactar en
+   * WordPress: `"...más "experiencia con RAG"..."`) y reintenta. Si aun así
+   * falla, normaliza sintaxis de objeto JS habitual (claves sin comillas,
+   * comillas simples, comas colgantes) — lo que se suele pegar por error
+   * copiando el mock de TypeScript — y reintenta una última vez. Si nada
+   * funciona, loguea el error real.
    */
   private parseLenientJson(jsonBody: string): { type?: string; data?: unknown } | null {
     try {
       return JSON.parse(jsonBody);
     } catch {
-      // sigue con el intento permisivo
+      // sigue con los intentos permisivos
     }
 
-    const normalized = jsonBody
+    const quotesRepaired = this.repairUnescapedQuotes(jsonBody);
+    try {
+      return JSON.parse(quotesRepaired);
+    } catch {
+      // sigue con el intento permisivo completo
+    }
+
+    const normalized = quotesRepaired
       // claves sin comillas: { foo: ... } o , foo: ...  →  "foo":
       .replace(/([{,]\s*)([A-Za-z_$][\w$]*)\s*:/g, '$1"$2":')
       // comillas simples de string → dobles (sin tocar comillas dobles internas)
@@ -240,5 +250,59 @@ export class DynamicContentComponent implements OnChanges {
       );
       return null;
     }
+  }
+
+  /**
+   * Escapa comillas dobles que aparecen DENTRO de un valor string de JSON
+   * sin haber sido escapadas (ej. alguien pegó `más "experiencia con RAG"`
+   * en vez de `más «experiencia con RAG»` o `más \"experiencia con RAG\"`).
+   *
+   * Recorre el texto carácter a carácter llevando el estado "dentro/fuera
+   * de string". Al encontrar una comilla mientras se está dentro de un
+   * string, se decide si es el cierre real mirando el siguiente carácter
+   * no-espacio: si es uno de `, : } ]` (o fin de texto) se asume cierre;
+   * en cualquier otro caso (letra, signo de puntuación, etc.) se trata como
+   * comilla interna y se escapa. Es una heurística best-effort — no un
+   * parser JSON real — pero cubre el caso típico de comillas "de cita"
+   * pegadas dentro de un párrafo.
+   */
+  private repairUnescapedQuotes(text: string): string {
+    let result = '';
+    let inString = false;
+
+    for (let i = 0; i < text.length; i++) {
+      const ch = text[i];
+
+      if (!inString) {
+        result += ch;
+        if (ch === '"') inString = true;
+        continue;
+      }
+
+      if (ch === '\\' && i + 1 < text.length) {
+        result += ch + text[i + 1];
+        i++;
+        continue;
+      }
+
+      if (ch === '"') {
+        let j = i + 1;
+        while (j < text.length && /\s/.test(text[j])) j++;
+        const next = text[j];
+        const isTerminator = next === undefined || ',:}]'.includes(next);
+
+        if (isTerminator) {
+          result += ch;
+          inString = false;
+        } else {
+          result += '\\"';
+        }
+        continue;
+      }
+
+      result += ch;
+    }
+
+    return result;
   }
 }
