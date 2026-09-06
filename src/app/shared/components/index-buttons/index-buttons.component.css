@@ -110,6 +110,19 @@
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
+.carousel-category-title {
+  margin: 0;
+  padding: 2.5rem 1.5rem 0;
+  text-align: center;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  background: linear-gradient(90deg, #fff, #aab1ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .slider-viewport {
   width: 100%;
   overflow: hidden;
@@ -228,6 +241,11 @@
 }
 
 @media (max-width: 768px) {
+  .carousel-category-title {
+    padding: 2rem 1rem 1.5rem;
+    font-size: 1.6rem;
+  }
+
   .slide {
     padding: 3rem 1.5rem;
   }

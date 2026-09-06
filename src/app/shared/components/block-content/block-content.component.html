@@ -27,7 +27,34 @@
                             }
                         </p>
                     }
-                    @if (contentBlock.image) 
+                    @for (list of contentBlock.list; track $index) {
+                        @if (list.type === 'ordered') {
+                            <ol [class]="list.styleList">
+                                @for (item of list.items; track $index) {
+                                    <li [class]="item.styleText">
+                                        @if (item.url) {
+                                            <a [href]="item.url" [target]="item.target" rel="noopener noreferrer">{{ item.text }}</a>
+                                        } @else {
+                                            {{ item.text }}
+                                        }
+                                    </li>
+                                }
+                            </ol>
+                        } @else {
+                            <ul [class]="list.styleList">
+                                @for (item of list.items; track $index) {
+                                    <li [class]="item.styleText">
+                                        @if (item.url) {
+                                            <a [href]="item.url" [target]="item.target" rel="noopener noreferrer">{{ item.text }}</a>
+                                        } @else {
+                                            {{ item.text }}
+                                        }
+                                    </li>
+                                }
+                            </ul>
+                        }
+                    }
+                    @if (contentBlock.image)
                     {
                         <app-image-adapter [image]="contentBlock.image"></app-image-adapter>
                     }

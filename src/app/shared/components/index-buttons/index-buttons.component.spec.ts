@@ -37,6 +37,28 @@ describe('IndexButtonsComponent', () => {
     expect(scrollIntoViewSpy).toHaveBeenCalledWith({ behavior: 'smooth', block: 'center' });
   }));
 
+  it('should not render the category title before selecting a category', () => {
+    const title: HTMLElement = fixture.nativeElement.querySelector('.carousel-category-title');
+
+    expect(title).toBeNull();
+  });
+
+  it('should render the selected category name above the carousel', fakeAsync(() => {
+    const item = component.indiceItems[0];
+
+    component.onItemSelected(item);
+    fixture.detectChanges();
+    tick(300);
+    fixture.detectChanges();
+    tick();
+
+    const title: HTMLElement = fixture.nativeElement.querySelector('.carousel-category-title');
+
+    expect(title).withContext('the category title should be rendered').toBeTruthy();
+    expect(title?.tagName.toLowerCase()).toBe('h3');
+    expect(title?.textContent?.trim()).toBe(component.selectedCategory.name);
+  }));
+
   it('should scroll to the carousel when the already active category is pressed', fakeAsync(() => {
     const item = component.indiceItems[0];
 

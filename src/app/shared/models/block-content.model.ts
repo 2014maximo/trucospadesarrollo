@@ -15,6 +15,7 @@ export class ColumnsBlocks {
     subtitle?: TextModel = new TextModel();
     image?: ImageAdapterModel = new ImageAdapterModel();
     paragraph?: TextModel[]=[];
+    list?: ListModel[]=[];
     blocks?: RowBlocks[]=[];
 }
 
@@ -23,4 +24,10 @@ export class TextModel {
     styleText?: string = '';
     url?: string = '';
     target?: string = '_blank';
+}
+
+export class ListModel {
+    type?: 'ordered' | 'unordered' = 'unordered';
+    styleList?: string = '';
+    items: TextModel[] = [];
 }

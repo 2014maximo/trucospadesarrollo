@@ -4,6 +4,7 @@
     </div>
 
     <div #carouselReveal class="slider-wrapper-reveal" [class.show]="selectedCategory" [class.fade-out]="isAnimating">
+        <h3 class="carousel-category-title fuenteSeis text-uppercase" *ngIf="selectedCategory">{{selectedCategory.name}}</h3>
         <div class="slider-container" *ngIf="selectedCategory">
             <div class="slider-viewport">
                 <div class="slider-wrapper" [ngStyle]="{'transform': 'translateX(-' + currentSlideIndex * 100 + '%)'}">
@@ -11,7 +12,7 @@
                     <div class="slide" *ngFor="let resource of selectedCategory.resources">
                         <div class="slide-content">
                             <img *ngIf="resource.ImgSlider.src" [class]="resource.ImgSlider.cssClass" src="{{resource.ImgSlider.src}}" alt="{{resource.ImgSlider.alt}}" height="{{resource.ImgSlider.height}}" width="auto">
-                            <h3 *ngIf="!resource.ImgSlider.src || resource.showTitleWithImage" class="fuenteOcho fw-5">{{resource.title}}</h3>
+                            <h3 *ngIf="!resource.ImgSlider.src || resource.showTitleWithImage" class="fuenteSeis fw-5">{{resource.title}}</h3>
                             <p class="f-open-sans-c fs-20 lh-25">{{resource.description}}</p>
                             <a [href]="resource.url" target="_blank" rel="noopener noreferrer" class="access-btn fuenteSeis">
                                 Visitar sitio <span class="arrow-icon ">&rarr;</span>
