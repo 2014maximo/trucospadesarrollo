@@ -29,7 +29,9 @@
                 </div>
             </div>
             <div class="col-1">
+                <!-- Traducción de contenido deshabilitada temporalmente, se habilitará más adelante
                 <app-language-switcher></app-language-switcher>
+                -->
             </div>
             <div class="col-1"></div>
         </div>
@@ -59,10 +61,12 @@
                             <a class="nav-link active" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                                 (click)="openSearch()">{{ 'Buscar' | translate }}</a>
                         </li>
+                        <!-- Traducción de contenido deshabilitada temporalmente, se habilitará más adelante
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                                 (click)="openLanguage()">{{ 'Idioma' | translate }}</a>
                         </li>
+                        -->
                         <li class="nav-item">
                             <a class="nav-link" href="#" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                                 (click)="openCategories()">{{ 'Categorias' | translate }}</a>
@@ -83,6 +87,7 @@
                     (click)="irAlPost(item.ruta)">{{ item.titulo }}</p>
             </div>
         </div>
+        <!-- Traducción de contenido deshabilitada temporalmente, se habilitará más adelante
         <div class="bg-dark p-5 transparenciaUno" *ngIf="showLanguajes">
             <a *ngFor="let lenguaje of lenguajes"
                 class="d-flex dropdown-item cursor-p translate-item justify-content-center mr-5"
@@ -91,6 +96,7 @@
                     alt="incon languaje" height="20px" width="auto" class="ms-2">
             </a>
         </div>
+        -->
         <div class="bg-dark p-5 transparenciaUno" *ngIf="showCategories">
             <app-content-index [indice]="pasoDeIndice" [clase]="claseContenedor"></app-content-index>
         </div>

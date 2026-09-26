@@ -1,29 +1,33 @@
 
 @for (rowBlock of blockContent; track $index) {
-    <div class="row">
+    <div [class]="rowBlock.rowStyle ? 'row ' + rowBlock.rowStyle : 'row'">
         @for (colBlock of rowBlock.blocks; track $index) {
             <div [class]="colBlock.initialStyle">
                 @for (contentBlock of colBlock.columns; track $index) {
-                    <h4 [class]="contentBlock.title?.styleText">
-                        @if (contentBlock.title?.url) {
-                            <a [href]="contentBlock.title?.url" [target]="contentBlock.title?.target" rel="noopener noreferrer">{{ contentBlock.title?.text }}</a>
-                        } @else {
-                            {{ contentBlock.title?.text }}
-                        }
-                    </h4>
-                    <h5 [class]="contentBlock.subtitle?.styleText">
-                        @if (contentBlock.subtitle?.url) {
-                            <a [href]="contentBlock.subtitle?.url" [target]="contentBlock.subtitle?.target" rel="noopener noreferrer">{{ contentBlock.subtitle?.text }}</a>
-                        } @else {
-                            {{ contentBlock.subtitle?.text }}
-                        }
-                    </h5>
+                    @if (contentBlock.title) {
+                        <h4 [class]="contentBlock.title.styleText">
+                            @if (contentBlock.title.url) {
+                                <a [href]="contentBlock.title.url" [target]="contentBlock.title.target" rel="noopener noreferrer" [innerHTML]="contentBlock.title.text"></a>
+                            } @else {
+                                <span [innerHTML]="contentBlock.title.text"></span>
+                            }
+                        </h4>
+                    }
+                    @if (contentBlock.subtitle) {
+                        <h5 [class]="contentBlock.subtitle.styleText">
+                            @if (contentBlock.subtitle.url) {
+                                <a [href]="contentBlock.subtitle.url" [target]="contentBlock.subtitle.target" rel="noopener noreferrer" [innerHTML]="contentBlock.subtitle.text"></a>
+                            } @else {
+                                <span [innerHTML]="contentBlock.subtitle.text"></span>
+                            }
+                        </h5>
+                    }
                     @for (paragraph of contentBlock.paragraph; track $index) {
                         <p [class]="paragraph.styleText">
                             @if (paragraph.url) {
-                                <a [href]="paragraph.url" [target]="paragraph.target" rel="noopener noreferrer">{{ paragraph.text }}</a>
+                                <a [href]="paragraph.url" [target]="paragraph.target" rel="noopener noreferrer" [innerHTML]="paragraph.text"></a>
                             } @else {
-                                {{ paragraph.text }}
+                                <span [innerHTML]="paragraph.text"></span>
                             }
                         </p>
                     }
@@ -33,9 +37,9 @@
                                 @for (item of list.items; track $index) {
                                     <li [class]="item.styleText">
                                         @if (item.url) {
-                                            <a [href]="item.url" [target]="item.target" rel="noopener noreferrer">{{ item.text }}</a>
+                                            <a [href]="item.url" [target]="item.target" rel="noopener noreferrer" [innerHTML]="item.text"></a>
                                         } @else {
-                                            {{ item.text }}
+                                            <span [innerHTML]="item.text"></span>
                                         }
                                     </li>
                                 }
@@ -45,9 +49,9 @@
                                 @for (item of list.items; track $index) {
                                     <li [class]="item.styleText">
                                         @if (item.url) {
-                                            <a [href]="item.url" [target]="item.target" rel="noopener noreferrer">{{ item.text }}</a>
+                                            <a [href]="item.url" [target]="item.target" rel="noopener noreferrer" [innerHTML]="item.text"></a>
                                         } @else {
-                                            {{ item.text }}
+                                            <span [innerHTML]="item.text"></span>
                                         }
                                     </li>
                                 }
@@ -57,6 +61,9 @@
                     @if (contentBlock.image)
                     {
                         <app-image-adapter [image]="contentBlock.image"></app-image-adapter>
+                    }
+                    @if (contentBlock.blocks?.length) {
+                        <app-block-content [blockContent]="[{ blocks: contentBlock.blocks ?? [], rowStyle: contentBlock.styleCol }]"></app-block-content>
                     }
                 }
             </div>

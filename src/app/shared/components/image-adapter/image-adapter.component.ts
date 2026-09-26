@@ -37,11 +37,15 @@ export class ImageAdapterComponent implements OnDestroy {
 
 	get imageStyles() {
 		return {
-			width: this.image.width,
-			height: this.image.height,
+			width: this.toCssSize(this.image.width),
+			height: this.toCssSize(this.image.height),
 			objectFit: this.image.objectFit,
 			borderRadius: this.image.borderRadius
 		};
+	}
+
+	private toCssSize(value: string): string {
+		return /^\d+$/.test(value) ? `${value}px` : value;
 	}
 
 	openModal(event: Event): void {

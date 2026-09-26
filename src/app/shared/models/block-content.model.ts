@@ -2,6 +2,7 @@ import { ImageAdapterModel } from "./image-adapter.model";
 
 export class BlockContentModel {
     blocks: RowBlocks[]=[];
+    rowStyle?: string = '';
 }
 
 export class RowBlocks {
@@ -20,6 +21,7 @@ export class ColumnsBlocks {
 }
 
 export class TextModel {
+    /** Se renderiza con [innerHTML]: admite etiquetas inline como <strong>, <b>, <em>, <i>. */
     text?: string = '';
     styleText?: string = '';
     url?: string = '';

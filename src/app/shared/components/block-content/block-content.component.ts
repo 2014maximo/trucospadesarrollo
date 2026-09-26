@@ -4,7 +4,7 @@ import { ImageAdapterComponent } from '../image-adapter/image-adapter.component'
 
 @Component({
 	selector: 'app-block-content',
-	imports: [ImageAdapterComponent],
+	imports: [ImageAdapterComponent, BlockContentComponent],
 	templateUrl: './block-content.component.html',
 	styleUrl: './block-content.component.css'
 })

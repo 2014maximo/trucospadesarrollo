@@ -11,6 +11,7 @@ import { ContentAuthorComponent } from '../content-author/content-author.compone
 import { GaleryPostComponent } from '../galery-post/galery-post.component';
 import { BlockContentComponent } from '../block-content/block-content.component';
 import { IndexButtonsComponent } from '../index-buttons/index-buttons.component';
+import { ContentIndexComponent } from '../content-index/content-index.component';
 
 // ── Tipos internos ────────────────────────────────────────────────────────────
 
@@ -56,6 +57,10 @@ const COMPONENT_REGISTRY: Record<string, ComponentEntry> = {
   'index-buttons': {
     component: IndexButtonsComponent,
     inputName: 'categories',
+  },
+  'content-index': {
+    component: ContentIndexComponent,
+    inputName: 'indice',
   },
   // Agregar aquí los próximos componentes:
   // 'block-text':   { component: BlockTextComponent,  inputName: 'data' },

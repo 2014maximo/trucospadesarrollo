@@ -10,7 +10,7 @@
         class="marcoFoto"
       />
     </div>
-    <a *ngIf="image.creditUrl" [href]="image.creditUrl" [target]="image.creditTarget">
+    <a *ngIf="image.creditUrl" [href]="image.creditUrl" [target]="image.creditTarget" class="text-decoration-none">
       <small [class]="image.creditClasses">{{ image.creditText }}</small>
     </a>
   </ng-container>

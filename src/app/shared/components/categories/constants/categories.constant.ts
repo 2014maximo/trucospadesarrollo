@@ -93,7 +93,7 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-developer',
 		class: 'drop box',
 		linkCategory: '/blog/developer',
-		state: 'inactive',
+		state: 'active',
 		nameCategorie: 'developer',
 		posicion: 'rot-2',
 		colorFondo: 'bg-Developer',

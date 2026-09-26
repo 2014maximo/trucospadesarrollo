@@ -82,6 +82,7 @@ El campo `data` debe ser un **array** de objetos `BlockContentModel`:
 ```typescript
 interface BlockContentModel {
   blocks: RowBlocks[];
+  rowStyle?: string;          // Clases CSS adicionales para el <div class="row"> de este nivel
 }
 
 interface RowBlocks {
@@ -90,17 +91,90 @@ interface RowBlocks {
 }
 
 interface ColumnsBlocks {
+  styleCol?: string;          // Clases CSS para el <div class="row"> de los `blocks` anidados
   title?: TextModel;
   subtitle?: TextModel;
   paragraph?: TextModel[];
+  list?: ListModel[];
   image?: ImageAdapterModel;
+  blocks?: RowBlocks[];       // Recursivo: columnas anidadas dentro de esta columna
 }
 
 interface TextModel {
-  text?: string;
+  text?: string;               // Se renderiza con [innerHTML]: admite <strong>/<b> (negrita), <em>/<i> (cursiva), <br>
   styleText?: string;         // Clases CSS para el texto
+  url?: string;               // Si se informa, el texto se renderiza como <a>
+  target?: string;            // Target del enlace (por defecto "_blank")
+}
+
+interface ListModel {
+  type?: 'ordered' | 'unordered';  // 'ordered' → <ol>, 'unordered' → <ul>
+  styleList?: string;              // Clases CSS para la lista
+  items: TextModel[];
 }
 ```
+
+> `title` y `subtitle` solo se renderizan (`<h4>` / `<h5>`) si están presentes
+> en el JSON: una columna sin ellos no genera encabezados vacíos.
+
+## Columnas anidadas (recursividad)
+
+Cualquier elemento de `columns` puede incluir su propio `blocks` para anidar
+columnas dentro de una columna. El componente se renderiza a sí mismo de forma
+recursiva, envolviendo los `blocks` anidados en un nuevo `<div class="row">`
+(al que se le aplican las clases de `styleCol` si se informan):
+
+```html
+<script type="application/json" data-component-id="bloque-anidado">
+{
+  "type": "block-content",
+  "data": [
+    {
+      "blocks": [
+        {
+          "initialStyle": "col-md-4",
+          "columns": [
+            {
+              "styleCol": "align-items-center",
+              "blocks": [
+                {
+                  "initialStyle": "col-md-4",
+                  "columns": [
+                    {
+                      "image": {
+                        "src": "https://ejemplo.com/logo.png",
+                        "alt": "Logo",
+                        "height": "80",
+                        "typeImage": "type-B"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "initialStyle": "col-md-8",
+                  "columns": [
+                    {
+                      "subtitle": {
+                        "styleText": "f-yanone fs-20 lh-20 text-light p-0 text-uppercase mb-2",
+                        "text": "Texto junto al logo"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+[ng-component]
+```
+
+El anidamiento no tiene límite de profundidad: un `blocks` anidado puede
+contener a su vez columnas con otros `blocks`.
 
 ## Ejemplo completo con múltiples bloques
 
@@ -184,6 +258,25 @@ Puedes incluir varios bloques en el mismo post:
 </script>
 [ng-component]
 ```
+
+## Texto en negrita / cursiva dentro de `text`
+
+Cualquier `text` de `title`, `subtitle`, `paragraph` o `list.items` se renderiza
+con `[innerHTML]`, así que puedes incrustar etiquetas inline directamente en el
+JSON:
+
+```json
+{
+  "text": "Antes de decirle al mundo que <strong>buscamos empleo</strong>, primero hay que saberlo dentro."
+}
+```
+
+- Usa `<strong>` o `<b>` para negrita, `<em>` o `<i>` para cursiva, `<br>` para
+  saltos de línea.
+- El sanitizador HTML de Angular limpia automáticamente cualquier etiqueta o
+  atributo no seguro (por ejemplo `<script>` o `onclick`), así que no hace
+  falta escapar nada extra ni preocuparse por XSS: solo se conservan las
+  etiquetas de formato inline habituales.
 
 ## Notas importantes
 

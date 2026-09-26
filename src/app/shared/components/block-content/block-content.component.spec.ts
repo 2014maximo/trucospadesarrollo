@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BlockContentComponent } from './block-content.component';
-import { BlockContentModel } from '../../models/block-content.model';
+import { BlockContentModel, RowBlocks } from '../../models/block-content.model';
 
 describe('BlockContentComponent', () => {
   let component: BlockContentComponent;
@@ -73,12 +73,107 @@ describe('BlockContentComponent', () => {
     expect(fixture.nativeElement.querySelector('h5').textContent).toContain('Subtítulo plano');
     expect(fixture.nativeElement.querySelector('p').textContent).toContain('Párrafo plano');
   });
+
+  it('no debe renderizar h4/h5 cuando el bloque no tiene title ni subtitle', () => {
+    component.blockContent = bloqueCon({
+      paragraph: [{ text: 'Solo párrafo' }]
+    });
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('h4')).toBeNull();
+    expect(fixture.nativeElement.querySelector('h5')).toBeNull();
+  });
+
+  it('debe renderizar recursivamente los blocks anidados dentro de una columna', () => {
+    component.blockContent = bloqueCon({
+      blocks: [
+        {
+          initialStyle: 'col-md-8',
+          columns: [
+            { subtitle: { text: 'Subtítulo anidado' } },
+            { paragraph: [{ text: 'Párrafo anidado' }] }
+          ]
+        }
+      ]
+    });
+    fixture.detectChanges();
+
+    const anidado = fixture.nativeElement.querySelector('app-block-content');
+    expect(anidado).withContext('debe existir un app-block-content recursivo').toBeTruthy();
+    expect(anidado.querySelector('.col-md-8 h5').textContent).toContain('Subtítulo anidado');
+    expect(anidado.querySelector('.col-md-8 p').textContent).toContain('Párrafo anidado');
+  });
+
+  it('debe soportar dos niveles de anidamiento', () => {
+    component.blockContent = bloqueCon({
+      blocks: [
+        {
+          initialStyle: 'col-md-6',
+          columns: [
+            {
+              blocks: [
+                {
+                  initialStyle: 'col-md-4',
+                  columns: [{ paragraph: [{ text: 'Nivel 3' }] }]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    });
+    fixture.detectChanges();
+
+    const nivel2 = fixture.nativeElement.querySelector('app-block-content');
+    const nivel3 = nivel2?.querySelector('app-block-content');
+    expect(nivel3).withContext('debe existir el segundo nivel recursivo').toBeTruthy();
+    expect(nivel3.querySelector('p').textContent).toContain('Nivel 3');
+  });
+
+  it('debe aplicar styleCol como clase del row anidado', () => {
+    component.blockContent = bloqueCon({
+      styleCol: 'g-0 align-items-center',
+      blocks: [
+        {
+          initialStyle: 'col-md-12',
+          columns: [{ paragraph: [{ text: 'Contenido' }] }]
+        }
+      ]
+    });
+    fixture.detectChanges();
+
+    const rowAnidado = fixture.nativeElement.querySelector('app-block-content > div');
+    expect(rowAnidado).toBeTruthy();
+    expect(rowAnidado.classList).toContain('row');
+    expect(rowAnidado.classList).toContain('g-0');
+    expect(rowAnidado.classList).toContain('align-items-center');
+  });
+
+  it('debe aplicar rowStyle como clase del row de primer nivel', () => {
+    component.blockContent = [
+      {
+        rowStyle: 'mi-clase-row',
+        blocks: [
+          {
+            initialStyle: 'col-md-12',
+            columns: [{ paragraph: [{ text: 'Texto' }] }]
+          }
+        ]
+      }
+    ];
+    fixture.detectChanges();
+
+    const row = fixture.nativeElement.querySelector('div.row');
+    expect(row.classList).toContain('mi-clase-row');
+  });
 });
 
 function bloqueCon(contentBlock: {
   title?: { text?: string; url?: string; target?: string };
   subtitle?: { text?: string; url?: string; target?: string };
   paragraph?: { text?: string; url?: string; target?: string }[];
+  styleCol?: string;
+  blocks?: RowBlocks[];
 }): BlockContentModel[] {
   return [
     {
