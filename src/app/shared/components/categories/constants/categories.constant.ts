@@ -37,7 +37,7 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-angular',
 		class: 'drop box',
 		linkCategory: '/blog/angular',
-		state: 'inactive',
+		state: 'active',
 		nameCategorie: 'angular',
 		posicion: 'rot-2',
 		colorFondo: 'bg-Angular',
