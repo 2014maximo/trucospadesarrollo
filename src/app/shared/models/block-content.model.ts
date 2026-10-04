@@ -1,4 +1,5 @@
 import { ImageAdapterModel } from "./image-adapter.model";
+import { PrintCodeModel } from "./print-code.model";
 
 export class BlockContentModel {
     blocks: RowBlocks[]=[];
@@ -15,6 +16,7 @@ export class ColumnsBlocks {
     title?: TextModel = new TextModel();
     subtitle?: TextModel = new TextModel();
     image?: ImageAdapterModel = new ImageAdapterModel();
+    printCode?: PrintCodeModel = new PrintCodeModel();
     paragraph?: TextModel[]=[];
     list?: ListModel[]=[];
     blocks?: RowBlocks[]=[];

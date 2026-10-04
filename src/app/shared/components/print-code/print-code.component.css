@@ -1,0 +1,79 @@
+.bg-lenguaje{
+    background-color: #1d2433;
+}
+.container-code{
+    padding-top: 20px;
+    padding-left: 3px;
+    padding-bottom: 20px;
+    border-radius: 0px;
+}
+.container-code button{
+    height: 15px;
+    width: 15px;
+    border: 0;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.barra-linux button,
+.barra-windows button{
+    height: 15px;
+    width: 15px;
+    border: 0;
+    margin-right: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button.red{
+    background-color: hsl(3.2deg 100% 66.86%)
+}
+button.yell{
+    background-color: hsl(41.05deg 100% 59.02%)
+}
+button.green{
+    background-color: hsl(128.89deg 67.5% 47.06%)
+}
+.cLineas{
+    width: 15px;
+}
+.eCodigo{
+    width: auto;
+    overflow: auto;
+    padding-left: 20px;
+}
+.lenguaje{
+    width: auto;
+    height: 50px;
+    padding-right: 10px;
+    padding-left: 10px;
+    position: absolute;
+    top: -24px;
+    right: 20px;
+    border-right: 4px solid;
+    border-bottom: 4px solid;
+    border-left: 4px solid;
+    opacity: 0.6;
+    border-radius: 0px 0px 5px 5px;
+}
+.bg-terminal-linux{
+    background-color: #310825;
+}
+.c-terminal-linux{
+    color: #536c28;
+}
+.barra-linux{
+    height: 25px;
+    width: 100%;
+    background-color: #2c2c2c;
+}
+.bg-terminal-windows{
+    background-color: #0c0c0c;
+}
+.c-terminal-windows{
+    color: #536c28;
+}
+.barra-windows{
+    height: 30px;
+    width: 100%;
+    background-color: #2c2c2c;
+}

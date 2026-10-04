@@ -1,0 +1,49 @@
+<div *ngIf="tipoCode == 'lenguajes'" class="row container-code shadow-two bg-lenguaje">
+    <div class="col-md-12 ml-1">
+        <div class="d-flex justify-content-end">
+            <div class="lenguaje shadow text-center text-light fuenteSeis fs-30 fw-6 bg-{{ lenguaje.charAt(0).toUpperCase() + lenguaje.slice(1) }}">{{ categoriaCorta }}</div>
+        </div>
+        <div class="head-code mb-3">
+            <button *ngIf="refDocumentacion" (click)="abrirLink(refDocumentacion)" class="red" title="Abrir Referencia a documentación"></button>
+            <button *ngIf="urlStackBlitz" (click)="abrirLink(urlStackBlitz)" class="yell" title="Abrir en Stackblitz"></button>
+            <button class="green" title="Copiar" (click)="copiarAlPortapapeles(clipboard)"></button>
+        </div>
+        <div class="body-code fuenteTres d-flex align-items-start">
+            <div class="cLineas text-right">
+                <p class="c5 fs-17 lh-23 m-0" *ngFor="let linea of contador(lineas + 3); let i = index">
+                    {{ i + 1 }}
+                </p>
+            </div>
+            <div class="eCodigo">
+                <pre><code class="language-{{lenguaje}} fuenteTres fs-17 lh-23 m-0 {{colorTextoBase}}">{{ code }}</code></pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="tipoCode == 'linux'" class="barra-linux shadow-two d-flex justify-content-end align-items-center pr-2">
+    <button class="green" title="Copiar" (click)="copiarAlPortapapeles(clipboard)"></button>
+</div>
+<div *ngIf="tipoCode == 'linux'" class="row container-code shadow-two bg-terminal-linux">
+    <div *ngFor="let code of ObjectCode" class="col-md-12 fuenteTres">
+        <span *ngIf="code.mostrarRuta" class="c-terminal-linux">user-dev&#64;user-dev</span>
+        <span *ngIf="code.mostrarRuta" class="text-light">:~$ </span>
+        <span class="text-light">{{ code.code }}</span>
+    </div>
+</div>
+
+<div *ngIf="tipoCode == 'windows'" class="barra-windows shadow-two d-flex justify-content-end align-items-center pr-2">
+    <button class="green" title="Copiar" (click)="copiarAlPortapapeles(clipboard)"></button>
+</div>
+<div *ngIf="tipoCode == 'windows'" class="row container-code shadow-two bg-terminal-windows">
+    <div *ngFor="let code of ObjectCode" class="col-md-12 fuenteTres overflow-auto">
+        <span *ngIf="code.mostrarRuta" class="{{colorTextoBase}}">{{code.textRuta}}</span><br>
+        <span class="text-light">{{ code.code }}</span>
+    </div>
+</div>
+
+<div *ngIf="tipoCode == 'transparente'" class="transparente">
+    <div class="minborder shadow-three">
+        <pre><code class="language-{{lenguaje}} fuenteTres fs-17 lh-23 m-0 {{colorTextoBase}}">{{ code }}</code></pre>
+    </div>
+</div>

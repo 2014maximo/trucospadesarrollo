@@ -62,6 +62,20 @@
                     {
                         <app-image-adapter [image]="contentBlock.image"></app-image-adapter>
                     }
+                    @if (contentBlock.printCode)
+                    {
+                        <app-print-code
+                            [tipoCode]="contentBlock.printCode.tipoCode ?? 'lenguajes'"
+                            [code]="contentBlock.printCode.code ?? ''"
+                            [ObjectCode]="contentBlock.printCode.objectCode ?? []"
+                            [lenguaje]="contentBlock.printCode.lenguaje ?? ''"
+                            [categoriaCorta]="contentBlock.printCode.categoriaCorta ?? ''"
+                            [lineas]="contentBlock.printCode.lineas ?? 0"
+                            [colorTextoBase]="contentBlock.printCode.colorTextoBase ?? ''"
+                            [refDocumentacion]="contentBlock.printCode.refDocumentacion ?? ''"
+                            [urlStackBlitz]="contentBlock.printCode.urlStackBlitz ?? ''">
+                        </app-print-code>
+                    }
                     @if (contentBlock.blocks?.length) {
                         <app-block-content [blockContent]="[{ blocks: contentBlock.blocks ?? [], rowStyle: contentBlock.styleCol }]"></app-block-content>
                     }

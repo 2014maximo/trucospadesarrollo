@@ -97,7 +97,26 @@ interface ColumnsBlocks {
   paragraph?: TextModel[];
   list?: ListModel[];
   image?: ImageAdapterModel;
+  printCode?: PrintCodeModel; // Bloque de código resaltado (ver shared-print-code.md)
   blocks?: RowBlocks[];       // Recursivo: columnas anidadas dentro de esta columna
+}
+
+interface PrintCodeModel {
+  tipoCode?: 'lenguajes' | 'linux' | 'windows' | 'transparente'; // Por defecto 'lenguajes'
+  code?: string;               // Código fuente (modos 'lenguajes' y 'transparente')
+  objectCode?: CodeModel[];    // Líneas de comandos (modos 'linux' y 'windows')
+  lenguaje?: string;           // Nombre del lenguaje para Prism (ej: 'typescript', 'java')
+  categoriaCorta?: string;     // Texto corto de la etiqueta (ej: 'TS', 'TERMINAL')
+  lineas?: number;             // Cantidad de líneas numeradas en el margen (modo 'lenguajes')
+  colorTextoBase?: string;     // Clase CSS adicional para el color del texto
+  refDocumentacion?: string;   // URL del botón "Abrir Referencia a documentación"
+  urlStackBlitz?: string;      // URL del botón "Abrir en Stackblitz"
+}
+
+interface CodeModel {
+  mostrarRuta?: boolean;       // Si se muestra el prompt/ruta antes del código
+  code: string;
+  textRuta?: string;           // Ruta a mostrar en Windows cuando mostrarRuta es true
 }
 
 interface TextModel {
@@ -175,6 +194,53 @@ recursiva, envolviendo los `blocks` anidados en un nuevo `<div class="row">`
 
 El anidamiento no tiene límite de profundidad: un `blocks` anidado puede
 contener a su vez columnas con otros `blocks`.
+
+## Bloque de código (`printCode`)
+
+Una columna puede incluir `printCode` para mostrar un fragmento de código resaltado con PrismJS, igual que hace `app-print-code`. Consulta [shared-print-code.md](shared-print-code.md) para el detalle completo de cada campo.
+
+```html
+<script type="application/json" data-component-id="bloque-codigo">
+{
+  "type": "block-content",
+  "data": [
+    {
+      "blocks": [
+        {
+          "initialStyle": "col-md-12",
+          "columns": [
+            {
+              "printCode": {
+                "tipoCode": "lenguajes",
+                "code": "export class Ejemplo {\n  valor = 1;\n}",
+                "lenguaje": "typescript",
+                "categoriaCorta": "TS",
+                "lineas": 3,
+                "colorTextoBase": "text-light"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+[ng-component]
+```
+
+Para el modo terminal (`tipoCode: "linux"` o `"windows"`), usa `objectCode` en lugar de `code`:
+
+```json
+{
+  "printCode": {
+    "tipoCode": "linux",
+    "objectCode": [
+      { "mostrarRuta": true, "code": "pnpm add prismjs" }
+    ]
+  }
+}
+```
 
 ## Ejemplo completo con múltiples bloques
 
@@ -324,3 +390,4 @@ Si publicas el bloque en WordPress y `app-block-content` no aparece en el post:
 - [Especificación de contenido headless](blog-headless-content.md)
 - [Modelo de datos](../src/app/shared/models/block-content.model.ts)
 - [Componente de imagen](shared-image-adapter.md)
+- [Componente de bloques de código](shared-print-code.md)

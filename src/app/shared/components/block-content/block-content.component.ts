@@ -1,10 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { BlockContentModel } from '../../models/block-content.model';
 import { ImageAdapterComponent } from '../image-adapter/image-adapter.component';
+import { PrintCodeComponent } from '../print-code/print-code.component';
 
 @Component({
 	selector: 'app-block-content',
-	imports: [ImageAdapterComponent, BlockContentComponent],
+	imports: [ImageAdapterComponent, PrintCodeComponent, BlockContentComponent],
 	templateUrl: './block-content.component.html',
 	styleUrl: './block-content.component.css'
 })
