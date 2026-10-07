@@ -14,7 +14,7 @@ Componente compartido que muestra una imagen con zoom en modal. Toda la configur
 | `borderRadius` | `string` | `'0'` | Radio de borde (`type-A` y `type-C`). |
 | `showZoomIcon` | `boolean` | `true` | Muestra el botón para abrir el modal (solo `type-A`). |
 | `zoomIconPosition` | `'top-right' \| ...` | `'top-right'` | Posición del icono de zoom (solo `type-A`). |
-| `customClass` | `string` | `''` | Clases en el host del componente (p. ej. `img-fluid`). |
+| `customClass` | `string` | `''` | En `type-A` se aplican directamente al `<img>` principal (junto a `.main-image`; p. ej. `shadow-two`, `img-fluid`). En `type-B` y `type-C` se aplican al host del componente. |
 | `typeImage` | `'type-A' \| 'type-B' \| 'type-C'` | `'type-A'` | Modo de visualización. `type-A`: imagen con zoom + modal. `type-B`: imagen con marco `.bord` + crédito (estática, sin modal). `type-C`: imagen sin marco convertida en enlace a `creditUrl` (sin modal ni `creditText`). |
 | `creditUrl` | `string` | `''` | URL del `<a>` de crédito (`type-B`) o del enlace que envuelve la imagen (`type-C`). Si está vacío, no se renderiza el enlace. |
 | `creditText` | `string` | `''` | Texto del `<small>` de crédito (solo `type-B`). |
@@ -110,7 +110,7 @@ El `*ngIf` evita instancias vacías cuando no hay imagen en ese bloque.
 ## Pruebas unitarias
 
 - Ejecutar: `npm test`.
-- El spec del componente (`image-adapter.component.spec.ts`) comprueba que sin `src` no hay `<img>`, que con un `ImageAdapterModel` completo se enlazan `src`, `alt` y `customClass` en el host, los comportamientos de `type-B` (`.marcoFoto` con `src`/`alt`, crédito `<a>`/`<small>`, ausencia de icono de zoom) y los de `type-C` (imagen sin marco dentro de `<a>` hacia `creditUrl` sin `creditText`, proyección de `creditClasses` en el `<img>`, e imagen estática si `creditUrl` está vacío).
+- El spec del componente (`image-adapter.component.spec.ts`) comprueba que sin `src` no hay `<img>`, que con un `ImageAdapterModel` completo se enlazan `src`, `alt` y `customClass` (en el `<img>` para `type-A`, en el host para `type-B`/`type-C`), los comportamientos de `type-B` (`.marcoFoto` con `src`/`alt`, crédito `<a>`/`<small>`, ausencia de icono de zoom) y los de `type-C` (imagen sin marco dentro de `<a>` hacia `creditUrl` sin `creditText`, proyección de `creditClasses` en el `<img>`, e imagen estática si `creditUrl` está vacío).
 
 ## Qué no hacer
 

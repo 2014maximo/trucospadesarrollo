@@ -43,13 +43,14 @@
   </ng-container>
 
   <!-- type-A: imagen con zoom y modal -->
-  <ng-container *ngIf="!isTypeB && !isTypeC">
+  <ng-container *ngIf="isTypeA">
     <div class="image-container">
       <img
         [src]="image.src"
         [alt]="image.alt"
         [ngStyle]="imageStyles"
         class="main-image"
+        [class]="image.customClass"
         (click)="openModal($event)"
       />
 

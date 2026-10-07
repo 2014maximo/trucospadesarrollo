@@ -1,0 +1,279 @@
+<script type="application/json" data-component-id="block-content">
+{
+    "type": "block-content",
+    "data": [
+        {
+            "blocks": [
+                {
+                    "initialStyle": "espaciado"
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "espaciado"
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "col-md-12",
+                    "columns": [
+                        {
+                            "subtitle": {
+                                "styleText": "f-yanone fs-40 lh-40 text-light p-0 text-uppercase mb-2",
+                                "text": "CREAR REPO EN GITHUB"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "espaciado"
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "col-md-7",
+                    "columns": [
+                        {
+                            "blocks": [
+                                {
+                                    "initialStyle": "col-md-2",
+                                    "columns": [
+                                        {
+                                            "title": {
+                                                "styleText": "f-bebas fs-200 p-0 m-0 text-light mb-5",
+                                                "text": "1"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "initialStyle": "col-md-10",
+                                    "columns": [
+                                        {
+                                            "paragraph": [
+                                                {
+                                                    "text": "En nuestro Github personal, crear un nuevo repositorio con solamente el nombre:",
+                                                    "styleText": "c7 f-open-sans-c fs-20 lh-20"
+                                                }
+                                            ],
+                                            "image": {
+                                                "src": "http://localhost/wordpress/wp-content/uploads/2026/09/001-nuevoRepo.png",
+                                                "alt": "Crear nuevo repositorio en Github",
+                                                "width": "",
+                                                "height": "",
+                                                "objectFit": "cover",
+                                                "customClass": "",
+                                                "typeImage": "type-A",
+                                                "creditUrl": "",
+                                                "creditText": "",
+                                                "creditTarget": "",
+                                                "creditClasses": ""
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "initialStyle": "col-md-5"
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "espaciado"
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "espaciado"
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "col-md-5"
+                },
+                {
+                    "initialStyle": "col-md-7",
+                    "columns": [
+                        {
+                            "blocks": [
+                                {
+                                    "initialStyle": "col-md-2",
+                                    "columns": [
+                                        {
+                                            "title": {
+                                                "styleText": "f-bebas fs-200 p-0 m-0 text-light mb-5",
+                                                "text": "2"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "initialStyle": "col-md-10",
+                                    "columns": [
+                                        {
+                                            "paragraph": [
+                                                {
+                                                    "text": "Copiar toda esta lista de comandos con el botón copiar de Github: ",
+                                                    "styleText": "c7 f-open-sans-c fs-20 lh-20"
+                                                }
+                                            ],
+                                            "image": {
+                                                "src": "http://localhost/wordpress/wp-content/uploads/2026/09/002-procesoGit.png",
+                                                "alt": "Proceso Git",
+                                                "width": "",
+                                                "height": "",
+                                                "objectFit": "cover",
+                                                "customClass": "",
+                                                "typeImage": "type-A",
+                                                "creditUrl": "",
+                                                "creditText": "",
+                                                "creditTarget": "",
+                                                "creditClasses": ""
+                                            }
+                                        },
+                                        {
+                                            "paragraph": [
+                                                {
+                                                    "text": "En esta parte la idea es subir en simple el proyecto Angular al repositorio recién creado. Se sugiere copiar el grupo de comandos, o, tranquilamente, se puede trabajar por ramas o con Github aplicación de escritorio.",
+                                                    "styleText": "c7 f-open-sans-c fs-20 lh-20"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "espaciado"
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "espaciado"
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "col-md-12",
+                    "columns": [
+                        {
+                            "subtitle": {
+                                "styleText": "f-yanone fs-40 lh-40 text-light p-0 text-uppercase mb-2",
+                                "text": "CREAR PROYECTO ANGULAR EN LOCAL"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "espaciado"
+                }
+            ]
+        },
+        {
+            "blocks": [
+                {
+                    "initialStyle": "col-md-7",
+                    "columns": [
+                        {
+                            "blocks": [
+                                {
+                                    "initialStyle": "col-md-2",
+                                    "columns": [
+                                        {
+                                            "title": {
+                                                "styleText": "f-bebas fs-200 p-0 m-0 text-light mb-5",
+                                                "text": "3"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "initialStyle": "col-md-10",
+                                    "columns": [
+                                        {
+                                            "paragraph": [
+                                                {
+                                                    "text": "Por consola o terminal, crear proyecto nuevo de angular en local:",
+                                                    "styleText": "c7 f-open-sans-c fs-20 lh-20"
+                                                }
+                                            ],
+                                            "printCode": {
+                                                "tipoCode": "windows",
+                                                "objectCode": [
+                                                    {
+                                                        "mostrarRuta": true,
+                                                        "textRuta": "C:\\Users\\Usuario\\Desktop\\Angular>",
+                                                        "code": "ng new nombre-proyecto"
+                                                    },
+                                                    {
+                                                        "mostrarRuta": true,
+                                                        "textRuta": "C:\\Users\\Usuario\\Desktop\\Angular>",
+                                                        "code": "cd nombre-proyecto"
+                                                    },
+                                                    {
+                                                        "mostrarRuta": true,
+                                                        "textRuta": "C:\\Users\\Usuario\\Desktop\\Angular\\nombre-proyecto>",
+                                                        "code": "ng serve"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "printCode": {
+                                                "tipoCode": "lenguajes",
+                                                "code": "export class AppComponent {\n  title = \"nombre-proyecto\";\n}",
+                                                "lenguaje": "typescript",
+                                                "categoriaCorta": "TS",
+                                                "lineas": 3,
+                                                "colorTextoBase": "text-light",
+                                                "refDocumentacion": "https://angular.dev/"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "initialStyle": "col-md-5"
+                }
+            ]
+        }
+    ]
+}
+</script>
+[ng-component]

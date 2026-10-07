@@ -42,7 +42,53 @@ describe('ImageAdapterComponent', () => {
     expect(img).toBeTruthy();
     expect(img?.src).toContain('test.png');
     expect(img?.alt).toBe('Texto alternativo');
-    expect(component.hostClasses).toContain('img-fluid');
+    expect(img?.classList).toContain('img-fluid');
+  });
+
+  it('type-A debe aplicar customClass en el <img> conservando main-image y no en el host', () => {
+    component.image = Object.assign(new ImageAdapterModel(), {
+      src: 'assets/test.png',
+      typeImage: 'type-A',
+      customClass: 'shadow-two'
+    });
+    fixture.detectChanges();
+
+    const img: HTMLImageElement | null = fixture.nativeElement.querySelector('.image-container img');
+    expect(img?.classList).toContain('main-image');
+    expect(img?.classList).toContain('shadow-two');
+    expect(component.hostClasses).toBe('image-adapter');
+    expect(fixture.nativeElement.querySelector('.zoom-icon')).toBeTruthy();
+  });
+
+  it('type-A debe seguir abriendo el modal con customClass', () => {
+    component.image = Object.assign(new ImageAdapterModel(), {
+      src: 'assets/test.png',
+      customClass: 'shadow-two'
+    });
+    fixture.detectChanges();
+
+    fixture.nativeElement.querySelector('img.main-image').click();
+    fixture.detectChanges();
+    expect(component.isModalOpen).toBe(true);
+    const modalImg: HTMLImageElement | null = fixture.nativeElement.querySelector('.modal-image');
+    expect(modalImg?.classList).not.toContain('shadow-two');
+    component.closeModal();
+  });
+
+  it('type-B y type-C deben mantener customClass en el host', () => {
+    component.image = Object.assign(new ImageAdapterModel(), {
+      src: 'assets/test.png',
+      typeImage: 'type-B',
+      customClass: 'img-fluid'
+    });
+    expect(component.hostClasses).toBe('image-adapter img-fluid');
+
+    component.image = Object.assign(new ImageAdapterModel(), {
+      src: 'assets/test.png',
+      typeImage: 'type-C',
+      customClass: 'img-fluid'
+    });
+    expect(component.hostClasses).toBe('image-adapter img-fluid');
   });
 
   it('type-A por defecto debe mostrar el icono de zoom', () => {

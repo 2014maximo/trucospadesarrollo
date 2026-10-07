@@ -13,14 +13,20 @@ export class ImageAdapterComponent implements OnDestroy {
 	constructor(@Inject(PLATFORM_ID) private platformId: Object){}
 	@Input() image: ImageAdapterModel = new ImageAdapterModel();
 
+	// En type-A customClass se aplica al <img>; en type-B/type-C sigue en el host
 	@HostBinding('class') get hostClasses(): string {
-		return `image-adapter ${this.image.customClass}`.trim();
+		const hostCustomClass = this.isTypeA ? '' : this.image.customClass ?? '';
+		return `image-adapter ${hostCustomClass}`.trim();
 	}
 
 	isModalOpen = false;
 
 	get hasSrc(): boolean {
 		return !!this.image?.src?.trim();
+	}
+
+	get isTypeA(): boolean {
+		return !this.isTypeB && !this.isTypeC;
 	}
 
 	get isTypeB(): boolean {

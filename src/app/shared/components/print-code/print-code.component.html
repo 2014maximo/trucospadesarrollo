@@ -22,7 +22,7 @@
 </div>
 
 <div *ngIf="tipoCode == 'linux'" class="barra-linux shadow-two d-flex justify-content-end align-items-center pr-2">
-    <button class="green" title="Copiar" (click)="copiarAlPortapapeles(clipboard)"></button>
+    <i class="fa fa-clone cursor-p mr-4" title="Copiar" (click)="copiarAlPortapapeles(clipboard)"></i>
 </div>
 <div *ngIf="tipoCode == 'linux'" class="row container-code shadow-two bg-terminal-linux">
     <div *ngFor="let code of ObjectCode" class="col-md-12 fuenteTres">
@@ -33,7 +33,7 @@
 </div>
 
 <div *ngIf="tipoCode == 'windows'" class="barra-windows shadow-two d-flex justify-content-end align-items-center pr-2">
-    <button class="green" title="Copiar" (click)="copiarAlPortapapeles(clipboard)"></button>
+    <i class="fa fa-clone cursor-p me-2 text-light" title="Copiar" (click)="copiarAlPortapapeles(clipboard)"></i>
 </div>
 <div *ngIf="tipoCode == 'windows'" class="row container-code shadow-two bg-terminal-windows">
     <div *ngFor="let code of ObjectCode" class="col-md-12 fuenteTres overflow-auto">
