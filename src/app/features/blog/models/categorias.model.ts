@@ -115,86 +115,6 @@ export class DatosPost{
     }
 }
 
-export class GlosarioModel {
-    id: string;
-    categoria: Categoria;
-    titulo: string;
-    subtitulo:string;
-    linksReferencia: linkReferenciaI[];
-    mostrar: boolean;
-    fechaActualizacion: string;
-    descripcion: DescripcionesI;
-
-    constructor(){
-        this.id = '';
-        this.titulo = '';
-        this.subtitulo = '';
-        this.linksReferencia = [];
-        this.descripcion = new DescripcionesI();
-        this.mostrar = false;
-        this.fechaActualizacion = '';
-        this.categoria = Categoria.ANGULAR
-    }
-}
-
-export enum Categoria {
-    ANGULAR = "Angular",
-    CSS = "CSS",
-    DART = "Dart",
-    DB = "DB",
-    DEVELOPER = "Developer",
-    ELECTRON = "Electron",
-    FLUTTER = "Flutter",
-    GIT = "Git",
-    HTML = "HTML",
-    JAVA = "Java",
-    JAVASCRIPT = "Javascript",
-    KOTLIN = "Kotlin",
-    KUBERNETES = "Kubernetes",
-    LINUX = "Linux",
-    NET = "NET",
-    PHP = "Php",
-    REACT = "React",
-    TYPESCRIPT = "Typescript",
-    WORDPRESS = "Wordpress"
-  }
-
-export class DescripcionesI{
-    listaTexto?: string[];
-    listaTituloTexto?: ListasTituloTextoI[];
-
-    constructor(){
-        this.listaTexto = [];
-        this.listaTituloTexto = [];
-    }
-}
-
-export interface linkReferenciaI {
-    titulo: string,
-    urlLink: string,
-    textos?:string[],
-    img:IImagen
-}
-
-export class IImagen {
-    nombre: string;
-    ulrImagen: string;
-    altura: string;
-    clase: string;
-
-    constructor(){
-        this.nombre = '';
-        this.ulrImagen = '';
-        this.altura = '';
-        this.clase = '';
-    }
-}
-
-export interface ListasTituloTextoI {
-    titulo?: string[],
-    descripciones?: string[]
-}
-
 export interface ImgSlider {
     alt: string,
     height: string,
@@ -227,7 +147,6 @@ export class CategoriaPostModel {
     ruta: string;
     colorFondo: string;
     color: string;
-    glosario: GlosarioModel[];
     descripcion: DescripcionModel[];
     descripcionCorta: string;
     post: DatosPost[];
@@ -241,7 +160,6 @@ export class CategoriaPostModel {
         this.descripcion = [];
         this.descripcionCorta = '';
         this.estado = '';
-        this.glosario = [];
         this.id = 0,
         this.nombre = '';
         this.posicion = '';

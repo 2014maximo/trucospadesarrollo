@@ -9,7 +9,7 @@ export const CATEGORIES: CategoriesPageModel[] = [
 		alt: 'icon-ia',
 		class: 'drop box',
 		linkCategory: '/blog/ia',
-		state: 'inactive',
+		state: 'active',
 		nameCategorie: 'ai',
 		posicion: 'rot-2',
 		colorFondo: 'bg-Ai',

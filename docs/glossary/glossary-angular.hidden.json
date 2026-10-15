@@ -1,0 +1,73 @@
+{
+  "type": "glossary",
+  "data": {
+    "title": "Glosario",
+    "color": "c-Angular",
+    "terms": [
+      {
+        "title": "Router",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "Sistema de manejo de rutas, desde la versión \"AngularJS\" pasa vario cambios, actualmente "
+        ]
+      },
+      {
+        "title": "ResolveStart",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          ""
+        ]
+      },
+      {
+        "title": "ResolveEnd",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          ""
+        ]
+      },
+      {
+        "title": "ActivationEnd",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          ""
+        ]
+      },
+      {
+        "title": "ChildActivationEnd",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          ""
+        ]
+      },
+      {
+        "title": "ChildActivationEnd",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          ""
+        ]
+      },
+      {
+        "title": "AOT (AHead Of Time)",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          ""
+        ]
+      },
+      {
+        "title": "bundles",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          ""
+        ]
+      }
+    ]
+  }
+}

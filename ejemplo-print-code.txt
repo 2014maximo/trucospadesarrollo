@@ -277,3 +277,99 @@
 }
 </script>
 [ng-component]
+
+<script type="application/json" data-component-id="glossary">
+{
+    "type": "glossary",
+    "data": {
+        "title": "Glosario",
+        "color": "c-Angular",
+        "itemsPerPage": 30,
+        "itemsMobile": 10,
+        "terms": [
+            {
+                "id": "first-value-from",
+                "title": "firstValueFrom (RXJS)",
+                "category": "Angular",
+                "updatedAt": "2023-04-01",
+                "paragraphs": [
+                    "No nos va a aparecer antes de la versión 7 de la libreria RxJS, esta función viene a reemplazar a toPromise(), quedando en el abismo de los obsoletos.",
+                    "Convierte un observable en una promesa que se cumple cuando devuelve el primer valor."
+                ],
+                "image": {
+                    "src": "https://plantillas_dev.gitlab.io/assets/img/posts/angular/firstValueFrom.png",
+                    "alt": "Ejemplo de uso de firstValueFrom",
+                    "customClass": "img-fluid",
+                    "typeImage": "type-A"
+                },
+                "links": [
+                    {
+                        "title": "RxJs First Value From",
+                        "url": "https://rxjs.dev/api/index/function/firstValueFrom"
+                    },
+                    {
+                        "title": "Ver el post completo",
+                        "url": "/blog/angular/ng-rxjs-first-value-from"
+                    }
+                ]
+            },
+            {
+                "title": "Inyección de dependencias",
+                "category": "Angular",
+                "updatedAt": "2026-10-12",
+                "paragraphs": [
+                    "Patrón con el que una clase recibe sus dependencias desde fuera en lugar de crearlas."
+                ],
+                "sections": [
+                    {
+                        "titles": [
+                            "Ámbitos de un servicio"
+                        ],
+                        "items": [
+                            "root: una única instancia para toda la aplicación.",
+                            "Componente: una instancia por cada componente que lo declara."
+                        ]
+                    }
+                ]
+            },
+            {
+                "title": {
+                    "text": "Signal",
+                    "styleText": "f-yanone fs-40 lh-40 c-Angular text-uppercase p-0 m-0"
+                },
+                "category": {
+                    "text": "Angular",
+                    "styleText": "f-open-sans-c fs-20 c7 m-0"
+                },
+                "paragraphs": [
+                    "Valor reactivo que avisa a quien lo lee cuando cambia.",
+                    {
+                        "text": "Guía oficial de signals",
+                        "styleText": "c7 f-open-sans-c fs-18 lh-20",
+                        "url": "https://angular.dev/guide/signals",
+                        "target": "_blank"
+                    }
+                ],
+                "sections": [
+                    {
+                        "titles": [
+                            {
+                                "text": "Tipos",
+                                "styleText": "f-yanone fs-25 c-Angular m-0"
+                            }
+                        ],
+                        "items": [
+                            "signal: valor que se puede escribir.",
+                            {
+                                "text": "computed: valor derivado de otros.",
+                                "styleText": "c7 f-open-sans-c fs-18 m-0 ps-3"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
+</script>
+[ng-component]

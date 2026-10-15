@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { TopTecnologyComponent } from './top-tecnology.component';
 
@@ -8,7 +9,7 @@ describe('TopTecnologyComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TopTecnologyComponent]
+      imports: [TopTecnologyComponent, TranslateModule.forRoot()]
     })
     .compileComponents();
 

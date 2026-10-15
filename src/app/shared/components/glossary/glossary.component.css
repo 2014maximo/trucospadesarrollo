@@ -1,0 +1,79 @@
+.glossary-search-box {
+    position: relative;
+}
+
+.glossary-search {
+    background: transparent;
+    border: 1px solid currentColor;
+    padding-right: 2.25rem;
+}
+
+/* Se oculta la X nativa del navegador: la sustituye .glossary-clear. */
+.glossary-search::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.glossary-clear {
+    background: transparent;
+    border: 0;
+    color: inherit;
+    height: 100%;
+    padding: 0 .65rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.glossary-clear:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: -4px;
+}
+
+.glossary-search:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* Hereda el color del tema activo en lugar de fijar texto claro. */
+.glossary-text {
+    color: inherit;
+}
+
+.glossary-letter {
+    background: transparent;
+    border: 1px solid transparent;
+    line-height: 1;
+    padding: 4px 10px;
+}
+
+.glossary-letter:hover,
+.glossary-letter.active {
+    border-color: currentColor;
+}
+
+.glossary-anchor {
+    color: inherit;
+    opacity: 0;
+    text-decoration: none;
+    transition: opacity .15s;
+}
+
+article:hover .glossary-anchor,
+.glossary-anchor:focus-visible {
+    opacity: .7;
+}
+
+/* En pantallas táctiles no hay hover: el enlace queda siempre visible. */
+@media (hover: none) {
+    .glossary-anchor {
+        opacity: .5;
+    }
+}
+
+.glossary-mark {
+    background: color-mix(in srgb, var(--color-uno) 40%, transparent);
+    border-radius: 2px;
+    color: inherit;
+    padding: 0;
+}

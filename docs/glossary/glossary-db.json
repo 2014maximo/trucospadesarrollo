@@ -1,0 +1,17 @@
+{
+  "type": "glossary",
+  "data": {
+    "title": "Glosario",
+    "color": "c-Sql",
+    "terms": [
+      {
+        "title": "Suite de aplicaciones Siebel CRM",
+        "category": "DB",
+        "updatedAt": "2024-04-16",
+        "paragraphs": [
+          "Partiendo del término módulos Siebel, que se refiere a áreas principales de una empresa, como toda esa parte funcional separada en categorías. Por ejemplo Ventas, El área de Marketing, Órdenes, Soporte, etc. Entonces, un módulo Siebel es todo lo que atrapa una categoria, que le permite poder funcionar en una organización. Ahora cuando se habla de la suite hace referencia a una plataforma de la empresa Oracle Corporation que permite gestionar relaciones y control de cada uno de estos módulos."
+        ]
+      }
+    ]
+  }
+}

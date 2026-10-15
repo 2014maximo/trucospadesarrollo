@@ -54,25 +54,6 @@ export function extraerListaRutas(categoria:[]):Route[]{
   return rutas
 }
 
-export function busquedaGeneral(array: any, bloque: string, palabra: string){
-
-  return array.filter((element:any) => element[bloque].toUpperCase()
-  .replace("Á", "A")
-  .replace("É", "E")
-  .replace("Í", "I")
-  .replace("Ó", "O")
-  .replace("Ú", "U")
-  .replace("Ü", "U")
-  .includes(palabra.toUpperCase()
-    .replace("Á", "A")
-    .replace("É", "E")
-    .replace("Í", "I")
-    .replace("Ó", "O")
-    .replace("Ú", "U")
-    .replace("Ü", "U")));
-          
-}
-
 export function datosCategoria(cat: string, referencia: number): any{
   let datoCategoria: any;
   

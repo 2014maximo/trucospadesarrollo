@@ -16,6 +16,7 @@ Este repositorio usa **desarrollo guiado por especificaciones**: los procedimien
 | [docs/specs/blog-category-headless.md](docs/specs/blog-category-headless.md) | Categoría dinámica: WordPress pages query, `CategoryBaseComponent`, ruta `:categoria`, `CategoryViewModel`, tests. |
 | [docs/specs/shared-image-adapter.md](docs/specs/shared-image-adapter.md) | `ImageAdapterComponent`: modelo único `ImageAdapterModel`, uso y tests. |
 | [docs/specs/shared-print-code.md](docs/specs/shared-print-code.md) | `PrintCodeComponent`: bloques de código resaltados con PrismJS, terminal Linux/Windows y modo transparente. |
+| [docs/specs/shared-glossary.md](docs/specs/shared-glossary.md) | `GlossaryComponent`: glosario desde JSON del post (`GlossaryModel`), búsqueda, índice A–Z, anclas y tests. |
 
 Si trabajas fuera de Cursor, el mismo contenido aplica; en Cursor, las reglas en `.cursor/rules/` reforzarán estos puntos según el tipo de archivo.
 

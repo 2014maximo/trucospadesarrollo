@@ -1,0 +1,117 @@
+@if (hayTerminos()) {
+<section class="row" [attr.aria-label]="encabezado().text | translate">
+    <div class="col-md-10 offset-md-1">
+        <h3 [class]="encabezado().clase">{{ encabezado().text | translate }}</h3>
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="glossary-search-box {{ color() }}">
+                    <input #buscador type="search" (input)="buscar($event)" [value]="busqueda()"
+                        class="glossary-search fs-20 ps-2 w-100 f-shadow-into-l {{ color() }}"
+                        [placeholder]="'Buscar' | translate" [attr.aria-label]="'Buscar' | translate">
+                    @if (busqueda()) {
+                    <button type="button" class="glossary-clear" (click)="limpiarBusqueda(buscador)"
+                        [attr.aria-label]="'Glosario_limpiar' | translate" [title]="'Glosario_limpiar' | translate">
+                        <i class="bi bi-x-lg" aria-hidden="true"></i></button>
+                    }
+                </div>
+            </div>
+        </div>
+        @if (letras().length > 1) {
+        <nav class="d-flex flex-wrap justify-content-center gap-2 mt-3"
+            [attr.aria-label]="'Glosario_indice' | translate">
+            <button type="button" class="glossary-letter f-bebas fs-20 {{ color() }}"
+                [class.active]="!letra()" [attr.aria-pressed]="!letra()" (click)="seleccionarLetra(null)">
+                {{ 'Glosario_todos' | translate }}</button>
+            @for (inicial of letras(); track inicial) {
+            <button type="button" class="glossary-letter f-bebas fs-20 {{ color() }}"
+                [class.active]="letra() === inicial" [attr.aria-pressed]="letra() === inicial"
+                (click)="seleccionarLetra(inicial)">{{ inicial }}</button>
+            }
+        </nav>
+        }
+        <div class="espacio"></div>
+
+        @for (item of visibles(); track item) {
+        <div class="row align-items-center pb-5">
+            <article class="col-md-7" [id]="item.ancla" [class.order-md-2]="$odd && item.imagen"
+                [class.offset-md-5]="$odd && !item.imagen">
+                <h4 [class]="item.titulo.clase">
+                    <ng-container [ngTemplateOutlet]="texto"
+                        [ngTemplateOutletContext]="{ $implicit: item.titulo }"></ng-container>
+                    <a [routerLink]="[]" [fragment]="item.ancla" class="glossary-anchor ms-2 fs-20"
+                        [attr.aria-label]="'Glosario_enlace' | translate" [title]="'Glosario_enlace' | translate">
+                        <i class="bi bi-link-45deg" aria-hidden="true"></i></a>
+                </h4>
+                @if (item.categoria; as categoria) {
+                <p [class]="categoria.clase">
+                    <ng-container [ngTemplateOutlet]="texto"
+                        [ngTemplateOutletContext]="{ $implicit: categoria }"></ng-container>
+                </p>
+                }
+                @if (item.fecha; as fecha) {
+                <p [class]="fecha.clase"><time [attr.datetime]="fecha.text">{{ fecha.text }}</time></p>
+                }
+                @for (parrafo of item.parrafos; track $index) {
+                <p [class]="parrafo.clase">
+                    <ng-container [ngTemplateOutlet]="texto"
+                        [ngTemplateOutletContext]="{ $implicit: parrafo }"></ng-container>
+                </p>
+                }
+                @for (seccion of item.secciones; track $index) {
+                <div class="mb-4">
+                    @for (titulo of seccion.titulos; track $index) {
+                    <p [class]="titulo.clase">
+                        <ng-container [ngTemplateOutlet]="texto"
+                            [ngTemplateOutletContext]="{ $implicit: titulo }"></ng-container>
+                    </p>
+                    }
+                    @for (elemento of seccion.elementos; track $index) {
+                    <p [class]="elemento.clase">
+                        <i class="bi bi-circle-fill fs-10 {{ color() }}" aria-hidden="true"></i>
+                        &nbsp;<ng-container [ngTemplateOutlet]="texto"
+                            [ngTemplateOutletContext]="{ $implicit: elemento }"></ng-container>
+                    </p>
+                    }
+                </div>
+                }
+                @for (link of item.links; track $index) {
+                <div>
+                    @if (esExterno(link.url)) {
+                    <a [href]="link.url" target="_blank" rel="noopener noreferrer"
+                        class="text-secondary f-open-sans-c fs-20">{{ link.title || link.url }}</a>
+                    } @else {
+                    <a [routerLink]="link.url" class="text-secondary f-open-sans-c fs-20">{{ link.title || link.url }}</a>
+                    }
+                </div>
+                }
+            </article>
+            @if (item.imagen; as imagen) {
+            <div class="col-md-5 pt-3 pt-md-0" [class.order-md-1]="$odd">
+                <app-image-adapter [image]="imagen"></app-image-adapter>
+            </div>
+            }
+        </div>
+        } @empty {
+        @if (!filtrados().length) {
+        <p class="text-center c7 f-open-sans-c fs-20" role="status">{{ 'Glosario_sin_resultados' | translate }}</p>
+        }
+        }
+
+        @if (filtrados().length) {
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <app-paginator (paginados)="recibirPagina($event)" [contenedor]="filtrados()"
+                    [mostrarItemsPorPantalla]="false" [itemIniciales]="glossary().itemsPerPage || 30"
+                    [itemsMobile]="glossary().itemsMobile || 10"></app-paginator>
+            </div>
+        </div>
+        }
+    </div>
+</section>
+}
+
+<!-- Texto de un TextoVista, enlazado si trae `url`. -->
+<ng-template #texto let-valor>@if (valor.url) {<a [href]="valor.url" [target]="valor.target" rel="noopener noreferrer"><ng-container [ngTemplateOutlet]="resaltado" [ngTemplateOutletContext]="{ $implicit: valor.text }"></ng-container></a>} @else {<ng-container [ngTemplateOutlet]="resaltado" [ngTemplateOutletContext]="{ $implicit: valor.text }"></ng-container>}</ng-template>
+
+<!-- Coincidencias de la búsqueda marcadas. Va en una sola línea para no meter espacios entre tramos. -->
+<ng-template #resaltado let-cadena>@for (tramo of cadena | highlight: busqueda(); track $index) {@if (tramo.match) {<mark class="glossary-mark">{{ tramo.text }}</mark>} @else {<span>{{ tramo.text }}</span>}}</ng-template>

@@ -1,6 +1,12 @@
 {
     "titulo_blog": "TRUCOS PA' DESARROLLO",
     "Buscar": "Buscar",
+    "Glosario": "Glosario",
+    "Glosario_sin_resultados": "No se encontraron términos",
+    "Glosario_todos": "Todos",
+    "Glosario_indice": "Índice alfabético",
+    "Glosario_enlace": "Enlace a este término",
+    "Glosario_limpiar": "Borrar búsqueda",
     "Email": "Email",
     "Comentarios": "Comentarios",
     "Presentacion": "Es increíble que desarrolladores visiten este blog, sin embargo es un honor poder ser útil, ayudar y brindar ese apoyo en una idea, una manera de expresar los conocimientos que propongo en este blog de desarrollo. Así como yo busqué fuentes en muchas partes y me sirvieron de mucha ayuda, ahora emprendo el mismo objetivo entregando lo que me voy empapando de este maravilloso mundo de las tecnologías de la información. No dudes si tienes alguna duda o quieres hablar, escribes y compartimos experiencias. Por todo y con gusto y gracias.",

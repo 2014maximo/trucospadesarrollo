@@ -1,6 +1,12 @@
 {
     "titulo_blog": "ASTUCES DE DÉVELOPPEMENT",
     "Buscar": "Recherche",
+    "Glosario": "Glossaire",
+    "Glosario_sin_resultados": "Aucun terme trouvé",
+    "Glosario_todos": "Tous",
+    "Glosario_indice": "Index alphabétique",
+    "Glosario_enlace": "Lien vers ce terme",
+    "Glosario_limpiar": "Effacer la recherche",
     "Email": "Courriel",
     "Comentarios": "Commentaires",
     "Presentacion": "Il est incroyable que des développeurs visitent ce blog, cependant c'est un honneur de pouvoir être utile, d'aider et d'apporter ce soutien dans une idée, une manière d'exprimer les connaissances que je propose dans ce blog de développement. Tout comme j'ai cherché des sources dans de nombreux endroits et qu'elles m'ont beaucoup aidé, j'entreprends maintenant le même objectif en livrant ce dont je m'imprègne dans ce monde merveilleux des technologies de l'information. N'hésitez pas si vous avez un doute ou envie de parler, écrivez-moi et nous partagerons nos expériences. Pour tout et avec plaisir et merci.",

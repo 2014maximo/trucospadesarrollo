@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { MenuHomeComponent } from './menu-home.component';
 
@@ -8,7 +9,7 @@ describe('MenuHomeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MenuHomeComponent]
+      imports: [MenuHomeComponent, TranslateModule.forRoot()]
     })
     .compileComponents();
 

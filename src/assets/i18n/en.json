@@ -1,6 +1,12 @@
 {
     "titulo_blog": "DEVELOPMENT TRICKS",
     "Buscar": "Search",
+    "Glosario": "Glossary",
+    "Glosario_sin_resultados": "No terms found",
+    "Glosario_todos": "All",
+    "Glosario_indice": "Alphabetical index",
+    "Glosario_enlace": "Link to this term",
+    "Glosario_limpiar": "Clear search",
     "Email": "Email",
     "Comentarios": "Comments",
     "Presentacion": "It is incredible that developers visit this blog, however it is an honor to be able to be useful, help and provide that support in an idea, a way to express the knowledge that I propose in this development blog. Just as I searched for sources in many places and they were very helpful, now I undertake the same goal delivering what I am soaking in this wonderful world of information technology. Do not hesitate if you have any doubt or want to talk, write me and we will share experiences. For everything and with pleasure and thanks.",

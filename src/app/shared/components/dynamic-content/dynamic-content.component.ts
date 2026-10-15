@@ -12,6 +12,7 @@ import { GaleryPostComponent } from '../galery-post/galery-post.component';
 import { BlockContentComponent } from '../block-content/block-content.component';
 import { IndexButtonsComponent } from '../index-buttons/index-buttons.component';
 import { ContentIndexComponent } from '../content-index/content-index.component';
+import { GlossaryComponent } from '../glossary/glossary.component';
 
 // ── Tipos internos ────────────────────────────────────────────────────────────
 
@@ -61,6 +62,10 @@ const COMPONENT_REGISTRY: Record<string, ComponentEntry> = {
   'content-index': {
     component: ContentIndexComponent,
     inputName: 'indice',
+  },
+  'glossary': {
+    component: GlossaryComponent,
+    inputName: 'glossary',
   },
   // Agregar aquí los próximos componentes:
   // 'block-text':   { component: BlockTextComponent,  inputName: 'data' },
@@ -238,13 +243,7 @@ export class DynamicContentComponent implements OnChanges {
       // sigue con el intento permisivo completo
     }
 
-    const normalized = quotesRepaired
-      // claves sin comillas: { foo: ... } o , foo: ...  →  "foo":
-      .replace(/([{,]\s*)([A-Za-z_$][\w$]*)\s*:/g, '$1"$2":')
-      // comillas simples de string → dobles (sin tocar comillas dobles internas)
-      .replace(/'((?:\\.|[^'\\])*)'/g, (_m, inner: string) => `"${inner.replace(/"/g, '\\"')}"`)
-      // comas colgantes antes de } o ]
-      .replace(/,(\s*[}\]])/g, '$1');
+    const normalized = this.normalizeJsLikeSyntax(quotesRepaired);
 
     try {
       return JSON.parse(normalized);
@@ -255,6 +254,37 @@ export class DynamicContentComponent implements OnChanges {
       );
       return null;
     }
+  }
+
+  /**
+   * Normaliza sintaxis de objeto JS (claves sin comillas, strings con comillas
+   * simples, comas colgantes) SOLO fuera de los strings con comillas dobles.
+   * Así un apóstrofo o un `, palabra:` dentro de un texto (ej. `nivel 'JUNIOR'`)
+   * no se reinterpreta como sintaxis y no rompe el string que lo contiene.
+   */
+  private normalizeJsLikeSyntax(text: string): string {
+    const stringToken = /"(?:\\.|[^"\\])*"|'((?:\\.|[^'\\])*)'/g;
+    const normalizeCode = (code: string) =>
+      code
+        // claves sin comillas: { foo: ... } o , foo: ...  →  "foo":
+        .replace(/([{,]\s*)([A-Za-z_$][\w$]*)\s*:/g, '$1"$2":')
+        // comas colgantes antes de } o ]
+        .replace(/,(\s*[}\]])/g, '$1');
+
+    let result = '';
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+
+    while ((match = stringToken.exec(text)) !== null) {
+      result += normalizeCode(text.slice(lastIndex, match.index));
+      // string con comillas dobles: se conserva; con simples: se pasa a dobles
+      result += match[0].startsWith('"')
+        ? match[0]
+        : `"${match[1].replace(/\\'/g, "'").replace(/"/g, '\\"')}"`;
+      lastIndex = match.index + match[0].length;
+    }
+
+    return result + normalizeCode(text.slice(lastIndex));
   }
 
   /**

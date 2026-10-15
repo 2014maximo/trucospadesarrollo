@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { INDEX_BUTTONS_DEV_SITES } from '../../../features/blog/posts/developer/dev-sites/constants/index-buttons.constant';
+import { INDEX_BUTTONS_DEV_SITES } from './constants/index-buttons.constant';
 import { IndexButtonsModel } from '../../models/index-buttons.model';
 import { ContentIndexComponent } from '../content-index/content-index.component';
 import { IndiceDeContenidosModel } from '../../models/indice.model';

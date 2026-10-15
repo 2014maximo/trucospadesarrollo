@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CATEGORIA } from '@constants/categories.constant';
-import { CategoriaPostModel, DatosPost, GlosarioModel, SubCategoriaModel } from '@models/categorias.model';
+import { CategoriaPostModel, DatosPost, SubCategoriaModel } from '@models/categorias.model';
 import { IndiceDeContenidosModel } from '@models/indice.model';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { postActual } from '@shared//global-functions';
@@ -24,7 +24,6 @@ export class CategoryHeaderComponent implements OnInit {
   @Input() adds = new AddsModel();
 
   public indice: IndiceDeContenidosModel[] = [];
-  public glosario: GlosarioModel[] = [];
 
   public categoria = new CategoriaPostModel();
   public subCategorias: SubCategoriaModel[] = [];
@@ -54,7 +53,6 @@ export class CategoryHeaderComponent implements OnInit {
 
 
     this.categoria ? this.subCategorias = this.categoria.subcategorias : [];
-    this.categoria ? this.glosario = this.categoria.glosario : [];
 
     this.publicacion = postActual(this.idPost)[0]
   }

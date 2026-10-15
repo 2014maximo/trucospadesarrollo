@@ -1,0 +1,561 @@
+{
+  "type": "glossary",
+  "data": {
+    "title": "Glosario",
+    "color": "c-Developer",
+    "terms": [
+      {
+        "title": "Servicios SOAP",
+        "category": "Developer",
+        "updatedAt": "2023-07-25",
+        "paragraphs": [
+          "(protocolo simple de acceso a objetos) Protocolo estándar que define cómo dos objetos en diferentes procesos pueden comunicarse por medio de intercambio de datos XML.",
+          "Los servicios SOAP funcionan por lo general por el protocolo HTTP que es lo más común cuando invocamos un Web Services, sin embargo, SOAP no está limitado a este protocolo, si no que puede ser enviado por FTP, POP3, TCP, Colas de mensajería (JMS, MQ, etc)"
+        ]
+      },
+      {
+        "title": "CÓDIGOS HTTP",
+        "category": "Developer",
+        "updatedAt": "2023-07-26",
+        "sections": [
+          {
+            "titles": [
+              "Respuestas informativas (100–199):"
+            ],
+            "items": [
+              "100 Continue",
+              "101 Switching Protocols",
+              "103 Early Hints"
+            ]
+          },
+          {
+            "titles": [
+              "Respuestas satisfactorias (200–299):"
+            ],
+            "items": [
+              "200 OK",
+              "201 Created",
+              "203 Non-Authoritative Information",
+              "204 No Content ",
+              "205 Reset Content",
+              "206 Partial Content"
+            ]
+          },
+          {
+            "titles": [
+              "Redirecciones (300–399):"
+            ],
+            "items": [
+              "300 Multiple Choices",
+              "301 Movido Permanentemente",
+              "302 Found",
+              "303 See Other",
+              "304 Not Modified",
+              "307 Temporary Redirect",
+              "308 Permanent Redirect"
+            ]
+          },
+          {
+            "titles": [
+              "Errores de los clientes (400–499):"
+            ],
+            "items": [
+              "400 Petición mala",
+              "401 Unauthorized",
+              "402 Payment Required",
+              "403 Forbidden",
+              "404 Not Found",
+              "405 Method Not Allowed",
+              "406 Not Acceptable",
+              "407 Proxy Authentication Required",
+              "408 Request Timeout",
+              "409 Conflict",
+              "410 Gone",
+              "411 Length Required",
+              "412 Precondition Failed",
+              "413 Payload Too Large",
+              "414 URI Too Long",
+              "416 Range Not Satisfiable",
+              "415 Unsupported Media Type",
+              "417 Expectation Failed",
+              "418 Soy una tetera",
+              "422 Unprocessable Entity",
+              "425 Too Early",
+              "426 Upgrade Required",
+              "428 Precondition Required",
+              "429 Too Many Requests",
+              "431 Request Header Fields Too Large",
+              "451 Unavailable For Legal Reasons"
+            ]
+          },
+          {
+            "titles": [
+              "Errores de los servidores (500–599):"
+            ],
+            "items": [
+              "500 Internal Server Error",
+              "501 Not Implemented",
+              "502 Puerta de enlace no válida",
+              "503 Servicio No Disponible",
+              "504 Gateway Timeout",
+              "505 HTTP Version Not Supported",
+              "506 Variant Also Negotiates",
+              "507 Insufficient Storage",
+              "508 Loop Detected",
+              "510 Not Extended",
+              "511 Network Authentication Required"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Polimorfismo",
+        "category": "Developer",
+        "updatedAt": "2023-07-26",
+        "paragraphs": [
+          "Por lo general diremos que existen 3 tipos de polimorfismo:"
+        ],
+        "sections": [
+          {
+            "titles": [
+              "Sobrecarga:"
+            ],
+            "items": [
+              "El más conocido y se aplica cuando existen funciones con el mismo nombre en clases que son completamente independientes una de la otra."
+            ]
+          },
+          {
+            "titles": [
+              "Paramétrico:"
+            ],
+            "items": [
+              "Existen funciones con el mismo nombre pero se usan diferentes parámetros (nombre o tipo). Se selecciona el método dependiendo del tipo de datos que se envíe."
+            ]
+          },
+          {
+            "titles": [
+              "Inclusión:"
+            ],
+            "items": [
+              "Es cuando se puede llamar a un método sin tener que conocer su tipo, así no se toma en cuenta los detalles de las clases especializadas, utilizando una interfaz común."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Modificadores de acceso",
+        "category": "Developer",
+        "updatedAt": "2023-07-26",
+        "sections": [
+          {
+            "titles": [
+              "público:"
+            ],
+            "items": [
+              "Se puede acceder al tipo o miembro mediante cualquier otro código en el mismo conjunto u otro conjunto que lo haga referencia."
+            ]
+          },
+          {
+            "titles": [
+              "privado:"
+            ],
+            "items": [
+              "El tipo o miembro solo se puede acceder por código en la misma clase o estructura."
+            ]
+          },
+          {
+            "titles": [
+              "protegido:"
+            ],
+            "items": [
+              "Solo se puede acceder al tipo o miembro mediante código en la misma clase o estructura, o en una clase derivada."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "PATRONES",
+        "category": "Developer",
+        "updatedAt": "2023-07-26",
+        "paragraphs": [
+          "Se definen como patrones de diseño software que ofrecen soluciones respecto a la interacción y responsabilidades entre clases y objetos, así como los algoritmos que encapsulan."
+        ],
+        "sections": [
+          {
+            "titles": [
+              "Patrones Creacionales:"
+            ],
+            "items": [
+              "Procuran independizar al sistema de como sus objetos son creados y/o representados."
+            ]
+          },
+          {
+            "titles": [
+              "Patrones Estructurales:"
+            ],
+            "items": [
+              "Se refieren a cómo las clases y los objetos son organizados para conformar estructuras más complejas."
+            ]
+          },
+          {
+            "titles": [
+              "Patrones de comportamiento:"
+            ],
+            "items": [
+              "Se centran en los algoritmos y en la asignación de responsabilidades entre los objetos."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Patrones de creación",
+        "category": "Developer",
+        "updatedAt": "2023-07-26",
+        "sections": [
+          {
+            "titles": [
+              "Abstract Factory:"
+            ],
+            "items": [
+              "permite trabajar con objetos de diferentes familias de manera que no se mezclen entre sí. De esa manera se consigue que el tipo de familia que se esté utilizando sea transparente."
+            ]
+          },
+          {
+            "titles": [
+              "Builder:"
+            ],
+            "items": [
+              "abstrae el proceso de creación de los objetos complejos, centralizando en un punto."
+            ]
+          },
+          {
+            "titles": [
+              "Factory Method:"
+            ],
+            "items": [
+              "centraliza en una clase constructora la creación de objetos de un tipo determinado. Ocultando al invocante la necesidad de indicar un tipo u otro."
+            ]
+          },
+          {
+            "titles": [
+              "Prototype:"
+            ],
+            "items": [
+              "crea un objeto a partir de la clonación de un objeto ya existente."
+            ]
+          },
+          {
+            "titles": [
+              "Singleton:"
+            ],
+            "items": [
+              "garantiza que solo exista una instancia de un objeto y que la forma de acceder a dicha instancia sea general."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Patrones de comportamiento",
+        "category": "Developer",
+        "updatedAt": "2023-07-26",
+        "sections": [
+          {
+            "titles": [
+              "Chain of Responsibility (Cadena de responsabilidad): "
+            ],
+            "items": [
+              "Permite establecer la línea que deben llevar los mensajes para que los objetos realicen la tarea indicada."
+            ]
+          },
+          {
+            "titles": [
+              "Command (Orden):"
+            ],
+            "items": [
+              "Encapsula una operación en un objeto, permitiendo ejecutar dicha operación sin necesidad de conocer el contenido de la misma."
+            ]
+          },
+          {
+            "titles": [
+              "Interpreter (Intérprete):"
+            ],
+            "items": [
+              "Dado un lenguaje, define una gramática para dicho lenguaje, así como las herramientas necesarias para interpretarlo."
+            ]
+          },
+          {
+            "titles": [
+              "Iterator (Iterador):"
+            ],
+            "items": [
+              "Permite realizar recorridos sobre objetos compuestos independientemente de la implementación de estos."
+            ]
+          },
+          {
+            "titles": [
+              "Mediator (Mediador): "
+            ],
+            "items": [
+              "Define un objeto que coordine la comunicación entre objetos de distintas clases, pero que funcionan como un conjunto."
+            ]
+          },
+          {
+            "titles": [
+              "Memento (Recuerdo):"
+            ],
+            "items": [
+              "Permite volver a estados anteriores del sistema."
+            ]
+          },
+          {
+            "titles": [
+              "Observer (Observador): "
+            ],
+            "items": [
+              "Define una dependencia de uno-a-muchos entre objetos, de forma que cuando un objeto cambie de estado se notifique y actualicen automáticamente todos los objetos que dependen de él."
+            ]
+          },
+          {
+            "titles": [
+              "State (Estado): "
+            ],
+            "items": [
+              "Permite que un objeto modifique su comportamiento cada vez que cambie su estado interno."
+            ]
+          },
+          {
+            "titles": [
+              "Strategy (Estrategia): "
+            ],
+            "items": [
+              "Permite disponer de varios métodos para resolver un problema y elegir cuál utilizar en tiempo de ejecución."
+            ]
+          },
+          {
+            "titles": [
+              "Template Method (Método plantilla): "
+            ],
+            "items": [
+              "Define en una operación el esqueleto de un algoritmo, delegando en las subclases algunos de sus pasos, esto permite que las subclases redefinan ciertos pasos de un algoritmo sin cambiar su estructura."
+            ]
+          },
+          {
+            "titles": [
+              "Visitor (Visitante): "
+            ],
+            "items": [
+              "Permite definir nuevas operaciones sobre una jerarquía de clases sin modificar las clases sobre las que opera."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Patrones estructurales",
+        "category": "Developer",
+        "updatedAt": "2023-07-26",
+        "sections": [
+          {
+            "titles": [
+              "Adapter o Wrapper (Adaptador o Envoltorio): "
+            ],
+            "items": [
+              "Adapta una interfaz para que pueda ser utilizada por una clase que de otro modo no podría utilizarla."
+            ]
+          },
+          {
+            "titles": [
+              "Bridge (Puente): "
+            ],
+            "items": [
+              "Desacopla una abstracción de su implementación."
+            ]
+          },
+          {
+            "titles": [
+              "Composite (Objeto compuesto): "
+            ],
+            "items": [
+              "Permite tratar objetos compuestos como si de uno simple se tratase."
+            ]
+          },
+          {
+            "titles": [
+              "Decorator (Decorador): "
+            ],
+            "items": [
+              "Añade funcionalidad a una clase dinámicamente."
+            ]
+          },
+          {
+            "titles": [
+              "Facade (Fachada): "
+            ],
+            "items": [
+              "Provee de una interfaz unificada simple para acceder a una interfaz o grupo de interfaces de un subsistema."
+            ]
+          },
+          {
+            "titles": [
+              "Flyweight (Peso ligero): "
+            ],
+            "items": [
+              "Reduce la redundancia cuando gran cantidad de objetos poseen idéntica información."
+            ]
+          },
+          {
+            "titles": [
+              "Proxy: Proporciona un intermediario de un objeto para controlar su acceso."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "ERPs (Enterprise Resource Planning)",
+        "category": "Developer",
+        "updatedAt": "2023-08-25",
+        "paragraphs": [
+          "Sistemas de Planificación de Recursos Empresariales",
+          "Se refiere a programas y herramientas que permiten realizar procesos de organización, gestión, administración, etc. Como por ejemplo: \"Splunk\" para revisar logs y el funcionamiento de peticiones, \"Postman\" como plataforma API."
+        ]
+      },
+      {
+        "title": "A/B TESTING",
+        "category": "Developer",
+        "updatedAt": "2023-09-06",
+        "sections": [
+          {
+            "titles": [
+              "(Producto firebase)"
+            ],
+            "items": [
+              "Firebase A/B Testing (con la tecnología de Google Optimize) te ayuda a optimizar tu experiencia con las apps y facilita la ejecución, el análisis y el escalamiento de los experimentos de productos y de marketing. Te da la posibilidad de probar los cambios que realices en la IU de la app, sus funciones o las campañas de participación para ver si modifican las métricas clave (como los ingresos y la retención) antes de implementarlos en forma general.",
+              "A/B Testing funciona con FCM para que puedas probar diferentes mensajes de marketing, y con Remote Config, a fin de que puedas probar los cambios en la app."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "ANALYTICS",
+        "category": "Developer",
+        "updatedAt": "2023-09-06",
+        "sections": [
+          {
+            "titles": [
+              "(Google analytics)"
+            ],
+            "items": [
+              "Herramienta de google utilizada para medir datos de los desarrollos, principalmente con fines comerciales para medir tendencias y el comportamiento del público frente a lo que más se mueve del momento, lo que esta a la moda y es el foco del subconciente general, para sacarle provecho comercial."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "ARQUITECTURA",
+        "category": "Developer",
+        "updatedAt": "2023-09-06",
+        "paragraphs": [
+          "La orquestación del funcionamiento proyectado en un ámbito donde se define diseño, planificación y construcción, en búsqueda de factores prácticos que satisfagan necesidades y expectativas para la elaboración de un proceso o fin esperado."
+        ]
+      },
+      {
+        "title": "ARQUITECTURA DE SOFTWARE",
+        "category": "Developer",
+        "updatedAt": "2023-09-06",
+        "paragraphs": [
+          "Es la que define, diseña, planifica la construcción y el diseño estructural de un sistema de software, buscando sea eficiente, confiable, fácil de mantener y cumpla los requisitos funcionales y no funcionales.",
+          "Algunos conceptos clave relacionados con la arquitectura de software:"
+        ],
+        "sections": [
+          {
+            "titles": [
+              "Componentes y Módulos"
+            ],
+            "items": [
+              "La arquitectura define los componentes principales del sistema y cómo se interconectan. Los componentes pueden ser módulos de software, servicios, bases de datos u otras partes del sistema."
+            ]
+          },
+          {
+            "titles": [
+              "Interacción y Comunicación"
+            ],
+            "items": [
+              "Define cómo los diferentes componentes o módulos del software interactúan entre sí, incluyendo el flujo de datos y la comunicación."
+            ]
+          },
+          {
+            "titles": [
+              "División de Responsabilidades"
+            ],
+            "items": [
+              "La arquitectura asigna responsabilidades específicas a cada componente o módulo. Esto ayuda a organizar el código de manera lógica y a separar preocupaciones."
+            ]
+          },
+          {
+            "titles": [
+              "Escalabilidad"
+            ],
+            "items": [
+              "Considera cómo el sistema puede escalarse para manejar un mayor volumen de carga o crecimiento futuro."
+            ]
+          },
+          {
+            "titles": [
+              "Mantenibilidad"
+            ],
+            "items": [
+              "La arquitectura se preocupa por la facilidad de mantenimiento del sistema a lo largo del tiempo. Un diseño limpio y modular facilita las actualizaciones y correcciones de errores."
+            ]
+          },
+          {
+            "titles": [
+              "Seguridad y Rendimiento"
+            ],
+            "items": [
+              "Incluye consideraciones sobre la seguridad de los datos y el rendimiento del sistema, garantizando que sea robusto y eficiente."
+            ]
+          },
+          {
+            "titles": [
+              "Cumplimiento de Requisitos"
+            ],
+            "items": [
+              "Asegura que el sistema cumpla con todos los requisitos funcionales y no funcionales definidos, como las características específicas que debe tener y los tiempos de respuesta aceptables."
+            ]
+          },
+          {
+            "titles": [
+              "Patrones de Diseño"
+            ],
+            "items": [
+              "La arquitectura de software a menudo utiliza patrones de diseño, que son soluciones probadas para problemas comunes de diseño de software. Los patrones de diseño ayudan a estandarizar y simplificar el diseño de software."
+            ]
+          },
+          {
+            "titles": [
+              "Documentación"
+            ],
+            "items": [
+              "Es importante documentar la arquitectura para que los desarrolladores y otros miembros del equipo comprendan cómo funciona el sistema y cómo se estructura."
+            ]
+          },
+          {
+            "titles": [
+              "Evolución"
+            ],
+            "items": [
+              "La arquitectura debe ser lo suficientemente flexible para adaptarse a cambios y mejoras en el software con el tiempo."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "WEBPACK",
+        "category": "Developer",
+        "updatedAt": "2023-09-15",
+        "paragraphs": [
+          "Bundler o empacador. Reconocido en proyectos de tipo (SPA)Simple Page Aplication, empaqueta módulos, optimiza el código, carga módulos dinámicos, gestiona recursos estáticos, es configurable."
+        ]
+      }
+    ]
+  }
+}

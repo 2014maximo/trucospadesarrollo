@@ -1,0 +1,123 @@
+{
+  "type": "glossary",
+  "data": {
+    "title": "Glosario",
+    "color": "c-Angular",
+    "terms": [
+      {
+        "title": "firstValueFrom (RXJS)",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "No nos va a aparecer antes de la versión 7 de la libreria RxJS, esta función viene a reemplazar a \"toPromise()\", quedando en el abismo de los obsoletos.",
+          "Se suele debatir si se usa un observable o una promesa dependiendo se requiera una sola petición o estar escuchando un emisor, en este caso su característica de operar es la de convertir un observable en una promesa que se cumple cuando devuelve el primer valor."
+        ],
+        "image": {
+          "src": "https://plantillas_dev.gitlab.io/assets/img/posts/angular/firstValueFrom.png",
+          "alt": "firstValueFrom (RXJS)",
+          "customClass": "img-fluid"
+        },
+        "links": [
+          {
+            "title": "RxJs First Value From",
+            "url": "https://rxjs.dev/api/index/function/firstValueFrom"
+          },
+          {
+            "title": "firstValueFrom (RXJS)",
+            "url": "/blog/angular/ng-rxjs-first-value-from"
+          }
+        ]
+      },
+      {
+        "title": "lastValueFrom() (RXJS)",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "No nos va a aparecer antes de la versión 7 de la libreria rxjs, esta función viene a reemplazar a \"toPromise()\", quedando en el abismo de los obsoletos.",
+          "Su característica de operar es la de convertir un observable en una promesa que se cumple cuando devuelve el último valor."
+        ]
+      },
+      {
+        "title": "first() (RXJS)",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "En simples palabras, esta función devuelve el primer elemento emitido y termina una vez lo reciba."
+        ]
+      },
+      {
+        "title": "takeUntil() (RXJS)",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "Emite valores hasta que le notifiquen que no siga emitiendo con un observable que emite un valor, en ese momento se completa."
+        ]
+      },
+      {
+        "title": "EmptyError (RXJS)",
+        "category": "Angular",
+        "updatedAt": "2023-04-02",
+        "paragraphs": [
+          "Dentro de la RxJS, es una interfaz que no contiene elementos, se usa en observables como first(), last(), entre otros."
+        ]
+      },
+      {
+        "title": "take() (RXJS)",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "Emite valores hasta que le notifiquen que no siga emitiendo con un observable que emite un valor, en ese momento se completa."
+        ]
+      },
+      {
+        "title": "BehaviorSubject (RXJS)",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "Una particularidad de este observable es que permite una comunicación constante entre varios componentes. O sea, tengo 4 componentes conectados a un behavior Subject, cuando alguno emite un cambio, los otros escuchan y también si uno de esos otros emite algún valor, los otros tendrán ese nuevo cambio almacenado en la variable suscrita. Puede usarse esa particularidad de ambos sentidos para recibir y enviar información a través de la misma variable suscrita.",
+          "Cuando se conoce o se ha trabajado frecuentemente con este, se sabe que puede traer comportamientos inesperados en situaciones no controladas. Como, por ejemplo, tener escapes de memoria por un uso exagerado de este operador."
+        ]
+      },
+      {
+        "title": "GuardsCheckStart - @angular/router",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "Evento desencadenado al comienzo de la fase de vigilancia del enrutamiento."
+        ]
+      },
+      {
+        "title": "ChildActivationStart - @angular/router",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "Evento desencadenado al comienzo de la parte de activación secundaria de la fase de resolución del enrutamiento."
+        ]
+      },
+      {
+        "title": "ActivationStart - @angular/router",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "Evento desencadenado al comienzo de la parte de activación de la fase de resolución del enrutamiento."
+        ]
+      },
+      {
+        "title": "GuardsCheckEnd  - @angular/router",
+        "category": "Angular",
+        "updatedAt": "2023-04-01",
+        "paragraphs": [
+          "Evento desencadenado al final de la fase de Guardia del enrutamiento."
+        ]
+      },
+      {
+        "title": "Genexus",
+        "category": "Angular",
+        "updatedAt": "2023-09-13",
+        "paragraphs": [
+          "Plataforma de desarrollo de software para crear aplicaciones multiplataforma y empresa, destacada por su enfoque en automatización de código."
+        ]
+      }
+    ]
+  }
+}

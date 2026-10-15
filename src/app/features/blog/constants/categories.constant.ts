@@ -21,9 +21,6 @@ import { NET } from './posts/posts-net.constant';
 
 import { SUB_NG } from './post-subcategories/subcategorias-angular.constant';
 import { CategoriaPostModel } from '../models/categorias.model';
-import { TERMINOS_ANGULAR } from './glosary/terminos.angular.constant';
-import { TERMINOS_DEVELOPER } from './glosary/terminos.developer.constant';
-import { TERMINOS_HTML } from './glosary/terminos.html.constant';
 import { AI } from './posts/posts-ai.contant';
 
 
@@ -37,7 +34,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/ia-white.png',
         alturaIcono: '100',
         estado:'activo',
-        glosario: [],
         ruta: 'blog/ai',
         colorFondo: 'bg-Ai',
         color: 'c-Ai',
@@ -63,7 +59,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         alturaIcono: '80',
         estado: 'activo',
         ruta: 'android',
-        glosario: [],
         colorFondo: 'bg-Android',
         color: 'c-Android',
         descripcion: [
@@ -89,7 +84,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         estado: 'activo',
         ruta: 'blog/angular',
         colorFondo: 'bg-Angular',
-        glosario: TERMINOS_ANGULAR,
         color: 'c-Angular',
         descripcion: [
             {
@@ -112,7 +106,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/css-white.png',
         alturaIcono: '80',
         estado: 'activo',
-        glosario: [],
         ruta: 'css',
         colorFondo: 'bg-Css',
         color: 'c-Css',
@@ -134,7 +127,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/dart-white.png',
         alturaIcono: '80',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'dart',
         colorFondo: 'bg-Dart',
         color: 'c-Dart',
@@ -157,7 +149,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/sql.png',
         alturaIcono: '80',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'db',
         colorFondo: 'bg-Sql',
         color: 'c-Sql',
@@ -183,7 +174,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         alturaIcono: '90',
         estado: 'activo',
         ruta: 'blog/developer',
-        glosario: TERMINOS_DEVELOPER,
         colorFondo: 'bg-Developer',
         color: 'c-Developer',
         descripcion: [
@@ -208,7 +198,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         alturaIcono: '90',
         estado: 'inactivo',
         ruta: 'electron',
-        glosario: [],
         colorFondo: 'bg-Electron',
         color: 'c-Electron',
         descripcion: [
@@ -232,7 +221,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/flutter-white.png',
         alturaIcono: '80',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'flutter',
         colorFondo: 'bg-Flutter',
         color: 'c-Flutter',
@@ -257,7 +245,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/git-white.png',
         alturaIcono: '80',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'git',
         colorFondo: 'bg-Git',
         color: 'c-Git',
@@ -283,7 +270,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         alturaIcono: '80',
         estado: 'inactivo',
         ruta: 'html',
-        glosario: TERMINOS_HTML,
         colorFondo: 'bg-Html',
         color: 'c-Html',
         descripcion: [{
@@ -305,7 +291,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/logo-java.png',
         alturaIcono: '100',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'java',
         colorFondo: 'bg-Java',
         color: 'c-Java',
@@ -331,7 +316,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         alturaIcono: '80',
         estado: 'inactivo',
         ruta: 'javascript',
-        glosario: [],
         colorFondo: 'bg-Javascript',
         color: 'c-Javascript',
         descripcion: [
@@ -356,7 +340,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         alturaIcono: '60',
         estado: 'inactivo',
         ruta: 'kotlin',
-        glosario: [],
         colorFondo: 'bg-Kotlin',
         color: 'c-Kotlin',
         descripcion: [
@@ -380,7 +363,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/kubernetes.png',
         alturaIcono: '100',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'kubernetes',
         colorFondo: 'bg-Kubernetes',
         color: 'c-Kubernetes',
@@ -405,7 +387,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/linux-white.png',
         alturaIcono: '80',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'linux',
         colorFondo: 'bg-Linux',
         color: 'c-Linux',
@@ -429,7 +410,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         abertura: '',
         rutaIcono: 'assets/img/categorias/net-framework.png',
         alturaIcono: '80',
-        glosario: [],
         estado: 'inactivo',
         ruta: 'net',
         colorFondo: 'bg-Net',
@@ -455,7 +435,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/php.png',
         alturaIcono: '70',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'php',
         colorFondo: 'bg-Php',
         color: 'c-Php',
@@ -480,7 +459,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/react.png',
         alturaIcono: '100',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'react',
         colorFondo: 'bg-React',
         color: ' c-React',
@@ -505,7 +483,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/typescript-white.png',
         alturaIcono: '40',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'typescript',
         colorFondo: 'bg-Typescript',
         color: ' c-Typescript',
@@ -530,7 +507,6 @@ export const CATEGORIA: CategoriaPostModel[] = [
         rutaIcono: 'assets/img/categorias/wordpress2.png',
         alturaIcono: '110',
         estado: 'inactivo',
-        glosario: [],
         ruta: 'wordpress',
         colorFondo: 'bg-Wordpress',
         color: 'c-Wordpress',
