@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
@@ -12,6 +12,7 @@ import { ContactService } from '../../services/contact.service';
     styleUrl: './contact-form.component.css'
 })
 export class ContactFormComponent {
+    @Input() textoBoton = 'Enviar';
     contactForm: FormGroup;
     enviando = false;
     enviado = false;

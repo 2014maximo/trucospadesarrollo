@@ -5,4 +5,10 @@
 .fw-7 { font-weight: 700; }
 .f-operator-m { font-family: var(--fuente-tres); }
 
+.author-link { color: #f8f9fa; transition: color .3s ease; }
+.author-icon { display: inline-block; opacity: 0; transform: translateX(-8px); transition: opacity .3s ease, transform .3s ease; }
+.author-link:hover, .author-link:focus-visible { color: #70b5f9; }
+.author-link:hover .author-icon, .author-link:focus-visible .author-icon { opacity: 1; transform: translateX(0); }
+@media (hover: none) { .author-icon { opacity: 1; transform: none; } }
+
 @media (max-width: 576px) { .testimonial { padding: 3rem; } .description { padding: 3rem; } }

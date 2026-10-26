@@ -21,7 +21,10 @@
                                 <div class="d-flex">
                                     <img src="{{ testimonial.srcImg }}" alt="photo" width="70" height="70" class="rounded-circle m-2">
                                 </div>
-                                <p class="text-light f-open-sans-c fs-25 lh-25 fw-7 m-0">{{ testimonial.author }}</p>
+                                <a [href]="testimonial.linkedinUrl" target="_blank" rel="noopener noreferrer"
+                                    class="author-link f-open-sans-c fs-25 lh-25 fw-7 m-0 d-block text-decoration-none">
+                                    {{ testimonial.author }} <i class="bi bi-linkedin author-icon" aria-hidden="true"></i>
+                                </a>
                                 <p class="text-light f-open-sans-c">{{ testimonial.workPerformed | translate }}</p>
                             </div>
                             <div class="col-sm-2"></div>

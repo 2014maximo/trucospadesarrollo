@@ -7,10 +7,10 @@
                     <div class="flip-front bg-dark shadow-three">
                         <div class="row fs-20 lh-20">
                             <div class="col-lg-4 imgAlex"></div>
-                            <div class="col-lg-8 text-light p-5">
-                                <div class="hello">{{ 'hola' | translate }}</div>
-                                <h2>{{ 'soy' | translate }} Alex Munoz</h2>
-                                <p>{{ 'perfilProfesional' | translate }}</p>
+                            <div class="col-lg-8 text-light p-5 contenidoPerfil">
+                                <div class="hello">{{ 'hola' | translate }}, {{ 'soy' | translate }}</div>
+                                <h2 class="tituloPost">Alex Munoz</h2>
+                                <p class="fw-6">{{ 'perfilProfesional' | translate }}</p>
                                 <div class="col-lg-4 d-lg-none">
                                     <img src="assets/img/portfolio/alex-sarku.jpg" alt="avatar-alex" class="img-fluid d-block d-xxl-none">
                                 </div>
@@ -24,7 +24,11 @@
                     </div>
                     <div class="flip-back bg-dark shadow-three text-light p-5">
                         <button type="button" class="btn-close btn-close-white float-end mb-4" (click)="flip()" aria-label="Close"></button>
-                        <app-contact-form></app-contact-form>
+                        <app-contact-form textoBoton="CONTACT.reclutar"></app-contact-form>
+                        <div class="espaciado"></div>
+                        <div class="text-center">
+                            <img src="assets/img/memes/mem1.png" alt="Meme" height="80" width="auto" class="mx-auto">
+                        </div>
                     </div>
                 </div>
             </div>

@@ -2,4 +2,91 @@
 
 .skills { position: relative; bottom: 170px; }
 .remove-padding { padding: 3rem; }
-@media (max-width: 418px) { .remove-padding { padding: 0 !important; } }
+@media (max-width: 418px) { .remove-padding { padding: 1.5rem 1rem !important; } }
+
+.tech-group + .tech-group { margin-top: 2.5rem; }
+
+.tech-group-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 0 1.25rem;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .45);
+}
+.tech-group-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, .15), transparent);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tech-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
+    padding: 1.25rem .75rem 1rem;
+    border: 1px solid rgba(255, 255, 255, .06);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .02);
+    transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease, background .3s ease;
+}
+
+.tech-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+}
+.tech-logo img {
+    max-width: 80px;
+    max-height: 44px;
+    object-fit: contain;
+    filter: grayscale(1) brightness(1.4);
+    opacity: .55;
+    transition: filter .3s ease, opacity .3s ease, transform .3s ease;
+}
+
+.tech-name {
+    font-size: 13px;
+    letter-spacing: .05em;
+    color: rgba(255, 255, 255, .5);
+    transition: color .3s ease;
+}
+
+.tech-card:hover {
+    transform: translateY(-4px);
+    border-color: color-mix(in srgb, var(--brand) 60%, transparent);
+    background: color-mix(in srgb, var(--brand) 8%, transparent);
+    box-shadow: 0 10px 30px -12px var(--brand);
+}
+.tech-card:hover .tech-logo img {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.08);
+}
+.tech-card:hover .tech-name { color: #fff; }
+
+@media (hover: none) {
+    .tech-logo img { filter: none; opacity: 1; }
+    .tech-name { color: rgba(255, 255, 255, .75); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tech-card, .tech-logo img { transition: none; }
+    .tech-card:hover { transform: none; }
+}

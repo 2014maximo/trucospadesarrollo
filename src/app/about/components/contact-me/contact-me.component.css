@@ -33,3 +33,18 @@
     transform: rotateY(180deg);
     overflow-y: auto;
 }
+
+@media (max-width: 992px) {
+    .itemTranslate { top: 15px; right: 15px; }
+    .contenidoPerfil { padding-top: 70px !important; }
+    .tituloPost { font-size: 76px; line-height: 76px; }
+}
+@media (max-width: 768px) {
+    .tituloPost { font-size: 66px; line-height: 66px; }
+}
+@media (max-width: 576px) {
+    .tituloPost { font-size: 56px; line-height: 56px; }
+}
+@media (max-width: 400px) {
+    .tituloPost { font-size: 48px; line-height: 48px; }
+}

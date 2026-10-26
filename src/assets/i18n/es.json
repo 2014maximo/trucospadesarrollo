@@ -16,6 +16,7 @@
     "Enviar": "Enviar",
     "CONTACT": {
         "enviando": "Enviando...",
+        "reclutar": "Reclutar, o simplemente decir hola",
         "enviado": "Mensaje enviado correctamente.",
         "error": "No se pudo enviar el mensaje. Intenta de nuevo más tarde."
     },
@@ -182,8 +183,14 @@
     "acercaDe": "Actualmente, he estado enfocado en el desarrollo frontend en Angular, con más de 5 años de experiencia. Me gusta trabajar en equipo, buscar una formación continua, aplicar nuevos conocimientos en desarrollo, y poner mi creatividad y corazón en mi trabajo diario. También considero que la vida y el tiempo que tenemos son una oportunidad y una bendición para compartir la pasión que nos hace únicos, y que el mundo espera y necesita para prosperar.",
     "descargar": "DESCARGAR CV",
     "contactame": "CONTÁCTAME",
-    "habilidades": "HABILIDADES PROFESIONALES",
-    "experiencia": "MI EXPERIENCIA",
+    "tecnologias": "TECNOLOGÍAS",
+    "SKILLS": {
+        "frontend": "Frontend",
+        "movil": "Móvil",
+        "backend": "Backend y datos",
+        "herramientas": "Herramientas"
+    },
+    "experiencia": "EXPERIENCIA",
     "primeraEra": "PRIMERA ERA",
     "segundaEra": "SEGUNDA ERA",
     "sena": "SENA",

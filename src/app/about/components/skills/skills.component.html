@@ -1,25 +1,19 @@
 <div class="row bg-transparent skills">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-        <h3 class="title-block text-center">{{ 'habilidades' | translate }}</h3>
+        <h3 class="title-block text-center">{{ 'tecnologias' | translate }}</h3>
         <div class="bg-dark shadow-three mt-2 remove-padding">
-            <div class="row">
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/html-white.png" class="drop" alt="logo-html" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/css.png" class="drop" alt="logo-css" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/javascript.png" class="drop" alt="logo-javascript" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/angular.png" class="drop" alt="logo-angular" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/RXJS.png" class="drop" alt="logo-rxjs" height="40" width="auto"><p class="text-light text-center f-open-sans-c">RxJS</p></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/redux.png" class="drop" alt="logo-redux" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/primeng.png" class="drop" alt="logo-primeNg" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/ionic.png" class="drop" alt="logo-ionic" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/flutter_text_white.png" class="drop" alt="logo-flutter" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/git-light.png" class="drop" alt="logo-git" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/Node.js_logo_black.png" class="drop" alt="logo-nodeJs" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/wordpress2.png" class="drop" alt="logo-wordpress" height="40" width="auto"><p class="text-light text-center f-open-sans-c">Wordpress</p></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/php.png" class="drop" alt="logo-php" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/sql.png" class="drop" alt="logo-sql" height="40" width="auto"></div>
-                <div class="col pr-3 text-center"><img src="assets/img/portfolio/logos/Firebase-Logo.png" class="drop" alt="logo-firebase" height="40" width="auto"></div>
-            </div>
+            <section *ngFor="let group of groups" class="tech-group">
+                <h4 class="tech-group-title f-open-sans-c">{{ group.label | translate }}</h4>
+                <ul class="tech-grid">
+                    <li *ngFor="let tech of group.technologies" class="tech-card" [style.--brand]="tech.color">
+                        <div class="tech-logo">
+                            <img [src]="tech.srcImg" alt="" loading="lazy">
+                        </div>
+                        <span class="tech-name f-open-sans-c">{{ tech.name }}</span>
+                    </li>
+                </ul>
+            </section>
         </div>
     </div>
     <div class="col-md-2"></div>

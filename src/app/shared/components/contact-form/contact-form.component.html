@@ -10,7 +10,7 @@
 
         <button type="submit" id="bt-enviar" class="p-2 btn-block bg-warning shadow-three w-100"
             [disabled]="contactForm.invalid || enviando">
-            {{ enviando ? ('CONTACT.enviando' | translate) : ('Enviar' | translate) }}
+            {{ enviando ? ('CONTACT.enviando' | translate) : (textoBoton | translate) }}
         </button>
         <p *ngIf="enviado" class="text-success mt-2 text-center">{{ 'CONTACT.enviado' | translate }}</p>
         <p *ngIf="error" class="text-danger mt-2 text-center">{{ 'CONTACT.error' | translate }}</p>

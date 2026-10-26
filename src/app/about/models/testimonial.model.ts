@@ -3,4 +3,5 @@ export interface ITestimonial {
     author: string;
     workPerformed: string;
     srcImg: string;
+    linkedinUrl: string;
 }

@@ -1,3 +1,15 @@
 @import '../../about-shared.css';
 
 .fShadowsIntoLight { font-family: var(--f-shadows-into-light); }
+
+/* Tarjeta de experiencia con fondo de hoja de cuaderno amarilla */
+.notebook-card {
+    background-image: url("../../../../assets/img/background/page-yellow-small.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: #2b2b2b;
+    /* El padding izquierdo deja libre el borde rasgado y la línea de margen de la hoja */
+    padding: 3rem 2rem 3rem 18%;
+    /* drop-shadow sigue el contorno del PNG (bordes transparentes), a diferencia de box-shadow */
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
+}
