@@ -1,5 +1,8 @@
 @import '../../about-shared.css';
 
+/* AOS fade-left/right desplaza las tarjetas ±100px antes de animar: evita el scroll horizontal */
+:host { display: block; overflow-x: clip; }
+
 .fShadowsIntoLight { font-family: var(--f-shadows-into-light); }
 
 /* Tarjeta de experiencia con fondo de hoja de cuaderno amarilla */
