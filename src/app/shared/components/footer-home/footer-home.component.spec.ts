@@ -25,4 +25,10 @@ describe('FooterHomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('el título rota y termina componiendo el nombre del blog, accesible completo', () => {
+    const titulo: HTMLElement = fixture.nativeElement.querySelector('#fh-titulo');
+    expect(titulo.querySelector('.visually-hidden')?.textContent).toBe('titulo_blog');
+    expect(titulo.querySelector('app-word-rotator')).toBeTruthy();
+  });
 });

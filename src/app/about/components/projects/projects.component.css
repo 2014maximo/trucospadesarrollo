@@ -15,10 +15,6 @@
     padding: 32px;
     border: 1px solid var(--about-borde);
     border-radius: var(--about-radio);
-    /* Foco de luz que sigue al puntero (--mx/--my los pone appSpotlight) */
-    background:
-        radial-gradient(420px circle at var(--mx, -500px) var(--my, -500px), rgba(242, 193, 78, .12), transparent 60%),
-        var(--about-superficie);
     transition: border-color .25s ease, transform .25s ease;
 }
 .tile:hover { border-color: var(--about-borde-fuerte); transform: translateY(-4px); }

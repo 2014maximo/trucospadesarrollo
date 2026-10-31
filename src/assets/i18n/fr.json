@@ -303,6 +303,12 @@
     "fPersonalizacion": "Personnalisation visuelle (couleurs, avatar)",
     "fQrCode": "Génération automatique de code QR",
     "fCategorias": "Dossiers et catégories de liens",
+    "FOOTER_HOME": {
+        "rotPlantilla": "ASTUCES %s",
+        "rotFinal": "DE DÉVELOPPEMENT",
+        "sobreMi": "À propos de moi",
+        "escribeme": "Écrivez-moi"
+    },
     "ABOUT_A11Y": {
         "subir": "Retour en haut",
         "cerrar": "Fermer",

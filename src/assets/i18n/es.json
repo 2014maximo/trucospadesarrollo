@@ -302,6 +302,12 @@
     "fPersonalizacion": "Personalización visual (colores, avatar)",
     "fQrCode": "Generación automática de código QR",
     "fCategorias": "Carpetas y categorías de links",
+    "FOOTER_HOME": {
+        "rotPlantilla": "TRUCOS PA' %s",
+        "rotFinal": "DESARROLLO",
+        "sobreMi": "Sobre mí",
+        "escribeme": "Escríbeme"
+    },
     "ABOUT_A11Y": {
         "subir": "Volver arriba",
         "cerrar": "Cerrar",

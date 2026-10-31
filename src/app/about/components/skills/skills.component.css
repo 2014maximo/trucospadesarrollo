@@ -27,10 +27,10 @@
     background: color-mix(in srgb, var(--brand) 12%, var(--about-superficie));
 }
 
-/* Sin animación (movimiento reducido): se muestra una sola copia, envuelta */
-.estatico { mask-image: none; }
-.estatico .pista { flex-wrap: wrap; justify-content: center; width: auto; padding: 0 16px; }
-.estatico .fila + .fila, .estatico .chip:nth-child(n + 16) { display: none; }
+/* Sin animación (movimiento reducido, clase de appMarquee): una sola copia, envuelta */
+.marquee:has(.marquee-estatico) { mask-image: none; }
+.marquee-estatico { flex-wrap: wrap; justify-content: center; width: auto; padding: 0 16px; }
+.fila:has(.marquee-estatico) + .fila, .marquee-estatico .chip:nth-child(n + 16) { display: none; }
 
 .categoria { margin: 0 0 12px; text-transform: uppercase; letter-spacing: .1em; }
 .tech-lista { margin: 0; padding: 0; list-style: none; color: var(--about-texto-suave); line-height: 1.9; }

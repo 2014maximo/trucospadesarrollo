@@ -1027,6 +1027,13 @@ code.language-html {
 }
 .ab-link:hover { color: var(--about-acento); border-color: var(--about-acento); }
 
-.ab-page a:focus-visible,
-.ab-page button:focus-visible { outline: 2px solid var(--about-acento); outline-offset: 3px; }
 
+
+/* Fondo con foco de luz que sigue al puntero (las variables --mx/--my las pone appSpotlight) */
+.ab-spotlight {
+    background:
+        radial-gradient(420px circle at var(--mx, -500px) var(--my, -500px), rgba(242, 193, 78, .12), transparent 60%),
+        var(--about-superficie);
+}
+.ab-foco a:focus-visible,
+.ab-foco button:focus-visible { outline: 2px solid var(--about-acento); outline-offset: 3px; }

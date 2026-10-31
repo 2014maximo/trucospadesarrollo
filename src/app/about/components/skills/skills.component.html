@@ -7,10 +7,10 @@
     </div>
 
     <!-- Cinta decorativa; el contenido accesible es la lista por categorías de abajo -->
-    <div class="marquee" [class.estatico]="estatico()" aria-hidden="true">
+    <div class="marquee" aria-hidden="true">
         @for (fila of filas; track $index; let inversa = $odd) {
-        <div class="fila" #fila>
-            <ul class="pista" #pista>
+        <div class="fila">
+            <ul class="pista" appMarquee [marqueeInversa]="inversa">
                 @for (copia of [0, 1]; track copia) {
                 @for (tech of fila; track tech.name) {
                 <li class="chip" [style.--brand]="tech.color">

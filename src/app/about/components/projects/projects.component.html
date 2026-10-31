@@ -5,7 +5,7 @@
             <h2 id="titulo-proyectos" class="ab-h2"><app-split-text [texto]="'proyectos' | translate" [oracion]="true"></app-split-text></h2>
         </div>
         <ul class="bento" appStagger [staggerIntervalo]="0.1" [staggerDistancia]="48">
-            <li class="tile" *ngFor="let project of projects; let i = index" [class.tile-grande]="i === 0" [class.tile-ancha]="i === projects.length - 1 && i > 0" appSpotlight [attr.data-num]="(i + 1).toString().padStart(2, '0')">
+            <li class="tile ab-spotlight" *ngFor="let project of projects; let i = index" [class.tile-grande]="i === 0" [class.tile-ancha]="i === projects.length - 1 && i > 0" appSpotlight [attr.data-num]="(i + 1).toString().padStart(2, '0')">
                 <span class="ab-mono" aria-hidden="true">{{ (i + 1).toString().padStart(2, '0') }}</span>
                 <h3 class="tile-title">{{ project.title }}</h3>
                 <p class="ab-muted">{{ project.description | translate }}</p>

@@ -302,6 +302,12 @@
     "fPersonalizacion": "Visual customization (colors, avatar)",
     "fQrCode": "Automatic QR code generation",
     "fCategorias": "Folders and link categories",
+    "FOOTER_HOME": {
+        "rotPlantilla": "%s TRICKS",
+        "rotFinal": "DEVELOPMENT",
+        "sobreMi": "About me",
+        "escribeme": "Write to me"
+    },
     "ABOUT_A11Y": {
         "subir": "Back to top",
         "cerrar": "Close",

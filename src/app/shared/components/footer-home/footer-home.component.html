@@ -1,25 +1,39 @@
-<div class="row" id="contact">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <div class="row">
-            <div class="col-md-6 pe-5">
-                    <h2 class="fuenteOcho text-light m-0 fs-40">{{ 'titulo_blog' | translate }}</h2>
-                    <br>
-                    <p class="f-open-sans-c c7">{{ 'Presentacion' | translate }}</p>
-
-                <img src="assets/img/author.png" alt="" width="auto" height="90" class="rounded-circle mx-1 border">
-                <a href="/about">
-                    <img src="assets/img/firma5.png" alt="" width="auto" height="60" class="mt-5">
-                </a>
-
+<footer class="fh ab-foco" id="contact" aria-labelledby="fh-titulo">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <!-- El final de la rotación compone el nombre del blog; el lector de pantalla lee el nombre completo -->
+                @let plantilla = ('FOOTER_HOME.rotPlantilla' | translate).split('%s');
+                <h2 id="fh-titulo" class="fh-titulo fuenteOcho">
+                    <span class="visually-hidden">{{ 'titulo_blog' | translate }}</span>
+                    <span aria-hidden="true">{{ plantilla[0] }}<app-word-rotator class="fh-rotador" [palabras]="['ANGULAR', 'FRONTEND', 'IONIC', 'FLUTTER', 'FOOTER_HOME.rotFinal' | translate]"></app-word-rotator>{{ plantilla[1] }}</span>
+                </h2>
+                <div appStagger [staggerIntervalo]="0.15">
+                    <p class="fh-texto f-open-sans-c">{{ 'Presentacion' | translate }}</p>
+                    <div class="fh-autor">
+                        <img src="assets/img/author.png" alt="" width="90" height="90" class="fh-foto"
+                            [appScrollAnimate]="{ rotate: [-6, 6] }" [scrollTarget]="pie" [scrollOffset]="['start end', 'end end']">
+                        <a href="/about" class="fh-firma" [attr.aria-label]="'FOOTER_HOME.sobreMi' | translate">
+                            <img #firma src="assets/img/firma5.png" alt="" width="auto" height="60">
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div class="text-center">
+            <div class="col-lg-6" #pie>
+                <div class="fh-form ab-spotlight" appSpotlight appReveal [revealDistancia]="40" [revealDuracion]="0.7">
+                    <h3 class="fh-form-titulo fuenteOcho">{{ 'FOOTER_HOME.escribeme' | translate }}</h3>
                     <app-contact-form></app-contact-form>
                 </div>
             </div>
         </div>
+
+        <div class="fh-base f-open-sans-c">
+            <span>© {{ anio }} · {{ 'titulo_blog' | translate }}</span>
+            <nav class="fh-enlaces" [attr.aria-label]="'titulo_blog' | translate">
+                <a class="ab-link" href="/about">{{ 'FOOTER_HOME.sobreMi' | translate }}</a>
+                <a class="ab-link" href="https://github.com/2014maximo" target="_blank" rel="noopener noreferrer">GitHub <span class="visually-hidden">({{ 'ABOUT_A11Y.pestanaNueva' | translate }})</span></a>
+                <a class="ab-link" href="https://linkedin.com/in/alex-uriel-munoz" target="_blank" rel="noopener noreferrer">LinkedIn <span class="visually-hidden">({{ 'ABOUT_A11Y.pestanaNueva' | translate }})</span></a>
+            </nav>
+        </div>
     </div>
-    <div class="col-md-1"></div>
-</div>
-<div class="espacio"></div>
+</footer>
