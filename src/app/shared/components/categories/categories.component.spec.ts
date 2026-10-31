@@ -3,12 +3,12 @@ import { provideRouter } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { CategoriesComponent } from './categories.component';
-import { ThemeService } from '../../services/theme.service';
+import { CATEGORIES } from './constants/categories.constant';
 
 describe('CategoriesComponent', () => {
   let component: CategoriesComponent;
   let fixture: ComponentFixture<CategoriesComponent>;
-  let themeService: ThemeService;
+  let host: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -19,51 +19,37 @@ describe('CategoriesComponent', () => {
 
     fixture = TestBed.createComponent(CategoriesComponent);
     component = fixture.componentInstance;
-    themeService = TestBed.inject(ThemeService);
-    themeService.setTheme('dark');
     fixture.detectChanges();
+    host = fixture.nativeElement;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should expose chunked categories of max 5 per row', () => {
-    expect(component.chunkedCategories).toBeTruthy();
-    for (const row of component.chunkedCategories) {
-      expect(row.length).toBeLessThanOrEqual(5);
-    }
+  it('muestra un libro por cada categoría activa y ninguna inactiva', () => {
+    const activas = CATEGORIES.filter(c => c.state === 'active');
+    expect(component.libros.map(l => l.ruta)).toEqual(activas.map(c => c.linkCategory));
+    expect(host.querySelectorAll('a.est-libro').length).toBe(activas.length);
   });
 
-  it('should only include active categories in chunks', () => {
-    const allSlugs = component.chunkedCategories.flat().map(c => c.state);
-    expect(allSlugs.every(s => s === 'active')).toBeTrue();
+  it('cada libro es un enlace a su categoría con nombre accesible', () => {
+    const enlaces = Array.from(host.querySelectorAll<HTMLAnchorElement>('a.est-libro'));
+    enlaces.forEach((enlace, i) => {
+      expect(enlace.getAttribute('href')).toBe(component.libros[i].ruta);
+      expect(enlace.getAttribute('aria-label')).toContain(component.libros[i].titulo);
+    });
   });
 
-  it('should build pasoDeIndice from CATEGORIES', () => {
-    expect(component.pasoDeIndice.length).toBe(component.categories.length);
+  it('toma el título del final de la ruta y usa siempre el ícono claro', () => {
+    const ia = component.libros.find(l => l.ruta === '/blog/ia')!;
+    expect(ia.titulo).toBe('IA');
+    expect(ia.icono).toBe(CATEGORIES.find(c => c.linkCategory === '/blog/ia')!.iconLight);
   });
 
-  it('should map active state to activo in pasoDeIndice', () => {
-    const activos = component.pasoDeIndice.filter(i => i.estado === 'activo');
-    const activosConstant = component.categories.filter(c => c.state === 'active');
-    expect(activos.length).toBe(activosConstant.length);
-  });
-
-  it('should uppercase nameCategorie into nombre', () => {
-    for (const item of component.pasoDeIndice) {
-      expect(item.nombre).toBe(item.nombre.toUpperCase());
-    }
-  });
-
-  it('iconoCategoria devuelve iconLight en modo dark', () => {
-    const ai = component.categories.find(c => c.nameCategorie === 'ai')!;
-    expect(component.iconoCategoria(ai)).toBe(ai.iconLight);
-  });
-
-  it('iconoCategoria devuelve iconDark en modo light', () => {
-    themeService.setTheme('light');
-    const ai = component.categories.find(c => c.nameCategorie === 'ai')!;
-    expect(component.iconoCategoria(ai)).toBe(ai.iconDark);
+  it('la decoración queda oculta para lectores de pantalla', () => {
+    host.querySelectorAll('.est-deco, .est-sujetalibros').forEach(deco => {
+      expect(deco.closest('[aria-hidden="true"]')).toBeTruthy();
+    });
   });
 });

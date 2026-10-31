@@ -303,6 +303,10 @@
     "fPersonalizacion": "Personnalisation visuelle (couleurs, avatar)",
     "fQrCode": "Génération automatique de code QR",
     "fCategorias": "Dossiers et catégories de liens",
+    "CATEGORIAS_HOME": {
+        "pista": "Prenez un livre sur l'étagère pour voir ses articles.",
+        "verArticulos": "Voir les articles"
+    },
     "FOOTER_HOME": {
         "rotPlantilla": "ASTUCES %s",
         "rotFinal": "DE DÉVELOPPEMENT",

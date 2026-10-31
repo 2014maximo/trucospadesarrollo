@@ -302,6 +302,10 @@
     "fPersonalizacion": "Visual customization (colors, avatar)",
     "fQrCode": "Automatic QR code generation",
     "fCategorias": "Folders and link categories",
+    "CATEGORIAS_HOME": {
+        "pista": "Pull a book off the shelf to see its articles.",
+        "verArticulos": "See articles"
+    },
     "FOOTER_HOME": {
         "rotPlantilla": "%s TRICKS",
         "rotFinal": "DEVELOPMENT",

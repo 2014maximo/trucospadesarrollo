@@ -302,6 +302,10 @@
     "fPersonalizacion": "Personalización visual (colores, avatar)",
     "fQrCode": "Generación automática de código QR",
     "fCategorias": "Carpetas y categorías de links",
+    "CATEGORIAS_HOME": {
+        "pista": "Saca un libro de la estantería para ver sus artículos.",
+        "verArticulos": "Ver artículos"
+    },
     "FOOTER_HOME": {
         "rotPlantilla": "TRUCOS PA' %s",
         "rotFinal": "DESARROLLO",

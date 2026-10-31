@@ -1,63 +1,43 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { CATEGORIES } from './constants/categories.constant';
-import { CategoriesPageModel } from '../../models/categories-page.model';
-import { ContentIndexComponent } from '../content-index/content-index.component';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { IndiceDeContenidosModel } from '@models/indice.model';
-import { ThemeService } from '../../services/theme.service';
+import { StaggerDirective } from '../../directives/stagger.directive';
+
+/** Un libro de la estantería: una categoría activa con su presentación. */
+export interface LibroCategoria {
+	titulo: string;
+	ruta: string;
+	icono: string;
+	colorFondo: string;
+	alto: number;
+	tono: string;
+}
+
+/** Alturas y tonos de piel de los lomos, para que la estantería no parezca uniforme. */
+const ALTOS = [290, 320, 270, 305];
+const TONOS = ['#2a2420', '#1f2229', '#2b2125', '#232823'];
 
 @Component({
 	selector: 'app-categories',
-	imports: [
-		ContentIndexComponent,
-		TranslateModule,
-		RouterLink],
+	imports: [TranslateModule, RouterLink, StaggerDirective],
 	templateUrl: './categories.component.html',
 	styleUrl: './categories.component.css'
 })
 export class CategoriesComponent {
-	private readonly themeService = inject(ThemeService);
 
-	public categories = CATEGORIES;
-	public pasoDeIndice: IndiceDeContenidosModel [] = [];
+	/** Solo las categorías activas: las inactivas no se muestran. */
+	readonly libros: LibroCategoria[] = CATEGORIES
+		.filter(cat => cat.state === 'active')
+		.map((cat, i) => ({
+			// El nombre visible sale de la ruta (p. ej. /blog/ia → IA)
+			titulo: cat.linkCategory.split('/').pop()!.toUpperCase(),
+			ruta: cat.linkCategory,
+			// Los lomos son oscuros en cualquier tema: siempre el ícono claro
+			icono: cat.iconLight,
+			colorFondo: cat.colorFondo,
+			alto: ALTOS[i % ALTOS.length],
+			tono: TONOS[i % TONOS.length]
+		}));
 
-	/** Tema activo: 'dark' usa iconLight (fondos oscuros), 'light' usa iconDark. */
-	get theme() {
-		return this.themeService.theme();
-	}
-
-	/** Ruta del ícono de una categoría según el tema activo. */
-	public iconoCategoria(cat: CategoriesPageModel): string {
-		return this.theme === 'dark' ? cat.iconLight : cat.iconDark;
-	}
-
-
-	constructor(private translate: TranslateService){
-		this.inicializarVariables();
-	}
-
-	get chunkedCategories(): CategoriesPageModel[][] {
-		const active = this.categories.filter(c => c.state === 'active');
-		const result: CategoriesPageModel[][] = [];
-		for (let i = 0; i < active.length; i += 4) {
-			result.push(active.slice(i, i + 4));
-		}
-		return result;
-	}
-
-	private inicializarVariables(){
-    this.categories.forEach( (cat: CategoriesPageModel) => {
-      let grupo: IndiceDeContenidosModel = {
-        color: cat.color,
-        colorFondo: cat.colorFondo,
-        estado: cat.state === 'active' ? 'activo' : 'inactivo',
-        nombre: cat.nameCategorie.toUpperCase(),
-        posicion: cat.posicion,
-        ruta: cat.linkCategory,
-        rutaInterna: ''
-      }
-      this.pasoDeIndice.push(grupo);
-    });
-  }
 }
