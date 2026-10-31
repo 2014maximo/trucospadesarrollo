@@ -1,9 +1,1 @@
-.about-me { position: relative; bottom: 290px; }
-
-.l-button {
-    height: 45px;
-    text-align: center;
-    margin: 1px;
-}
-.l-button:hover { box-shadow: 5px 5px 5px #000; }
-
+.bio { max-width: 60ch; margin: 0 0 32px; }

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://anijs.github.io/lib/anicollection/anicollection.css');
 @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
@@ -893,7 +894,25 @@ code.language-html {
 
 :root {
     --f-open-sans-c: 'Open Sans Condensed', sans-serif;
-    --f-shadows-into-light: 'Shadows Into Light';
+    --f-shadows-into-light: var(--fuente-seis);
+
+    /* Tokens de la página About: usar estos en lugar de valores sueltos */
+    --about-fuente-texto: 'Manrope', system-ui, sans-serif;
+    --about-fuente-mono: var(--fuente-tres);        /* OperatorMono: etiquetas y datos */
+    --about-fuente-mano: var(--fuente-seis);        /* Shadows Into Light: solo acentos artesanales */
+
+    --about-fondo: #111113;
+    --about-superficie: #18181b;
+    --about-superficie-2: #1f1f23;
+    --about-borde: rgba(255, 255, 255, .08);
+    --about-borde-fuerte: rgba(255, 255, 255, .16);
+    --about-texto: #f4f4f5;
+    --about-texto-suave: #a1a1aa;
+    --about-texto-tenue: #8a8a93;
+    --about-texto-papel: #2b2b2b;
+    --about-acento: #f2c14e;
+    --about-sobre-acento: #111113;
+    --about-radio: 20px;
 }
 
 .f-open-sans-c { font-family: var(--f-open-sans-c); }
@@ -941,3 +960,73 @@ code.language-html {
 
 .cursor-p { cursor: pointer; }
 .border-l { border: .7px solid #464141; }
+
+
+/* ===== ABOUT: sistema visual (prefijo ab-) ===== */
+
+.ab-page {
+    background: var(--about-fondo);
+    color: var(--about-texto);
+    font-family: var(--about-fuente-texto);
+    font-size: 17px;
+    line-height: 1.6;
+    /* El volteo 3D de la tarjeta de contacto saca el honeypot del formulario (left: -9999px) hacia la derecha */
+    overflow-x: clip;
+}
+.ab-page ::selection { background: var(--about-acento); color: var(--about-sobre-acento); }
+
+.ab-section { padding: 112px 0; }
+@media (max-width: 768px) { .ab-section { padding: 64px 0; } }
+
+.ab-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 48px; }
+.ab-eyebrow {
+    font-family: var(--about-fuente-mono);
+    font-size: 15px;
+    letter-spacing: .08em;
+    color: var(--about-acento);
+}
+.ab-h2 {
+    margin: 0;
+    font-size: clamp(40px, 6vw, 80px);
+    font-weight: 800;
+    letter-spacing: -.035em;
+    line-height: 1;
+}
+
+.ab-muted { color: var(--about-texto-suave); }
+.ab-mono { font-family: var(--about-fuente-mono); font-size: 14px; color: var(--about-texto-tenue); }
+.ab-hand { font-family: var(--about-fuente-mano); color: var(--about-acento); }
+
+.ab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 22px;
+    border: 1px solid var(--about-borde-fuerte);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--about-texto);
+    font: 700 13px/1 var(--about-fuente-texto);
+    letter-spacing: .06em;
+    text-decoration: none;
+    transition: background .2s ease, border-color .2s ease, color .2s ease;
+}
+.ab-btn:hover { border-color: var(--about-texto); color: var(--about-texto); }
+.ab-btn-primary { background: var(--about-acento); border-color: var(--about-acento); color: var(--about-sobre-acento); }
+.ab-btn-primary:hover { background: var(--about-texto); border-color: var(--about-texto); color: var(--about-sobre-acento); }
+
+.ab-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--about-texto);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--about-borde-fuerte);
+    transition: border-color .2s ease, color .2s ease;
+}
+.ab-link:hover { color: var(--about-acento); border-color: var(--about-acento); }
+
+.ab-page a:focus-visible,
+.ab-page button:focus-visible { outline: 2px solid var(--about-acento); outline-offset: 3px; }
+

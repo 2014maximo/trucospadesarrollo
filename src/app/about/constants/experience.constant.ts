@@ -21,9 +21,7 @@ export const EXPERIENCE: IEras[] = [
                     "versionamientoGithub"
                 ],
                 styles: {
-                    dataAos: "fade-right",
-                    dataAosOffset: "200",
-                    dataAosEasing: "ease-in-out",
+                    revealDesde: "izquierda",
                     class: "border-end"
                 }
             },
@@ -49,9 +47,7 @@ export const EXPERIENCE: IEras[] = [
                     "patronesUML"
                 ],
                 styles: {
-                    dataAos: "fade-left",
-                    dataAosOffset: "200",
-                    dataAosEasing: "ease-in-out",
+                    revealDesde: "derecha",
                     class: "border-start"
                 }
             }
@@ -74,9 +70,7 @@ export const EXPERIENCE: IEras[] = [
                     "migracionesW"
                 ],
                 styles: {
-                    dataAos: "fade-right",
-                    dataAosOffset: "200",
-                    dataAosEasing: "ease-in-out",
+                    revealDesde: "izquierda",
                     class: "border-end"
                 }
             },
@@ -93,9 +87,7 @@ export const EXPERIENCE: IEras[] = [
                     "migracionesW"
                 ],
                 styles: {
-                    dataAos: "fade-left",
-                    dataAosOffset: "200",
-                    dataAosEasing: "ease-in-out",
+                    revealDesde: "derecha",
                     class: "border-start"
                 }
             },
@@ -115,9 +107,7 @@ export const EXPERIENCE: IEras[] = [
                     "ci-cdAzure"
                 ],
                 styles: {
-                    dataAos: "fade-right",
-                    dataAosOffset: "200",
-                    dataAosEasing: "ease-in-out",
+                    revealDesde: "izquierda",
                     class: "border-end"
                 }
             },
@@ -134,9 +124,7 @@ export const EXPERIENCE: IEras[] = [
                     "continuaInt"
                 ],
                 styles: {
-                    dataAos: "fade-left",
-                    dataAosOffset: "200",
-                    dataAosEasing: "ease-in-out",
+                    revealDesde: "derecha",
                     class: "border-start"
                 }
             }
@@ -160,9 +148,7 @@ export const EXPERIENCE: IEras[] = [
                     "aActivo"
                 ],
                 styles: {
-                    dataAos: "fade-right",
-                    dataAosOffset: "200",
-                    dataAosEasing: "ease-in-out",
+                    revealDesde: "izquierda",
                     class: "border-end"
                 }
             }

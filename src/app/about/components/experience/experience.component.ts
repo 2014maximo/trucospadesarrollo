@@ -1,37 +1,25 @@
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import * as AOS from 'aos';
 import { IEras } from '../../models/experience.model';
 import { EXPERIENCE } from '../../constants/experience.constant';
 import { CommonModule } from '@angular/common';
+import { RevealDirective } from '../../../shared/directives/reveal.directive';
+import { ScrollAnimateDirective } from '../../../shared/directives/scroll-animate.directive';
+import { SplitTextComponent } from '../../../shared/components/split-text/split-text.component';
 
 @Component({
     selector: 'app-experience',
     standalone: true,
-    imports: [TranslateModule, CommonModule],
+    imports: [TranslateModule, CommonModule, RevealDirective, ScrollAnimateDirective, SplitTextComponent],
     templateUrl: './experience.component.html',
     styleUrl: './experience.component.css'
 })
-export class ExperienceComponent implements OnInit {
+export class ExperienceComponent {
     EXPERIENCES: IEras[] = EXPERIENCE;
 
-    constructor(
-        public translate: TranslateService,
-        @Inject(PLATFORM_ID) private platformId: object
-    ) {
+    constructor(public translate: TranslateService) {
         this.translate.addLangs(['fr', 'en', 'es']);
         this.translate.setDefaultLang('es');
         this.translate.use('es');
-    }
-
-    ngOnInit(): void {
-        if (isPlatformBrowser(this.platformId)) {
-            AOS.init();
-        }
-    }
-
-    public itsEvenNumber(numero: number): boolean {
-        return (numero % 2) === 0;
     }
 }

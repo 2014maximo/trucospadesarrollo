@@ -302,6 +302,16 @@
     "fPersonalizacion": "Visual customization (colors, avatar)",
     "fQrCode": "Automatic QR code generation",
     "fCategorias": "Folders and link categories",
+    "ABOUT_A11Y": {
+        "subir": "Back to top",
+        "cerrar": "Close",
+        "anterior": "Previous testimonial",
+        "siguiente": "Next testimonial",
+        "pestanaNueva": "opens in a new tab",
+        "statAnios": "years of experience",
+        "statProyectos": "published projects",
+        "statExperiencias": "companies and programs"
+    },
     "cookieConsent": {
         "title": "Cookie Policy",
         "description": "We use cookies to improve your experience on our website. You can accept all cookies, reject non-essential cookies, or customize your preferences.",

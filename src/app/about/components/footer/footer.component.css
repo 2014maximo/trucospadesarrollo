@@ -1,14 +1,17 @@
-.fSixCaps { font-family: var(--fuente-ocho); }
+.ab-footer { padding: 48px 0; border-top: 1px solid var(--about-borde); }
 
-.wrappers {
-    position: relative; height: 40px; width: 40px; display: block;
-    background: #fff; text-align: center; border-radius: 50%;
-    color: #000; z-index: 2; box-shadow: 0 10px 10px rgba(0,0,0,0.1);
-    font-size: 25px; line-height: 40px;
+.brand { font-size: 26px; text-decoration: none; transition: color .2s ease; }
+.brand:hover { color: var(--about-texto); }
+
+.social {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--about-borde-fuerte);
+    border-radius: 50%;
+    color: var(--about-texto);
+    font-size: 18px;
+    transition: border-color .2s ease, color .2s ease;
 }
-.wrappers:hover { color: #fff; }
-.linkedin:hover { background: #0a66c2; }
-.github:hover { background: #000; }
-.trucos { text-decoration: none; }
-.trucos h3:hover { color: #FFEF27 !important; }
-@media (max-width: 576px) { .footer { text-align: center; } .footer-icons { justify-content: center; } }
+.social:hover { border-color: var(--about-acento); color: var(--about-acento); }

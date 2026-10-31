@@ -302,6 +302,16 @@
     "fPersonalizacion": "Personalización visual (colores, avatar)",
     "fQrCode": "Generación automática de código QR",
     "fCategorias": "Carpetas y categorías de links",
+    "ABOUT_A11Y": {
+        "subir": "Volver arriba",
+        "cerrar": "Cerrar",
+        "anterior": "Testimonio anterior",
+        "siguiente": "Testimonio siguiente",
+        "pestanaNueva": "abre en una pestaña nueva",
+        "statAnios": "años de experiencia",
+        "statProyectos": "proyectos publicados",
+        "statExperiencias": "empresas y formaciones"
+    },
     "cookieConsent": {
         "title": "Política de Cookies",
         "description": "Utilizamos cookies para mejorar tu experiencia en nuestro sitio. Puedes aceptar todas las cookies, rechazar las no esenciales o configurar tus preferencias.",

@@ -1,17 +1,16 @@
-<div class="parallax-portfolio" #target></div>
-
-<div class="row fondoNegro">
-    <div class="col-md-12">
-        <app-contact-me></app-contact-me>
+<div class="progreso" [appScrollAnimate]="{ scaleX: [0, 1] }" aria-hidden="true"></div>
+<div class="ab-page" #target>
+    <app-contact-me></app-contact-me>
+    <main>
         <app-skills></app-skills>
         <app-experience></app-experience>
         <app-projects></app-projects>
         <app-hobbies></app-hobbies>
         <app-from-blog></app-from-blog>
         <app-testimonials></app-testimonials>
-        <app-footer></app-footer>
-    </div>
+    </main>
+    <app-footer></app-footer>
 </div>
-<div class="go-up" (click)="scroll(target)">
-    <i class="bi bi-arrow-up-circle"></i>
-</div>
+<button type="button" class="go-up" (click)="scroll(target)" [attr.aria-label]="'ABOUT_A11Y.subir' | translate">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+</button>

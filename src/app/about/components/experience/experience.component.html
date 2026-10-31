@@ -1,33 +1,28 @@
-<h3 class="text-center title-block">{{ 'experiencia' | translate }}</h3>
-<div class="row">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <div class="row" *ngFor="let era of EXPERIENCES">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h2 class="text-center text-light fShadowsIntoLight">{{ era.era | translate }}</h2>
-                    </div>
-                </div>
-                <div class="row" *ngFor="let experience of era.experience; let i = index">
-                    <div *ngIf="!itsEvenNumber(i)" class="col-md-6"></div>
-                    <div class="col-md-6 {{ experience.styles.class }}">
-                        <div class="notebook-card fuenteSeis me-2" [attr.data-aos]="experience.styles.dataAos" data-aos-offset="500" data-aos-easing="ease-in-sine" data-aos-duration="800">
-                            <b class="fs-25 lh-25">{{ experience.entity | translate }}</b><br>
-                            {{ experience.workPerformed | translate }}<br>
-                            {{ experience.dateRange }}<br>
-                            {{ experience.place }}<br>
-                            <ul>
-                                <li *ngFor="let knoledge of experience.knowledgeAcquired">{{ knoledge | translate }}</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div *ngIf="itsEvenNumber(i)" class="col-md-6"></div>
-                </div>
+<section class="ab-section" aria-labelledby="titulo-experiencia">
+    <div class="container">
+        <div class="ab-head">
+            <span class="ab-eyebrow" aria-hidden="true">02</span>
+            <h2 id="titulo-experiencia" class="ab-h2"><app-split-text [texto]="'experiencia' | translate" [oracion]="true"></app-split-text></h2>
+        </div>
+
+        <div class="timeline" #timeline>
+            <!-- La línea se "dibuja" a medida que la línea de tiempo atraviesa la pantalla -->
+            <div class="linea" aria-hidden="true">
+                <div class="linea-progreso" [appScrollAnimate]="{ scaleY: [0, 1] }" [scrollTarget]="timeline" [scrollOffset]="['start 75%', 'end 60%']"></div>
             </div>
-            <div class="espacio"></div>
+
+            <div class="era" *ngFor="let era of EXPERIENCES">
+                <h3 class="era-title ab-mono" appReveal [revealDesde]="'izquierda'">{{ era.era | translate }}</h3>
+                <article class="item" *ngFor="let experience of era.experience" appReveal [revealDesde]="'derecha'" [revealDistancia]="48" [revealDuracion]="0.6">
+                    <span class="punto" aria-hidden="true"></span>
+                    <p class="ab-mono fecha">{{ experience.dateRange }} · {{ experience.place }}</p>
+                    <h4 class="entidad">{{ experience.entity | translate }}</h4>
+                    <p class="cargo">{{ experience.workPerformed | translate }}</p>
+                    <ul class="saberes">
+                        <li *ngFor="let knoledge of experience.knowledgeAcquired">{{ knoledge | translate }}</li>
+                    </ul>
+                </article>
+            </div>
         </div>
     </div>
-    <div class="col-md-1"></div>
-</div>
-<div class="row"><div class="col-md-12"><div class="espaciado"></div></div></div>
+</section>

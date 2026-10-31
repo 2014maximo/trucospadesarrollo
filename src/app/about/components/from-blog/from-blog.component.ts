@@ -20,11 +20,13 @@ interface FromBlogItem {
 }
 
 type FromBlogEstado = 'cargando' | 'listo' | 'error' | 'vacio' | 'sin-api';
+import { SplitTextComponent } from '../../../shared/components/split-text/split-text.component';
+import { StaggerDirective } from '../../../shared/directives/stagger.directive';
 
 @Component({
     selector: 'app-from-blog',
     standalone: true,
-    imports: [TranslateModule, CommonModule],
+    imports: [TranslateModule, CommonModule, SplitTextComponent, StaggerDirective],
     templateUrl: './from-blog.component.html',
     styleUrl: './from-blog.component.css'
 })

@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ITestimonial } from '../../models/testimonial.model';
 import { TESTIMONIALS } from '../../constants/testimonial.constant';
+import { RevealDirective } from '../../../shared/directives/reveal.directive';
+import { SplitTextComponent } from '../../../shared/components/split-text/split-text.component';
 
 @Component({
     selector: 'app-testimonials',
     standalone: true,
-    imports: [TranslateModule, CommonModule],
+    imports: [TranslateModule, CommonModule, RevealDirective, SplitTextComponent],
     templateUrl: './testimonials.component.html',
     styleUrl: './testimonials.component.css'
 })

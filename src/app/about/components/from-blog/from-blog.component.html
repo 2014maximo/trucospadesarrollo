@@ -1,60 +1,52 @@
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <h3 class="text-center title-block">{{ 'blog' | translate }}</h3>
+<section class="ab-section" aria-labelledby="titulo-blog">
+    <div class="container">
+        <div class="ab-head">
+            <span class="ab-eyebrow" aria-hidden="true">05</span>
+            <h2 id="titulo-blog" class="ab-h2"><app-split-text [texto]="'blog' | translate" [oracion]="true"></app-split-text></h2>
+        </div>
 
         @if (estado === 'cargando') {
-        <div class="text-center p-5">
-            <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">{{ 'BLOG_GALLERY.loading' | translate }}</span>
-            </div>
-            <p class="text-light f-open-sans-c fs-20 mt-3">{{ 'BLOG_GALLERY.loading' | translate }}</p>
+        <div class="estado" role="status">
+            <div class="spinner-border spinner-border-sm" aria-hidden="true"></div>
+            <span>{{ 'BLOG_GALLERY.loading' | translate }}</span>
         </div>
         }
 
         @if (estado === 'sin-api') {
-        <div class="text-center p-5">
-            <p class="text-light f-open-sans-c fs-20">{{ 'BLOG_GALLERY.noApi' | translate }}</p>
-        </div>
+        <p class="estado">{{ 'BLOG_GALLERY.noApi' | translate }}</p>
         }
 
         @if (estado === 'error') {
-        <div class="text-center p-5">
-            <p class="text-danger f-open-sans-c fs-20">{{ 'BLOG_GALLERY.error' | translate }}</p>
-        </div>
+        <p class="estado text-danger" role="alert">{{ 'BLOG_GALLERY.error' | translate }}</p>
         }
 
         @if (estado === 'vacio') {
-        <div class="text-center p-5">
-            <p class="text-light f-open-sans-c fs-20">{{ 'BLOG_GALLERY.empty' | translate }}</p>
-        </div>
+        <p class="estado">{{ 'BLOG_GALLERY.empty' | translate }}</p>
         }
 
         @if (estado === 'listo') {
-        <div class="row">
+        <div class="row g-4" appStagger [staggerHijos]="':scope > div'" [staggerIntervalo]="0.12">
             @for (post of posts; track post.id) {
-            <div class="col-sm-4 pe-3 ps-3">
-                <div class="post">
-                    <div class="d-flex justify-content-end mb-2 drop-two">
-                        <a href="{{ post.categoriaRuta }}">
-                            <img src="{{ iconoCategoria(post.categoriaNombre) }}" class="drop" alt="{{ post.categoriaNombre }}" height="30" width="auto">
+            <div class="col-md-4">
+                <article class="post">
+                    <div class="img-marco"><img class="post-img" alt="" src="{{ post.imagenUrl }}" width="640" height="360" loading="lazy"></div>
+                    <div class="post-meta ab-mono">
+                        <a href="{{ post.categoriaRuta }}" class="post-cat">
+                            <img src="{{ iconoCategoria(post.categoriaNombre) }}" alt="" height="18" width="auto">
+                            {{ post.categoriaNombre }}
                         </a>
+                        <span aria-hidden="true">·</span>
+                        <time>{{ post.fecha }}</time>
                     </div>
-                    <div class="pr-3 pt-3 imgPost">
-                        <img class="shadow-two img-fluid" alt="{{ post.titulo }}" src="{{ post.imagenUrl }}" height="220" width="auto">
-                    </div>
-                    <div class="mt-5">
-                        <h4 class="tituloPostGallery f-bebas text-light lh-25">{{ post.titulo }}</h4>
-                    </div>
-                    <p class="f-open-sans-c fs-17 lh-17 text-light descriptionText">{{ post.resumen }}</p>
-                    <time><p class="f-shadow-into-l text-light fs-15 m-0">{{ post.fecha }}</p></time>
-                    <a class="f-open-sans-c leerMas mt-2" href="{{ post.ruta }}">{{ 'leerMas' | translate }}...</a>
-                </div>
+                    <h3 class="post-title">{{ post.titulo }}</h3>
+                    <p class="post-summary">{{ post.resumen }}</p>
+                    <a class="ab-link mt-auto align-self-start" href="{{ post.ruta }}" [attr.aria-label]="('LeerMas' | translate) + ': ' + post.titulo">
+                        <span class="lower-cap">{{ 'LeerMas' | translate }}</span> <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                    </a>
+                </article>
             </div>
             }
         </div>
         }
     </div>
-    <div class="col-md-2"></div>
-</div>
-<div class="espaciado"></div>
+</section>

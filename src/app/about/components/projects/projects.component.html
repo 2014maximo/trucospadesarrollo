@@ -1,30 +1,25 @@
-<div class="row bg-transparent">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <h3 class="text-center title-block">{{ 'proyectos' | translate }}</h3>
-        <div class="bg-dark shadow-three mt-2 p-5">
-            <div class="row">
-                <div class="col-md-12 mb-4 f-open-sans-c" *ngFor="let project of projects" data-aos="fade-up" data-aos-duration="1000">
-                    <div class="card bg-dark text-light border">
-                        <div class="card-body">
-                            <h3 class="card-title">{{ project.title }}</h3>
-                            <p class="card-text">{{ project.description | translate }}</p>
-                            <div class="technologies mb-3">
-                                <span class="badge bg-primary me-2" *ngFor="let tech of project.technologies">{{ tech }}</span>
-                            </div>
-                            <div class="features mb-3">
-                                <ul><li *ngFor="let feature of project.features">{{ feature | translate }}</li></ul>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <a [href]="project.githubUrl" target="_blank" class="btn btn-outline-light"><i class="bi bi-github"></i> GitHub</a>
-                                <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" class="btn btn-primary"><i class="bi bi-play-fill"></i> Demo</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<section class="ab-section" aria-labelledby="titulo-proyectos">
+    <div class="container">
+        <div class="ab-head">
+            <span class="ab-eyebrow" aria-hidden="true">03</span>
+            <h2 id="titulo-proyectos" class="ab-h2"><app-split-text [texto]="'proyectos' | translate" [oracion]="true"></app-split-text></h2>
         </div>
+        <ul class="bento" appStagger [staggerIntervalo]="0.1" [staggerDistancia]="48">
+            <li class="tile" *ngFor="let project of projects; let i = index" [class.tile-grande]="i === 0" [class.tile-ancha]="i === projects.length - 1 && i > 0" appSpotlight [attr.data-num]="(i + 1).toString().padStart(2, '0')">
+                <span class="ab-mono" aria-hidden="true">{{ (i + 1).toString().padStart(2, '0') }}</span>
+                <h3 class="tile-title">{{ project.title }}</h3>
+                <p class="ab-muted">{{ project.description | translate }}</p>
+                <ul class="features" *ngIf="i === 0">
+                    <li *ngFor="let feature of project.features">{{ feature | translate }}</li>
+                </ul>
+                <ul class="stack ab-mono">
+                    <li *ngFor="let tech of project.technologies">{{ tech }}</li>
+                </ul>
+                <div class="d-flex flex-wrap gap-4 mt-4">
+                    <a *ngIf="project.demoUrl" [href]="project.demoUrl" target="_blank" rel="noopener noreferrer" class="ab-link">Demo <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                    <a [href]="project.githubUrl" target="_blank" rel="noopener noreferrer" class="ab-link">GitHub <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+                </div>
+            </li>
+        </ul>
     </div>
-    <div class="col-md-2"></div>
-</div>
-<div class="espaciado"></div>
+</section>

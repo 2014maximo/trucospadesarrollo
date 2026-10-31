@@ -1,11 +1,14 @@
-.translate-item {
+.selector {
+    padding: 4px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
     color: #fff;
-}
-
-.translate-item:hover {
-    color: #002451;
-}
-
-.dropdown-toggle {
     user-select: none;
 }
+.selector:focus-visible { outline: 2px solid #f2c14e; outline-offset: 2px; }
+
+.translate-item { color: #fff; }
+.translate-item:hover,
+.translate-item:focus-visible { background: rgba(255, 255, 255, .12); color: #fff; }
+.translate-item:focus-visible { outline: 2px solid #f2c14e; outline-offset: -2px; }

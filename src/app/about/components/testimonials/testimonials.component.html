@@ -1,47 +1,37 @@
-<div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
-        <h3 class="text-center title-block">{{ 'testimonial' | translate }}</h3>
-        <div class="bg-dark shadow-three mt-2 pt-5 pb-5 about-me" data-aos="fade-up" data-aos-duration="3000">
-            <div id="carouselTestimonials" class="carousel slide">
-                <div class="carousel-inner">
-                    <div *ngFor="let testimonial of TESTIMONIALS; let i = index" class="carousel-item {{ i === 0 ? 'active' : '' }}">
-                        <div class="row">
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-8 testimonial">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <span class="text-light f-operator-m fs-110 m-0 lh-90 text-end">&ldquo;</span>
-                                    </div>
-                                    <div class="col-md-10 description">
-                                        <p class="text-light f-open-sans-c fs-20 lh-20">{{ testimonial.description | translate }}</p>
-                                    </div>
-                                </div>
-                                <hr class="bg-secondary">
-                                <div class="d-flex">
-                                    <img src="{{ testimonial.srcImg }}" alt="photo" width="70" height="70" class="rounded-circle m-2">
-                                </div>
-                                <a [href]="testimonial.linkedinUrl" target="_blank" rel="noopener noreferrer"
-                                    class="author-link f-open-sans-c fs-25 lh-25 fw-7 m-0 d-block text-decoration-none">
+<section class="ab-section" aria-labelledby="titulo-testimonios">
+    <div class="container">
+        <div class="ab-head">
+            <span class="ab-eyebrow" aria-hidden="true">06</span>
+            <h2 id="titulo-testimonios" class="ab-h2"><app-split-text [texto]="'testimonial' | translate" [oracion]="true"></app-split-text></h2>
+        </div>
+        <div id="carouselTestimonials" class="carousel slide" appReveal [revealDistancia]="24" [revealDuracion]="0.6">
+            <div class="carousel-inner">
+                <div *ngFor="let testimonial of TESTIMONIALS; let i = index" class="carousel-item {{ i === 0 ? 'active' : '' }}">
+                    <figure class="quote">
+                        <span class="quote-mark ab-hand" aria-hidden="true">&ldquo;</span>
+                        <blockquote class="quote-text">{{ testimonial.description | translate }}</blockquote>
+                        <figcaption class="quote-author">
+                            <img src="{{ testimonial.srcImg }}" alt="" width="56" height="56" class="rounded-circle">
+                            <div>
+                                <a [href]="testimonial.linkedinUrl" target="_blank" rel="noopener noreferrer" class="author-link">
                                     {{ testimonial.author }} <i class="bi bi-linkedin author-icon" aria-hidden="true"></i>
                                 </a>
-                                <p class="text-light f-open-sans-c">{{ testimonial.workPerformed | translate }}</p>
+                                <span class="d-block ab-mono">{{ testimonial.workPerformed | translate }}</span>
                             </div>
-                            <div class="col-sm-2"></div>
-                        </div>
-                    </div>
+                        </figcaption>
+                    </figure>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
+            </div>
+            <div class="controls">
+                <button class="control" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="prev">
+                    <i class="bi bi-arrow-left" aria-hidden="true"></i>
+                    <span class="visually-hidden">{{ 'ABOUT_A11Y.anterior' | translate }}</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
+                <button class="control" type="button" data-bs-target="#carouselTestimonials" data-bs-slide="next">
+                    <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                    <span class="visually-hidden">{{ 'ABOUT_A11Y.siguiente' | translate }}</span>
                 </button>
             </div>
         </div>
     </div>
-    <div class="col-md-2"></div>
-</div>
-<div class="espaciado"></div>
+</section>

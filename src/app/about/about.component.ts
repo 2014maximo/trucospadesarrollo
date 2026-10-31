@@ -1,6 +1,6 @@
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
-import * as AOS from 'aos';
+import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { ScrollAnimateDirective } from '../shared/directives/scroll-animate.directive';
 import { ContactMeComponent } from './components/contact-me/contact-me.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ExperienceComponent } from './components/experience/experience.component';
@@ -12,19 +12,11 @@ import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
     selector: 'app-about',
-    imports: [ContactMeComponent, SkillsComponent, ExperienceComponent, ProjectsComponent, HobbiesComponent, FromBlogComponent, TestimonialsComponent, FooterComponent],
+    imports: [TranslateModule, ScrollAnimateDirective, ContactMeComponent, SkillsComponent, ExperienceComponent, ProjectsComponent, HobbiesComponent, FromBlogComponent, TestimonialsComponent, FooterComponent],
     templateUrl: './about.component.html',
     styleUrl: './about.component.css'
 })
-export class AboutComponent implements OnInit {
-    constructor(@Inject(PLATFORM_ID) private platformId: object) {}
-
-    ngOnInit(): void {
-        if (isPlatformBrowser(this.platformId)) {
-            AOS.init();
-        }
-    }
-
+export class AboutComponent {
     scroll(el: HTMLElement) {
         el.scrollIntoView();
     }

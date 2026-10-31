@@ -1,16 +1,9 @@
-<div class="espacio"></div>
-
-<p class="text-light f-open-sans-c fs-20 lh-20">{{ 'acercaDe' | translate }}</p>
-<div class="espacio"></div>
-<div class="row">
-    <div class="col-md-12 col-xl-6 text-center">
-        <a href="assets/doc/CV_ALEX_URIEL_MUNOZ_PANIAGUA_SOFTWARE_DEV_{{ translate.currentLang }}.pdf" download class="text-decoration-none rot-3 l-button bg-Javascript c-Kubernetes f-shadow-into-l mb-2 fs-20 border pe-5 ps-5">
-            {{ 'descargar' | translate }}
-        </a>
-    </div>
-    <div class="col-md-12 col-xl-6 text-center">
-        <button type="button" class="l-button bg-Wordpress text-light f-shadow-into-l mb-2 rot-1 fs-20 border pe-5 ps-5" (click)="onContactClick()">
-            {{ 'contactame' | translate }}
-        </button>
-    </div>
+<p class="ab-muted bio">{{ 'acercaDe' | translate }}</p>
+<div class="d-flex flex-wrap gap-3">
+    <button type="button" class="ab-btn ab-btn-primary" (click)="onContactClick()">
+        {{ 'contactame' | translate }} <i class="bi bi-arrow-right" aria-hidden="true"></i>
+    </button>
+    <a href="assets/doc/CV_ALEX_URIEL_MUNOZ_PANIAGUA_SOFTWARE_DEV_{{ translate.currentLang }}.pdf" download class="ab-btn">
+        <i class="bi bi-download" aria-hidden="true"></i> {{ 'descargar' | translate }}
+    </a>
 </div>

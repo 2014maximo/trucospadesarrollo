@@ -1,0 +1,11 @@
+<span class="visually-hidden">{{ textoVisible }}</span>
+<span aria-hidden="true">
+    @for (palabra of palabras; track $index; let ultima = $last) {
+    @if (modo === 'letras') {
+    <span class="st-palabra">@for (letra of letras(palabra); track $index) {<span class="st-u">{{ letra }}</span>}</span>
+    } @else {
+    <span class="st-palabra st-u">{{ palabra }}</span>
+    }
+    @if (!ultima) { {{ ' ' }} }
+    }
+</span>

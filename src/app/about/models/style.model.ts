@@ -1,6 +1,6 @@
+import { RevealDesde } from '../../shared/directives/reveal.directive';
+
 export interface IStyles {
-    dataAos: string;
-    dataAosOffset: string;
-    dataAosEasing: string;
+    revealDesde: RevealDesde;
     class: string;
 }

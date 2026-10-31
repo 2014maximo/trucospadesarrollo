@@ -1,38 +1,52 @@
-<div class="row bg-transparent">
-    <div class="col-md-2"></div>
-    <div class="col-md-8 f-open-sans-c">
-        <div class="contact-me pt-5 pb-5" data-aos="fade-up" data-aos-duration="3000">
-            <div class="flip-container" [class.flipped]="flipped">
-                <div class="flip-inner">
-                    <div class="flip-front bg-dark shadow-three">
-                        <div class="row fs-20 lh-20">
-                            <div class="col-lg-4 imgAlex"></div>
-                            <div class="col-lg-8 text-light p-5 contenidoPerfil">
-                                <div class="hello">{{ 'hola' | translate }}, {{ 'soy' | translate }}</div>
-                                <h2 class="tituloPost">Alex Munoz</h2>
-                                <p class="fw-6">{{ 'perfilProfesional' | translate }}</p>
-                                <div class="col-lg-4 d-lg-none">
-                                    <img src="assets/img/portfolio/alex-sarku.jpg" alt="avatar-alex" class="img-fluid d-block d-xxl-none">
-                                </div>
-                                <hr>
+<header class="ab-hero" #hero>
+    <div class="glow" aria-hidden="true" [appScrollAnimate]="{ y: [0, 240], scale: [1, 1.5], opacity: [0.55, 0] }" [scrollTarget]="hero" [scrollOffset]="['start start', 'end start']"></div>
+    <div class="container position-relative">
+        <div class="flip-container" [class.flipped]="flipped">
+            <div class="flip-inner">
+                <div #frente class="flip-front" tabindex="-1" [attr.inert]="flipped ? '' : null">
+                    <div class="itemTranslate">
+                        <app-language-switcher></app-language-switcher>
+                    </div>
+                    <div class="row g-5 align-items-center">
+                        <div class="col-lg-8">
+                            <p class="ab-hand hello" appReveal [revealDistancia]="12">{{ 'hola' | translate }}, {{ 'soy' | translate | lowercase }}</p>
+                            <h1 class="hero-name">
+                                <app-split-text texto="Alex Munoz" modo="letras" [retardo]="0.15"></app-split-text>
+                            </h1>
+                            <p class="hero-role" appReveal [revealRetardo]="0.6">{{ 'perfilProfesional' | translate }}</p>
+                            <div appReveal [revealRetardo]="0.8">
                                 <app-about-me (contactClick)="flip()"></app-about-me>
                             </div>
                         </div>
-                        <div class="itemTranslate">
-                            <app-language-switcher></app-language-switcher>
+                        <div class="col-lg-4" appReveal [revealRetardo]="0.4" [revealDistancia]="60">
+                            <figure class="polaroid" [appScrollAnimate]="{ y: [0, 120], rotate: [3, -6] }" [scrollTarget]="hero" [scrollOffset]="['start start', 'end start']">
+                                <img src="assets/img/portfolio/alex-sarku.jpg" alt="" width="480" height="560">
+                            </figure>
                         </div>
                     </div>
-                    <div class="flip-back bg-dark shadow-three text-light p-5">
-                        <button type="button" class="btn-close btn-close-white float-end mb-4" (click)="flip()" aria-label="Close"></button>
-                        <app-contact-form textoBoton="CONTACT.reclutar"></app-contact-form>
-                        <div class="espaciado"></div>
-                        <div class="text-center">
-                            <img src="assets/img/memes/mem1.png" alt="Meme" height="80" width="auto" class="mx-auto">
-                        </div>
+                    <ul class="stats" appStagger [staggerIntervalo]="0.12">
+                        <li>
+                            <span class="stat-num" [appCountUp]="anios" countUpSufijo="+"></span>
+                            <span class="stat-label">{{ 'ABOUT_A11Y.statAnios' | translate }}</span>
+                        </li>
+                        <li>
+                            <span class="stat-num" [appCountUp]="proyectos"></span>
+                            <span class="stat-label">{{ 'ABOUT_A11Y.statProyectos' | translate }}</span>
+                        </li>
+                        <li>
+                            <span class="stat-num" [appCountUp]="experiencias"></span>
+                            <span class="stat-label">{{ 'ABOUT_A11Y.statExperiencias' | translate }}</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flip-back hero-card" [attr.inert]="flipped ? null : ''">
+                    <button #cerrar type="button" class="btn-close btn-close-white float-end mb-4" (click)="flip()" [attr.aria-label]="'ABOUT_A11Y.cerrar' | translate"></button>
+                    <app-contact-form textoBoton="CONTACT.reclutar"></app-contact-form>
+                    <div class="text-center mt-5">
+                        <img src="assets/img/memes/mem1.png" alt="" height="80" width="auto" class="mx-auto">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="col-md-2"></div>
-</div>
+</header>

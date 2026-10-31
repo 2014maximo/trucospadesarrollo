@@ -10,9 +10,7 @@ export const FROM_BLOG: IFromBlog[] = [
         date: '2024-05-05',
         link: 'https://2014maximo.github.io/trucospadesarrollo/ng-gh-pages',
         styles: {
-            dataAos: "fade-right",
-            dataAosOffset: "200",
-            dataAosEasing: "ease-in-out",
+            revealDesde: "izquierda",
             class: "border-end"
         }
     },
@@ -25,9 +23,7 @@ export const FROM_BLOG: IFromBlog[] = [
         date: '2024-06-09',
         link: 'https://2014maximo.github.io/trucospadesarrollo/ng-gh-pages',
         styles: {
-            dataAos: "fade-right",
-            dataAosOffset: "200",
-            dataAosEasing: "ease-in-out",
+            revealDesde: "izquierda",
             class: "border-end"
         }
     },
@@ -40,9 +36,7 @@ export const FROM_BLOG: IFromBlog[] = [
         date: '2023-11-29',
         link: 'https://2014maximo.github.io/trucospadesarrollo/ng-gh-pages',
         styles: {
-            dataAos: "fade-right",
-            dataAosOffset: "200",
-            dataAosEasing: "ease-in-out",
+            revealDesde: "izquierda",
             class: "border-end"
         }
     }

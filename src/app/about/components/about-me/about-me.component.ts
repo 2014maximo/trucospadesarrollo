@@ -1,8 +1,6 @@
-import { Component, OnInit, OnDestroy, Output, EventEmitter, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { CommonModule } from '@angular/common';
-import * as AOS from 'aos';
 import { Subscription } from 'rxjs';
 import { LangChangeEvent } from '@ngx-translate/core';
 
@@ -18,17 +16,11 @@ export class AboutMeComponent implements OnInit, OnDestroy {
     espanol = true;
     private langChangeSubscription: Subscription | null = null;
 
-    constructor(
-        public translate: TranslateService,
-        @Inject(PLATFORM_ID) private platformId: object
-    ) {
+    constructor(public translate: TranslateService) {
         this.translate.setDefaultLang('es');
     }
 
     ngOnInit(): void {
-        if (isPlatformBrowser(this.platformId)) {
-            AOS.init();
-        }
         this.langChangeSubscription = this.translate.onLangChange.subscribe((event: LangChangeEvent) => {
             this.espanol = true;
         });

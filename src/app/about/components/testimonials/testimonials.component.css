@@ -1,14 +1,29 @@
-@import '../../about-shared.css';
+.quote { position: relative; max-width: 860px; margin: 0; padding-left: 72px; }
+.quote-mark { position: absolute; top: -12px; left: 0; font-size: 110px; line-height: 1; }
+.quote-text { margin: 0 0 32px; font-size: clamp(20px, 2.4vw, 28px); font-weight: 600; line-height: 1.45; letter-spacing: -.01em; }
 
-.fs-110 { font-size: 110px; }
-.lh-90 { line-height: 90px; }
-.fw-7 { font-weight: 700; }
-.f-operator-m { font-family: var(--fuente-tres); }
-
-.author-link { color: #f8f9fa; transition: color .3s ease; }
-.author-icon { display: inline-block; opacity: 0; transform: translateX(-8px); transition: opacity .3s ease, transform .3s ease; }
-.author-link:hover, .author-link:focus-visible { color: #70b5f9; }
-.author-link:hover .author-icon, .author-link:focus-visible .author-icon { opacity: 1; transform: translateX(0); }
+.quote-author { display: flex; align-items: center; gap: 16px; }
+.author-link { color: var(--about-texto); font-weight: 700; font-size: 18px; text-decoration: none; transition: color .2s ease; }
+.author-icon { display: inline-block; opacity: 0; transform: translateX(-6px); transition: opacity .2s ease, transform .2s ease; }
+.author-link:hover, .author-link:focus-visible { color: var(--about-acento); }
+.author-link:hover .author-icon, .author-link:focus-visible .author-icon { opacity: 1; transform: none; }
 @media (hover: none) { .author-icon { opacity: 1; transform: none; } }
 
-@media (max-width: 576px) { .testimonial { padding: 3rem; } .description { padding: 3rem; } }
+.controls { display: flex; gap: 12px; margin-top: 40px; padding-left: 72px; }
+.control {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--about-borde-fuerte);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--about-texto);
+    transition: border-color .2s ease, color .2s ease;
+}
+.control:hover { border-color: var(--about-acento); color: var(--about-acento); }
+
+@media (max-width: 576px) {
+    .quote, .controls { padding-left: 0; }
+    .quote-mark { position: static; display: block; height: 56px; }
+}

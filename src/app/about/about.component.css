@@ -1,31 +1,31 @@
 .go-up {
-    color: white;
     position: fixed;
-    right: 35px;
-    bottom: 35px;
-    padding: 10px;
-    background: black;
-    border-radius: 50%;
-    height: 45px;
-    width: 45px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 1px 39px 39px #000000;
+    right: 28px;
+    bottom: 28px;
     z-index: 999;
-    user-select: none;
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--about-borde-fuerte);
+    border-radius: 50%;
+    background: var(--about-superficie);
+    color: var(--about-texto);
+    font-size: 20px;
+    cursor: pointer;
+    transition: border-color .2s ease, color .2s ease;
 }
+.go-up:hover { border-color: var(--about-acento); color: var(--about-acento); }
+.go-up:focus-visible { outline: 2px solid var(--about-acento); outline-offset: 3px; }
 
-.parallax-portfolio {
-    background-image: url("../../assets/img/portfolio/background.jpg");
-    min-height: 400px;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-color: #1d1d1d;
-    position: relative;
-    color: white;
+/* Barra de progreso de lectura, ligada al scroll de la página */
+.progreso {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1000;
+    height: 3px;
+    background: var(--about-acento);
+    transform-origin: 0 50%;
+    transform: scaleX(0);
 }
-.parallax-portfolio::before {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-    opacity: 0.6;
-}
+@media (prefers-reduced-motion: reduce) { .progreso { display: none; } }

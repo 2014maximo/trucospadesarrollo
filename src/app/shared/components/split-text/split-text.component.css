@@ -1,0 +1,4 @@
+.st-palabra { display: inline-block; white-space: nowrap; }
+.st-u { display: inline-block; }
+/* Mientras no se ha animado, los fragmentos quedan ocultos (solo en navegador, lo añade el componente) */
+:host(.st-oculto) .st-u { opacity: 0; }

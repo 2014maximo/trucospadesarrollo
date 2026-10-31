@@ -1,1 +1,13 @@
-@import '../../about-shared.css';
+.hobbies-text { max-width: 62ch; margin: 0 0 32px; font-size: 20px; line-height: 1.65; color: var(--about-texto-suave); }
+.hobby-icons { display: flex; gap: 12px; }
+.hobby-icons i {
+    display: grid;
+    place-items: center;
+    width: 52px;
+    height: 52px;
+    border: 1px solid var(--about-borde);
+    border-radius: 14px;
+    background: var(--about-superficie);
+    color: var(--about-acento);
+    font-size: 22px;
+}

@@ -1,18 +1,22 @@
-import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
 import { CommonModule, isPlatformBrowser } from '@angular/common';
-import { TranslateService } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TraduccionService } from '../../services/traduccion.service';
 
 @Component({
     selector: 'app-language-switcher',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, TranslateModule],
     templateUrl: './language-switcher.component.html',
     styleUrl: './language-switcher.component.css'
 })
 export class LanguageSwitcherComponent {
     public idiomaActual: string = '';
     public lenguajes: string[] = ['es', 'en', 'fr'];
+    /** Nombre de cada idioma en su propia lengua, para el menú y el lector de pantalla. */
+    public readonly nombres: Record<string, string> = { es: 'Español', en: 'English', fr: 'Français' };
+
+    @ViewChild('selector') selector!: ElementRef<HTMLButtonElement>;
 
     constructor(
         private translate: TranslateService,
@@ -37,6 +41,8 @@ export class LanguageSwitcherComponent {
         this.idiomaActual = lenguaje;
         this.traduccion.cambiarIdioma(lenguaje);
         this.cargarListaLenguajes(lenguaje);
+        // La opción elegida desaparece de la lista: el foco vuelve al botón para no perderse en <body>
+        this.selector.nativeElement.focus();
     }
 
     private cargarListaLenguajes(actual: string): void {
