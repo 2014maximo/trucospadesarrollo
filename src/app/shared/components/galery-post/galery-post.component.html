@@ -1,13 +1,15 @@
-<!-- Estado: sin API configurada -->
-@if (estado === 'sin-api') {
+<!-- Cabecera común a todos los estados -->
 <div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
-		<h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
-
+		<h2 id="galeria-titulo" class="seccion-titulo fuenteOcho">{{ 'Post' | translate }}</h2>
+		<p class="seccion-pista f-open-sans-c">{{ 'BLOG_GALLERY.pista' | translate }}</p>
 	</div>
 	<div class="col-md-1"></div>
 </div>
+
+<!-- Estado: sin API configurada -->
+@if (estado === 'sin-api') {
 <div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
@@ -21,13 +23,6 @@
 
 <!-- Estado: cargando -->
 @if (estado === 'cargando') {
-<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-10">
-		<h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
-	</div>
-	<div class="col-md-1"></div>
-</div>
 <div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
@@ -47,13 +42,6 @@
 <div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
-		<h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
-	</div>
-	<div class="col-md-1"></div>
-</div>
-<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-10">
 		<div class="text-center p-5">
 			<p class="text-danger f-open-sans-c fs-20">{{ 'BLOG_GALLERY.error' | translate }}</p>
 		</div>
@@ -67,15 +55,8 @@
 <div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
-		<h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
-	</div>
-	<div class="col-md-1"></div>
-</div>
-<div class="row">
-	<div class="col-md-1"></div>
-	<div class="col-md-10">
 		<div class="text-center p-5">
-			<p class="text-light f-open-sans-c fs-20">{{ 'No hay publicaciones disponibles.' }}</p>
+			<p class="text-light f-open-sans-c fs-20">{{ 'BLOG_GALLERY.empty' | translate }}</p>
 		</div>
 	</div>
 	<div class="col-md-1"></div>
@@ -87,12 +68,6 @@
 <div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
-		<div class="row">
-			<div class="col-md-4 p-0">
-				<h2 class="text-light categorias fuenteOcho">{{ 'Post' | translate }}</h2>
-			</div>
-			<div class="col-md-8"></div>
-		</div>
 		<div class="row">
 			@for (post of this.postPaginar; track post.id) {
 			<div class="col-12 col-md-6 col-lg-4 pt-5 pb-5 pe-5">

@@ -1041,8 +1041,10 @@ code.language-html {
 /* ===== CATEGORÍAS DEL HOME: estantería de libros (prefijo est-) ===== */
 
 .est-seccion { padding: 96px 0; }
-.est-titulo { margin: 0; font-size: clamp(96px, 12vw, 180px); line-height: .9; color: var(--about-texto); }
-.est-pista { max-width: 30ch; margin: 16px 0 0; font-size: 20px; color: var(--about-texto-suave); }
+/* Cabecera de las secciones del home (categorías, publicaciones, frases): Six Caps gigante + pista */
+.seccion-titulo { margin: 0; font-size: clamp(96px, 12vw, 180px); line-height: .9; color: var(--about-texto); text-transform: lowercase; }
+.seccion-titulo::first-letter { text-transform: uppercase; }
+.seccion-pista { max-width: 30ch; margin: 16px 0 0; font-size: 20px; color: var(--about-texto-suave); }
 
 .est-estante { position: relative; }
 .est-libros {

@@ -153,7 +153,14 @@
     },
     "PHRASES": {
         "loading": "Cargando frases...",
-        "error": "Error al cargar las frases"
+        "error": "Error al cargar las frases",
+        "titulo": "Frases",
+        "pista": "Ideas que me acompañan mientras programo.",
+        "anterior": "Frase anterior",
+        "siguiente": "Frase siguiente",
+        "pausar": "Pausar frases",
+        "reanudar": "Reanudar frases",
+        "contador": "Frase {{actual}} de {{total}}"
     },
     "BLOG_POST_BASE": {
         "loading": "Cargando publicación…",
@@ -170,7 +177,9 @@
     "BLOG_GALLERY": {
         "loading": "Cargando publicaciones…",
         "error": "No se pudieron cargar las publicaciones. Inténtalo de nuevo más tarde.",
-        "noApi": "La URL del API de WordPress no está configurada. Define BLOG_WP_GRAPHQL_URL en blog-wp-graphql.config.ts."
+        "noApi": "La URL del API de WordPress no está configurada. Define BLOG_WP_GRAPHQL_URL en blog-wp-graphql.config.ts.",
+        "empty": "No hay publicaciones disponibles.",
+        "pista": "Lo último del blog: trucos, guías y aprendizajes del día a día."
     },
     "hola": "Hola",
     "soy": "Soy",

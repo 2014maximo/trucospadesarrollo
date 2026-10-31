@@ -1,26 +1,47 @@
-<div *ngIf="estado === 'cargando'" class="row mt-5">
-  <div class="col-12 text-center">
-    <p>{{ 'PHRASES.loading' | translate }}</p>
-  </div>
-</div>
+<section class="frases-seccion" aria-labelledby="frases-titulo">
+  <div class="container">
+    <div class="row align-items-center gy-4">
+      <div class="col-lg-4">
+        <h2 id="frases-titulo" class="seccion-titulo fuenteOcho">{{ 'PHRASES.titulo' | translate }}</h2>
+        <p class="seccion-pista f-open-sans-c">{{ 'PHRASES.pista' | translate }}</p>
 
-<div *ngIf="estado === 'error'" class="row mt-5">
-  <div class="col-12 text-center">
-    <p class="text-danger">{{ 'PHRASES.error' | translate }}</p>
-  </div>
-</div>
-
-<div *ngIf="estado === 'listo'" class="row mt-5">
-    <div class="col-md-3"></div>
-    <div class="col-md-8 d-flex justify-content-end">
-        <div class="parchment p-5" style='background-image:url("assets/img/banner/parchment.png");background-repeat:no-repeat;background-size:contain;'>
-            <h2 class="comillas text-left">"</h2>
-            <h4 class="f-open-sans-c text-center text-phrases">{{ displayPhrase }}</h4>
-            <h2 class="text-author f-alex-brush text-center">{{ displayAuthor }}</h2>
-            <div class="espaciado"></div>
+        @if (estado === 'listo') {
+        <div class="controles f-open-sans-c">
+          <button type="button" class="control" (click)="anterior()" [attr.aria-label]="'PHRASES.anterior' | translate">
+            <i class="bi bi-arrow-left" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="control" (click)="alternarPausa()"
+            [attr.aria-label]="(pausado ? 'PHRASES.reanudar' : 'PHRASES.pausar') | translate">
+            <i class="bi" [class.bi-play-fill]="pausado" [class.bi-pause-fill]="!pausado" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="control" (click)="siguiente()" [attr.aria-label]="'PHRASES.siguiente' | translate">
+            <i class="bi bi-arrow-right" aria-hidden="true"></i>
+          </button>
+          <span class="contador" [attr.aria-label]="'PHRASES.contador' | translate: { actual: indice + 1, total: frases.length }">
+            <span aria-hidden="true">{{ dosCifras(indice + 1) }} <span class="contador-total">/ {{ dosCifras(frases.length) }}</span></span>
+          </span>
         </div>
+        }
+      </div>
 
+      <div class="col-lg-8">
+        @if (estado === 'cargando') {
+        <p class="text-center">{{ 'PHRASES.loading' | translate }}</p>
+        }
+        @if (estado === 'error') {
+        <p class="text-danger text-center">{{ 'PHRASES.error' | translate }}</p>
+        }
+        @if (estado === 'listo') {
+        <!-- Solo se anuncia el cambio cuando lo controla la persona (pausa o botones), como en un carrusel accesible -->
+        <figure #pergamino class="pergamino" [attr.aria-live]="pausado ? 'polite' : 'off'">
+          <span class="comillas" aria-hidden="true">&ldquo;</span>
+          <blockquote class="cita f-open-sans-c">
+            @for (palabra of palabras; track $index) {<span class="tinta">{{ palabra }}</span>{{ ' ' }}}
+          </blockquote>
+          <figcaption class="autor">{{ fraseActual.autor }}</figcaption>
+        </figure>
+        }
+      </div>
     </div>
-    <div class="col-md-1"></div>
-</div>
-<div *ngIf="estado === 'listo'" class="espaciado d-none d-md-block"></div>
+  </div>
+</section>

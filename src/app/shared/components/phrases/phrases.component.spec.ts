@@ -2,13 +2,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PLATFORM_ID } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { PhrasesComponent } from './phrases.component';
+import { PHRASES } from './constants/phrases.constant';
 
 describe('PhrasesComponent', () => {
   let component: PhrasesComponent;
   let fixture: ComponentFixture<PhrasesComponent>;
   let translate: TranslateService;
 
+  const frases = [
+    { frase: 'Hola mundo', autor: 'Uno', borde: '', colorText: '', id: 1 },
+    { frase: 'Adiós', autor: 'Dos', borde: '', colorText: '', id: 2 },
+    { frase: 'Tres palabras aquí', autor: 'Tres', borde: '', colorText: '', id: 3 }
+  ];
+
   beforeEach(async () => {
+    spyOn(window, 'matchMedia').and.returnValue({ matches: true } as MediaQueryList);
     await TestBed.configureTestingModule({
       imports: [PhrasesComponent, TranslateModule.forRoot()],
       providers: [{ provide: PLATFORM_ID, useValue: 'browser' }]
@@ -22,64 +30,66 @@ describe('PhrasesComponent', () => {
     fixture.detectChanges();
   });
 
+  function listo(): void {
+    component.frases = [...frases];
+    component.indice = 0;
+    component.estado = 'listo';
+    fixture.detectChanges();
+  }
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('debe iniciar en estado cargando', () => {
-    expect(component.estado).toBe('cargando');
+  it('carga todas las frases y pasa a listo', async () => {
+    await component.procesarCargarFrases(true);
+    expect(component.estado).toBe('listo');
+    expect(component.frases.length).toBe(PHRASES.length);
   });
 
-  it('typeNext debe escribir el primer carácter de la frase', () => {
-    component.frases = [
-      { frase: 'Hola', autor: 'Test', borde: '', colorText: '', id: 1 }
-    ];
-    component.typeNext();
-    expect(component.displayPhrase).toBe('H');
-    expect(component.charIndex).toBe(1);
+  it('con movimiento reducido empieza en pausa', () => {
+    expect(component.pausado).toBeTrue();
   });
 
-  it('typeNext debe escribir el autor tras completar la frase', () => {
-    component.frases = [
-      { frase: 'OK', autor: 'Juan', borde: '', colorText: '', id: 1 }
-    ];
-    component.displayPhrase = 'OK';
-    component.charIndex = 2;
-    (component as any).typePhase = 'phrase';
-
-    component.typeNext();
-    // Frase completa → transita a author y escribe 'J'
-    expect(component.displayAuthor).toBe('J');
-    expect(component.charIndex).toBe(1);
+  it('divide la frase en palabras de tinta y muestra el autor', () => {
+    listo();
+    const host: HTMLElement = fixture.nativeElement;
+    expect(Array.from(host.querySelectorAll('.tinta')).map(e => e.textContent)).toEqual(['Hola', 'mundo']);
+    expect(host.querySelector('.autor')?.textContent).toBe('Uno');
   });
 
-  it('typeNext debe borrar autor antes que frase en fase delete', () => {
-    component.frases = [
-      { frase: 'Hola', autor: 'Juan', borde: '', colorText: '', id: 1 }
-    ];
-    component.displayPhrase = 'Hola';
-    component.displayAuthor = 'Juan';
-    component.currentPhraseIndex = 0;
-    (component as any).typePhase = 'delete';
-
-    component.typeNext();
-    expect(component.displayAuthor).toBe('Jua');
-    expect(component.displayPhrase).toBe('Hola');
+  it('siguiente y anterior recorren las frases de forma circular', async () => {
+    listo();
+    await component.siguiente();
+    expect(component.indice).toBe(1);
+    await component.anterior();
+    await component.anterior();
+    expect(component.indice).toBe(2);
   });
 
-  it('typeNext debe pasar a siguiente frase tras borrar todo', () => {
-    component.frases = [
-      { frase: 'A', autor: 'Uno', borde: '', colorText: '', id: 1 },
-      { frase: 'B', autor: 'Dos', borde: '', colorText: '', id: 2 }
-    ];
-    component.displayPhrase = '';
-    component.displayAuthor = '';
-    component.currentPhraseIndex = 0;
-    (component as any).typePhase = 'delete';
+  it('el contador muestra la posición con dos cifras y un nombre accesible', () => {
+    listo();
+    const contador: HTMLElement = fixture.nativeElement.querySelector('.contador');
+    expect(contador.textContent?.replace(/\s+/g, ' ').trim()).toBe('01 / 03');
+    expect(contador.getAttribute('aria-label')).toBeTruthy();
+  });
 
-    component.typeNext();
-    expect(component.currentPhraseIndex).toBe(1);
-    expect((component as any).typePhase).toBe('phrase');
-    expect(component.charIndex).toBe(0);
+  it('el botón de pausa alterna el estado y su nombre', () => {
+    listo();
+    const boton: HTMLButtonElement = fixture.nativeElement.querySelectorAll('.control')[1];
+    expect(boton.getAttribute('aria-label')).toBe('PHRASES.reanudar');
+    boton.click();
+    fixture.detectChanges();
+    expect(component.pausado).toBeFalse();
+    expect(boton.getAttribute('aria-label')).toBe('PHRASES.pausar');
+  });
+
+  it('solo anuncia cambios a lectores de pantalla cuando está en pausa', () => {
+    listo();
+    const pergamino: HTMLElement = fixture.nativeElement.querySelector('.pergamino');
+    expect(pergamino.getAttribute('aria-live')).toBe('polite');
+    component.alternarPausa();
+    fixture.detectChanges();
+    expect(pergamino.getAttribute('aria-live')).toBe('off');
   });
 });

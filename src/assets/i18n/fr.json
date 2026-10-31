@@ -153,7 +153,14 @@
     },
     "PHRASES": {
         "loading": "Chargement des phrases...",
-        "error": "Erreur lors du chargement des phrases"
+        "error": "Erreur lors du chargement des phrases",
+        "titulo": "Citations",
+        "pista": "Des idées qui m'accompagnent quand je code.",
+        "anterior": "Citation précédente",
+        "siguiente": "Citation suivante",
+        "pausar": "Mettre les citations en pause",
+        "reanudar": "Reprendre les citations",
+        "contador": "Citation {{actual}} sur {{total}}"
     },
     "BLOG_POST_BASE": {
         "loading": "Chargement de la publication…",
@@ -170,7 +177,9 @@
     "BLOG_GALLERY": {
         "loading": "Chargement des publications…",
         "error": "Impossible de charger les publications. Veuillez réessayer plus tard.",
-        "noApi": "L'URL de l'API WordPress n'est pas configurée. Définissez BLOG_WP_GRAPHQL_URL dans blog-wp-graphql.config.ts."
+        "noApi": "L'URL de l'API WordPress n'est pas configurée. Définissez BLOG_WP_GRAPHQL_URL dans blog-wp-graphql.config.ts.",
+        "empty": "Aucune publication disponible.",
+        "pista": "Les derniers articles du blog : astuces, guides et leçons du quotidien."
     },
     "hola": "Bonjour",
     "soy": "Je suis",

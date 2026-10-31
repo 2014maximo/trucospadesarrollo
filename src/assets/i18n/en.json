@@ -153,7 +153,14 @@
     },
     "PHRASES": {
         "loading": "Loading phrases...",
-        "error": "Error loading phrases"
+        "error": "Error loading phrases",
+        "titulo": "Quotes",
+        "pista": "Ideas that keep me company while I code.",
+        "anterior": "Previous quote",
+        "siguiente": "Next quote",
+        "pausar": "Pause quotes",
+        "reanudar": "Resume quotes",
+        "contador": "Quote {{actual}} of {{total}}"
     },
     "BLOG_POST_BASE": {
         "loading": "Loading post…",
@@ -170,7 +177,9 @@
     "BLOG_GALLERY": {
         "loading": "Loading posts…",
         "error": "Could not load posts. Please try again later.",
-        "noApi": "The WordPress API URL is not configured. Set BLOG_WP_GRAPHQL_URL in blog-wp-graphql.config.ts."
+        "noApi": "The WordPress API URL is not configured. Set BLOG_WP_GRAPHQL_URL in blog-wp-graphql.config.ts.",
+        "empty": "No posts available.",
+        "pista": "The latest from the blog: tips, guides and everyday lessons."
     },
     "hola": "Hello",
     "soy": "I'm",
