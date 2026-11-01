@@ -1,6 +1,6 @@
 .ab-footer { padding: 48px 0; border-top: 1px solid var(--about-borde); }
 
-.brand { font-size: 26px; text-decoration: none; transition: color .2s ease; }
+.brand { font-size: 44px; line-height: 1; color: var(--about-acento); text-decoration: none; transition: color .2s ease; }
 .brand:hover { color: var(--about-texto); }
 
 .social {
