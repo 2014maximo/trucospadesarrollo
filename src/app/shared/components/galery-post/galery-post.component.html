@@ -68,32 +68,38 @@
 <div class="row">
 	<div class="col-md-1"></div>
 	<div class="col-md-10">
-		<div class="row">
-			@for (post of this.postPaginar; track post.id) {
-			<div class="col-12 col-md-6 col-lg-4 pt-5 pb-5 pe-5">
-				<div class="d-flex justify-content-end mb-2 drop-two">
-					<a href="{{ post.categoriaRuta }}">
-						<img src="{{ iconoCategoria(post.categoriaNombre) }}" alt="" height="30" width="auto">
-					</a>
+		<ul class="gal-rejilla">
+			@for (post of this.postPaginar; track post.id; let i = $index) {
+			<li class="gal-tarjeta ab-spotlight" [class.gal-destacada]="i === 0" appSpotlight
+				appReveal [revealDistancia]="32" [revealRetardo]="i * 0.06">
+				<div class="gal-marco">
+					<img [class.gal-img-png]="tipoSombra(post.imagenUrl) === 'drop'" src="{{ post.imagenUrl }}" alt=""
+						width="640" height="360" loading="lazy">
 				</div>
-				<div class="pr-3 pt-3 imgPost">
-					<img [ngClass]="tipoSombra(post.imagenUrl)" src="{{ post.imagenUrl }}" alt="{{ post.titulo }}"
-						width="100%" height="auto">
+				<div class="gal-cuerpo">
+					<div class="gal-meta f-open-sans-c">
+						<a class="gal-categoria" href="{{ post.categoriaRuta }}">
+							<img src="{{ iconoCategoria(post.categoriaNombre) }}" alt="" height="18" width="auto">
+							{{ post.categoriaNombre }}
+						</a>
+						<span aria-hidden="true">·</span>
+						<time>{{ post.fecha }}</time>
+					</div>
+					<h3 class="gal-titulo f-open-sans-c">
+						<!-- El enlace del título cubre toda la tarjeta (::after); categoría y autor quedan por encima -->
+						<a class="gal-enlace" href="{{ post.ruta }}">{{ post.titulo }}</a>
+					</h3>
+					<p class="gal-resumen f-open-sans-c">{{ post.resumen }}</p>
+					<div class="gal-pie f-open-sans-c">
+						@if (post.autor) {
+						<app-content-author [datesAuthor]="post.autor" [tipo]="2"></app-content-author>
+						}
+						<span class="gal-leer" aria-hidden="true"><span class="gal-leer-texto">{{ 'LeerMas' | translate }}</span> →</span>
+					</div>
 				</div>
-				<div class="mt-5">
-					<h4 class="tituloPost f-bebas">{{ post.titulo }}</h4>
-				</div>
-				<p class="f-open-sans-c fs-20 lh-20 text-light">{{ post.resumen }}</p>
-				@if (post.autor) {
-				<app-content-author class="d-block mb-2" [datesAuthor]="post.autor" [tipo]="2"></app-content-author>
-				}
-				<time>
-					<p class="f-shadow-into-l text-light fs-15 m-0">{{ post.fecha }}</p>
-				</time>
-				<a class="f-open-sans-c leerMas mt-2" href="{{ post.ruta }}">{{ 'LeerMas' | translate }}...</a>
-			</div>
+			</li>
 			}
-		</div>
+		</ul>
 		<div class="row">
 			<div class="col-md-4"></div>
 			<div class="col-md-4">

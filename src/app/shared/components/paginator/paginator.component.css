@@ -1,3 +1,17 @@
-.active{
-    color: yellow;
+.paginador { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 16px; }
+.pagina {
+    display: grid;
+    place-items: center;
+    min-width: 44px;
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid var(--about-borde-fuerte);
+    border-radius: 999px;
+    background: transparent;
+    color: var(--about-texto);
+    font: 600 18px/1 var(--about-fuente-texto);
+    transition: border-color .2s ease, color .2s ease, background .2s ease;
 }
+.pagina:hover { border-color: var(--about-acento); color: var(--about-acento); }
+.pagina:focus-visible { outline: 2px solid var(--about-acento); outline-offset: 3px; }
+.pagina.active { border-color: var(--about-acento); background: var(--about-acento); color: var(--about-sobre-acento); }

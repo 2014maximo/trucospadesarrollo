@@ -2,14 +2,14 @@
     user-select: none
 }
 
-.space-between-components{
-    height: 150px;
+/*
+ * Control del espacio entre secciones del home: una sola variable, fluida según el ancho
+ * (≈ 24 px en móvil → 96 px en escritorio). Las secciones ya tienen su propio margen interior.
+ */
+:host {
+    --espacio-secciones: clamp(16px, 6vw, 96px);
 }
 
-
-
-@media (max-width: 768px) {
-    .space-between-components{
-        height: 90px;
-    }
+.space-between-components {
+    height: var(--espacio-secciones);
 }

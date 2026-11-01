@@ -210,6 +210,35 @@ describe('GaleryPostComponent', () => {
       expect(fixture.nativeElement.querySelector('.autor-compacto')).not.toBeNull();
     });
 
+    it('destaca la primera publicación de la página y enlaza título y categoría', () => {
+      blogContent.getLatestPosts.and.returnValue(of([
+        postMock({ categoriaNombre: 'Angular', slug: 'uno' }),
+        postMock({ id: '2', categoriaNombre: 'Angular', slug: 'dos' })
+      ]));
+      fixture.detectChanges();
+      component.postPaginar = [...component.todosLosPost];
+      fixture.detectChanges();
+
+      const tarjetas: HTMLElement[] = Array.from(fixture.nativeElement.querySelectorAll('.gal-tarjeta'));
+      expect(tarjetas.length).toBe(2);
+      expect(tarjetas[0].classList).toContain('gal-destacada');
+      expect(tarjetas[1].classList).not.toContain('gal-destacada');
+      expect(tarjetas[0].querySelector('.gal-enlace')?.getAttribute('href')).toBe('/blog/angular/uno');
+      expect(tarjetas[0].querySelector('.gal-categoria')?.getAttribute('href')).toBe(component.todosLosPost[0].categoriaRuta);
+    });
+
+    it('el título es un encabezado h3 bajo el h2 de la sección y la imagen es decorativa', () => {
+      blogContent.getLatestPosts.and.returnValue(of([postMock()]));
+      fixture.detectChanges();
+      component.postPaginar = [...component.todosLosPost];
+      fixture.detectChanges();
+
+      const tarjeta: HTMLElement = fixture.nativeElement.querySelector('.gal-tarjeta');
+      expect(tarjeta.querySelector('h3 .gal-enlace')).not.toBeNull();
+      expect(tarjeta.querySelector('.gal-marco img')?.getAttribute('alt')).toBe('');
+      expect(tarjeta.querySelector('.gal-leer')?.getAttribute('aria-hidden')).toBe('true');
+    });
+
     it('no debe renderizar app-content-author cuando el post no tiene autor', () => {
       blogContent.getLatestPosts.and.returnValue(of([postMock()]));
       fixture.detectChanges();

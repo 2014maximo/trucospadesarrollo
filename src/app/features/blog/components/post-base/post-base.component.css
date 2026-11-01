@@ -3,36 +3,27 @@
   text-align: center;
 }
 
-.post-base__cabecera {
-  margin-bottom: 1.5rem;
+/*
+ * Aire arriba y abajo, fluido según el ancho. Arriba incluye la altura de la cabecera fija del sitio
+ * (≈ 64 px en móvil, ≈ 77 px en escritorio) más un margen: 96 px en móvil → 150 px en escritorio.
+ */
+.post-base {
+  padding: clamp(96px, 10.5vw, 150px) 0 clamp(56px, 8vw, 120px);
 }
 
-.post-base__titulo {
-  margin-bottom: 0.5rem;
-}
-
-.post-base__meta {
-  margin: 0;
-  opacity: 0.85;
-  font-size: 0.95rem;
-}
-
-.post-base__resumen {
-  margin-bottom: 1.5rem;
+.autor {
+  margin: clamp(8px, 1.5vw, 16px) 0 clamp(28px, 4vw, 48px);
 }
 
 .post-base__cuerpo {
-  margin-bottom: 2rem;
+  margin-bottom: 0;
 }
 
 .go-up {
+  border: 0;
   cursor: pointer;
 }
-
-.texto-lateral {
-  transform: rotate(-90deg);
-  display: inline-block;
-  position: relative;
-  left: -40px;
-  bottom: -15px;
+.go-up:focus-visible {
+  outline: 2px solid var(--about-acento);
+  outline-offset: 3px;
 }

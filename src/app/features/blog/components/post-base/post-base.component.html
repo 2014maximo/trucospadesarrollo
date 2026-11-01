@@ -1,7 +1,6 @@
 <div #target></div>
 
 <app-header></app-header>
-<div class="espaciado"></div>
 
 <main>
 <article class="post-base">
@@ -32,7 +31,7 @@
       <div class="row">
         <div class="col-md-5"></div>
         <div class="col-md-7">
-          <app-content-author class="d-block mb-4" [datesAuthor]="post.autor" [tipo]="3"></app-content-author>
+          <app-content-author class="d-block autor" [datesAuthor]="post.autor" [tipo]="3"></app-content-author>
         </div>
       </div>
       }
@@ -52,6 +51,6 @@
 </main>
 
 <app-footer></app-footer>
-<div class="go-up" (click)="scroll(target)">
+<button type="button" class="go-up" (click)="scroll(target)" [attr.aria-label]="'ABOUT_A11Y.subir' | translate">
   <i class="fa fa-chevron-up" aria-hidden="true"></i>
-</div>
+</button>

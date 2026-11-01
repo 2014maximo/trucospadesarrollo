@@ -311,6 +311,10 @@
     "fPersonalizacion": "Personalización visual (colores, avatar)",
     "fQrCode": "Generación automática de código QR",
     "fCategorias": "Carpetas y categorías de links",
+    "PAGINADOR": {
+        "navegacion": "Paginación",
+        "pagina": "Página {{numero}}"
+    },
     "CATEGORIAS_HOME": {
         "pista": "Saca un libro de la estantería para ver sus artículos.",
         "verArticulos": "Ver artículos"

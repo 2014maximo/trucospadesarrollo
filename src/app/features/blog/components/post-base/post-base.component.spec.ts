@@ -64,6 +64,15 @@ describe('PostBaseComponent', () => {
       expect(component).toBeTruthy();
     });
 
+    it('el botón para volver arriba es un <button> con nombre accesible', () => {
+      blogContent.hasBaseUrl.and.returnValue(true);
+      blogContent.getPostBySlug.and.returnValue(of(null));
+      fixture.detectChanges();
+      const boton: HTMLElement = fixture.nativeElement.querySelector('.go-up');
+      expect(boton.tagName).toBe('BUTTON');
+      expect(boton.getAttribute('aria-label')).toBeTruthy();
+    });
+
     it('debe mostrar sin-api si no hay URL de API configurada', () => {
       blogContent.hasBaseUrl.and.returnValue(false);
       fixture.detectChanges();

@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnChanges, OnInit, OnDestroy, Output, EventEmitter, SimpleChanges, Inject, PLATFORM_ID, HostListener, afterNextRender, signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface Pagina<T = any> {
   pagina: number;
@@ -9,7 +10,7 @@ interface Pagina<T = any> {
 
 @Component({
   selector: 'app-paginator',
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './paginator.component.html',
   styleUrl: './paginator.component.css'
 })

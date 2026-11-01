@@ -1,4 +1,4 @@
-.frases-seccion { padding: 48px 0; }
+.frases-seccion { padding: clamp(24px, 4vw, 48px) 0; }
 
 /* El texto se coloca en el panel central del pergamino (entre los dos pliegues) */
 .pergamino {

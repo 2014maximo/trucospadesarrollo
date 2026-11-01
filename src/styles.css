@@ -1040,7 +1040,7 @@ code.language-html {
 
 /* ===== CATEGORÍAS DEL HOME: estantería de libros (prefijo est-) ===== */
 
-.est-seccion { padding: 96px 0; }
+.est-seccion { padding: clamp(40px, 7vw, 96px) 0; }
 /* Cabecera de las secciones del home (categorías, publicaciones, frases): Six Caps gigante + pista */
 .seccion-titulo { margin: 0; font-size: clamp(96px, 12vw, 180px); line-height: .9; color: var(--about-texto); text-transform: lowercase; }
 .seccion-titulo::first-letter { text-transform: uppercase; }
@@ -1171,3 +1171,97 @@ code.language-html {
 @media (prefers-reduced-motion: reduce) {
     .est-cuerpo { transition: none; }
 }
+
+/* ===== GALERÍA DE PUBLICACIONES DEL HOME (prefijo gal-) ===== */
+
+.gal-rejilla {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin: clamp(28px, 4vw, 48px) 0;
+    padding: 0;
+    list-style: none;
+}
+/* La primera publicación de cada página ocupa dos columnas: con 9 por página se llenan 3 filas exactas */
+.gal-destacada { grid-column: span 2; }
+
+.gal-tarjeta {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid var(--about-borde);
+    border-radius: var(--about-radio);
+    transition: border-color .25s ease, transform .25s ease;
+}
+.gal-tarjeta:hover { border-color: rgba(242, 193, 78, .5); transform: translateY(-4px); }
+.gal-tarjeta:focus-within { border-color: var(--about-acento); }
+
+.gal-marco { overflow: hidden; aspect-ratio: 16 / 9; background: var(--about-superficie-2); }
+.gal-marco img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .6s cubic-bezier(.16, 1, .3, 1); }
+.gal-marco .gal-img-png { object-fit: contain; padding: 16px; }
+.gal-tarjeta:hover .gal-marco img { transform: scale(1.06); }
+
+.gal-cuerpo { display: flex; flex: 1; flex-direction: column; padding: 20px 24px 24px; }
+.gal-meta { display: flex; align-items: center; gap: 8px; font-size: 15px; color: var(--about-texto-tenue); }
+.gal-categoria {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border: 1px solid var(--about-borde-fuerte);
+    border-radius: 999px;
+    color: var(--about-texto);
+    text-decoration: none;
+}
+.gal-categoria:hover { border-color: var(--about-acento); color: var(--about-acento); }
+
+.gal-titulo { margin: 14px 0 8px; font-size: 26px; font-weight: 700; line-height: 1.15; }
+.gal-enlace { color: var(--about-texto); text-decoration: none; }
+.gal-enlace::after { content: ""; position: absolute; inset: 0; z-index: 1; }
+.gal-tarjeta:hover .gal-enlace { color: var(--about-acento); }
+.gal-enlace:focus-visible { outline: none; }
+.gal-tarjeta:has(.gal-enlace:focus-visible) { outline: 2px solid var(--about-acento); outline-offset: 3px; }
+
+.gal-resumen {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0 0 20px;
+    font-size: 18px;
+    line-height: 1.45;
+    color: var(--about-texto-suave);
+}
+.gal-pie { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; }
+.gal-pie app-content-author { position: relative; z-index: 2; }
+.gal-leer { margin-left: auto; font-size: 17px; font-weight: 700; color: var(--about-acento); white-space: nowrap; }
+.gal-leer-texto { display: inline-block; text-transform: lowercase; }
+.gal-leer-texto::first-letter { text-transform: uppercase; }
+
+/* Destacada: imagen y texto lado a lado */
+@media (min-width: 992px) {
+    .gal-destacada { flex-direction: row; }
+    .gal-destacada .gal-marco { flex: 0 0 55%; aspect-ratio: auto; }
+    .gal-destacada .gal-cuerpo { justify-content: center; padding: 32px; }
+    .gal-destacada .gal-titulo { font-size: 36px; }
+    .gal-destacada .gal-resumen { -webkit-line-clamp: 5; }
+}
+@media (max-width: 991.98px) {
+    .gal-rejilla { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 575.98px) {
+    .gal-rejilla { grid-template-columns: 1fr; }
+    .gal-destacada { grid-column: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .gal-tarjeta, .gal-marco img { transition: none; }
+    .gal-tarjeta:hover { transform: none; }
+}
+
+/* ===== CUERPO DE LOS POSTS (contenido de WordPress) ===== */
+/* Interlineado de lectura para el HTML del CMS. Necesita !important porque las utilidades lh-*
+   vienen también de max.css (cargado en index.html) con !important */
+.post-base__cuerpo p { line-height: 1.6 !important; }

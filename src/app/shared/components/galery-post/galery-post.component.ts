@@ -13,6 +13,8 @@ import { ThemeService } from '../../services/theme.service';
 import { resolverIconoCategoria } from '../categories/categories.helper';
 import { ContentAuthorComponent } from '../content-author/content-author.component';
 import { ContentAuthorModel } from '../../models/content-author.model';
+import { RevealDirective } from '../../directives/reveal.directive';
+import { SpotlightDirective } from '../../directives/spotlight.directive';
 
 interface GalleryPostItem {
   id: string;
@@ -30,7 +32,7 @@ export type GalleryEstado = 'cargando' | 'listo' | 'error' | 'vacio' | 'sin-api'
 
 @Component({
   selector: 'app-galery-post',
-  imports: [TranslateModule, CommonModule, PaginatorComponent, ContentAuthorComponent],
+  imports: [TranslateModule, CommonModule, PaginatorComponent, ContentAuthorComponent, RevealDirective, SpotlightDirective],
   templateUrl: './galery-post.component.html',
   styleUrl: './galery-post.component.css'
 })

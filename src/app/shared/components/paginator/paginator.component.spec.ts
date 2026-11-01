@@ -1,3 +1,4 @@
+import { TranslateModule } from '@ngx-translate/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PaginatorComponent } from './paginator.component';
@@ -8,7 +9,7 @@ describe('PaginatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PaginatorComponent]
+      imports: [PaginatorComponent, TranslateModule.forRoot()]
     })
     .compileComponents();
 
@@ -100,5 +101,28 @@ describe('PaginatorComponent', () => {
     component.ngOnInit();
 
     expect(component.active()).toBe('0');
+  });
+
+  it('con una sola página no muestra la paginación', async () => {
+    component.contenedor = [1, 2, 3];
+    component.itemIniciales = 9;
+    component.ngOnInit();
+    fixture.detectChanges();
+    expect(fixture.nativeElement.querySelector('.paginador')).toBeNull();
+  });
+
+  it('muestra botones accesibles y marca la página actual', async () => {
+    component.contenedor = Array.from({ length: 20 }, (_, i) => i);
+    component.itemIniciales = 9;
+    component.ngOnInit();
+    fixture.detectChanges();
+    const botones: HTMLButtonElement[] = Array.from(fixture.nativeElement.querySelectorAll('.paginador button'));
+    expect(botones.length).toBe(3);
+    expect(botones[0].getAttribute('aria-current')).toBe('page');
+    expect(botones[1].getAttribute('aria-current')).toBeNull();
+    botones[2].click();
+    fixture.detectChanges();
+    expect(botones[2].getAttribute('aria-current')).toBe('page');
+    expect(botones[0].getAttribute('aria-current')).toBeNull();
   });
 });

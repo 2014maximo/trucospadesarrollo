@@ -7,16 +7,14 @@
     </select>
 </div>
 }
-<div class="row mt-3">
-    <div class="col-md-1"></div>
-    <div class="col-md-10">
-        <div class="row text-center">
-            @for (pages of totalPaginas(); track pages.pagina) {
-            <a (click)="cargarPagina(pages.pagina)" class="cursor-p col text-light">
-                <p class="ml-3 d-block f-shadow-into-l fs-25 text-shadow" [class.active]="active() === pages.pagina.toString()">{{ pages.pagina + 1 }}</p>
-            </a>
-            }
-        </div>
-    </div>
-    <div class="col-md-1 text-light"></div>
-</div>
+<!-- Con una sola página no hay nada que paginar -->
+@if (totalPaginas().length > 1) {
+<nav class="paginador" [attr.aria-label]="'PAGINADOR.navegacion' | translate">
+    @for (pages of totalPaginas(); track pages.pagina) {
+    <button type="button" class="pagina" [class.active]="active() === pages.pagina.toString()"
+        [attr.aria-current]="active() === pages.pagina.toString() ? 'page' : null"
+        [attr.aria-label]="'PAGINADOR.pagina' | translate: { numero: pages.pagina + 1 }"
+        (click)="cargarPagina(pages.pagina)">{{ pages.pagina + 1 }}</button>
+    }
+</nav>
+}
