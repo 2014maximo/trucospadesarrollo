@@ -50,7 +50,13 @@
 </article>
 </main>
 
-<app-footer></app-footer>
+<div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-10">
+    <app-footer></app-footer>
+  </div>
+  <div class="col-md-1"></div>
+</div>
 <button type="button" class="go-up" (click)="scroll(target)" [attr.aria-label]="'ABOUT_A11Y.subir' | translate">
   <i class="fa fa-chevron-up" aria-hidden="true"></i>
 </button>

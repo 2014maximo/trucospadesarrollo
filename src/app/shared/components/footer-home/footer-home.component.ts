@@ -3,6 +3,7 @@ import { AfterViewInit, Component, DestroyRef, ElementRef, Inject, NgZone, PLATF
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { animate, AnimationPlaybackControls, inView } from 'motion';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
+import { FooterComponent } from '../footer/footer.component';
 import { WordRotatorComponent } from '../word-rotator/word-rotator.component';
 import { StaggerDirective } from '../../directives/stagger.directive';
 import { RevealDirective } from '../../directives/reveal.directive';
@@ -15,15 +16,13 @@ const IDIOMAS = ['es', 'en', 'fr'];
 @Component({
   selector: 'app-footer-home',
   imports: [
-    CommonModule, TranslateModule, ContactFormComponent, WordRotatorComponent,
+    CommonModule, TranslateModule, ContactFormComponent, FooterComponent, WordRotatorComponent,
     StaggerDirective, RevealDirective, SpotlightDirective, ScrollAnimateDirective
   ],
   templateUrl: './footer-home.component.html',
   styleUrl: './footer-home.component.css'
 })
 export class FooterHomeComponent implements AfterViewInit {
-
-  readonly anio = new Date().getFullYear();
 
   @ViewChild('firma') firma!: ElementRef<HTMLImageElement>;
 

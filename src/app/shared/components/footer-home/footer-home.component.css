@@ -26,17 +26,11 @@
 .fh-form-titulo { margin: 0 0 20px; font-size: 56px; line-height: 1; color: var(--about-acento); }
 
 .fh-base {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 16px;
     margin-top: 80px;
-    padding-top: 24px;
+    /* Suma 12 px a los 12 de la columna de app-footer para igualar los 24 de las columnas g-5 de arriba */
+    padding-inline: 12px;
     border-top: 1px solid var(--about-borde);
-    font-size: 17px;
-    color: var(--about-texto-tenue);
 }
-.fh-enlaces { display: flex; gap: 24px; }
 
 @media (prefers-reduced-motion: reduce) {
     .fh-firma img { transition: none; }

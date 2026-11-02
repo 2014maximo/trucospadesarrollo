@@ -31,4 +31,12 @@ describe('FooterHomeComponent', () => {
     expect(titulo.querySelector('.visually-hidden')?.textContent).toBe('titulo_blog');
     expect(titulo.querySelector('app-word-rotator')).toBeTruthy();
   });
+
+  it('tras la línea separadora muestra app-footer y no anida elementos <footer>', () => {
+    const base: HTMLElement = fixture.nativeElement.querySelector('.fh-base');
+    expect(base.querySelector('app-footer')).toBeTruthy();
+    expect(base.querySelector('.fh-enlaces')).toBeNull();
+    expect(fixture.nativeElement.querySelectorAll('footer').length).toBe(1);
+    expect(fixture.nativeElement.querySelector('footer footer')).toBeNull();
+  });
 });
