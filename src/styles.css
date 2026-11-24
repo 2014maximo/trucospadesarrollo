@@ -1264,4 +1264,4 @@ code.language-html {
 /* ===== CUERPO DE LOS POSTS (contenido de WordPress) ===== */
 /* Interlineado de lectura para el HTML del CMS. Necesita !important porque las utilidades lh-*
    vienen también de max.css (cargado en index.html) con !important */
-.post-base__cuerpo p { line-height: 1.6 !important; }
+/*.post-base__cuerpo p { line-height: 1.6 !important; } */
